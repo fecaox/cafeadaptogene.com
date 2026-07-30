@@ -47,6 +47,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const selectedIds = guide.productIds ?? fallbackProducts(slug);
   const selectedProducts = selectedIds.map((id) => products.find((product) => product.id === id)).filter(Boolean) as typeof products;
   const universe = universes.find((item) => item.slug === slug || item.children.some((child) => child.slug === slug));
+  const hasDeepDive = Boolean(guide.sections?.length);
+  const readingTime = 7 + (guide.sections?.length ?? 0) * 2;
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -83,7 +85,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <p className="eyebrow"><span /> {guide.eyebrow}</p>
             <h1>{guide.title}</h1>
             <p>{guide.description}</p>
-            <div className="article-meta"><span>Mis à jour le 30 juillet 2026</span><span>Lecture · 7 min</span><span>Sources et méthode visibles</span></div>
+            <div className="article-meta"><span>Mis à jour le 30 juillet 2026</span><span>Lecture · {readingTime} min</span><span>Sources et méthode visibles</span></div>
           </div>
           <div className="article-monogram" aria-hidden="true"><span>{guide.icon}</span><small>CAFÉ<br />ADAPTOGÈNE</small></div>
         </header>
@@ -93,8 +95,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <p>Dans ce guide</p>
             <a href="#definition">01. La définition</a>
             <a href="#criteres">02. Les bons critères</a>
-            {selectedProducts.length > 0 && <a href="#produits">03. Produits repères</a>}
-            <a href="#faq">04. Questions fréquentes</a>
+            {hasDeepDive && <a href="#approfondir">03. Le guide détaillé</a>}
+            {selectedProducts.length > 0 && <a href="#produits">{hasDeepDive ? "04" : "03"}. Produits repères</a>}
+            <a href="#faq">{hasDeepDive ? "05" : "04"}. Questions fréquentes</a>
+            {guide.sources?.length ? <a href="#sources">{hasDeepDive ? "06" : "05"}. Sources</a> : null}
             <Link href="/quel-cafe-me-correspond/">Faire le test →</Link>
           </aside>
 
@@ -124,6 +128,25 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               </div>
             </section>
 
+            {guide.sections?.length ? (
+              <section id="approfondir" className="article-deep-dive">
+                <p className="eyebrow"><span /> Guide détaillé</p>
+                {guide.sections.map((section, index) => (
+                  <div className="article-deep-section" key={section.title}>
+                    <span className="deep-section-number">{String(index + 1).padStart(2, "0")}</span>
+                    <h2>{section.title}</h2>
+                    {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                    {section.bullets?.length ? <ul>{section.bullets.map((item) => <li key={item}>{item}</li>)}</ul> : null}
+                    {section.links?.length ? (
+                      <div className="deep-section-links">
+                        {section.links.map((link) => <Link href={`/${link.slug}/`} key={link.slug}>{link.label} <span>→</span></Link>)}
+                      </div>
+                    ) : null}
+                  </div>
+                ))}
+              </section>
+            ) : null}
+
             {selectedProducts.length > 0 && (
               <section id="produits" className="article-products">
                 <p className="eyebrow"><span /> Repères du marché</p>
@@ -138,6 +161,14 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <h2>Ce qu’il faut retenir</h2>
               {guide.faq.map((item) => <details key={item.question}><summary>{item.question}<span>+</span></summary><p>{item.answer}</p></details>)}
             </section>
+
+            {guide.sources?.length ? (
+              <section id="sources" className="article-sources">
+                <p className="eyebrow"><span /> Sources institutionnelles</p>
+                <h2>Pour aller à la source</h2>
+                <div>{guide.sources.map((source) => <a href={source.url} target="_blank" rel="noopener" key={source.url}>{source.label}<span>↗</span></a>)}</div>
+              </section>
+            ) : null}
 
             <div className="health-warning">
               <h3>Précaution</h3>

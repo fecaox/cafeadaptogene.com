@@ -45,11 +45,29 @@ test("ships the static GitHub Pages essentials", async () => {
   assert.match(sitemap, /cafe-bdnf/);
   assert.match(sitemap, /quel-cafe-me-correspond/);
   assert.match(sitemap, /cafe-intrinsequement-fonctionnel/);
+  assert.match(sitemap, /cafe-fonctionnel/);
+  assert.match(sitemap, /cafe-nouvelle-generation/);
+  assert.match(sitemap, /comparatif-cafe-adaptogene/);
   assert.match(outputHome, /og\.png/);
   await access(new URL("out/guide-cafe-adaptogene/index.html", root));
   await access(new URL("out/quel-cafe-me-correspond/index.html", root));
   await access(new URL("out/cafes-enrichis/index.html", root));
+  await access(new URL("out/cafe-fonctionnel/index.html", root));
+  await access(new URL("out/cafe-nouvelle-generation/index.html", root));
+  await access(new URL("out/comparatif-cafe-adaptogene/index.html", root));
   await assert.rejects(access(new URL("app/_sites-preview/SkeletonPreview.tsx", root)));
+});
+
+test("server-renders a priority SEO article with its internal cluster", async () => {
+  const response = await render("/comparatif-cafe-adaptogene/");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Meilleur café adaptogène/i);
+  assert.match(html, /Quel café adaptogène choisir selon votre profil/i);
+  assert.match(html, /Portion/i);
+  assert.match(html, /Caféine/i);
+  assert.match(html, /Faire le test personnalisé/i);
+  assert.match(html, /FAQPage/i);
 });
 
 test("server-renders the recommendation quiz", async () => {

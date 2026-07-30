@@ -2,11 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ProductCard } from "./components/product-card";
 import { SiteFooter, SiteHeader } from "./components/site-chrome";
-import { products, siteUrl, taxonomyGuides, universes } from "./site-data";
+import { guides, products, siteUrl, taxonomyGuides, universes } from "./site-data";
 
 const featuredIds = ["torregral", "bonjour", "cafit", "cosmicblend"];
 const featured = featuredIds.map((id) => products.find((product) => product.id === id)).filter(Boolean) as typeof products;
 const familyPages = taxonomyGuides.filter((guide) => !universes.some((universe) => universe.slug === guide.slug));
+const priorityArticleIds = ["cafe-fonctionnel", "cafe-nouvelle-generation", "comparatif-cafe-adaptogene", "cafe-focus", "cafe-sans-crash"];
+const priorityArticles = priorityArticleIds.map((slug) => guides.find((guide) => guide.slug === slug)).filter(Boolean) as typeof guides;
 
 export default function Home() {
   const structuredData = {
@@ -125,6 +127,27 @@ export default function Home() {
             {featured.map((product) => <ProductCard product={product} compact key={product.id} />)}
           </div>
           <p className="local-disclosure"><b>Transparence :</b> Torrégral appartient à l’écosystème à l’origine de ce média. Cette relation est signalée et ne lui apporte aucun bonus dans le questionnaire. Les informations de toutes les marques restent soumises à la même grille.</p>
+        </section>
+
+        <section className="home-section priority-editorial">
+          <header className="section-intro split-intro">
+            <div>
+              <p className="eyebrow"><span /> À lire en premier</p>
+              <h2>Les guides qui posent<br /><em>les bons repères.</em></h2>
+            </div>
+            <p>Définition, nouvelle génération, comparatif et choix par usage : cinq dossiers reliés entre eux pour comprendre le marché avant d’acheter.</p>
+          </header>
+          <div className="priority-article-grid">
+            {priorityArticles.map((guide, index) => (
+              <Link className={guide.color} href={`/${guide.slug}/`} key={guide.slug}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <small>{guide.eyebrow}</small>
+                <h3>{guide.title}</h3>
+                <p>{guide.description}</p>
+                <b>Lire le guide →</b>
+              </Link>
+            ))}
+          </div>
         </section>
 
         <section className="family-index">

@@ -15,6 +15,11 @@ export function ProductCard({ product, compact = false }: { product: ProductProf
         <strong>{product.product}</strong>
         <p>{product.description}</p>
         <div className="product-badges">{product.badges.map((badge) => <span key={badge}>{badge}</span>)}</div>
+        <dl className="product-data" aria-label={`Données clés pour ${product.name}`}>
+          <div><dt>Portion</dt><dd>{product.serving}</dd></div>
+          <div><dt>Caféine</dt><dd>{product.caffeineText}</dd></div>
+          <div><dt>Prix observé</dt><dd>{product.priceText}</dd></div>
+        </dl>
         {!compact && (
           <div className="product-balance">
             <p><b>Points forts</b>{product.strengths.slice(0, 2).join(" · ")}</p>
