@@ -21,10 +21,11 @@ test("server-renders the Café Adaptogène homepage", async () => {
   const html = await response.text();
   assert.match(html, /<html lang="fr">/i);
   assert.match(html, /Café Adaptogène — Le guide des cafés nouvelle génération/i);
-  assert.match(html, /Le café change\./i);
-  assert.match(html, /Comparatifs indépendants/i);
+  assert.match(html, /Quel café voulez-vous vraiment boire/i);
+  assert.match(html, /Trois univers/i);
   assert.match(html, /Torrégral/i);
-  assert.match(html, /Notre méthode/i);
+  assert.match(html, /Cafés enrichis/i);
+  assert.match(html, /Trouver mon café/i);
   assert.match(html, /application\/ld\+json/i);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
@@ -42,7 +43,21 @@ test("ships the static GitHub Pages essentials", async () => {
   assert.match(robots, /Sitemap: https:\/\/cafeadaptogene\.com\/sitemap\.xml/);
   assert.match(sitemap, /cafe-champignon/);
   assert.match(sitemap, /cafe-bdnf/);
+  assert.match(sitemap, /quel-cafe-me-correspond/);
+  assert.match(sitemap, /cafe-intrinsequement-fonctionnel/);
   assert.match(outputHome, /og\.png/);
   await access(new URL("out/guide-cafe-adaptogene/index.html", root));
+  await access(new URL("out/quel-cafe-me-correspond/index.html", root));
+  await access(new URL("out/cafes-enrichis/index.html", root));
   await assert.rejects(access(new URL("app/_sites-preview/SkeletonPreview.tsx", root)));
+});
+
+test("server-renders the recommendation quiz", async () => {
+  const response = await render("/quel-cafe-me-correspond/");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Quel café vous/i);
+  assert.match(html, /aucune marque citée pendant le test/i);
+  assert.match(html, /Question[\s\S]*01[\s\S]*07/i);
+  assert.match(html, /Le goût d’un véritable café/i);
 });

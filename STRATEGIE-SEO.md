@@ -8,6 +8,14 @@ Mise à jour : 30 juillet 2026
 
 Le territoire est volontairement plus large que « café aux champignons ». Le site couvre tous les cafés « augmentés » par un ingrédient, un usage ou une technologie : champignons fonctionnels, collagène, protéines, fibres, plantes, nootropiques, caféine modulée, polyphénols et alternatives torréfiées.
 
+La navigation publique repose désormais sur **3 univers visibles** et **7 familles SEO** :
+
+1. **L’univers du café** : café classique et de spécialité ; café intrinsèquement fonctionnel.
+2. **Cafés enrichis** : champignons et plantes ; nutrition et performance ; multi-actifs.
+3. **Alternatives et dérivés** : alternatives et boissons hybrides ; produits issus de la cerise de café.
+
+Chaque produit possède une seule catégorie principale et des étiquettes secondaires. La fonctionnalité provenant du café ou de son procédé conduit à la famille intrinsèque ; celle provenant d’un ingrédient ajouté conduit aux cafés enrichis.
+
 La différence éditoriale repose sur quatre piliers :
 
 1. comparer des catégories avant de classer des marques ;
@@ -21,6 +29,17 @@ Ton : expert accessible, précis, sobre et curieux. Le site refuse les promesses
 ```text
 /
 ├── guide-cafe-adaptogene/
+├── quel-cafe-me-correspond/
+├── univers-cafe/
+│   ├── cafe-classique-specialite/
+│   └── cafe-intrinsequement-fonctionnel/
+├── cafes-enrichis/
+│   ├── cafe-champignons-plantes/
+│   ├── cafe-nutrition-performance/
+│   └── cafe-multi-actifs/
+├── alternatives-derives-cafe/
+│   ├── alternatives-cafe/
+│   └── produits-cerise-cafe/
 ├── comparatifs/
 │   ├── meilleur-cafe-adaptogene/
 │   ├── cafe-champignon/
@@ -134,6 +153,10 @@ Chaque fiche marque renvoie vers sa catégorie, les ingrédients principaux et d
 - données factuelles citées au plus près ;
 - balisage `Article`, `FAQPage`, `ItemList` et `Product` uniquement lorsqu’il est justifié ;
 - pas de FAQ artificielle ni de balisage qui ne correspond pas au contenu visible.
+
+### Questionnaire de recommandation
+
+Le sélecteur « Quel café vous correspond ? » fonctionne sans collecte de données personnelles. Il classe les produits selon le goût attendu, la composition, l’objectif, la préparation, la caféine, la simplicité et le budget. Le taux de commission n’entre jamais dans le calcul. Torrégral est favorisé uniquement lorsque ses différences objectives — vrai goût de café, rituel conservé et fonctionnalité intrinsèque — correspondent aux réponses.
 
 ## 5. Monétisation et crédibilité
 

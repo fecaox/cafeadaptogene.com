@@ -11,6 +11,7 @@ export type Guide = {
   keyPoints: string[];
   criteria: { title: string; text: string }[];
   faq: { question: string; answer: string }[];
+  productIds?: string[];
 };
 
 export const guides: Guide[] = [
@@ -175,6 +176,563 @@ export const guides: Guide[] = [
     ],
   },
 ];
+
+export type Universe = {
+  id: string;
+  number: string;
+  title: string;
+  slug: string;
+  kicker: string;
+  description: string;
+  color: string;
+  children: { title: string; slug: string; note: string }[];
+};
+
+export const universes: Universe[] = [
+  {
+    id: "coffee",
+    number: "01",
+    title: "L’univers du café",
+    slug: "univers-cafe",
+    kicker: "Du classique au café intrinsèquement fonctionnel",
+    description: "Des cafés qui conservent le goût, le geste et le rituel d’une vraie tasse, qu’ils soient traditionnels ou transformés d’une manière nouvelle.",
+    color: "universe-rust",
+    children: [
+      { title: "Café classique & spécialité", slug: "cafe-classique-specialite", note: "Origines, torréfactions et préparations" },
+      { title: "Café intrinsèquement fonctionnel", slug: "cafe-intrinsequement-fonctionnel", note: "La fonctionnalité vient du fruit et du procédé" },
+    ],
+  },
+  {
+    id: "enriched",
+    number: "02",
+    title: "Cafés enrichis",
+    slug: "cafes-enrichis",
+    kicker: "Un café, plus un ou plusieurs actifs",
+    description: "Champignons, plantes, collagène, protéines ou formules tout-en-un : ici, la fonctionnalité vient principalement d’ingrédients ajoutés.",
+    color: "universe-sage",
+    children: [
+      { title: "Champignons & plantes", slug: "cafe-champignons-plantes", note: "Lion’s Mane, Chaga, adaptogènes…" },
+      { title: "Nutrition & performance", slug: "cafe-nutrition-performance", note: "Protéines, collagène, créatine, MCT" },
+      { title: "Multi-actifs", slug: "cafe-multi-actifs", note: "Les formules all-in-one" },
+    ],
+  },
+  {
+    id: "alternatives",
+    number: "03",
+    title: "Alternatives & dérivés",
+    slug: "alternatives-derives-cafe",
+    kicker: "Pas vraiment du café, mais quand même",
+    description: "Des boissons torréfiées et des produits issus du caféier qui déplacent le rituel : chicorée, orge, lupin, cascara ou fruit entier.",
+    color: "universe-gold",
+    children: [
+      { title: "Alternatives & boissons hybrides", slug: "alternatives-cafe", note: "Chicorée, céréales et boissons minoritaires en café" },
+      { title: "Produits issus de la cerise", slug: "produits-cerise-cafe", note: "Cascara, café vert et fruit complet" },
+    ],
+  },
+];
+
+export type ProductProfile = {
+  id: string;
+  name: string;
+  product: string;
+  category: string;
+  origin: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  link: string;
+  relationship: "partenaire" | "editorial";
+  badges: string[];
+  taste: number;
+  compositions: string[];
+  goals: string[];
+  rituals: string[];
+  caffeine: "classic" | "reduced" | "none" | "variable";
+  simplicity: number;
+  priceTier: "value" | "balanced" | "premium";
+  strengths: string[];
+  limits: string[];
+  verified: string;
+};
+
+export const products: ProductProfile[] = [
+  {
+    id: "torregral",
+    name: "Torrégral",
+    product: "Café premium nouvelle génération",
+    category: "Café intrinsèquement fonctionnel",
+    origin: "France",
+    description: "Un café présenté par la marque comme 100 % café, pensé pour conserver un goût familier et une préparation classique tout en travaillant une approche plus complète de la cerise.",
+    image: "/images/products/torregral-packaging.jpg",
+    imageAlt: "Paquet de café Torrégral",
+    link: "https://www.torregral.com/",
+    relationship: "partenaire",
+    badges: ["100 % café déclaré", "Goût café", "Procédé intrinsèque"],
+    taste: 5,
+    compositions: ["coffee-only"],
+    goals: ["ritual", "focus", "steady"],
+    rituals: ["machine", "filter"],
+    caffeine: "classic",
+    simplicity: 5,
+    priceTier: "premium",
+    strengths: ["Reste un véritable café", "Compatible avec le rituel habituel", "Sans champignons ni mélange aromatisé"],
+    limits: ["Ne convient pas à une recherche sans caféine", "Les bénéfices spécifiques doivent encore être documentés produit par produit"],
+    verified: "Site officiel consulté le 30 juillet 2026",
+  },
+  {
+    id: "cafeminceur",
+    name: "Café Minceur",
+    product: "Café au goût familier",
+    category: "Café intrinsèquement fonctionnel",
+    origin: "France",
+    description: "Une déclinaison à base de café qui se positionne sur le rituel et l’équilibre, sans transformer la tasse en latte ou en boisson aux champignons.",
+    image: "/images/products/cafeminceur-packaging.jpg",
+    imageAlt: "Paquet Café Minceur avec cuillère doseuse",
+    link: "https://www.cafeminceur.fr/",
+    relationship: "partenaire",
+    badges: ["Goût café", "Rituel quotidien", "Objectif équilibre"],
+    taste: 5,
+    compositions: ["coffee-only"],
+    goals: ["weight", "ritual"],
+    rituals: ["filter"],
+    caffeine: "classic",
+    simplicity: 5,
+    priceTier: "balanced",
+    strengths: ["Goût annoncé proche du café", "Routine simple", "Format découverte"],
+    limits: ["Aucun café ne garantit une perte de poids", "La caféine doit être prise en compte"],
+    verified: "Site officiel consulté le 30 juillet 2026",
+  },
+  {
+    id: "cafeintegral",
+    name: "Café Intégral",
+    product: "Fruit entier du caféier",
+    category: "Produit issu de la cerise de café",
+    origin: "France",
+    description: "Une approche centrée sur le fruit complet du caféier, distincte d’un café torréfié conventionnel et classée parmi les dérivés de la cerise.",
+    image: "/images/products/cafeintegral-packaging.jpg",
+    imageAlt: "Paquet Café Intégral à base de cerise de café",
+    link: "https://www.cafeintegral.fr/",
+    relationship: "partenaire",
+    badges: ["Fruit du caféier", "Infusion", "Approche intégrale"],
+    taste: 2,
+    compositions: ["fruit"],
+    goals: ["discover", "focus", "steady"],
+    rituals: ["infusion"],
+    caffeine: "variable",
+    simplicity: 5,
+    priceTier: "premium",
+    strengths: ["Valorise une autre partie du fruit", "Composition courte", "Univers distinct du café torréfié"],
+    limits: ["Ne reproduit pas exactement un espresso", "Teneur en caféine à vérifier selon la préparation"],
+    verified: "Site officiel consulté le 30 juillet 2026",
+  },
+  {
+    id: "bonjour",
+    name: "Bonjour",
+    product: "Super Café Original",
+    category: "Alternative multi-actifs",
+    origin: "France",
+    description: "Une boisson instantanée d’orge et de cacao enrichie en Lion’s Mane, Chaga et Cordyceps, avec 35 mg de caféine déclarés par portion.",
+    image: "/images/products/bonjourdrink-packaging.jpg",
+    imageAlt: "Sachet jaune Bonjour Super Café",
+    link: "https://eu.bonjourdrink.co/fr",
+    relationship: "editorial",
+    badges: ["Champignons", "35 mg caféine déclarés", "Instantané"],
+    taste: 2,
+    compositions: ["mushrooms", "multi", "alternative"],
+    goals: ["focus", "steady", "discover", "low-caffeine"],
+    rituals: ["instant"],
+    caffeine: "reduced",
+    simplicity: 3,
+    priceTier: "balanced",
+    strengths: ["Dose de caféine déclarée", "Format simple", "Profil cacao et céréales grillées"],
+    limits: ["Ne goûte pas comme un espresso", "Contient plusieurs ingrédients et de l’orge selon la recette"],
+    verified: "Site officiel consulté le 30 juillet 2026",
+  },
+  {
+    id: "wake",
+    name: "Wake",
+    product: "Boisson fonctionnelle",
+    category: "Multi-actifs",
+    origin: "France",
+    description: "Une formule instantanée positionnée entre alternative torréfiée, adaptogènes et nutrition, destinée à ceux qui acceptent de quitter le goût du café classique.",
+    image: "/images/products/wake-packaging.jpg",
+    imageAlt: "Packaging de la boisson fonctionnelle Wake",
+    link: "https://getyourwake.com/",
+    relationship: "editorial",
+    badges: ["Adaptogènes", "Collagène", "Instantané"],
+    taste: 2,
+    compositions: ["multi", "nutrition", "alternative"],
+    goals: ["beauty", "steady", "discover"],
+    rituals: ["instant"],
+    caffeine: "reduced",
+    simplicity: 2,
+    priceTier: "premium",
+    strengths: ["Formule tout-en-un", "Rituel rapide", "Positionnement différencié"],
+    limits: ["Formule complexe", "Profil gustatif différent du café"],
+    verified: "Informations publiques de la marque, vérifiées le 30 juillet 2026",
+  },
+  {
+    id: "brainstoorm",
+    name: "Brainstoorm",
+    product: "Mushroom Coffee",
+    category: "Café aux champignons et plantes",
+    origin: "France",
+    description: "Un mélange fonctionnel centré sur les champignons et les plantes, pour les personnes qui recherchent explicitement ce type d’actifs.",
+    image: "/images/products/brainstoorm-packaging.jpg",
+    imageAlt: "Packaging Brainstoorm Mushroom Coffee",
+    link: "https://mushngo.com/products/brainstoorm-coffee",
+    relationship: "editorial",
+    badges: ["Champignons", "Plantes", "Focus déclaré"],
+    taste: 3,
+    compositions: ["mushrooms", "multi"],
+    goals: ["focus", "discover"],
+    rituals: ["instant"],
+    caffeine: "variable",
+    simplicity: 2,
+    priceTier: "premium",
+    strengths: ["Positionnement clair", "Association de plusieurs actifs", "Format pratique"],
+    limits: ["Composition plus complexe", "Caféine et dosages à vérifier avant achat"],
+    verified: "Informations publiques de la marque, vérifiées le 30 juillet 2026",
+  },
+  {
+    id: "frenchmush",
+    name: "French Mush",
+    product: "Boisson Boost Café",
+    category: "Café aux champignons",
+    origin: "France",
+    description: "Une boisson au café enrichie en champignons, à comparer sur la nature des extraits, la dose par tasse et la proximité gustative avec le café.",
+    image: "/images/products/frenchmush-packaging.jpg",
+    imageAlt: "Packaging French Mush Boisson Boost Café",
+    link: "https://www.frenchmush.com/products/boisson-boost-bio-cafe",
+    relationship: "editorial",
+    badges: ["Café", "Champignons", "Bio déclaré"],
+    taste: 3,
+    compositions: ["mushrooms"],
+    goals: ["focus", "discover"],
+    rituals: ["instant"],
+    caffeine: "variable",
+    simplicity: 3,
+    priceTier: "premium",
+    strengths: ["Univers spécialisé", "Base café identifiable", "Option française"],
+    limits: ["Goût potentiellement différent", "Données par portion à vérifier"],
+    verified: "Informations publiques de la marque, vérifiées le 30 juillet 2026",
+  },
+  {
+    id: "guerriers",
+    name: "Café des Guerriers",
+    product: "Café & champignons bio",
+    category: "Café aux champignons",
+    origin: "France",
+    description: "Un positionnement qui conserve une base café tout en ajoutant des champignons fonctionnels, pertinent pour ceux qui veulent une tasse encore reconnaissable.",
+    image: "/images/products/cafedesguerriers-packaging.jpg",
+    imageAlt: "Café et packaging Café des Guerriers",
+    link: "https://cafedesguerriers.fr/",
+    relationship: "editorial",
+    badges: ["Café", "Champignons", "Bio déclaré"],
+    taste: 4,
+    compositions: ["mushrooms"],
+    goals: ["focus", "steady", "discover"],
+    rituals: ["machine", "filter"],
+    caffeine: "classic",
+    simplicity: 3,
+    priceTier: "premium",
+    strengths: ["Rituel proche du café", "Association café et champignons", "Positionnement premium"],
+    limits: ["Actifs ajoutés", "Ne convient pas à une recherche sans caféine"],
+    verified: "Informations publiques de la marque, vérifiées le 30 juillet 2026",
+  },
+  {
+    id: "strate",
+    name: "Strate",
+    product: "Café aux six champignons",
+    category: "Café multi-actifs",
+    origin: "France",
+    description: "Une formule large autour de plusieurs champignons, pour les utilisateurs qui privilégient la diversité des actifs à la sobriété de la recette.",
+    image: "/images/products/strate-packaging.jpg",
+    imageAlt: "Boîte de café Strate aux champignons",
+    link: "https://stratecafe.com/",
+    relationship: "editorial",
+    badges: ["Six champignons", "Multi-actifs", "Café"],
+    taste: 3,
+    compositions: ["mushrooms", "multi"],
+    goals: ["focus", "steady", "discover"],
+    rituals: ["instant"],
+    caffeine: "variable",
+    simplicity: 1,
+    priceTier: "premium",
+    strengths: ["Large spectre d’ingrédients", "Univers bien identifié", "Format fonctionnel"],
+    limits: ["Nombreux actifs à évaluer", "La longueur de la formule ne garantit pas son efficacité"],
+    verified: "Informations publiques de la marque, vérifiées le 30 juillet 2026",
+  },
+  {
+    id: "cosmicblend",
+    name: "Cosmic Blend",
+    product: "Mushroom Coffee Collagen",
+    category: "Multi-actifs et collagène",
+    origin: "France",
+    description: "Une formule hybride associant caféine modérée déclarée, champignons, L-théanine et collagène marin.",
+    image: "/images/products/cosmicblend-packaging.jpg",
+    imageAlt: "Pot Cosmic Blend Mushroom Coffee",
+    link: "https://cosmicblend.co/products/mushroom-coffee-cafe-champignons",
+    relationship: "editorial",
+    badges: ["Collagène marin", "Champignons", "Multi-actifs"],
+    taste: 2,
+    compositions: ["nutrition", "mushrooms", "multi"],
+    goals: ["beauty", "focus", "steady"],
+    rituals: ["instant"],
+    caffeine: "reduced",
+    simplicity: 1,
+    priceTier: "premium",
+    strengths: ["Réunit plusieurs usages", "Caféine annoncée modérée", "Format instantané"],
+    limits: ["Contient du collagène marin", "Difficile d’isoler le rôle de chaque actif"],
+    verified: "Informations publiques de la marque, vérifiées le 30 juillet 2026",
+  },
+  {
+    id: "cafit",
+    name: "Cafit",
+    product: "Café protéiné",
+    category: "Nutrition et performance",
+    origin: "France",
+    description: "Un café instantané enrichi en protéines, conçu pour rapprocher le café du matin et la collation sportive.",
+    image: "/images/products/cafit-packaging.jpg",
+    imageAlt: "Boîte Cafit café protéiné",
+    link: "https://cafitdrink.com/",
+    relationship: "editorial",
+    badges: ["Protéines", "Sport", "Instantané"],
+    taste: 3,
+    compositions: ["nutrition"],
+    goals: ["performance"],
+    rituals: ["instant"],
+    caffeine: "variable",
+    simplicity: 3,
+    priceTier: "balanced",
+    strengths: ["Objectif nutritionnel lisible", "Format pratique", "Alternative au proffee maison"],
+    limits: ["Ne remplace pas automatiquement un repas", "Source et dose de protéines à comparer"],
+    verified: "Informations publiques de la marque, vérifiées le 30 juillet 2026",
+  },
+  {
+    id: "corial",
+    name: "Corial",
+    product: "Collagen Coffee Original",
+    category: "Nutrition et performance",
+    origin: "Europe",
+    description: "Un café au collagène destiné à ceux qui souhaitent réunir leur boisson chaude et leur routine de peptides dans un même produit.",
+    image: "/images/products/corial-packaging.jpg",
+    imageAlt: "Packaging Corial Collagen Coffee Original",
+    link: "https://corialfoods.com/fr/collections/performance/products/collagen-coffee-original",
+    relationship: "editorial",
+    badges: ["Collagène", "Café", "Instantané"],
+    taste: 3,
+    compositions: ["nutrition"],
+    goals: ["beauty", "performance"],
+    rituals: ["instant"],
+    caffeine: "variable",
+    simplicity: 3,
+    priceTier: "balanced",
+    strengths: ["Usage très lisible", "Deux routines réunies", "Préparation rapide"],
+    limits: ["Non végétalien", "À comparer avec un collagène ajouté séparément"],
+    verified: "Informations publiques de la marque, vérifiées le 30 juillet 2026",
+  },
+];
+
+export const taxonomyGuides: Guide[] = [
+  {
+    slug: "univers-cafe", eyebrow: "Univers 01", title: "L’univers du café : du classique au café intrinsèquement fonctionnel", color: "copper", icon: "01",
+    description: "Comprendre ce qui reste pleinement du café : origines, spécialité, torréfaction et procédés fonctionnels issus du fruit.",
+    intro: "Cet univers réunit les produits dont la tasse, le goût et la préparation restent ceux d’un café. La frontière décisive n’est pas la modernité du discours, mais l’origine de la fonctionnalité : lorsqu’elle vient du café lui-même ou de son procédé, le produit reste ici.",
+    keyPoints: ["Goût et rituel de café conservés", "Fonctionnalité intrinsèque ou café classique", "Pas d’actif externe dominant", "Préparation clairement indiquée"],
+    criteria: [
+      { title: "Le produit reste-t-il un café ?", text: "Nous regardons sa base, son goût et sa préparation réelle, pas seulement le mot café sur l’emballage." },
+      { title: "D’où vient la différence ?", text: "Origine, variété, torréfaction ou nouveau travail de la cerise : la fonctionnalité doit venir du café." },
+      { title: "Le rituel est-il conservé ?", text: "Machine, filtre ou extraction habituelle sont des marqueurs importants pour cet univers." },
+    ],
+    faq: [
+      { question: "Pourquoi ne pas appeler cet univers “100 % café” ?", answer: "Parce que certaines recettes ou préparations peuvent contenir d’autres éléments. Le titre doit rester exact dans tous les cas." },
+      { question: "Un café innovant peut-il rester un vrai café ?", answer: "Oui, si l’innovation concerne le fruit ou sa transformation et que la tasse conserve la nature et le rituel d’un café." },
+      { question: "Les cafés aux champignons sont-ils inclus ?", answer: "Non : leur fonctionnalité vient principalement d’ingrédients ajoutés, ils appartiennent aux cafés enrichis." },
+    ], productIds: ["torregral", "cafeminceur"],
+  },
+  {
+    slug: "cafe-classique-specialite", eyebrow: "Famille 01", title: "Café classique et café de spécialité : les repères essentiels", color: "sand", icon: "C",
+    description: "Espresso, filtre, dosettes, origines, variétés et torréfactions : le socle indispensable pour comparer le café augmenté.",
+    intro: "Avant de parler de café fonctionnel, il faut savoir ce que l’on compare. Le café classique se décrit par son espèce, son origine, son traitement, sa torréfaction, sa fraîcheur et sa méthode de préparation. Le café de spécialité ajoute des exigences de qualité et de traçabilité, sans devenir pour autant un café enrichi.",
+    keyPoints: ["Arabica, robusta et variétés", "Origine et méthode de traitement", "Torréfaction et fraîcheur", "Méthode de préparation"],
+    criteria: [
+      { title: "Le grain", text: "Variété, terroir et traitement structurent le potentiel aromatique avant même la torréfaction." },
+      { title: "La torréfaction", text: "Claire, moyenne ou foncée : elle modifie fortement acidité, amertume et perception du corps." },
+      { title: "La tasse", text: "Espresso, filtre, piston ou dosette ne sont pas des cafés différents mais des méthodes d’extraction." },
+    ],
+    faq: [
+      { question: "Qu’est-ce qu’un café de spécialité ?", answer: "C’est un café évalué selon des critères de qualité, de traçabilité et de défauts, généralement associé à une origine et une torréfaction précises." },
+      { question: "Un latte est-il une variété de café ?", answer: "Non. C’est une préparation associant un espresso et du lait ou une boisson végétale." },
+      { question: "Le café classique est-il fonctionnel ?", answer: "Le café possède naturellement des composés actifs, mais nous réservons ici l’expression intrinsèquement fonctionnel aux procédés revendiquant une différence spécifique et documentable." },
+    ],
+  },
+  {
+    slug: "cafe-intrinsequement-fonctionnel", eyebrow: "Famille 02", title: "Café intrinsèquement fonctionnel : l’innovation vient du café", color: "copper", icon: "I",
+    description: "Une nouvelle famille de cafés qui conservent le goût et le rituel tout en travaillant autrement le fruit du caféier.",
+    intro: "Le café intrinsèquement fonctionnel ne reçoit pas nécessairement une longue liste d’actifs. Sa différence vient du choix de la matière première, du fruit du caféier ou d’un procédé particulier. Pour rester dans cette famille, il doit encore se boire et se reconnaître comme un véritable café.",
+    keyPoints: ["Goût de café reconnaissable", "Procédé clairement expliqué", "Fonctionnalité issue du café", "Comparaison possible avec un café classique"],
+    criteria: [
+      { title: "Une définition stricte", text: "Ajouter un champignon ou du collagène fait basculer le produit dans les cafés enrichis, même si la base est excellente." },
+      { title: "La preuve du procédé", text: "La marque doit pouvoir expliquer la matière utilisée, les étapes de transformation et les différences mesurables." },
+      { title: "Le test de la tasse", text: "Le produit doit conserver un goût et une préparation suffisamment proches du café pour tenir sa promesse sensorielle." },
+    ],
+    faq: [
+      { question: "Torrégral appartient-il à cette famille ?", answer: "Oui selon son positionnement actuel : la marque le présente comme un café, sans champignons ni substitut, dont l’innovation vient d’une approche plus complète de la cerise." },
+      { question: "Café Intégral 100 % appartient-il à cette famille ?", answer: "Non dans notre taxonomie : il relève des produits issus de la cerise car son usage et son goût ne sont pas nécessairement ceux d’un café torréfié conventionnel." },
+      { question: "Une déclinaison enrichie de Torrégral reste-t-elle ici ?", answer: "Non si un actif externe devient central. Elle conserve alors l’étiquette “base Torrégral”, mais sa catégorie principale devient café enrichi." },
+    ], productIds: ["torregral", "cafeminceur"],
+  },
+  {
+    slug: "cafes-enrichis", eyebrow: "Univers 02", title: "Cafés enrichis : comprendre ce que l’on ajoute à la tasse", color: "sage", icon: "02",
+    description: "Champignons, plantes, protéines, collagène ou formules all-in-one : une carte claire des cafés avec ingrédients ajoutés.",
+    intro: "Les cafés enrichis forment le territoire le plus visible du café fonctionnel. Leur point commun est simple : une partie importante de leur promesse vient d’un ingrédient ajouté. Cela ne les rend ni meilleurs ni moins bons ; cela impose seulement de vérifier les quantités, la compatibilité alimentaire et la cohérence de la formule.",
+    keyPoints: ["Actifs et quantités par tasse", "Base réellement utilisée", "Allergènes et compatibilités", "Goût et format de préparation"],
+    criteria: [
+      { title: "Champignons et plantes", text: "Comparer les espèces, les parties utilisées, les extraits et les dosages plutôt que le nombre de logos." },
+      { title: "Nutrition et performance", text: "Protéines, collagène et créatine répondent à des usages différents et ne doivent pas être confondus." },
+      { title: "Multi-actifs", text: "Plus la formule est longue, plus la transparence des quantités et l’explication du rôle de chaque ingrédient deviennent importantes." },
+    ],
+    faq: [
+      { question: "Pourquoi éviter “artificiellement enrichi” ?", answer: "Parce que les ingrédients ajoutés peuvent être naturels et que l’expression introduit un jugement avant l’analyse de la formule." },
+      { question: "Un café enrichi peut-il avoir un vrai goût de café ?", answer: "Oui, surtout lorsque la base café reste dominante, mais les poudres et arômes ajoutés peuvent modifier sensiblement la tasse." },
+      { question: "Plus d’actifs signifie-t-il plus d’efficacité ?", answer: "Non. Les quantités, la qualité des extraits, les interactions et les preuves comptent davantage que la longueur de la liste." },
+    ], productIds: ["bonjour", "guerriers", "cafit", "cosmicblend"],
+  },
+  {
+    slug: "cafe-champignons-plantes", eyebrow: "Famille 03", title: "Cafés aux champignons et aux plantes fonctionnelles", color: "sage", icon: "M",
+    description: "Lion’s Mane, Chaga, Reishi, Cordyceps et plantes : comment lire les formules sans confondre présence et preuve.",
+    intro: "Cette famille réunit deux sous-ensembles proches mais distincts : les cafés aux champignons fonctionnels et les cafés enrichis en plantes. Dans les deux cas, la qualité de l’extrait, la dose par tasse et la transparence de la marque comptent plus qu’une simple mention en façade.",
+    keyPoints: ["Espèce et partie utilisées", "Extrait ou poudre brute", "Dose par portion", "Base café, céréale ou cacao"],
+    criteria: [
+      { title: "Champignons", text: "Lion’s Mane, Chaga, Reishi et Cordyceps n’ont ni le même historique ni les mêmes usages revendiqués." },
+      { title: "Plantes", text: "Les plantes dites adaptogènes doivent être identifiées précisément, avec une vigilance particulière sur les contre-indications." },
+      { title: "Goût réel", text: "Une formule peut ressembler à un café, à un cacao ou à une boisson de céréales : nous le précisons avant la promesse fonctionnelle." },
+    ],
+    faq: [
+      { question: "Le café aux champignons goûte-t-il le champignon ?", answer: "Pas toujours. Le café, le cacao ou les céréales peuvent masquer les notes terreuses, mais le résultat varie fortement." },
+      { question: "Corps fructifère ou mycélium ?", answer: "Cette information aide à comprendre la matière utilisée, mais elle ne remplace pas les données d’extraction, de standardisation et de dose." },
+      { question: "Ces produits conviennent-ils à tout le monde ?", answer: "Non nécessairement. Les plantes et extraits peuvent présenter des précautions, notamment avec certains traitements ou situations médicales." },
+    ], productIds: ["bonjour", "brainstoorm", "frenchmush", "guerriers", "strate"],
+  },
+  {
+    slug: "cafe-nutrition-performance", eyebrow: "Famille 04", title: "Cafés nutritionnels et de performance", color: "gold", icon: "N",
+    description: "Protéines, whey, collagène, créatine et MCT : choisir selon l’usage nutritionnel réel, pas selon la tendance.",
+    intro: "Le café devient ici un véhicule nutritionnel. Certaines formules visent une collation protéinée, d’autres une routine collagène ou un usage sportif. Les grammes par portion, la source de l’actif, les calories et la tolérance digestive doivent être visibles immédiatement.",
+    keyPoints: ["Grammes par portion", "Source de l’actif", "Calories, sucres et édulcorants", "Usage avant ou après l’effort"],
+    criteria: [
+      { title: "Protéines", text: "Whey, végétal et collagène n’ont pas le même profil d’acides aminés ni le même rôle nutritionnel." },
+      { title: "Collagène", text: "Son origine animale, sa quantité et le prix pour une dose comparable doivent être indiqués." },
+      { title: "Créatine et MCT", text: "Le dosage, la tolérance et l’intérêt d’une association systématique au café doivent être examinés séparément." },
+    ],
+    faq: [
+      { question: "Un café protéiné remplace-t-il un petit-déjeuner ?", answer: "Pas automatiquement. Il faut considérer l’ensemble des protéines, fibres, calories et micronutriments apportés." },
+      { question: "Le collagène est-il végétalien ?", answer: "Non. Le collagène commercial est d’origine animale, généralement bovine ou marine." },
+      { question: "Faut-il prendre la créatine avec du café ?", answer: "Le café peut être un support pratique, mais la pertinence dépend surtout de la dose totale, de la régularité et de la tolérance individuelle." },
+    ], productIds: ["cafit", "corial", "cosmicblend", "wake"],
+  },
+  {
+    slug: "cafe-multi-actifs", eyebrow: "Famille 05", title: "Cafés multi-actifs : les formules all-in-one", color: "blue", icon: "+",
+    description: "Plusieurs promesses dans une tasse : comment évaluer une formule qui combine champignons, plantes, nutriments et caféine.",
+    intro: "Les cafés all-in-one veulent simplifier la routine en réunissant plusieurs familles d’actifs. Leur commodité est réelle, mais la comparaison devient difficile lorsque les quantités sont regroupées ou que chaque ingrédient est présent à une dose très faible.",
+    keyPoints: ["Quantité de chaque actif", "Absence de mélange propriétaire opaque", "Compatibilité entre ingrédients", "Coût face à des produits séparés"],
+    criteria: [
+      { title: "La lisibilité", text: "Une formule complète doit être plus transparente, pas moins : chaque dose doit pouvoir être comprise." },
+      { title: "La cohérence", text: "Les actifs doivent répondre à un usage commun plutôt qu’accumuler des promesses sans hiérarchie." },
+      { title: "La tolérance", text: "Plus il y a d’ingrédients, plus il devient difficile d’identifier la cause d’un effet indésirable." },
+    ],
+    faq: [
+      { question: "Un all-in-one remplace-t-il plusieurs compléments ?", answer: "Seulement si les actifs et les doses sont comparables, ce qui doit être vérifié sur l’étiquette." },
+      { question: "Pourquoi les mélanges propriétaires posent-ils problème ?", answer: "Ils peuvent indiquer une quantité totale sans révéler la dose de chaque ingrédient." },
+      { question: "À qui cette famille convient-elle ?", answer: "Aux personnes qui privilégient la commodité et acceptent une formule complexe, après vérification des ingrédients et précautions." },
+    ], productIds: ["bonjour", "wake", "brainstoorm", "strate", "cosmicblend"],
+  },
+  {
+    slug: "alternatives-derives-cafe", eyebrow: "Univers 03", title: "Alternatives et dérivés du café", color: "gold", icon: "03",
+    description: "Chicorée, lupin, céréales torréfiées, cascara et fruit du caféier : tout ce qui prolonge le rituel sans être un espresso classique.",
+    intro: "Cet univers accueille deux familles souvent confondues : les alternatives fabriquées avec d’autres plantes, et les produits provenant bien du caféier mais consommés autrement. Leur intérêt se mesure d’abord au goût recherché, à la caféine et au rituel que l’on souhaite conserver.",
+    keyPoints: ["Origine botanique réelle", "Présence et quantité de café", "Caféine par tasse", "Goût et préparation"],
+    criteria: [
+      { title: "Alternatives", text: "Chicorée, lupin et céréales cherchent surtout à reproduire des notes torréfiées, souvent avec moins ou sans caféine." },
+      { title: "Boissons hybrides", text: "Une petite quantité de café peut cohabiter avec une base majoritaire de cacao, céréales ou plantes." },
+      { title: "Dérivés du fruit", text: "Cascara, café vert et fruit complet viennent du caféier, mais leur tasse et leur usage diffèrent du café torréfié." },
+    ],
+    faq: [
+      { question: "La chicorée est-elle du café ?", answer: "Non. C’est une autre plante dont la racine torréfiée produit une boisson aux notes grillées." },
+      { question: "La cascara contient-elle de la caféine ?", answer: "Elle peut en contenir, avec une teneur dépendant du produit et de la préparation." },
+      { question: "Pourquoi conserver ces produits sur cafeadaptogene.com ?", answer: "Parce qu’ils répondent souvent à la même intention : garder un rituel chaud et fonctionnel en modifiant le café classique." },
+    ], productIds: ["cafeintegral", "bonjour", "wake"],
+  },
+  {
+    slug: "alternatives-cafe", eyebrow: "Famille 06", title: "Alternatives au café et boissons hybrides", color: "sand", icon: "A",
+    description: "Chicorée, lupin, orge, petit épeautre et sarrasin torréfiés : comparer le goût, la caféine et la composition.",
+    intro: "Les alternatives au café utilisent d’autres racines, graines ou céréales torréfiées pour produire une boisson brune et réconfortante. Les boissons hybrides y ajoutent parfois une petite quantité de café ou un extrait de caféine. Elles doivent être décrites selon leur ingrédient principal, pas seulement selon leur ressemblance visuelle avec le café.",
+    keyPoints: ["Ingrédient majoritaire", "Présence de gluten ou allergènes", "Caféine ajoutée ou naturelle", "Sucres et arômes"],
+    criteria: [
+      { title: "Chicorée", text: "Naturellement sans caféine, elle apporte amertume et notes torréfiées, avec un profil distinct du café." },
+      { title: "Lupin et graines", text: "Ils peuvent offrir un rituel proche du filtre tout en demandant une attention particulière aux allergènes." },
+      { title: "Hybrides", text: "Le pourcentage de café ou la dose d’extrait de caféine doit être indiqué pour comprendre l’effet stimulant." },
+    ],
+    faq: [
+      { question: "Quelle alternative ressemble le plus au café ?", answer: "Cela dépend de la torréfaction et de la recette ; aucune ne reproduit exactement un espresso, mais certaines approchent ses notes grillées." },
+      { question: "Toutes les alternatives sont-elles sans caféine ?", answer: "Non. Certaines boissons hybrides ajoutent du café ou un extrait de caféine." },
+      { question: "Les céréales torréfiées contiennent-elles du gluten ?", answer: "L’orge, le seigle et l’épeautre en contiennent ; il faut vérifier l’étiquette et les procédés revendiqués par la marque." },
+    ], productIds: ["bonjour", "wake"],
+  },
+  {
+    slug: "produits-cerise-cafe", eyebrow: "Famille 07", title: "Produits fonctionnels issus de la cerise de café", color: "rose", icon: "F",
+    description: "Cascara, café vert, fruit entier et extraits : les usages fonctionnels du caféier au-delà du grain torréfié.",
+    intro: "Le caféier produit un fruit dont le grain n’est qu’une partie. Cette famille explore la peau et la pulpe séchées, le café vert, le fruit complet et ses extraits. Ces produits appartiennent bien à l’univers du caféier, mais pas nécessairement à celui du goût et de la préparation d’un café classique.",
+    keyPoints: ["Partie du fruit utilisée", "Séchage et transformation", "Caféine et polyphénols", "Infusion, poudre ou extrait"],
+    criteria: [
+      { title: "Cascara", text: "La peau et la pulpe séchées s’infusent généralement comme une tisane fruitée." },
+      { title: "Café vert", text: "Non torréfié, il possède un profil gustatif et une composition différents du café brun." },
+      { title: "Fruit complet", text: "Il cherche à valoriser plusieurs parties de la cerise et doit expliquer précisément son procédé." },
+    ],
+    faq: [
+      { question: "Pourquoi cette famille est-elle séparée du café intrinsèquement fonctionnel ?", answer: "Parce que ces produits ne conservent pas toujours le goût, l’extraction et le rituel d’un café torréfié." },
+      { question: "La cascara est-elle un déchet valorisé ?", answer: "Elle provient d’une partie souvent écartée lors de la préparation du grain ; sa valorisation peut créer un produit distinct." },
+      { question: "Le café vert a-t-il le goût du café ?", answer: "Non. Sans torréfaction, son profil est généralement plus végétal et moins marqué par les arômes grillés." },
+    ], productIds: ["cafeintegral"],
+  },
+];
+
+export const supportGuides: Guide[] = [
+  {
+    slug: "methodologie", eyebrow: "Transparence", title: "Notre méthode de comparaison", color: "blue", icon: "M",
+    description: "Comment Café Adaptogène classe, vérifie et compare des produits qui ne jouent pas tous dans la même catégorie.",
+    intro: "Nous commençons par classer le produit avant de le noter. Une chicorée, un espresso et un café au collagène ne concourent pas dans le même classement. Chaque fiche sépare composition vérifiée, déclarations de la marque, niveau de preuve et appréciation éditoriale.",
+    keyPoints: ["Une catégorie principale par produit", "Données normalisées par tasse", "Critères propres à chaque famille", "Date et source de vérification"],
+    criteria: [
+      { title: "Socle commun", text: "Goût, transparence, préparation, prix par tasse et qualité de l’information sont comparés pour tous." },
+      { title: "Critères spécialisés", text: "Dosage protéique, type d’extrait ou fidélité au goût du café n’ont pas le même poids selon la catégorie." },
+      { title: "Indépendance", text: "Une relation commerciale est signalée et ne modifie jamais la formule de calcul du questionnaire ou d’un classement." },
+    ],
+    faq: [
+      { question: "Les produits sont-ils tous testés physiquement ?", answer: "Non. Une fiche précise ce qui provient d’un test, de l’étiquette ou des déclarations publiques de la marque." },
+      { question: "Comment sont traités les prix ?", answer: "Nous privilégions le prix par portion à la dose recommandée et indiquons la date de vérification." },
+      { question: "Une marque peut-elle acheter sa note ?", answer: "Non. Elle peut corriger une donnée factuelle documentée, jamais choisir le résultat éditorial." },
+    ],
+  },
+  {
+    slug: "politique-affiliation", eyebrow: "Indépendance", title: "Financement et politique d’affiliation", color: "sage", icon: "€",
+    description: "Comment le site peut être rémunéré sans transformer ses recommandations en publicité déguisée.",
+    intro: "Certains liens peuvent générer une commission lorsque vous achetez un produit. Cela n’augmente pas votre prix. Les relations directes avec Torrégral, Café Intégral et Café Minceur sont indiquées ; elles n’accordent aucun bonus automatique dans les classements ou le questionnaire.",
+    keyPoints: ["Liens commerciaux signalés", "Aucun classement acheté", "Même grille pour toutes les marques", "Alternative non affiliée toujours possible"],
+    criteria: [
+      { title: "Signalement local", text: "La nature commerciale d’un lien est indiquée près du bouton concerné, pas seulement dans le pied de page." },
+      { title: "Séparation", text: "Le modèle de données et les scores sont définis indépendamment du taux de commission." },
+      { title: "Corrections", text: "Une marque peut fournir une source ou demander la correction d’un fait, mais pas réécrire notre appréciation." },
+    ],
+    faq: [
+      { question: "Les liens affiliés changent-ils le prix ?", answer: "En principe non ; la commission est versée par le marchand selon son programme." },
+      { question: "Pourquoi Torrégral apparaît-il souvent ?", answer: "Parce qu’il correspond à plusieurs profils recherchant un vrai goût de café et une fonctionnalité intrinsèque. Il ne gagne pas pour les profils collagène, protéines, champignons ou sans caféine." },
+      { question: "Les marques sans affiliation sont-elles comparées ?", answer: "Oui. L’objectif est de couvrir le marché, qu’un programme commercial existe ou non." },
+    ],
+  },
+];
+
+export const allGuides = [...taxonomyGuides, ...guides, ...supportGuides];
 
 export const brands = [
   { name: "Torrégral", category: "Focus & café nouvelle génération", origin: "France", link: "https://www.torregral.com/", featured: true },
