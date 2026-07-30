@@ -17,8 +17,4 @@ Visuels collectés le 30 juillet 2026 et intégrés à cafeadaptogene.com dans u
 | `cafit-packaging.jpg` | Premier média produit officiel de `https://cafitdrink.com/` |
 | `corial-packaging.jpg` | Image sociale officielle de `https://corialfoods.com/fr/collections/performance/products/collagen-coffee-original` |
 
-## Visuel manquant
-
-`mugwi-packaging.jpg` n’a pas été créé : le domaine officiel `mugwi.com` ne résout plus dans le DNS au moment de la collecte et aucun visuel produit officiel fiable n’a pu être téléchargé. Ne pas substituer une image d’une autre marque. Retenter depuis une archive officielle ou demander le visuel à MUGWI avant publication.
-
 Les visuels de marques tierces servent à identifier et comparer leurs produits dans un contexte éditorial. Conserver les liens vers les sources et ne pas les présenter comme des créations de cafeadaptogene.com.

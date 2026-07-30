@@ -162,10 +162,6 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <div className="brand-watch">
-            <b>Marque sous surveillance</b>
-            <p><strong>MUGWI</strong> a été identifié dans la catégorie café &amp; champignons. Son domaine officiel ne répondait plus lors de notre vérification du 30 juillet 2026 : nous le citons dans l’observatoire, mais suspendons sa fiche et son visuel jusqu’à retrouver une source officielle fiable.</p>
-          </div>
         </section>
 
         <section className="method-band">

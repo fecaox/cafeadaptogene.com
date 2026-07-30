@@ -164,10 +164,6 @@ img { max-width: 100%; }
 .brand-wall small { color: var(--rust); font-size: 6px; letter-spacing: .1em; text-transform: uppercase; }
 .brand-wall h3 { margin: 7px 0; font-family: var(--serif); font-size: 23px; font-weight: 400; }
 .brand-wall p { margin: 0; color: var(--muted); font-size: 8px; line-height: 1.5; }
-.brand-watch { margin-top: 20px; padding: 17px 20px; display: grid; grid-template-columns: 180px 1fr; gap: 25px; border: 1px solid var(--line); }
-.brand-watch > b { color: var(--rust); font-size: 8px; letter-spacing: .1em; text-transform: uppercase; }
-.brand-watch p { margin: 0; color: var(--muted); font-size: 9px; line-height: 1.6; }
-.brand-watch strong { color: var(--ink); }
 .method-band { padding: 110px 7vw; display: grid; grid-template-columns: .8fr 1.2fr; gap: 9vw; color: var(--white); background: var(--ink); }
 .method-lead blockquote { max-width: 540px; margin: 55px 0 24px; font-family: var(--serif); font-size: clamp(34px, 3.8vw, 58px); letter-spacing: -.045em; line-height: 1.05; }
 .method-lead > p:not(.eyebrow) { max-width: 460px; color: #bfb4aa; line-height: 1.7; }
@@ -415,7 +411,6 @@ footer { color: #e7ded4; background: #211c18; }
   .brand-wall { grid-template-columns: 1fr; }
   .brand-wall > a { grid-template-columns: 24px 95px 1fr 12px; }
   .brand-wall-image { width: 95px; height: 115px; }
-  .brand-watch { grid-template-columns: 1fr; gap: 8px; }
   .method-band { padding: 75px 6vw; gap: 45px; }
   .method-steps article { grid-template-columns: 45px 1fr; padding: 20px 0; }
   .method-steps p { grid-column: 2; margin: 0; }

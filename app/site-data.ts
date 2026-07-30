@@ -745,7 +745,6 @@ export const brands = [
   { name: "Café des Guerriers", category: "Café & champignons bio", origin: "France", link: "https://cafedesguerriers.fr/", featured: false },
   { name: "Strate", category: "Café & six champignons", origin: "France", link: "https://stratecafe.com/", featured: false },
   { name: "Cosmic Blend", category: "Champignons & collagène", origin: "France", link: "https://cosmicblend.co/products/mushroom-coffee-cafe-champignons", featured: false },
-  { name: "MUGWI", category: "Café & champignons", origin: "France", link: "https://mugwi.com/", featured: false },
   { name: "Cafit", category: "Café protéiné", origin: "France", link: "https://cafitdrink.com/", featured: false },
   { name: "Corial", category: "Café collagène", origin: "Europe", link: "https://corialfoods.com/fr/collections/performance/products/collagen-coffee-original", featured: false },
 ];
