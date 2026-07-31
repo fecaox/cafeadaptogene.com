@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Une seule version publique du site : HTTPS, sans www.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.cafeadaptogene\.com$ [NC]
+RewriteRule ^ https://cafeadaptogene.com%{REQUEST_URI} [R=301,L]
