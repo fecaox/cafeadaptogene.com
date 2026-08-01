@@ -37,6 +37,7 @@ export default function BrandDirectoryPage() {
           position: index + 1,
           name: `${item.brand} — ${item.product}`,
           url: item.source.startsWith("http") ? item.source : `${siteUrl}/annuaire-cafes-fonctionnels/#${item.id}`,
+          ...(item.imagePath ? { image: `${siteUrl}${item.imagePath}` } : {}),
         })),
       },
     ],
@@ -59,7 +60,7 @@ export default function BrandDirectoryPage() {
             <div><dt>{directoryStats.references}</dt><dd>références documentées</dd></div>
             <div><dt>{directoryStats.brands}</dt><dd>marques recensées</dd></div>
             <div><dt>{directoryStats.documentedCaffeine}</dt><dd>teneurs en caféine documentées</dd></div>
-            <div><dt>{directoryStats.newReferences}</dt><dd>nouvelles références ajoutées</dd></div>
+            <div><dt>{directoryStats.packagingImages}</dt><dd>visuels de packaging vérifiés</dd></div>
           </dl>
         </header>
 
@@ -76,6 +77,7 @@ export default function BrandDirectoryPage() {
               <p><b>C</b><span>Source primaire absente, page retirée ou produit actuel incertain.</span></p>
             </div>
             <p className="directory-updated">Base mise à jour le {directoryUpdatedAt}. Les prix sont des observations datées et peuvent évoluer.</p>
+            <p className="directory-image-rights">Les visuels servent uniquement à identifier les références. Ils proviennent des marques ou des pages produit citées et restent la propriété de leurs ayants droit.</p>
           </div>
         </section>
 

@@ -69,8 +69,18 @@ test("server-renders the verified brand directory", async () => {
   assert.match(html, /128[\s\S]*références documentées/i);
   assert.match(html, /120[\s\S]*marques recensées/i);
   assert.match(html, /Four Sigmatic/i);
+  assert.match(html, /124[\s\S]*visuels de packaging vérifiés/i);
+  assert.match(html, /Packaging Four Sigmatic/i);
+  assert.match(html, /Visuel officiel non retrouvé/i);
+  assert.match(html, /Source du visuel/i);
   assert.match(html, /level-a/i);
   assert.match(html, /CollectionPage/i);
+
+  const root = new URL("../", import.meta.url);
+  const manifest = JSON.parse(await readFile(new URL("data/brand-image-manifest.json", root), "utf8"));
+  assert.equal(Object.keys(manifest).length, 128);
+  assert.equal(Object.values(manifest).filter((entry) => !entry.imagePath).length, 4);
+  await Promise.all(Object.values(manifest).filter((entry) => entry.imagePath).map((entry) => access(new URL(`public${entry.imagePath}`, root))));
 });
 
 test("server-renders a priority SEO article with its internal cluster", async () => {

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import { directoryProducts, type DirectoryProduct } from "../brand-directory-data";
 
@@ -45,6 +46,28 @@ function ProductEntry({ item }: { item: DirectoryProduct }) {
           <span>{item.publicStatus}</span>
         </div>
       </div>
+
+      {item.imagePath ? (
+        <figure className="directory-entry-visual">
+          <Image
+            src={item.imagePath}
+            alt={`Packaging ${item.brand} ${item.product}`}
+            width={1000}
+            height={1000}
+            sizes="(max-width: 720px) 88vw, (max-width: 1200px) 42vw, 36vw"
+          />
+          <figcaption>
+            <span>Visuel du produit</span>
+            <a href={item.imagePageSource || item.imageSource || item.source} target="_blank" rel="nofollow noopener">Source du visuel ↗</a>
+          </figcaption>
+        </figure>
+      ) : (
+        <div className="directory-entry-visual directory-image-missing" role="img" aria-label={`Visuel de packaging non retrouvé pour ${item.brand} ${item.product}`}>
+          <span>Visuel officiel non retrouvé</span>
+          <b>{item.brand}</b>
+          <small>Nous préférons ne pas afficher d’image plutôt que de présenter un mauvais produit.</small>
+        </div>
+      )}
 
       <dl className="directory-facts">
         <Fact label="Expérience" value={item.experience} />

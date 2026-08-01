@@ -1,0 +1,55 @@
+{
+  "updatedAt": "2026-08-01",
+  "references": 128,
+  "counts": {
+    "existing-reviewed": 12,
+    "official-product-image": 52,
+    "reviewed-search-image": 24,
+    "official-page-image": 36,
+    "missing": 4
+  },
+  "missing": [
+    {
+      "id": "mudshroom-mudshroom-coffee",
+      "brand": "MudShroom",
+      "product": "MudShroom Coffee",
+      "imagePath": null,
+      "imageSource": null,
+      "pageSource": "https://mudshroomcoffee.co.za/products/mud-shroom-coffee",
+      "status": "missing",
+      "note": "fetch failed"
+    },
+    {
+      "id": "fungu-fungu-chocolate-flavor",
+      "brand": "Fungu",
+      "product": "Fungu Chocolate Flavor",
+      "imagePath": null,
+      "imageSource": null,
+      "pageSource": "https://fungu.es/producto/fungu/",
+      "status": "missing",
+      "note": "fetch failed"
+    },
+    {
+      "id": "eight-batch-001",
+      "brand": "Eight",
+      "product": "Batch 001",
+      "imagePath": null,
+      "imageSource": null,
+      "pageSource": "https://idrinkeight.com/",
+      "status": "missing",
+      "bytes": 43988,
+      "note": "Aucun visuel de packaging vérifiable n’a été trouvé. Le produit est encore en pré-lancement ou la marque ne publie pas de paquet identifiable."
+    },
+    {
+      "id": "urth-root-creatine-coffee",
+      "brand": "Urth&Root",
+      "product": "Creatine Coffee",
+      "imagePath": null,
+      "imageSource": null,
+      "pageSource": "https://urthandroot.com/",
+      "status": "missing",
+      "bytes": 19134,
+      "note": "Aucun visuel de packaging vérifiable n’a été trouvé. Le produit est encore en pré-lancement ou la marque ne publie pas de paquet identifiable."
+    }
+  ]
+}

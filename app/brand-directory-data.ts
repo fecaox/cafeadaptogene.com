@@ -43,6 +43,10 @@ export type DirectoryProduct = {
   notes: string;
   lastVerified: string;
   newEntry: boolean;
+  imagePath: string | null;
+  imageSource: string | null;
+  imagePageSource: string | null;
+  imageStatus: string;
 };
 
 export const directoryProducts: DirectoryProduct[] = [
@@ -87,7 +91,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "À documenter par fiche technique; conserve le goût et l'usage du café.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/products/torregral-packaging.jpg",
+    "imageSource": "https://torregral.com/",
+    "imagePageSource": "https://torregral.com/",
+    "imageStatus": "existing-reviewed"
   },
   {
     "id": "cafe-minceur-cafe-minceur",
@@ -130,7 +138,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Données fabricant à consolider par fiche technique.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/products/cafeminceur-packaging.jpg",
+    "imageSource": "https://cafeminceur.fr/",
+    "imagePageSource": "https://cafeminceur.fr/",
+    "imageStatus": "existing-reviewed"
   },
   {
     "id": "cafe-integral-cafe-integral-100",
@@ -173,7 +185,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Ce n'est pas un café torréfié classique; classer hors comparateur principal de goût café.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/products/cafeintegral-packaging.jpg",
+    "imageSource": "https://cafeintegral.fr/",
+    "imagePageSource": "https://cafeintegral.fr/",
+    "imageStatus": "existing-reviewed"
   },
   {
     "id": "bonjour-super-cafe",
@@ -216,7 +232,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Formule phare française; vérifier régulièrement le détail des extraits.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/products/bonjourdrink-packaging.jpg",
+    "imageSource": "https://bonjourdrink.co/",
+    "imagePageSource": "https://bonjourdrink.co/",
+    "imageStatus": "existing-reviewed"
   },
   {
     "id": "wake-wake-original",
@@ -259,7 +279,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Incohérence de caféine entre pages de marque.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/products/wake-packaging.jpg",
+    "imageSource": "https://wake-drinks.com/",
+    "imagePageSource": "https://wake-drinks.com/",
+    "imageStatus": "existing-reviewed"
   },
   {
     "id": "brainstoorm-mush-n-go-cafe-adaptogene",
@@ -302,7 +326,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Somme des masses déclarées à contrôler par rapport au poids de portion.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/products/brainstoorm-packaging.jpg",
+    "imageSource": "https://brainstoorm.com/",
+    "imagePageSource": "https://brainstoorm.com/",
+    "imageStatus": "existing-reviewed"
   },
   {
     "id": "french-mush-boost-cafe",
@@ -345,7 +373,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Marque française; formule à surveiller lors des changements de gamme.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/products/frenchmush-packaging.jpg",
+    "imageSource": "https://frenchmush.com/",
+    "imagePageSource": "https://frenchmush.com/",
+    "imageStatus": "existing-reviewed"
   },
   {
     "id": "cafe-des-guerriers-le-cafe-parfait",
@@ -388,7 +420,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Écart de caféine entre contenus officiels.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/products/cafedesguerriers-packaging.jpg",
+    "imageSource": "https://cafedesguerriers.fr/",
+    "imagePageSource": "https://cafedesguerriers.fr/",
+    "imageStatus": "existing-reviewed"
   },
   {
     "id": "strate-cafe-adaptogene",
@@ -431,7 +467,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Nouvelle adresse officielle vérifiée; six extraits de corps fructifères; formule conçue en France.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/products/strate-packaging.jpg",
+    "imageSource": "https://stratecafe.com/products/cafe-champignons",
+    "imagePageSource": "https://stratecafe.com/products/cafe-champignons",
+    "imageStatus": "existing-reviewed"
   },
   {
     "id": "cosmic-blend-cosmic-blend-coffee",
@@ -474,7 +514,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "élevé",
     "notes": "Le domaine affiche désormais un service générique sans produit identifiable; existence commerciale actuelle non confirmée.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/products/cosmicblend-packaging.jpg",
+    "imageSource": "https://cosmicblend.fr/",
+    "imagePageSource": "https://cosmicblend.fr/",
+    "imageStatus": "existing-reviewed"
   },
   {
     "id": "cafit-cafe-proteine",
@@ -517,7 +561,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Usage café protéiné; la portion peut varier.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/products/cafit-packaging.jpg",
+    "imageSource": "https://cafitdrink.com/",
+    "imagePageSource": "https://cafitdrink.com/",
+    "imageStatus": "existing-reviewed"
   },
   {
     "id": "magic-lab-magic-coffee",
@@ -560,7 +608,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Substitut et non café; page officielle contient des allégations santé à traiter avec prudence éditoriale.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/magic-lab-magic-coffee.webp",
+    "imageSource": "https://www.drinkmagiclab.com/cdn/shop/files/Magic_Coffee_1.png?v=1784731589&width=1024",
+    "imagePageSource": "https://www.drinkmagiclab.com/products/magic-coffee-cafe-complement-aux-champignons-adaptognes",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "mousse-mousse-cafe-adaptogene",
@@ -603,7 +655,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Terminologie officielle confuse: Bacopa, Maca et Ashwagandha ne sont pas des champignons.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/mousse-mousse-cafe-adaptogene.webp",
+    "imageSource": "https://media.ulule.com/presales/6/0/8/5/1/2/215806/mousse---ulule-1-1_01.YxJsUHoZqv.png",
+    "imagePageSource": "https://fr.ulule.com/mousse-cafe-parfait/",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "popeli-super-cafe-proteine",
@@ -646,7 +702,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Prix et variante à horodater au moment de publication.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/popeli-super-cafe-proteine.webp",
+    "imageSource": "https://www.popeli.co/assets/gallery-all-flavors-oLI8nKNr.webp",
+    "imagePageSource": "https://popeli.co/",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "kawa-kawa-cafe-proteine",
@@ -689,7 +749,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Composition complète et origine de la protéine à obtenir.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/kawa-kawa-cafe-proteine.webp",
+    "imageSource": "https://kawadrinks.com/cdn/shop/t/1/assets/kawa-card-30-v2.png?v=162719114033366141891777460931",
+    "imagePageSource": "https://kawadrinks.com/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "foocus-start",
@@ -732,7 +796,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Pages officielles décrivent deux compositions différentes, probablement changement de formule.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/foocus-start.webp",
+    "imageSource": "https://drinkfoocus.fr/cdn/shop/files/Ficheproduitfoocusavril2025_726b4f29-41eb-4055-a8ae-ae1355e7d0cd.jpg?v=1744989822&width=1024",
+    "imagePageSource": "https://drinkfoocus.fr/products/cafe-foocus",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "frate-mate-magic-powder-cafe",
@@ -775,7 +843,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "La page mentionne 150 g et des variantes 30/60/90 portions; contrôler le poids livré.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/frate-mate-magic-powder-cafe.webp",
+    "imageSource": "https://www.fratemateclub.com/cdn/shop/files/Magic_Powder_Cafe_poudre_mate_e_nergisante_au_cafe_30_portions_facile_a_boire.png?v=1776350729&width=1000",
+    "imagePageSource": "https://www.fratemateclub.com/products/poudre-cafe",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "proffee-cafe-instantane-proteine",
@@ -818,7 +890,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Composition simple; plusieurs allégations marketing doivent être reformulées avec prudence.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/proffee-cafe-instantane-proteine.webp",
+    "imageSource": "https://www.proffee.fr/cdn/shop/files/Design_sans_titre_2b031182-2eae-4470-a5dc-b50d84375043.png?v=1768213624&width=1920",
+    "imagePageSource": "https://www.proffee.fr/products/cafe-instantane-proteine-gene",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "lion-spirit-cafes-bibal-focus-criniere-de-lion",
@@ -861,7 +937,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen à élevé",
     "notes": "Produit de torréfacteur français lancé en 2025; format et dosage à confirmer.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/lion-spirit-cafes-bibal-focus-criniere-de-lion.webp",
+    "imageSource": "https://www.fandcm.fr/wp-content/uploads/2025/04/FCM_BIBAL1.png",
+    "imagePageSource": "https://www.fandcm.fr/2025/04/cafes-bibal-innove-avec-lion-spirit-du-cafe-enrichi-en-champignons-adaptogenes/",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "naturecan-protein-coffee",
@@ -904,7 +984,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Trois saveurs; composition varie légèrement.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/naturecan-protein-coffee.webp",
+    "imageSource": "https://www.naturecan.fr/cdn/shop/files/Protein_Iced_Coffee__Glass_ea57ad63-a159-43a0-b7bf-b77e10886256.webp?v=1767353630&width=1920",
+    "imagePageSource": "https://www.naturecan.fr/products/cafe-proteine",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "corial-collagen-coffee-original",
@@ -947,7 +1031,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Le total d'ingrédients arrondi doit être contrôlé sur l'étiquette.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/products/corial-packaging.jpg",
+    "imageSource": "https://corialfoods.com/en-us/products/collagen-coffee-original",
+    "imagePageSource": "https://corialfoods.com/en-us/products/collagen-coffee-original",
+    "imageStatus": "existing-reviewed"
   },
   {
     "id": "clearly-mushroom-coffee",
@@ -990,7 +1078,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Formule café et décaféinée; dosages individuels non visibles.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/clearly-mushroom-coffee.webp",
+    "imageSource": "https://clearly.nl/cdn/shop/files/MushroomCoffee-Front_1667x.jpg?v=1768832982",
+    "imagePageSource": "https://clearly.nl/en/products/mushroom-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "cokare-focus-ground-coffee",
@@ -1033,7 +1125,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Vrai café moulu; disponibilité actuelle incertaine.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/cokare-focus-ground-coffee.webp",
+    "imageSource": "https://cokare.co/files/930-203-foto/etiqueta-back-fino.png",
+    "imagePageSource": "https://cokare.co/focus-ground-coffee",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "earthshake-functional-coffee",
@@ -1076,7 +1172,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "La page affirme aussi 'sans caféine' à certains endroits malgré les valeurs 29,5/59 mg: incohérence éditoriale.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/earthshake-functional-coffee.webp",
+    "imageSource": "https://www.earthshake.co/cdn/shop/files/Earthshake_bag_1024x1024_7ada8147-a040-42d1-8784-265f0764fae6.png?v=1761775321&width=1200",
+    "imagePageSource": "https://www.earthshake.co/products/readybrew",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "smaints-mushroom-coffee",
@@ -1119,7 +1219,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Formule très chargée mais dosages partiels publiés.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/smaints-mushroom-coffee.webp",
+    "imageSource": "https://smaints.de/cdn/shop/files/Pulver-Produkte-PDP-Freisteller_0003s_0003_Mushroom-Coffee-Freisteller-vorne_182a4e92-047c-4a04-b078-f97842ec22bb.png?v=1760860712&width=1920",
+    "imagePageSource": "https://smaints.de/en/products/mushroom-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "vitaritual-mushroom-coffee",
@@ -1162,7 +1266,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen à élevé",
     "notes": "Les doses visibles ne totalisent pas 3 500 mg; caféine et nombre de portions non publiés.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/vitaritual-mushroom-coffee.webp",
+    "imageSource": "https://vitaritual.de/cdn/shop/files/Kaffee_war_noch_nie_so_durchdacht..webp?v=1775973534",
+    "imagePageSource": "https://vitaritual.de/products/pilzkaffee",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "mushee-super-adaptogener-kaffee",
@@ -1205,7 +1313,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Composition principale transparente.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/mushee-super-adaptogener-kaffee.webp",
+    "imageSource": "https://drinkmushee.de/cdn/shop/files/cafe_adaptogene.png?v=1779381354&width=1024",
+    "imagePageSource": "https://drinkmushee.de/products/adaptogener-pilzkaffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "sam-s-superfoods-6-in-1-paddenstoelen-koffie",
@@ -1248,7 +1360,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Le sac représente 30 portions de 6 g.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/sam-s-superfoods-6-in-1-paddenstoelen-koffie.webp",
+    "imageSource": "https://samsuperfoods.nl/cdn/shop/files/hf_20260609_221715_c6a290f7-57b3-4712-a66b-6846e85183cc.png?v=1781043580&width=1920",
+    "imagePageSource": "https://samsuperfoods.nl/products/6-in-1-paddenstoelen-koffie",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "adapcoffee-happy-detox-tea-clarity-cup",
@@ -1291,7 +1407,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Quantités individuelles non publiées.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/adapcoffee-happy-detox-tea-clarity-cup.webp",
+    "imageSource": "https://happydetoxtea.de/cdn/shop/files/1_6c672cc8-4b58-4e59-a36e-039fea84b3a1_1024x1024.png?v=1762156661",
+    "imagePageSource": "https://happydetoxtea.de/products/clarity-cup-mushroom-coffee-blend",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "mindabolics-mushroom-mojo",
@@ -1334,7 +1454,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Importante incohérence entre pages officielles: formule, poids, température de préparation et caféine.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/mindabolics-mushroom-mojo.webp",
+    "imageSource": "https://mindabolics.de/cdn/shop/files/hf_20260605_203439_acc77ce9-a25d-4f96-a38e-77baa3aa57ac_1.png?v=1780922913&width=1920",
+    "imagePageSource": "https://mindabolics.de/en/products/mushroom-mojo-en",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "london-nootropics-flow",
@@ -1377,7 +1501,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Fabriqué au Royaume-Uni; tests tiers annoncés.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/london-nootropics-flow.webp",
+    "imageSource": "https://londonnootropics.com/cdn/shop/files/LOND5166-LondonNootropics0367-1_2.jpg?v=1752591141&width=1100",
+    "imagePageSource": "https://londonnootropics.com/collections/adaptogenic-coffee",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "london-nootropics-zen",
@@ -1420,7 +1548,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Formule calme/focus distincte.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/london-nootropics-zen.webp",
+    "imageSource": "https://londonnootropics.com/cdn/shop/files/LOND5166-LondonNootropics0367-1_2.jpg?v=1752591141&width=1100",
+    "imagePageSource": "https://londonnootropics.com/collections/adaptogenic-coffee",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "london-nootropics-mojo",
@@ -1463,7 +1595,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Formule énergie distincte.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/london-nootropics-mojo.webp",
+    "imageSource": "https://londonnootropics.com/cdn/shop/files/LOND5166-LondonNootropics0367-1_2.jpg?v=1752591141&width=1100",
+    "imagePageSource": "https://londonnootropics.com/collections/adaptogenic-coffee",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "london-nootropics-mush-love",
@@ -1506,7 +1642,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Formule multi-champignons distincte.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/london-nootropics-mush-love.webp",
+    "imageSource": "https://londonnootropics.com/cdn/shop/files/13.png?v=1742985229&width=1500",
+    "imagePageSource": "https://londonnootropics.com/products/mush-love-coffee",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "dirtea-mushroom-coffee",
@@ -1549,7 +1689,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Une des formules UK les mieux documentées.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/dirtea-mushroom-coffee.webp",
+    "imageSource": "https://eu-eur.dirteaworld.com/cdn/shop/files/STARTER_KIT_NEW_ITEMS_97f85bac-be21-4c97-8117-b927ec139d55.jpg?v=1754385759",
+    "imagePageSource": "https://eu-eur.dirteaworld.com/?shpxid=88443368-5655-49df-9681-1ddfbc679e68",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "gomush-organic-mushroom-coffee-pods-with-chaga",
@@ -1592,7 +1736,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "La même page affiche 'Lion's Mane extract 5 g' dans les données nutritionnelles: erreur ou page mélangée.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/gomush-organic-mushroom-coffee-pods-with-chaga.webp",
+    "imageSource": "https://gomush.co.uk/cdn/shop/files/Coffee_Pods_MIXED_SCENE_2800px_x_1000px_v3-Current_View_69f526bd-d44a-42f6-bea3-4c541132b2fa.png?v=1689597922&width=2800",
+    "imagePageSource": "https://gomush.co.uk/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "ancient-brave-coffee-collagen",
@@ -1635,7 +1783,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Nécessite cafetière; ce n'est pas une poudre instantanée.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/ancient-brave-coffee-collagen.webp",
+    "imageSource": "https://ancientandbrave.earth/cdn/shop/files/23-09-ANCIENTBRAVE-COFFEE-RITUAL-FRONT-1500px_1024x1024.png?v=1726218682",
+    "imagePageSource": "https://ancientandbrave.earth/products/coffee-collagen",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "collafe-collagen-coffee-madagascan-vanilla",
@@ -1678,7 +1830,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Préparer avec une eau à 60–70 °C selon la marque; contient poisson et collagène bovin.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/collafe-collagen-coffee-madagascan-vanilla.webp",
+    "imageSource": "https://collafe.com/cdn/shop/files/ChatGPT_Image_Jun_24_2026_12_07_34_AM_2.png?v=1782252501&width=500",
+    "imagePageSource": "https://collafe.com/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "ostrovit-protein-coffee",
@@ -1721,7 +1877,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Caféine totale et nombre de portions à extraire de l'étiquette.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/ostrovit-protein-coffee.webp",
+    "imageSource": "https://ostrovit.com/hpeciai/1780990ce3a01e76cb805e5c185cac3f/eng_pl_OstroVit-Protein-Coffee-360-g-26688_1.png",
+    "imagePageSource": "https://ostrovit.com/en/products/ostrovit-protein-coffee-360-g-26688.html",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "purasana-mushroom-coffee",
@@ -1764,7 +1924,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen à élevé",
     "notes": "Produit découvert dans une fiche technique officielle de distributeur; page produit directe à retrouver.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/purasana-mushroom-coffee.webp",
+    "imageSource": "https://www.heliosholland.com/Files/2/21000/21172/ProductPhotos/Source/2146712367.png",
+    "imagePageSource": "https://www.heliosholland.com/Instant-Mushroom-Koffie-18-gram-Purasana",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "kovr-mushroom-latte",
@@ -1807,7 +1971,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Marque récente; informations complémentaires à extraire.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/kovr-mushroom-latte.webp",
+    "imageSource": "https://kovrcoffee.com/KOVR_GOLDEN_CLARITY_Mushroom_Coffee__1.jpeg",
+    "imagePageSource": "https://kovrcoffee.com/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "four-sigmatic-focus-organic-coffee-latte-think-coffee",
@@ -1850,7 +2018,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Marque pionnière; gamme et formules multiples.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/four-sigmatic-focus-organic-coffee-latte-think-coffee.webp",
+    "imageSource": "https://us.foursigmatic.com/cdn/shop/files/focus-latte-original-1pack-2026.jpg?v=1777565163&width=1920",
+    "imagePageSource": "https://us.foursigmatic.com/products/focus-organic-coffee-latte-original",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "ryze-mushroom-coffee",
@@ -1893,7 +2065,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Prix fortement promotionnel et abonnement à surveiller.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/ryze-mushroom-coffee.webp",
+    "imageSource": "https://health360.shop/cdn/shop/files/ryze2pack_b7ef35f7-ca6f-4395-8114-7438cc014a4f.jpg?v=1763577689&width=1445",
+    "imagePageSource": "https://health360.shop/products/ryze-mushroom-coffee-2-pack",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "everyday-dose-coffee-mild-medium",
@@ -1936,7 +2112,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen à élevé",
     "notes": "Chaga et Lion's Mane issus du corps fructifère; mélange propriétaire total 7 300 ou 8 700 mg selon version.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/everyday-dose-coffee-mild-medium.webp",
+    "imageSource": "https://www.everydaydose.com/cdn/shop/files/main_20.png?v=1770098796&width=480",
+    "imagePageSource": "https://www.everydaydose.com/products/30-serving-bold-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "mud-wtr-rise-cacao",
@@ -1979,7 +2159,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Alternative et non café. L'utilisateur avait demandé de la retirer du site; conservée uniquement dans l'inventaire de marché.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/mud-wtr-rise-cacao.webp",
+    "imageSource": "https://mudwtr.com/cdn/shop/files/mud-tin_1200x1200.jpg?v=1614300033",
+    "imagePageSource": "https://mudwtr.com/pages/rise",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "strong-coffee-company-collagen-latte-vanilla",
@@ -2022,7 +2206,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Pages officielles montrent des tailles/offres différentes; formule très documentée.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/strong-coffee-company-collagen-latte-vanilla.webp",
+    "imageSource": "https://strongcoffeecompany.com/cdn/shop/files/Kit1.png?v=1782411942&width=1200",
+    "imagePageSource": "https://strongcoffeecompany.com/products/vanilla-latte-starter-kit",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "before-you-speak-collagen-coffee",
@@ -2065,7 +2253,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Marque propose aussi Performance, Thermo et Period Coffee.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/before-you-speak-collagen-coffee.webp",
+    "imageSource": "https://beforeyouspeakcoffee.com/cdn/shop/files/CollagenMochaHero_1500x.webp?v=1764029074",
+    "imagePageSource": "https://beforeyouspeakcoffee.com/products/collagen-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "chike-high-protein-iced-coffee",
@@ -2108,7 +2300,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Nombreuses saveurs; forte teneur en caféine.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/chike-high-protein-iced-coffee.webp",
+    "imageSource": "https://www.ilikechike.com/cdn/shop/files/Chike_DailyRitualKit_2_600x.png?v=1784130926",
+    "imagePageSource": "https://www.ilikechike.com/collections/protein-coffee",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "javvy-protein-coffee",
@@ -2151,7 +2347,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Très grand nombre de saveurs; prix promotionnel par bundle.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/javvy-protein-coffee.webp",
+    "imageSource": "https://cdn.shopify.com/s/files/1/0435/8216/1057/files/BR647_Mockup_ProteinCoffee_DubaiChocolate_20serv_V4_001_Q226_Front-2000x2000.png?v=1784565694",
+    "imagePageSource": "https://javvycoffee.com/products/javvy-protein-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "super-coffee-lean-iced-latte",
@@ -2194,7 +2394,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Édulcoré au sucralose; distinguer des versions Protein+ et XXTRA.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/super-coffee-lean-iced-latte.webp",
+    "imageSource": "https://www.drinksupercoffee.com/cdn/shop/files/LILVanilla-website_1600x1600-front.png?v=1761700067&width=1920",
+    "imagePageSource": "https://www.drinksupercoffee.com/products/vanilla-super-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "super-coffee-xxtra",
@@ -2237,7 +2441,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Formule très caféinée et distincte de Lean.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/super-coffee-xxtra.webp",
+    "imageSource": "https://www.drinksupercoffee.com/cdn/shop/files/XXTRAVanilla-website_1600x1600-front_bf831343-f25d-421e-9cea-17e3d2223c57.png?v=1761751145&width=1920",
+    "imagePageSource": "https://www.drinksupercoffee.com/products/super-coffee-xxtra-vanilla",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "taika-black-coffee-macadamia-latte",
@@ -2280,7 +2488,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "La gamme et les teneurs ont évolué; vérifier par référence avant publication.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/taika-black-coffee-macadamia-latte.webp",
+    "imageSource": "https://taika.co/wp-content/uploads/2023/08/taika-black-coffee.png",
+    "imagePageSource": "https://taika.co/product/black-coffee/",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "optimal-human-adaptogenic-mushroom-super-coffee",
@@ -2323,7 +2535,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen à élevé",
     "notes": "Dose des trois adaptogènes non publiée dans l'extrait.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/optimal-human-adaptogenic-mushroom-super-coffee.webp",
+    "imageSource": "https://optimalhuman.com/cdn/shop/files/bb.png?v=1769007039&width=1200",
+    "imagePageSource": "https://optimalhuman.com/products/adaptogenic-mushroom-super-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "transparent-labs-protein-coffee",
@@ -2366,7 +2582,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Forte caféine; 80 kcal et moins de 1 g de sucre annoncés.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/transparent-labs-protein-coffee.webp",
+    "imageSource": "https://www.transparentlabs.com/cdn/shop/articles/Screenshot_2026-04-27_at_11.19.26_AM_8cfe7d77-f508-43ed-ada8-b871e6ca27a3.png?v=1777305920",
+    "imagePageSource": "https://www.transparentlabs.com/blogs/all/protein-coffee",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "canadian-protein-protein-coffee",
@@ -2409,7 +2629,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Fabriqué au Canada.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/canadian-protein-protein-coffee.webp",
+    "imageSource": "https://canadianprotein.com/cdn/shop/files/Protein-Coffee-1kg-Original-Blend.jpg?v=1710195936",
+    "imagePageSource": "https://canadianprotein.com/products/protein-coffee",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "eons-smart-mushroom-coffee",
@@ -2452,7 +2676,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Formule très chargée et stimulante; évaluer sécurité et réglementation France avant toute mise en avant.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/eons-smart-mushroom-coffee.webp",
+    "imageSource": "https://eons.com/cdn/shop/files/MAIN_-_SMART.webp?v=1769725021&width=2000",
+    "imagePageSource": "https://eons.com/products/smart-mushroom-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "x-mushroom-coffee-x-mushroom-coffee",
@@ -2495,7 +2723,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Doses individuelles et caféine à compléter.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/x-mushroom-coffee-x-mushroom-coffee.webp",
+    "imageSource": "https://xmushroomcoffee.com/wp-content/uploads/2025/04/coffe_6-1.png",
+    "imagePageSource": "https://xmushroomcoffee.com/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "eightbillion-brain-mood-coffee",
@@ -2538,7 +2770,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Présence d'extrait de fruit du café intéressante pour l'axe BDNF; formule exacte à relever.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/eightbillion-brain-mood-coffee.webp",
+    "imageSource": "https://eightbillion.com/cdn/shop/files/Product_Steam.png?crop=center&height=607&v=1778354164&width=828",
+    "imagePageSource": "https://eightbillion.com/",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "nueva-nueva-morning",
@@ -2581,7 +2817,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Café plus caféine de thé vert; composition et format à détailler.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/nueva-nueva-morning.webp",
+    "imageSource": "https://www.nuevalife.com/v4/shop_products/product11.png",
+    "imagePageSource": "https://www.nuevalife.com/vision",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "atlas-superblend-coffee-latte",
@@ -2624,7 +2864,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Source officielle alterne entre 3 et 4 champignons sur certaines pages; vérifier étiquette.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/atlas-superblend-coffee-latte.webp",
+    "imageSource": "https://m.media-amazon.com/images/I/41FON+n0gjL._SS400_.jpg",
+    "imagePageSource": "https://www.global.ubuy.com/product/QICQOEUJ0-atlas-superblend-duo-pack-instant-coffee-latte-mushroom-blends-with-adaptogens-probiotics-vitamins-2-functional-drink-mixes-for-energy-focus",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "laird-superfood-organic-perform-functional-mushroom-coffee",
@@ -2667,7 +2911,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Vrai café moulu; extraits ajoutés aux grains moulus.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/laird-superfood-organic-perform-functional-mushroom-coffee.webp",
+    "imageSource": "https://lairdsuperfood.com/cdn/shop/files/perform-mushroom-coffee_238dca53-c91c-4e17-8361-faea2f49bc4a.png?v=1759288598",
+    "imagePageSource": "https://lairdsuperfood.com/collections/all/products/perform-medium-roast-ground-mushroom-coffee",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "mushup-spark",
@@ -2710,7 +2958,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Technique propriétaire incorporant les extraits directement aux grains; triple extraction annoncée.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/mushup-spark.webp",
+    "imageSource": "https://mushup.ca/cdn/shop/files/spark-shooting_1000x.webp?v=1777319654",
+    "imagePageSource": "https://mushup.ca/products/duo-spark-lionsmane-reishi?variant=18882406940761",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "shyne-lion-s-mane-coffee-rising-star",
@@ -2753,7 +3005,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Extrait double incluant mycélium et corps fructifère; 2 g de sucres par tasse.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/shyne-lion-s-mane-coffee-rising-star.webp",
+    "imageSource": "https://shynecoffee.ca/images/products/30-cup/lions-mane-coffee-30-cup-white-bg.png",
+    "imagePageSource": "https://shynecoffee.ca/product/lions-mane-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "rainbo-fungki-mushroom-coffee",
@@ -2796,7 +3052,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Extraits bio issus uniquement du corps fructifère; base cold brew faible acidité.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/rainbo-fungki-mushroom-coffee.webp",
+    "imageSource": "https://rainbo.ca/cdn/shop/files/Rainbo-Fungki-Mushroom-Coffee-44mgCaffeine-Nootropic-Low-Acid-Front_c91ac4a4-d88c-4bf8-87cf-82245aa6ab12.jpg?v=1754005477&width=1920",
+    "imagePageSource": "https://rainbo.ca/products/fungki-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "dodjivi-4-protection-instant-organic-mushroom-coffee",
@@ -2839,7 +3099,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Sans sucre, édulcorant ni additif annoncé; champignons bio cultivés au Canada.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/dodjivi-4-protection-instant-organic-mushroom-coffee.webp",
+    "imageSource": "https://www.dodjivi.com/cdn/shop/files/Images-01.jpg?v=1770969148&width=1920",
+    "imagePageSource": "https://www.dodjivi.com/products/4-in-1-chaga-and-lions-mane-mushroom-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "dodjivi-vitality-instant-organic-mushroom-coffee",
@@ -2882,7 +3146,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Présence de plusieurs sources stimulantes; ligne distincte du produit 4 Protection.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/dodjivi-vitality-instant-organic-mushroom-coffee.webp",
+    "imageSource": "https://www.dodjivi.com/cdn/shop/files/Images_01-main_450x450.jpg?v=1772167968",
+    "imagePageSource": "https://www.dodjivi.com/products/vitality-mushroom-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "urban-calm-coffee-dreamer-onward-centered-lioness",
@@ -2925,7 +3193,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Corps fructifères bio; quatre profils fonctionnels et formats café traditionnels. Une autre page instantanée mentionne 50 mg et cinq champignons: vérifier la gamme exacte avant publication.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/urban-calm-coffee-dreamer-onward-centered-lioness.webp",
+    "imageSource": "https://urbancalmcoffee.ca/cdn/shop/collections/MUSHROOM_COFFEE_-_-_urbancalmcoffee.ca-3126140.jpg?v=1777138927",
+    "imagePageSource": "https://urbancalmcoffee.ca/collections/mushroom-coffee",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "shroomy-shroomy-coffee",
@@ -2968,7 +3240,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen à élevé",
     "notes": "Transparence faible: pas de tableau de composition, dosage ni caféine visible; nombreuses répétitions de témoignages sur la page.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/shroomy-shroomy-coffee.webp",
+    "imageSource": "https://myshroomycoffee.com/cdn/shop/files/2_d77bb781-0805-456e-b8a8-22df46f189ed.jpg?v=1755714896",
+    "imagePageSource": "https://myshroomycoffee.com/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "adaptolatte-original-adaptolatte",
@@ -3011,7 +3287,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Ce n'est pas un café noir: produit cacao-latte très chargé en actifs; page officielle présente des dosages différents selon versions, vérifier l'étiquette.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/adaptolatte-original-adaptolatte.webp",
+    "imageSource": "https://adaptolatte.com/cdn/shop/files/3D-6.jpg?v=1684866267&width=1920",
+    "imagePageSource": "https://adaptolatte.com/en-au/products/adaptolatte-powder",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "alchemy-dose-mycosynergy-mushroom-coffee",
@@ -3054,7 +3334,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Corps fructifères 8:1 double extraction; excellente transparence mais incohérence interne sur la caféine.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/alchemy-dose-mycosynergy-mushroom-coffee.webp",
+    "imageSource": "https://alchemydose.com/cdn/shop/files/Mushroom_Coffee_mycosynergy_five_mushrooms_website_cover_jpg.jpg?v=1783786130&width=1200",
+    "imagePageSource": "https://alchemydose.com/products/super-shroom-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "the-nutra-company-focus-energy-slim-beauty-coffee",
@@ -3097,7 +3381,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Une des rares gammes structurées en quatre bénéfices; vérifier chaque fiche et les allégations avant réemploi en France.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/the-nutra-company-focus-energy-slim-beauty-coffee.webp",
+    "imageSource": "https://thenutracompany.co.in/cdn/shop/files/TNC_wbsite_Benefits-01_1.jpg?v=1765038250&width=185",
+    "imagePageSource": "https://thenutracompany.co.in/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "potential-protein-functional-coffee",
@@ -3140,7 +3428,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "0 sucre; 53 kcal; caféine listée à la fois via Arabica et dans la liste d'ingrédients.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/potential-protein-functional-coffee.webp",
+    "imageSource": "https://potentialfuel.com/cdn/shop/files/Hazelnut1_b164611e-924c-468f-8d64-e35c5086006b.jpg?v=1776768216&width=1200",
+    "imagePageSource": "https://potentialfuel.com/products/potential-protein-functional-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "shroomnest-focus-energy",
@@ -3183,7 +3475,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen à élevé",
     "notes": "Se présente comme premier café adaptogène indien; niveau de détail public insuffisant pour comparer les doses.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/shroomnest-focus-energy.webp",
+    "imageSource": "https://www.shroomnest.com/cdn/shop/files/focus-energy-hero-img-new.png?v=1783964485&width=800",
+    "imagePageSource": "https://www.shroomnest.com/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "mahogany-organics-7-mushrooms-mix-coffee",
@@ -3226,7 +3522,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Gamme comprenant aussi Gano, Lion's Mane et Cordyceps; manque de dosage et de caféine chiffrée.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/mahogany-organics-7-mushrooms-mix-coffee.webp",
+    "imageSource": "https://m.media-amazon.com/images/I/51PIp94UeNL._SL1001_.jpg",
+    "imagePageSource": "https://www.amazon.in/Mahogany-Mushrooms-beneficial-effects-mushrooms/dp/B0BDL6V7ZF",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "mudshroom-mudshroom-coffee",
@@ -3269,7 +3569,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Incohérences entre page d'accueil et fiche; le même sélecteur contient aussi chai/cacao sans café.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": null,
+    "imageSource": null,
+    "imagePageSource": "https://mudshroomcoffee.co.za/products/mud-shroom-coffee",
+    "imageStatus": "missing"
   },
   {
     "id": "fungu-fungu-chocolate-flavor",
@@ -3312,7 +3616,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Formulé en Espagne; sans sucre ajouté mais édulcoré au xylitol.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": null,
+    "imageSource": null,
+    "imagePageSource": "https://fungu.es/producto/fungu/",
+    "imageStatus": "missing"
   },
   {
     "id": "mykofi-cafe-con-hongos-funcionales",
@@ -3355,7 +3663,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Très forte caféine pour le segment; les valeurs 2 500 mg par extrait semblent être des équivalences 10:1 et doivent être clarifiées.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/mykofi-cafe-con-hongos-funcionales.webp",
+    "imageSource": "https://drinkmykofi.es/cdn/shop/files/mykofi_imagen_paquete.jpg?v=1771499425&width=1920",
+    "imagePageSource": "https://drinkmykofi.es/products/mushroom-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "nu3-focus-mushroom-coffee",
@@ -3398,7 +3710,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen à élevé",
     "notes": "L'ancienne fiche officielle redirige vers Redcare Italie; dose élevée de caféine; disponibilité actuelle via détaillant à confirmer.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/nu3-focus-mushroom-coffee.webp",
+    "imageSource": "https://cdn.redcare.it/images/D08/115/063/D08115063-p1.jpg",
+    "imagePageSource": "https://www.redcare.it/dieta-alimentazione/8115063/nu3-focus-mushroom-coffee.htm",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "rahygge-reishi-mushroom-coffee",
@@ -3441,7 +3757,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Café faible acidité annoncé pH 6,0; existe aussi en Lion's Mane et Tremella.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/rahygge-reishi-mushroom-coffee.webp",
+    "imageSource": "https://primary.jwwb.nl/public/m/f/y/temp-uwnnpkqgxsbsfhyshlso/1vwvuf/rahygge_reishi_wholebeans_doypack_227g_160x230x90mm.png?enable-io=true&crop=0.8333%3A1&width=1920",
+    "imagePageSource": "https://www.rahygge.nl/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "mushroom-coffee-spain-mushroom-coffee",
@@ -3484,7 +3804,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen à élevé",
     "notes": "Site très récent et transparence limitée; incohérence entre liste principale à cinq champignons et mention de Chaga.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/mushroom-coffee-spain-mushroom-coffee.webp",
+    "imageSource": "https://www.mushroomcoffespain.com/assets/infographic-DFfn8QDl.webp",
+    "imagePageSource": "https://www.mushroomcoffespain.com/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "dxn-lingzhi-coffee-2-in-1",
@@ -3527,7 +3851,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Acteur historique avec une large gamme 2-en-1, 3-en-1, black coffee et Cordyceps; source corporate confirme l'importance commerciale.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/dxn-lingzhi-coffee-2-in-1.webp",
+    "imageSource": "https://www.dxn2u.com/product/images/FFB/CF/2in1.jpg",
+    "imagePageSource": "https://www.dxn2u.com/product/product_det.php?lang=en&p=bev_ling21&pid=fb",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "gano-excel-gano-cafe-3-in-1",
@@ -3570,7 +3898,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Marque revendique le lancement du premier 3-en-1 au Ganoderma en 1997; formule sucrée.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/gano-excel-gano-cafe-3-in-1.webp",
+    "imageSource": "https://www.ganoexcel.com/new_image/mockup/Bellagene.jpg",
+    "imagePageSource": "https://www.ganoexcel.com/language/Portugese/our-offer.html",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "organo-gourmet-black-coffee-coffee-range",
@@ -3613,7 +3945,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Acteur pionnier du réseau; composition, caféine et tarifs varient fortement par SKU et pays.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/organo-gourmet-black-coffee-coffee-range.webp",
+    "imageSource": "https://m.media-amazon.com/images/I/71PM3mBc65L.jpg",
+    "imagePageSource": "https://www.amazon.com/Organo-Gourmet-Certified-Ganoderma-Extract/dp/B017R5L2SO",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "nuspira-nucore-6-black-coffee",
@@ -3656,7 +3992,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Six champignons bio; 45 mg de caféine; existe aussi en latte 24 portions.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/nuspira-nucore-6-black-coffee.webp",
+    "imageSource": "https://www.nuspira.com/cdn/shop/files/product-black-coffee.jpg?v=1782432701&width=600",
+    "imagePageSource": "https://www.nuspira.com/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "feelgood-company-mushroom-coffee",
@@ -3699,7 +4039,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Liste exhaustive mais aucune quantité de champignons indiquée.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/feelgood-company-mushroom-coffee.webp",
+    "imageSource": "https://feelgoodcompany.com/cdn/shop/files/FeelGood-Mushroom-Coffee_c52bc583-6df7-48d2-b6ba-f716f15b29f6.webp?v=1779474463&width=1920",
+    "imagePageSource": "https://feelgoodcompany.com/products/mushroom-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "organic-bless-mushroom-coffee",
@@ -3742,7 +4086,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Formule latte riche en lipides, à distinguer d'un café noir.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/organic-bless-mushroom-coffee.webp",
+    "imageSource": "https://www.organic-bless.com/cdn/shop/files/Hero_Image_a8138c1d-e561-4cdc-adfe-575cb6307d69.jpg?v=1767675491",
+    "imagePageSource": "https://www.organic-bless.com/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "peak-state-coffee-variety-pack-brain-sustain-immunity-boost-stress-less",
@@ -3785,7 +4133,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Processus d'infusion pendant torréfaction; rapports de laboratoires officiels disponibles.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/peak-state-coffee-variety-pack-brain-sustain-immunity-boost-stress-less.webp",
+    "imageSource": "https://peakstatecoffee.com/cdn/shop/products/Mockups-21_3085x.png?v=1762526471",
+    "imagePageSource": "https://peakstatecoffee.com/products/variety-pack-functional-whole-bean-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "vitacup-mushroom-focus-coffee",
@@ -3828,7 +4180,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Grande gamme fonctionnelle comprenant aussi créatine, collagène, minceur, MCT, probiotiques et minéraux: marque stratégique à cartographier par SKU.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/vitacup-mushroom-focus-coffee.webp",
+    "imageSource": "https://www.vitacup.com/cdn/shop/files/MushroomCoffee-instant-pouch-Front-3DRender_1_450x450.jpg?v=1769542592",
+    "imagePageSource": "https://www.vitacup.com/products/mushroom-coffee-instant-bag",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "om-mushroom-superfood-mushroom-coffee-latte-blend",
@@ -3871,7 +4227,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "élevé",
     "notes": "Source officielle datée 2021; existence commerciale actuelle du SKU à confirmer avant publication.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/om-mushroom-superfood-mushroom-coffee-latte-blend.webp",
+    "imageSource": "https://ommushrooms.com/cdn/shop/articles/BROLL_SS_PP_1014.MOV.19_04_36_05.Still001.jpg?v=1622225039",
+    "imagePageSource": "https://ommushrooms.com/blogs/blog/mushroom-coffee-caffeine-m2",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "xtreme-wellness-x-tribe-organic-mushroom-coffee",
@@ -3914,7 +4274,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Corps fructifères double extraction; dosages très transparents.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/xtreme-wellness-x-tribe-organic-mushroom-coffee.webp",
+    "imageSource": "https://xtreme-brands.com/cdn/shop/files/Xtreme-_TRIBe_COFFEE_SOLID_BG_TEST_2.webp?v=1756764457&width=1920",
+    "imagePageSource": "https://xtreme-brands.com/products/tribe-organic-mushroom-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "vahdam-mushroom-coffee",
@@ -3957,7 +4321,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Étiquette officielle repérée dans un dossier réglementaire FDA; page commerciale à vérifier.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/vahdam-mushroom-coffee.webp",
+    "imageSource": "https://abmushroom.com/wp-content/uploads/2025/07/817jSPGY6aL._SL1500_.jpg",
+    "imagePageSource": "https://abmushroom.com/product/vahdam-instant-mushroom-coffee-with-ksm-66-ashwagandha-250mg-40-servings-turmeric-lions-mane-and-chaga-mushroom/",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "nuubrew-the-hustle-blend",
@@ -4000,7 +4368,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Formule parmi les plus transparentes du marché; café 100 % Robusta et ingrédients annoncés bio.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/nuubrew-the-hustle-blend.webp",
+    "imageSource": "https://www.nuubrew.com/cdn/shop/files/10_a62e66b5-c21f-4c5d-a701-ed851b077711.png?v=1766943742&width=1920",
+    "imagePageSource": "https://www.nuubrew.com/products/the-hustler-blend",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "puls-original-latte",
@@ -4043,7 +4415,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "élevé",
     "notes": "Concept stratégique rare associant café réel, protéines, créatine et MCT; ne pas présenter comme disponible tant que le lancement n'est pas confirmé.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/puls-original-latte.webp",
+    "imageSource": "https://www.drinkpuls.com/cdn/shop/files/SECOND_png_77b05bd8-1ac8-467e-ab0b-e69689ec548d.png?v=1778853934",
+    "imagePageSource": "https://www.drinkpuls.com/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "eight-batch-001",
@@ -4086,7 +4462,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "élevé",
     "notes": "Projet bêta annoncé pour 2026; suivre le lancement effectif et l'étiquette finale.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": null,
+    "imageSource": null,
+    "imagePageSource": "https://idrinkeight.com/",
+    "imageStatus": "missing"
   },
   {
     "id": "trubrain-coffee-kit",
@@ -4129,7 +4509,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen à élevé",
     "notes": "Le site mentionne aussi Alpha-GPC dans un autre passage: actif cholinergique à confirmer avant publication.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/trubrain-coffee-kit.webp",
+    "imageSource": "https://www.trubrain.com/cdn/shop/products/2_00ba00e8-ad04-4a11-aac0-1a5097b978fe.jpg?v=1619547790&width=1920",
+    "imagePageSource": "https://www.trubrain.com/products/coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "crushed-tonic-coffee-collagen",
@@ -4172,7 +4556,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Sans sucre; 28 sticks ou poche annoncée pour 30 boissons. Petite divergence de caféine à signaler.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/crushed-tonic-coffee-collagen.webp",
+    "imageSource": "https://crushedtonic.com/cdn/shop/files/28_3e2a9806-558a-4e95-9c22-7f903f59b137.png?v=1770042659",
+    "imagePageSource": "https://crushedtonic.com/products/coffeecollagen",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "smart-owl-coffee-cognition-blend",
@@ -4215,7 +4603,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Environ 292 mg par portion par simple division, mais cette valeur ne doit pas être attribuée au fabricant. Gammes Balance et Immune à cartographier séparément.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/smart-owl-coffee-cognition-blend.webp",
+    "imageSource": "https://smartowlcoffee.com/cdn/shop/products/CognitionLabel300_1125x.png?v=1589491867",
+    "imagePageSource": "https://smartowlcoffee.com/collections/all-products/products/smart-owl-coffee-cognition-blend",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "herbalife-high-protein-iced-coffee",
@@ -4258,7 +4650,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "80 kcal et sans sucres ajoutés selon l'étiquette officielle; allergène lait.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/herbalife-high-protein-iced-coffee.webp",
+    "imageSource": "https://www.herbalife.com/dmassets/market-reusable-assets/amer/united-states/images/canister/pc-012k-us.png:pdp-w875h783?fmt=webp-alpha",
+    "imagePageSource": "https://www.herbalife.com/en-us/u/products/high-protein-iced-coffee-house-blend-12oz-012k",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "dr-oetker-high-protein-coffee-drink-espresso-macchiato-style",
@@ -4301,7 +4697,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Sans sucres ajoutés et pauvre en matières grasses selon la fiche officielle; allergène lait.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/dr-oetker-high-protein-coffee-drink-espresso-macchiato-style.webp",
+    "imageSource": "https://eu-central-1-droetker.graphassets.com/AVtdz8Pl3QxerK0kYX32fz/resize=fit:clip,height:662,width:662/cmorrprio7eve08w12zv1el89",
+    "imagePageSource": "https://www.oetker.de/produkte/p/high-protein-coffee-drink-espresso-macchiato-style",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "kimera-koffee-original-blend",
@@ -4344,7 +4744,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Marque active depuis 2013 selon sa fiche; véritable café enrichi, mais transparence quantitative insuffisante.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/kimera-koffee-original-blend.webp",
+    "imageSource": "https://kimerakoffee.com/cdn/shop/files/orignalBliend.png?v=1758176085&width=1920",
+    "imagePageSource": "https://kimerakoffee.com/collections/coffee/products/kimera-koffee-12oz-ground",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "neuroast-classic-roast",
@@ -4387,7 +4791,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Sans sucre et vegan selon la FAQ; mélange en poudre ajouté au café moulu.",
     "lastVerified": "2026-08-01",
-    "newEntry": false
+    "newEntry": false,
+    "imagePath": "/images/directory/neuroast-classic-roast.webp",
+    "imageSource": "https://www.neuroast.com/cdn/shop/files/9e14bcd2-974b-4bb1-ad12-339d73c06312_16fe8e00-de41-4eaa-8fbc-818b9653e467_1024x.png?v=1770267199",
+    "imagePageSource": "https://www.neuroast.com/products/foodservice",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "creoffee-original",
@@ -4430,7 +4838,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Formule courte: café instantané et créatine monohydrate; sans sucre, agents de charge ni additifs annoncés.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/creoffee-original.webp",
+    "imageSource": "https://www.designerpeople.com/wp-content/uploads/2019/09/eco-friendly-coffee-packaging-design-2.jpg",
+    "imagePageSource": "https://storage.googleapis.com/diyvtoqwhoptxe/coffee-packaging-details.html",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "creatinecoffeee-creatinecoffee",
@@ -4473,7 +4885,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "élevé",
     "notes": "Formule détaillée mais allégations santé et longévité très fortes: forte prudence éditoriale.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/creatinecoffeee-creatinecoffee.webp",
+    "imageSource": "https://crea-coffeee.myshopify.com/cdn/shop/files/HERO_Design_1-V5_1.png?v=1768554073",
+    "imagePageSource": "https://crea-coffeee.myshopify.com/products/creatine-coffee",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "day-one-functional-coffees-creatine-coffee-k-cup",
@@ -4516,7 +4932,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "élevé",
     "notes": "Pré-lancement; compatibilité Keurig annoncée; formule finale et disponibilité à confirmer.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/day-one-functional-coffees-creatine-coffee-k-cup.webp",
+    "imageSource": "https://m.media-amazon.com/images/I/91pw0Zm8DoS._SL1500_.jpg",
+    "imagePageSource": "https://www.amazon.com/Day-Variety-Single-Coffee-Flavored/dp/B07YGWQXZS",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "bulletproof-coffee-creatine",
@@ -4559,7 +4979,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Référence lancée en mars 2026; café Arabica instantané annoncé testé pour les toxines; indiquée en stock lors du relevé.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/bulletproof-coffee-creatine.webp",
+    "imageSource": "https://shop.bulletproof.com/cdn/shop/files/bulletproof-creatine-coffee-packaging-render-next-to-iced-coffee-glass-1.jpg?v=1769639977&width=1200",
+    "imagePageSource": "https://shop.bulletproof.com/products/creatine-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "four-sigmatic-the-boys-creatine-coffee",
@@ -4602,7 +5026,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Lion's Mane annoncé issu du corps fructifère; édition limitée 2026.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/four-sigmatic-the-boys-creatine-coffee.webp",
+    "imageSource": "https://us.foursigmatic.com/cdn/shop/files/the-boys-1-pack-variant.jpg?v=1775478984&width=1920",
+    "imagePageSource": "https://us.foursigmatic.com/products/prime-original-the-boys-creatine-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "vitacup-creatine-coffee",
@@ -4645,7 +5073,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Produit officiellement annoncé en 2026; page commerciale inaccessible à l'outil lors du relevé.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/vitacup-creatine-coffee.webp",
+    "imageSource": "https://www.vitacup.com/cdn/shop/files/95010159.jpg?v=1778711242&width=1946",
+    "imagePageSource": "https://www.vitacup.com/products/creatine-coffee-instant-pouch-20-servings?variant=41283854630970",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "mareshi-drive",
@@ -4688,7 +5120,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Préparation annoncée avec 250 ml d'eau chaude; formule sportive tout-en-un.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/mareshi-drive.webp",
+    "imageSource": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/09bcf1f6-e0c7-4174-8e56-f3601a347064/id-preview-bbfa52fa--59c08d10-ca54-4a2f-aa29-c616f24d5455.lovable.app-1776453192338.png",
+    "imagePageSource": "https://www.mareshi.co.uk/",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "urth-root-creatine-coffee",
@@ -4731,7 +5167,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "élevé",
     "notes": "Page incohérente sur la technologie de créatine et l'identité produit; ne pas recommander sans clarification fabricant.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": null,
+    "imageSource": null,
+    "imagePageSource": "https://urthandroot.com/",
+    "imageStatus": "missing"
   },
   {
     "id": "smart-coffee-eu-functional-coffee",
@@ -4774,7 +5214,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Sans lactose ni gluten, compatible keto et édulcoré à la stévia; tests par lots annoncés.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/smart-coffee-eu-functional-coffee.webp",
+    "imageSource": "https://smartcoffeeeu.com/cdn/shop/files/DSCF6845.png?v=1780646641&width=3200",
+    "imagePageSource": "https://smartcoffeeeu.com/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "bulk-whey-protein-coffee",
@@ -4817,7 +5261,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Contient lait, sucralose, lécithine de tournesol, gomme guar et xanthane.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/bulk-whey-protein-coffee.webp",
+    "imageSource": "https://www.bulk.com/media/catalog/product/I/C/ICED_CARAMEL_CAROUSEL_1_dfe0.png",
+    "imagePageSource": "https://www.bulk.com/fr/products/cafe-proteine-whey/bpb-pico",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "clearly-protein-iced-coffee",
@@ -4860,7 +5308,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Véritable base café; fiche nutritionnelle complète à relever avant comparaison chiffrée.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/clearly-protein-iced-coffee.webp",
+    "imageSource": "https://clearly.fr/cdn/shop/files/ProteinIcedCoffee_Original_2000x.png?v=1784730832",
+    "imagePageSource": "https://clearly.fr/products/protein-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "protealpes-whey-cafe-sans-sucres-ajoutes",
@@ -4903,7 +5355,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Fabriqué en France; contient du lait; sans sucres ajoutés.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/protealpes-whey-cafe-sans-sucres-ajoutes.webp",
+    "imageSource": "https://www.worden.fr/cache/imgcatalogue/2026/1024x1024/sl/protealpes-altitude-whey-proteine-sans-sucres-ajoutes-750g-cafe-decafeine_252828.webp",
+    "imagePageSource": "https://www.worden.fr/protealpes-altitude-whey-proteine-sans-sucres-ajoutes-750g-cafe-decafeine-p252828.html",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "collagen-coffee-original-collagen-coffee",
@@ -4946,7 +5402,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Page officielle active mais détails nutritionnels insuffisants pour une comparaison ferme.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/collagen-coffee-original-collagen-coffee.webp",
+    "imageSource": "https://collagencoffee.com/wp-content/uploads/2024/03/Group-190.png",
+    "imagePageSource": "https://collagencoffee.com/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "zenergy-mushrooms-mushroom-coffee",
@@ -4989,7 +5449,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Corps fructifères, culture sur bois, bio UE et au moins 10 % de bêta-glucanes annoncés.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/zenergy-mushrooms-mushroom-coffee.webp",
+    "imageSource": "https://zenergymushrooms.com/_next/static/media/product.3e10be13.png",
+    "imagePageSource": "https://zenergymushrooms.com/",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "lyfe-mushrooms-mushroom-coffee",
@@ -5032,7 +5496,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Rapport de laboratoire par lot 2026.05 mentionné; liste et doses à archiver.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/lyfe-mushrooms-mushroom-coffee.webp",
+    "imageSource": "https://lyfebrew.com/cdn/shop/files/17609709_rm362-02p-mockup-googlev1_1.png?v=1725318519",
+    "imagePageSource": "https://lyfebrew.com/",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "setacor-cafe-funcional-con-hongos-medicinales",
@@ -5075,7 +5543,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Produit bio espagnol; informations quantitatives à obtenir.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/setacor-cafe-funcional-con-hongos-medicinales.webp",
+    "imageSource": "https://www.setacor.com/wp-content/uploads/2023/12/Mushroom_coffee_Setacor.jpeg",
+    "imagePageSource": "https://www.setacor.com/producto/cafe-funcional-con-hongos-medicinales/?v=f911dfc151a2",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "morli-perform",
@@ -5118,7 +5590,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Formule très large; dosage et origine du collagène à documenter.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/morli-perform.webp",
+    "imageSource": "https://morli.co/cdn/shop/files/hero_cermaic.png?v=1784780573",
+    "imagePageSource": "https://morli.co/products/perform",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "rise-shine-mushroom-coffee",
@@ -5161,7 +5637,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen à élevé",
     "notes": "Champignons bio annoncés issus du corps fructifère; mélange propriétaire.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/rise-shine-mushroom-coffee.webp",
+    "imageSource": "https://www.drinkriseandshine.com/cdn/shop/files/product_image_main.jpg?v=1769484072&width=616",
+    "imagePageSource": "https://www.drinkriseandshine.com/products/rise-and-shine-mushroom-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "bioflow-deep-focus-coffee",
@@ -5204,7 +5684,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Formule simple mais valeurs quantitatives non extraites.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/bioflow-deep-focus-coffee.webp",
+    "imageSource": "https://trybioflow.com/cdn/shop/files/3D1_Final.jpg?v=1735017686",
+    "imagePageSource": "https://trybioflow.com/en-eu/pages/dfb1-coffee",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "activz-everyday-coffee",
@@ -5247,7 +5731,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Positionnement peau/beauté; origine du collagène et doses à obtenir.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/activz-everyday-coffee.webp",
+    "imageSource": "https://www.activz.com/img/products/coffee-pc-us.jpg",
+    "imagePageSource": "https://www.activz.com/products/coffee",
+    "imageStatus": "official-page-image"
   },
   {
     "id": "egano-ganoderma-coffee",
@@ -5290,7 +5778,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Gamme instantanée black et aromatisée; transparence quantitative limitée.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/egano-ganoderma-coffee.webp",
+    "imageSource": "https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/7/1/71AFTaTtldS._AC_SL1500__2.jpg",
+    "imagePageSource": "https://www.gosupps.com/2-boxes-egano-premium-ganoderma-black-coffee-instant-coffee-with-ganoderma-lucidum-extract-30-sachets-x-3-5g-box.html",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "king-coffee-cappuccino-collagen",
@@ -5333,7 +5825,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Référence présente au portfolio international 2024/2025; étiquette locale à obtenir.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/king-coffee-cappuccino-collagen.webp",
+    "imageSource": "https://kingcoffee.com.vn/wp-content/uploads/2025/08/KING-COFFEE-Collagen-Sakura-Strawberry-cappuccino-instant-coffee-%E2%80%93-Box-240-g-12-sticks-x-20g_VE.jpg",
+    "imagePageSource": "https://kingcoffee.com.vn/san-pham/ca-phe-hoa-tan-cappuccino-collagen-king-coffee-vi-dau-va-hoa-anh-dao-hop-12-goi-x-20g/",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "nature-s-finest-collagen-coffee",
@@ -5376,7 +5872,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Sans sucres ajoutés annoncé; la fiche technique détaille aussi tapioca et cellulose.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/nature-s-finest-collagen-coffee.webp",
+    "imageSource": "https://www.naturesfinest.fr/wp-content/uploads/2024/03/Collagen_Coffee-1x.png",
+    "imagePageSource": "https://www.naturesfinest.fr/produit/collagene-cafe-boisson/",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "brain-and-brawn-synergy-collagen-coffee",
@@ -5419,7 +5919,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Contient lait/beurre et collagène bovin; sans édulcorant annoncé.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/brain-and-brawn-synergy-collagen-coffee.webp",
+    "imageSource": "https://www.brainandbrawn.com.au/cdn/shop/products/SynergyCollagenCoffee_2.png?v=1653966668",
+    "imagePageSource": "https://www.brainandbrawn.com.au/products/synergy-collagen-coffee-with-organic-cordyceps-mct-c8-c10-20-x-15g-sachet",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "brewy-organic-mushroom-coffee",
@@ -5462,7 +5966,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen",
     "notes": "Liste d'ingrédients publiée mais doses et nature des extraits à préciser.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/brewy-organic-mushroom-coffee.webp",
+    "imageSource": "https://brewy.com.au/cdn/shop/files/1Coffee_33a51e4f-42be-49d4-9abc-b26ea5e32e5a.png?v=1776658854&width=1920",
+    "imagePageSource": "https://brewy.com.au/products/organic-mushroom-coffee",
+    "imageStatus": "official-product-image"
   },
   {
     "id": "rytual-cafe-a-base-de-hongos",
@@ -5505,7 +6013,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "moyen à élevé",
     "notes": "Marque active mais documentation quantitative limitée.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/rytual-cafe-a-base-de-hongos.webp",
+    "imageSource": "https://www.ryzesuperfoods.com/cdn/shop/files/Coffee_-_Ritual_Set_9ac0f921-5e7e-4c47-8e42-e0cf5c8dc123.jpg?v=1743426044&width=1280&em-format=auto",
+    "imagePageSource": "https://www.ryzesuperfoods.com/es/products/mushroom-chai-60-servings",
+    "imageStatus": "reviewed-search-image"
   },
   {
     "id": "physalis-collagen-coffee",
@@ -5548,7 +6060,11 @@ export const directoryProducts: DirectoryProduct[] = [
     "editorialCaution": "faible à moyen",
     "notes": "Formule: 50 % collagène marin, 27,5 % poudre MCT, 22,5 % café; sans sucres ajoutés, gluten ni lait annoncés.",
     "lastVerified": "2026-08-01",
-    "newEntry": true
+    "newEntry": true,
+    "imagePath": "/images/directory/physalis-collagen-coffee.webp",
+    "imageSource": "https://www.physalishealth.com/image_cache/A5000/5402/ph_sup_9018_collagen-coffee-front_nieuw_3d_p11443_nl-fr-78d721aaa1f2c44781cdef8ed22743a2-og_image_large-default.jpg",
+    "imagePageSource": "https://www.physalishealth.com/fr/complements-alimentaires/cheveux-peau-ongles-yeux/collagen-coffee/",
+    "imageStatus": "official-product-image"
   }
 ];
 
@@ -5560,7 +6076,9 @@ export const directoryStats = {
   "newReferences": 27,
   "levelA": 70,
   "levelB": 47,
-  "levelC": 11
+  "levelC": 11,
+  "packagingImages": 124,
+  "packagingImagesMissing": 4
 } as const;
 
 export const directoryUpdatedAt = "1er août 2026";

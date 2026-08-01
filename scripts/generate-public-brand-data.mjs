@@ -4,6 +4,7 @@ import path from "node:path";
 const ROOT = path.resolve(import.meta.dirname, "..");
 const SOURCE = path.join(ROOT, "data", "marques-cafe-fonctionnel.csv");
 const TARGET = path.join(ROOT, "app", "brand-directory-data.ts");
+const IMAGE_MANIFEST = path.join(ROOT, "data", "brand-image-manifest.json");
 
 function parseCsv(text) {
   const rows = [];
@@ -39,8 +40,12 @@ function publicStatus(value) {
 }
 
 const rows = parseCsv(fs.readFileSync(SOURCE, "utf8"));
-const products = rows.map((row, index) => ({
-  id: `${row.marque}-${row.produit}`.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
+const imageManifest = fs.existsSync(IMAGE_MANIFEST) ? JSON.parse(fs.readFileSync(IMAGE_MANIFEST, "utf8")) : {};
+const products = rows.map((row, index) => {
+  const id = `${row.marque}-${row.produit}`.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+  const image = imageManifest[id] ?? {};
+  return ({
+  id,
   brand: row.marque.replace(/\\+/g, "\\"),
   product: row.produit,
   market: row.pays_marche,
@@ -81,7 +86,11 @@ const products = rows.map((row, index) => ({
   notes: row.notes,
   lastVerified: row.date_derniere_verification,
   newEntry: index >= 101,
-}));
+  imagePath: image.imagePath ?? null,
+  imageSource: image.imageSource ?? null,
+  imagePageSource: image.pageSource ?? null,
+  imageStatus: image.status ?? "missing",
+})});
 
 const stats = {
   references: products.length,
@@ -92,6 +101,8 @@ const stats = {
   levelA: products.filter((product) => product.verificationLevel === "A").length,
   levelB: products.filter((product) => product.verificationLevel === "B").length,
   levelC: products.filter((product) => product.verificationLevel === "C").length,
+  packagingImages: products.filter((product) => product.imagePath).length,
+  packagingImagesMissing: products.filter((product) => !product.imagePath).length,
 };
 
 const typeShape = `{
@@ -136,6 +147,10 @@ const typeShape = `{
   notes: string;
   lastVerified: string;
   newEntry: boolean;
+  imagePath: string | null;
+  imageSource: string | null;
+  imagePageSource: string | null;
+  imageStatus: string;
 }`;
 
 const output = `// Généré depuis data/marques-cafe-fonctionnel.csv par scripts/generate-public-brand-data.mjs.\n// Ne pas modifier ce fichier à la main.\n\nexport type DirectoryProduct = ${typeShape};\n\nexport const directoryProducts: DirectoryProduct[] = ${JSON.stringify(products, null, 2)};\n\nexport const directoryStats = ${JSON.stringify(stats, null, 2)} as const;\n\nexport const directoryUpdatedAt = "1er août 2026";\n`;
