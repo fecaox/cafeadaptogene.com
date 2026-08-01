@@ -14,14 +14,14 @@ export function SiteHeader({ compact = false }: { compact?: boolean }) {
         </Link>
         <nav aria-label="Navigation principale">
           {universes.map((universe) => <Link href={`/${universe.slug}/`} key={universe.id}>{universe.title}</Link>)}
-          <Link href="/#marques">Marques</Link>
+          <Link href="/annuaire-cafes-fonctionnels/">Marques</Link>
         </nav>
         <Link className="header-cta" href="/quel-cafe-me-correspond/">Trouver mon café <span>→</span></Link>
         <details className="mobile-menu">
           <summary aria-label="Ouvrir le menu">Menu</summary>
           <div>
             {universes.map((universe) => <Link href={`/${universe.slug}/`} key={universe.id}>{universe.title}</Link>)}
-            <Link href="/#marques">Marques</Link>
+            <Link href="/annuaire-cafes-fonctionnels/">Marques</Link>
             <Link className="mobile-quiz-link" href="/quel-cafe-me-correspond/">Trouver mon café</Link>
           </div>
         </details>
@@ -47,6 +47,7 @@ export function SiteFooter() {
           <h3>Nos engagements</h3>
           <Link href="/methodologie/">Méthodologie</Link>
           <Link href="/politique-affiliation/">Affiliation</Link>
+          <Link href="/annuaire-cafes-fonctionnels/">Annuaire des marques</Link>
           <Link href="/guide-cafe-adaptogene/">Guide essentiel</Link>
         </div>
         <div>

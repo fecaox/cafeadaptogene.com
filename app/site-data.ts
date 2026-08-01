@@ -527,6 +527,7 @@ export type ProductProfile = {
   caffeineText: string;
   priceText: string;
   verified: string;
+  recommendable?: boolean;
 };
 
 export const products: ProductProfile[] = [
@@ -767,15 +768,15 @@ export const products: ProductProfile[] = [
   {
     id: "cosmicblend",
     name: "Cosmic Blend",
-    product: "Mushroom Coffee Collagen",
-    category: "Multi-actifs et collagène",
+    product: "Ancienne référence Mushroom Coffee Collagen",
+    category: "Référence à reconfirmer",
     origin: "France",
-    description: "Une formule hybride associant extrait de café, Lion’s Mane, Chaga, L-théanine, acérola et collagène marin hydrolysé.",
+    description: "Une ancienne formule recensée comme café multi-actifs au collagène. La référence produit n’a pas été retrouvée sur le site officiel actuel et n’est donc plus recommandée.",
     image: "/images/products/cosmicblend-packaging.jpg",
     imageAlt: "Pot Cosmic Blend Mushroom Coffee",
-    link: "https://cosmicblend.co/products/mushroom-coffee-cafe-champignons",
+    link: "https://cosmicblend.fr/",
     relationship: "editorial",
-    badges: ["30 mg de caféine", "Collagène marin", "30 tasses"],
+    badges: ["Produit non retrouvé", "Historique", "À reconfirmer"],
     taste: 2,
     compositions: ["nutrition", "mushrooms", "multi"],
     goals: ["beauty", "focus", "steady"],
@@ -783,12 +784,13 @@ export const products: ProductProfile[] = [
     caffeine: "reduced",
     simplicity: 1,
     priceTier: "premium",
-    strengths: ["Réunit plusieurs usages", "Caféine annoncée modérée", "Format instantané"],
-    limits: ["Dose et quantités individuelles non publiées", "Contient du collagène marin et n’est pas végétalien"],
+    strengths: ["Référence conservée pour la traçabilité historique"],
+    limits: ["Produit actuel non retrouvé sur le site officiel", "Composition, prix et disponibilité à reconfirmer"],
     serving: "Non publiée",
     caffeineText: "30 mg",
     priceText: "1,66 € / tasse",
-    verified: "Informations publiques de la marque, vérifiées le 30 juillet 2026",
+    verified: "Page produit non retrouvée lors de la vérification du 1er août 2026",
+    recommendable: false,
   },
   {
     id: "cafit",
@@ -907,7 +909,7 @@ export const taxonomyGuides: Guide[] = [
       { question: "Pourquoi éviter “artificiellement enrichi” ?", answer: "Parce que les ingrédients ajoutés peuvent être naturels et que l’expression introduit un jugement avant l’analyse de la formule." },
       { question: "Un café enrichi peut-il avoir un vrai goût de café ?", answer: "Oui, surtout lorsque la base café reste dominante, mais les poudres et arômes ajoutés peuvent modifier sensiblement la tasse." },
       { question: "Plus d’actifs signifie-t-il plus d’efficacité ?", answer: "Non. Les quantités, la qualité des extraits, les interactions et les preuves comptent davantage que la longueur de la liste." },
-    ], productIds: ["bonjour", "guerriers", "cafit", "cosmicblend"],
+    ], productIds: ["bonjour", "guerriers", "cafit", "corial"],
   },
   {
     slug: "cafe-champignons-plantes", eyebrow: "Famille 03", title: "Cafés aux champignons et aux plantes fonctionnelles", color: "sage", icon: "M",
@@ -939,7 +941,7 @@ export const taxonomyGuides: Guide[] = [
       { question: "Un café protéiné remplace-t-il un petit-déjeuner ?", answer: "Pas automatiquement. Il faut considérer l’ensemble des protéines, fibres, calories et micronutriments apportés." },
       { question: "Le collagène est-il végétalien ?", answer: "Non. Le collagène commercial est d’origine animale, généralement bovine ou marine." },
       { question: "Faut-il prendre la créatine avec du café ?", answer: "Le café peut être un support pratique, mais la pertinence dépend surtout de la dose totale, de la régularité et de la tolérance individuelle." },
-    ], productIds: ["cafit", "corial", "cosmicblend", "wake"],
+    ], productIds: ["cafit", "corial", "wake"],
   },
   {
     slug: "cafe-multi-actifs", eyebrow: "Famille 05", title: "Cafés multi-actifs : les formules all-in-one", color: "blue", icon: "+",
@@ -955,7 +957,7 @@ export const taxonomyGuides: Guide[] = [
       { question: "Un all-in-one remplace-t-il plusieurs compléments ?", answer: "Seulement si les actifs et les doses sont comparables, ce qui doit être vérifié sur l’étiquette." },
       { question: "Pourquoi les mélanges propriétaires posent-ils problème ?", answer: "Ils peuvent indiquer une quantité totale sans révéler la dose de chaque ingrédient." },
       { question: "À qui cette famille convient-elle ?", answer: "Aux personnes qui privilégient la commodité et acceptent une formule complexe, après vérification des ingrédients et précautions." },
-    ], productIds: ["bonjour", "wake", "brainstoorm", "strate", "cosmicblend"],
+    ], productIds: ["bonjour", "wake", "brainstoorm", "strate"],
   },
   {
     slug: "alternatives-derives-cafe", eyebrow: "Univers 03", title: "Alternatives et dérivés du café", color: "gold", icon: "03",
@@ -1054,7 +1056,7 @@ export const brands = [
   { name: "French Mush", category: "Café bio & champignons", origin: "France", link: "https://www.frenchmush.com/products/boisson-boost-bio-cafe", featured: false },
   { name: "Café des Guerriers", category: "Café & champignons bio", origin: "France", link: "https://cafedesguerriers.fr/", featured: false },
   { name: "Strate", category: "Café & six champignons", origin: "France", link: "https://stratecafe.com/", featured: false },
-  { name: "Cosmic Blend", category: "Champignons & collagène", origin: "France", link: "https://cosmicblend.co/products/mushroom-coffee-cafe-champignons", featured: false },
+  { name: "Cosmic Blend", category: "Ancienne référence à reconfirmer", origin: "France", link: "https://cosmicblend.fr/", featured: false },
   { name: "Cafit", category: "Café protéiné", origin: "France", link: "https://cafitdrink.com/", featured: false },
   { name: "Corial", category: "Café collagène", origin: "Europe", link: "https://corialfoods.com/fr/collections/performance/products/collagen-coffee-original", featured: false },
 ];

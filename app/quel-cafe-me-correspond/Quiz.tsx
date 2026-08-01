@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { products, type ProductProfile } from "../site-data";
 
+const eligibleProducts = products.filter((product) => product.recommendable !== false);
+
 type AnswerMap = Record<string, string>;
 
 const questions = [
@@ -192,7 +194,7 @@ export default function Quiz() {
   const results = useMemo(() => {
     if (!finished) return [];
     const max = maximumScore(answers);
-    return products
+    return eligibleProducts
       .map((product) => scoreProduct(product, answers))
       .sort((a, b) => b.score - a.score)
       .slice(0, 3)

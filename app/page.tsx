@@ -4,7 +4,7 @@ import { ProductCard } from "./components/product-card";
 import { SiteFooter, SiteHeader } from "./components/site-chrome";
 import { guides, products, siteUrl, taxonomyGuides, universes } from "./site-data";
 
-const featuredIds = ["torregral", "bonjour", "cafit", "cosmicblend"];
+const featuredIds = ["torregral", "bonjour", "cafit", "corial"];
 const featured = featuredIds.map((id) => products.find((product) => product.id === id)).filter(Boolean) as typeof products;
 const familyPages = taxonomyGuides.filter((guide) => !universes.some((universe) => universe.slug === guide.slug));
 const priorityArticleIds = ["cafe-fonctionnel", "cafe-nouvelle-generation", "comparatif-cafe-adaptogene", "cafe-focus", "cafe-sans-crash"];
@@ -48,7 +48,7 @@ export default function Home() {
             <div className="hero-facts">
               <span><b>3</b> univers lisibles</span>
               <span><b>7</b> familles comparables</span>
-              <span><b>12</b> produits documentés</span>
+              <span><b>128</b> références documentées</span>
             </div>
           </div>
           <div className="hero-products" aria-label="Exemples de cafés nouvelle génération">
@@ -173,10 +173,10 @@ export default function Home() {
               <p className="eyebrow"><span /> Observatoire des marques</p>
               <h2>Le marché en images,<br /><em>sans angle mort.</em></h2>
             </div>
-            <p>Les visuels identifient les produits ; les textes distinguent ce que la marque déclare de ce que nous avons pu vérifier. Les données sont revues au fil des changements de formule.</p>
+            <p>Notre annuaire recense 128 références issues de 120 marques. Cette sélection visuelle présente quelques produits repères ; chaque fiche complète distingue les déclarations des marques de ce que nous avons pu vérifier.</p>
           </header>
           <div className="brand-wall">
-            {products.map((product, index) => (
+            {products.filter((product) => product.recommendable !== false).map((product, index) => (
               <a href={product.link} target="_blank" rel={product.relationship === "partenaire" ? "sponsored nofollow noopener" : "nofollow noopener"} key={product.id}>
                 <span className="brand-wall-number">{String(index + 1).padStart(2, "0")}</span>
                 <div className="brand-wall-image"><Image src={product.image} alt={product.imageAlt} width={420} height={420} /></div>
@@ -184,6 +184,10 @@ export default function Home() {
                 <b>↗</b>
               </a>
             ))}
+          </div>
+          <div className="brand-directory-cta">
+            <p><b>128 références · 120 marques</b><span>Composition, caféine, dosage, prix, disponibilité et niveau de vérification.</span></p>
+            <Link className="button button-primary" href="/annuaire-cafes-fonctionnels/">Ouvrir l’annuaire complet <span>→</span></Link>
           </div>
         </section>
 

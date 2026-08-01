@@ -26,6 +26,7 @@ test("server-renders the Café Adaptogène homepage", async () => {
   assert.match(html, /Torrégral/i);
   assert.match(html, /Cafés enrichis/i);
   assert.match(html, /Trouver mon café/i);
+  assert.match(html, /128 références/i);
   assert.match(html, /application\/ld\+json/i);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
@@ -48,6 +49,7 @@ test("ships the static GitHub Pages essentials", async () => {
   assert.match(sitemap, /cafe-fonctionnel/);
   assert.match(sitemap, /cafe-nouvelle-generation/);
   assert.match(sitemap, /comparatif-cafe-adaptogene/);
+  assert.match(sitemap, /annuaire-cafes-fonctionnels/);
   assert.match(outputHome, /og\.png/);
   await access(new URL("out/guide-cafe-adaptogene/index.html", root));
   await access(new URL("out/quel-cafe-me-correspond/index.html", root));
@@ -55,7 +57,20 @@ test("ships the static GitHub Pages essentials", async () => {
   await access(new URL("out/cafe-fonctionnel/index.html", root));
   await access(new URL("out/cafe-nouvelle-generation/index.html", root));
   await access(new URL("out/comparatif-cafe-adaptogene/index.html", root));
+  await access(new URL("out/annuaire-cafes-fonctionnels/index.html", root));
   await assert.rejects(access(new URL("app/_sites-preview/SkeletonPreview.tsx", root)));
+});
+
+test("server-renders the verified brand directory", async () => {
+  const response = await render("/annuaire-cafes-fonctionnels/");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /L’annuaire des cafés fonctionnels/i);
+  assert.match(html, /128[\s\S]*références documentées/i);
+  assert.match(html, /120[\s\S]*marques recensées/i);
+  assert.match(html, /Four Sigmatic/i);
+  assert.match(html, /level-a/i);
+  assert.match(html, /CollectionPage/i);
 });
 
 test("server-renders a priority SEO article with its internal cluster", async () => {

@@ -5,11 +5,12 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    { url: siteUrl, lastModified: "2026-07-30", changeFrequency: "weekly", priority: 1 },
-    { url: `${siteUrl}/quel-cafe-me-correspond/`, lastModified: "2026-07-30", changeFrequency: "monthly", priority: 0.9 },
+    { url: siteUrl, lastModified: "2026-08-01", changeFrequency: "weekly", priority: 1 },
+    { url: `${siteUrl}/annuaire-cafes-fonctionnels/`, lastModified: "2026-08-01", changeFrequency: "weekly", priority: 0.95 },
+    { url: `${siteUrl}/quel-cafe-me-correspond/`, lastModified: "2026-08-01", changeFrequency: "monthly", priority: 0.9 },
     ...allGuides.map((guide) => ({
       url: `${siteUrl}/${guide.slug}/`,
-      lastModified: "2026-07-30",
+      lastModified: "2026-08-01",
       changeFrequency: "monthly" as const,
       priority: guide.slug === "guide-cafe-adaptogene" ? 0.9 : 0.8,
     })),

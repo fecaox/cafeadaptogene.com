@@ -29,8 +29,8 @@ function fallbackProducts(slug: string) {
     "cafe-champignon": ["bonjour", "guerriers", "frenchmush"],
     "cafe-focus": ["torregral", "bonjour", "brainstoorm"],
     "cafe-sans-crash": ["torregral", "bonjour", "cafeintegral"],
-    "cafe-collagene": ["corial", "cosmicblend", "wake"],
-    "cafe-proteine": ["cafit", "corial", "cosmicblend"],
+    "cafe-collagene": ["corial", "wake"],
+    "cafe-proteine": ["cafit", "corial"],
     "cafe-minceur": ["cafeminceur", "torregral", "bonjour"],
     "cafe-bdnf": ["cafeintegral", "torregral", "brainstoorm"],
   };
@@ -56,7 +56,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     headline: guide.title,
     description: guide.description,
     datePublished: "2026-07-30",
-    dateModified: "2026-07-30",
+    dateModified: "2026-08-01",
     inLanguage: "fr-FR",
     mainEntityOfPage: `${siteUrl}/${guide.slug}/`,
     author: { "@type": "Organization", name: "Rédaction Café Adaptogène" },
@@ -85,7 +85,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <p className="eyebrow"><span /> {guide.eyebrow}</p>
             <h1>{guide.title}</h1>
             <p>{guide.description}</p>
-            <div className="article-meta"><span>Mis à jour le 30 juillet 2026</span><span>Lecture · {readingTime} min</span><span>Sources et méthode visibles</span></div>
+            <div className="article-meta"><span>Mis à jour le 1er août 2026</span><span>Lecture · {readingTime} min</span><span>Sources et méthode visibles</span></div>
           </div>
           <div className="article-monogram" aria-hidden="true"><span>{guide.icon}</span><small>CAFÉ<br />ADAPTOGÈNE</small></div>
         </header>
