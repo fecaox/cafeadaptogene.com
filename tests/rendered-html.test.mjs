@@ -50,6 +50,10 @@ test("ships the static GitHub Pages essentials", async () => {
   assert.match(sitemap, /cafe-nouvelle-generation/);
   assert.match(sitemap, /comparatif-cafe-adaptogene/);
   assert.match(sitemap, /annuaire-cafes-fonctionnels/);
+  assert.match(sitemap, /proteine/);
+  assert.match(sitemap, /creatine/);
+  assert.match(sitemap, /collagene/);
+  assert.match(sitemap, /mush/);
   assert.match(outputHome, /og\.png/);
   await access(new URL("out/guide-cafe-adaptogene/index.html", root));
   await access(new URL("out/quel-cafe-me-correspond/index.html", root));
@@ -58,6 +62,10 @@ test("ships the static GitHub Pages essentials", async () => {
   await access(new URL("out/cafe-nouvelle-generation/index.html", root));
   await access(new URL("out/comparatif-cafe-adaptogene/index.html", root));
   await access(new URL("out/annuaire-cafes-fonctionnels/index.html", root));
+  await access(new URL("out/proteine/index.html", root));
+  await access(new URL("out/creatine/index.html", root));
+  await access(new URL("out/collagene/index.html", root));
+  await access(new URL("out/mush/index.html", root));
   await assert.rejects(access(new URL("app/_sites-preview/SkeletonPreview.tsx", root)));
 });
 

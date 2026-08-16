@@ -51,6 +51,13 @@ export function SiteFooter() {
           <Link href="/guide-cafe-adaptogene/">Guide essentiel</Link>
         </div>
         <div>
+          <h3>Nos créations</h3>
+          <Link href="/proteine/">Café Protéiné</Link>
+          <Link href="/creatine/">Café Créatine</Link>
+          <Link href="/collagene/">Café Collagène</Link>
+          <Link href="/mush/">Café Mush</Link>
+        </div>
+        <div>
           <h3>Contact</h3>
           <a href="mailto:bonjour@cafeadaptogene.com">bonjour@cafeadaptogene.com</a>
           <p className="footer-small">Une donnée à corriger ? Envoyez-nous sa source et sa date.</p>

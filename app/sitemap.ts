@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { landingSlugs } from "./product-landing-data";
 import { allGuides, siteUrl } from "./site-data";
 
 export const dynamic = "force-static";
@@ -8,6 +9,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: siteUrl, lastModified: "2026-08-01", changeFrequency: "weekly", priority: 1 },
     { url: `${siteUrl}/annuaire-cafes-fonctionnels/`, lastModified: "2026-08-01", changeFrequency: "weekly", priority: 0.95 },
     { url: `${siteUrl}/quel-cafe-me-correspond/`, lastModified: "2026-08-01", changeFrequency: "monthly", priority: 0.9 },
+    ...landingSlugs.map((slug) => ({
+      url: `${siteUrl}/${slug}/`,
+      lastModified: "2026-08-16",
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    })),
     ...allGuides.map((guide) => ({
       url: `${siteUrl}/${guide.slug}/`,
       lastModified: "2026-08-01",
