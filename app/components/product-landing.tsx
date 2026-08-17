@@ -81,6 +81,26 @@ export function ProductLanding({ product }: { product: LandingProduct }) {
           {[0, 1, 2].map((item) => <span key={item}>{product.promise} <b>✦</b></span>)}
         </div>
 
+        <section className={styles.videoStory}>
+          <div className={styles.videoCopy}>
+            <p>Présentation du concept</p>
+            <h2>Le format individuel,<br />en mouvement.</h2>
+            <p>
+              {product.slug === "proteine"
+                ? "Découvrez l’édition Café Protéiné, son sachet individuel et l’univers imaginé autour de ce nouveau rituel."
+                : `Cette présentation montre l’édition Café Protéiné, première déclinaison du concept. Café ${product.shortName} reprend le même principe de sachet individuel dans son propre univers.`}
+            </p>
+            <span>Vidéo · Café Adaptogène</span>
+          </div>
+          <div className={styles.videoFrame}>
+            <video controls preload="metadata" playsInline poster={product.animalImage} aria-label="Présentation vidéo du Café Protéiné par Café Adaptogène">
+              <source src="/videos/cafe-presentation-proteine.mp4" type="video/mp4" />
+              Votre navigateur ne permet pas de lire cette vidéo.
+            </video>
+            <small>Appuyez sur lecture pour découvrir la présentation</small>
+          </div>
+        </section>
+
         <section className={styles.identity}>
           <div className={styles.identityTitle}>
             <p>Le manifeste</p>
