@@ -6,6 +6,9 @@ import { PreorderForm } from "./preorder-form";
 import styles from "./product-landing.module.css";
 
 export function ProductLanding({ product }: { product: LandingProduct }) {
+  const relatedProducts = landingSlugs
+    .filter((slug) => slug !== product.slug)
+    .map((slug) => landingProducts[slug]);
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -183,6 +186,29 @@ export function ProductLanding({ product }: { product: LandingProduct }) {
           <strong>À savoir</strong>
           <p>Ce produit est une denrée alimentaire en développement, pas un médicament. Il contient du café et donc de la caféine. En cas de grossesse, d’allaitement, de pathologie, de traitement ou de sensibilité particulière, demandez conseil à un professionnel de santé.</p>
         </aside>
+
+        <section className={styles.relatedProducts}>
+          <header>
+            <p>Continuer la découverte</p>
+            <h2>Un autre café<br />vous ressemble peut-être.</h2>
+            <span>Explorez les trois autres créations Café Adaptogène.</span>
+          </header>
+          <div className={styles.relatedGrid}>
+            {relatedProducts.map((related) => (
+              <Link className={`${styles.relatedCard} ${styles[`relatedCard_${related.theme}`]}`} href={`/${related.slug}/`} key={related.slug}>
+                <div className={styles.relatedImage}>
+                  <Image src={related.packImage} alt={related.packAlt} width={560} height={680} sizes="(max-width: 760px) 70vw, 25vw" />
+                </div>
+                <div className={styles.relatedCopy}>
+                  <small>{related.eyebrow}</small>
+                  <h3>{related.productName}</h3>
+                  <p>{related.promise}</p>
+                  <b>Découvrir <span>→</span></b>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
       </main>
 
       <footer className={styles.footer}>
