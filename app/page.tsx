@@ -27,6 +27,23 @@ export default function Home() {
         "@id": `${siteUrl}/#organization`,
         name: "Café Adaptogène",
         url: siteUrl,
+        logo: `${siteUrl}/favicon.png`,
+        email: "bonjour@cafeadaptogene.com",
+        areaServed: "France",
+        knowsAbout: [
+          "café adaptogène",
+          "café fonctionnel",
+          "café aux champignons",
+          "café protéiné",
+          "café au collagène",
+          "café à la créatine",
+          "produits issus de la cerise de café",
+        ],
+        brand: [
+          { "@id": `${siteUrl}/torregral/#brand`, "@type": "Brand", name: "Torrégral", url: "https://www.torregral.com/" },
+          { "@id": `${siteUrl}/marques/cafe-integral/#brand`, "@type": "Brand", name: "Café Intégral", url: "https://www.cafeintegral.fr/" },
+          { "@id": `${siteUrl}/marques/cafe-minceur/#brand`, "@type": "Brand", name: "Café Minceur", url: "https://www.cafeminceur.fr/" },
+        ],
       },
     ],
   };

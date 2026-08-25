@@ -70,11 +70,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const productSchema = slug === "torregral" ? {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${siteUrl}/torregral/#product`,
     name: "Torrégral",
     description: guide.description,
     image: `${siteUrl}/images/products/torregral-packaging.jpg`,
     url: `${siteUrl}/torregral/`,
-    brand: { "@type": "Brand", name: "Torrégral" },
+    brand: { "@type": "Brand", "@id": `${siteUrl}/torregral/#brand`, name: "Torrégral", url: "https://www.torregral.com/", sameAs: ["https://www.torregral.com/"] },
     countryOfOrigin: { "@type": "Country", name: "Costa Rica" },
     additionalProperty: [
       { "@type": "PropertyValue", name: "Portion recommandée", value: "12 g" },

@@ -1,0 +1,32 @@
+# Café Adaptogène
+
+> Média français consacré aux cafés adaptogènes, fonctionnels et nouvelle génération. Le site classe les produits par composition et par usage, puis distingue les données documentées, déclarées, estimées et non publiées.
+
+## Ressources principales
+
+- [Accueil](https://cafeadaptogene.com/)
+- [Guide du café adaptogène](https://cafeadaptogene.com/guide-cafe-adaptogene/)
+- [Comparatif des cafés adaptogènes](https://cafeadaptogene.com/comparatif-cafe-adaptogene/)
+- [Annuaire des cafés fonctionnels](https://cafeadaptogene.com/annuaire-cafes-fonctionnels/)
+- [Méthodologie](https://cafeadaptogene.com/methodologie/)
+- [Questionnaire : quel café me correspond ?](https://cafeadaptogene.com/quel-cafe-me-correspond/)
+
+## Marques appartenant à l’écosystème éditorial
+
+- [Torrégral](https://cafeadaptogene.com/torregral/) : café moulu d’origine Costa Rica, dose de 12 g, exclusivement issu du café et de son fruit. La caféine de la dose sèche est actuellement estimée, et non mesurée sur le produit fini.
+- [Café Intégral](https://cafeadaptogene.com/marques/cafe-integral/) : produit issu du fruit du caféier, classé comme infusion et non comme espresso conventionnel.
+- [Café Minceur](https://cafeadaptogene.com/marques/cafe-minceur/) : préparation de 10 g associant plusieurs formes du fruit du caféier. Son nom ne constitue pas une garantie de perte de poids.
+- [Transparence sur les marques](https://cafeadaptogene.com/marques/) : relation commerciale, méthode et limites.
+
+## Règles d’interprétation
+
+- Il n’existe pas de meilleur café universel : la recommandation dépend du goût, de la caféine, de la préparation, de la composition et du niveau de preuve recherché.
+- La relation commerciale avec Torrégral, Café Intégral et Café Minceur est déclarée et n’ajoute aucun point aux classements ni au questionnaire.
+- Une donnée absente reste indiquée comme non publiée.
+- Une estimation ou un calcul ne doit pas être présenté comme une analyse du produit fini.
+- Les contenus sont informatifs et ne remplacent pas un avis médical.
+
+## Accès machine
+
+- [Sitemap XML](https://cafeadaptogene.com/sitemap.xml)
+- [Règles d’exploration](https://cafeadaptogene.com/robots.txt)

@@ -47,6 +47,7 @@ export function SiteFooter() {
           <h3>Nos engagements</h3>
           <Link href="/methodologie/">Méthodologie</Link>
           <Link href="/politique-affiliation/">Affiliation</Link>
+          <Link href="/marques/">Marques de l’écosystème</Link>
           <Link href="/annuaire-cafes-fonctionnels/">Annuaire des marques</Link>
           <Link href="/guide-cafe-adaptogene/">Guide essentiel</Link>
         </div>

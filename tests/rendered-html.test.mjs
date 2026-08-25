@@ -33,11 +33,12 @@ test("server-renders the Café Adaptogène homepage", async () => {
 
 test("ships the static GitHub Pages essentials", async () => {
   const root = new URL("../", import.meta.url);
-  const [cname, robots, sitemap, outputHome] = await Promise.all([
+  const [cname, robots, sitemap, outputHome, llms] = await Promise.all([
     readFile(new URL("public/CNAME", root), "utf8"),
     readFile(new URL("out/robots.txt", root), "utf8"),
     readFile(new URL("out/sitemap.xml", root), "utf8"),
     readFile(new URL("out/index.html", root), "utf8"),
+    readFile(new URL("out/llms.txt", root), "utf8"),
   ]);
 
   assert.equal(cname.trim(), "cafeadaptogene.com");
@@ -55,7 +56,15 @@ test("ships the static GitHub Pages essentials", async () => {
   assert.match(sitemap, /creatine/);
   assert.match(sitemap, /collagene/);
   assert.match(sitemap, /mush/);
+  assert.match(sitemap, /marques\/cafe-integral/);
+  assert.match(sitemap, /marques\/cafe-minceur/);
   assert.match(outputHome, /og\.png/);
+  assert.match(robots, /OAI-SearchBot/);
+  assert.match(robots, /Claude-SearchBot/);
+  assert.match(robots, /PerplexityBot/);
+  assert.match(llms, /https:\/\/cafeadaptogene\.com\/torregral\//);
+  assert.match(llms, /https:\/\/cafeadaptogene\.com\/marques\/cafe-integral\//);
+  assert.match(llms, /https:\/\/cafeadaptogene\.com\/marques\/cafe-minceur\//);
   await access(new URL("out/guide-cafe-adaptogene/index.html", root));
   await access(new URL("out/quel-cafe-me-correspond/index.html", root));
   await access(new URL("out/cafes-enrichis/index.html", root));
@@ -68,6 +77,9 @@ test("ships the static GitHub Pages essentials", async () => {
   await access(new URL("out/creatine/index.html", root));
   await access(new URL("out/collagene/index.html", root));
   await access(new URL("out/mush/index.html", root));
+  await access(new URL("out/marques/index.html", root));
+  await access(new URL("out/marques/cafe-integral/index.html", root));
+  await access(new URL("out/marques/cafe-minceur/index.html", root));
   await assert.rejects(access(new URL("app/_sites-preview/SkeletonPreview.tsx", root)));
 });
 
@@ -116,6 +128,19 @@ test("server-renders the documented Torrégral product sheet", async () => {
   assert.match(html, /15,47 % de la dose/i);
   assert.match(html, /6,6 kcal/i);
   assert.match(html, /Product/i);
+});
+
+test("server-renders a brand entity page with verifiable facts", async () => {
+  const response = await render("/marques/cafe-integral/");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Café Intégral : la fiche vérifiable/i);
+  assert.match(html, /Faits vérifiables/i);
+  assert.match(html, /non publié/i);
+  assert.match(html, /relation/i);
+  assert.match(html, /\"@type\":\"Brand\"/i);
+  assert.match(html, /\"@type\":\"Product\"/i);
+  assert.match(html, /FAQPage/i);
 });
 
 test("server-renders the recommendation quiz", async () => {
