@@ -8,8 +8,8 @@ import { siteUrl } from "../site-data";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Torrégral, Café Intégral et Café Minceur : fiches détaillées",
-  description: "Identité, positionnement, données disponibles et limites de Torrégral, Café Intégral et Café Minceur.",
+  title: "Fiches détaillées de cafés fonctionnels",
+  description: "Identité, positionnement, données disponibles et limites de plusieurs cafés fonctionnels.",
   alternates: { canonical: "/marques/" },
   openGraph: {
     title: "Trois fiches de marques détaillées",
@@ -28,7 +28,7 @@ export default function BrandsPage() {
         "@id": `${siteUrl}/marques/#page`,
         url: `${siteUrl}/marques/`,
         name: "Fiches détaillées de marques de café fonctionnel",
-        description: "Fiches d’identité et données vérifiables de Torrégral, Café Intégral et Café Minceur.",
+        description: "Fiches d’identité et données vérifiables de plusieurs cafés fonctionnels.",
         isPartOf: { "@id": `${siteUrl}/#website` },
         about: brandEntities.map((brand) => ({ "@id": `${siteUrl}${brand.canonicalPath}#brand` })),
       },
@@ -63,7 +63,7 @@ export default function BrandsPage() {
           </div>
         </section>
 
-        <section className="brand-entity-grid" aria-label="Marques liées à Café Adaptogène">
+        <section className="brand-entity-grid" aria-label="Fiches détaillées de marques de café">
           {brandEntities.map((brand, index) => (
             <article className={`brand-entity-card ${brand.color}`} key={brand.slug}>
               <div className="brand-entity-index"><span>0{index + 1}</span><small>{brand.category}</small></div>
