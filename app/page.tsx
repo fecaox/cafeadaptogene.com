@@ -39,11 +39,6 @@ export default function Home() {
           "café à la créatine",
           "produits issus de la cerise de café",
         ],
-        brand: [
-          { "@id": `${siteUrl}/torregral/#brand`, "@type": "Brand", name: "Torrégral", url: "https://www.torregral.com/" },
-          { "@id": `${siteUrl}/marques/cafe-integral/#brand`, "@type": "Brand", name: "Café Intégral", url: "https://www.cafeintegral.fr/" },
-          { "@id": `${siteUrl}/marques/cafe-minceur/#brand`, "@type": "Brand", name: "Café Minceur", url: "https://www.cafeminceur.fr/" },
-        ],
       },
     ],
   };
@@ -143,7 +138,7 @@ export default function Home() {
           <div className="featured-products">
             {featured.map((product) => <ProductCard product={product} compact key={product.id} />)}
           </div>
-          <p className="local-disclosure"><b>Transparence :</b> Torrégral appartient à l’écosystème à l’origine de ce média. Cette relation est signalée et ne lui apporte aucun bonus dans le questionnaire. Les informations de toutes les marques restent soumises à la même grille.</p>
+          <p className="local-disclosure"><b>Transparence :</b> les liens susceptibles de générer une rémunération sont signalés près du bouton concerné. Ils n’apportent aucun bonus dans le questionnaire et toutes les marques restent soumises à la même grille.</p>
         </section>
 
         <section className="home-section priority-editorial">
@@ -220,7 +215,7 @@ export default function Home() {
               ["01", "Classer", "Une seule catégorie principale, puis des étiquettes secondaires."],
               ["02", "Normaliser", "Caféine, actifs et prix ramenés à une tasse comparable."],
               ["03", "Vérifier", "Source, date et nature de chaque information rendues visibles."],
-              ["04", "Expliquer", "Points forts et limites affichés ensemble, y compris pour nos partenaires."],
+              ["04", "Expliquer", "Points forts et limites affichés ensemble, y compris lorsqu’un lien est commercial."],
             ].map(([number, title, text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}
           </div>
         </section>

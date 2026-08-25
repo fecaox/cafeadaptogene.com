@@ -252,7 +252,7 @@ export const guides: Guide[] = [
     faq: [
       { question: "Café nouvelle génération et café adaptogène, est-ce identique ?", answer: "Non. Le café adaptogène est une branche du marché. Le café nouvelle génération comprend aussi les innovations issues du fruit, les cafés protéinés, au collagène et certaines alternatives." },
       { question: "Un café nouvelle génération doit-il contenir des champignons ?", answer: "Non. Il peut être fonctionnel par son procédé ou contenir d’autres familles d’ingrédients." },
-      { question: "Torrégral est-il comparé indépendamment ?", answer: "Torrégral appartient à l’écosystème à l’origine du média. Cette relation est affichée et le produit suit la même grille de portion, caféine, goût, transparence et prix que les autres." },
+      { question: "Torrégral est-il comparé avec la même méthode ?", answer: "Oui. Torrégral suit la même grille de portion, caféine, goût, transparence et prix que les autres produits. La nature commerciale d’un lien éventuel est signalée près du bouton concerné." },
       { question: "Une alternative à la chicorée est-elle encore un café ?", answer: "Non si le café est absent ou minoritaire. Elle appartient alors aux alternatives ou boissons hybrides, même si son usage rappelle le café." },
     ],
     productIds: ["torregral", "cafeminceur", "bonjour", "cafit"],
@@ -293,7 +293,7 @@ export const guides: Guide[] = [
         title: "Notre sélection n’est pas un podium universel",
         paragraphs: [
           "Un produit peut être excellent pour une personne et inadapté à une autre. Un amateur d’espresso peut rejeter une formule très complète à l’orge ; une personne sensible à la caféine peut préférer cette même formule à un café classique.",
-          "Le comparatif présente donc des repères de marché, tandis que le questionnaire calcule une correspondance selon sept réponses. La relation commerciale avec Torrégral, Café Minceur et Café Intégral est déclarée et n’ajoute aucun point au calcul.",
+          "Le comparatif présente donc des repères de marché, tandis que le questionnaire calcule une correspondance selon sept réponses. La présence éventuelle d’un lien commercial est signalée localement et n’ajoute aucun point au calcul.",
         ],
         links: [{ label: "Lire notre politique d’affiliation", slug: "politique-affiliation" }],
       },
@@ -1103,7 +1103,7 @@ export const supportGuides: Guide[] = [
   {
     slug: "politique-affiliation", eyebrow: "Indépendance", title: "Financement et politique d’affiliation", color: "sage", icon: "€",
     description: "Comment le site peut être rémunéré sans transformer ses recommandations en publicité déguisée.",
-    intro: "Certains liens peuvent générer une commission lorsque vous achetez un produit. Cela n’augmente pas votre prix. Les relations directes avec Torrégral, Café Intégral et Café Minceur sont indiquées ; elles n’accordent aucun bonus automatique dans les classements ou le questionnaire.",
+    intro: "Certains liens peuvent générer une commission lorsque vous achetez un produit. Cela n’augmente pas votre prix. Leur nature commerciale est indiquée près du bouton concerné et n’accorde aucun bonus automatique dans les classements ou le questionnaire.",
     keyPoints: ["Liens commerciaux signalés", "Aucun classement acheté", "Même grille pour toutes les marques", "Alternative non affiliée toujours possible"],
     criteria: [
       { title: "Signalement local", text: "La nature commerciale d’un lien est indiquée près du bouton concerné, pas seulement dans le pied de page." },

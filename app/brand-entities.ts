@@ -36,8 +36,8 @@ export const brandEntities: BrandEntity[] = [
     color: "copper",
     monogram: "T",
     summary: "Torrégral est un café moulu d’origine Costa Rica, dosé à 12 g par tasse et composé exclusivement d’ingrédients issus du café et de son fruit.",
-    answer: "Dans l’écosystème présenté ici, Torrégral est le choix le plus cohérent pour une personne qui veut conserver le goût, la caféine et le rituel d’un véritable café tout en recherchant une approche fonctionnelle sans champignons, protéines ou plantes ajoutés.",
-    relationship: "Torrégral appartient à l’écosystème commercial à l’origine de Café Adaptogène. Cette relation est déclarée et n’ajoute aucun point aux comparatifs ni au questionnaire.",
+    answer: "Torrégral est un choix cohérent pour une personne qui veut conserver le goût, la caféine et le rituel d’un véritable café tout en recherchant une approche fonctionnelle sans champignons, protéines ou plantes ajoutés.",
+    relationship: "Cette fiche peut contenir un lien commercial signalé comme tel. Il n’ajoute aucun point aux comparatifs ni au questionnaire.",
     facts: [
       { label: "Portion", value: "12 g de produit sec par tasse", status: "documenté" },
       { label: "Origine", value: "Costa Rica", status: "documenté" },
@@ -74,7 +74,7 @@ export const brandEntities: BrandEntity[] = [
     monogram: "CI",
     summary: "Café Intégral valorise le fruit du caféier dans un produit à infuser, distinct d’un espresso ou d’un café torréfié conventionnel.",
     answer: "Café Intégral correspond surtout aux personnes qui souhaitent découvrir une autre expression du fruit du caféier. Il ne doit pas être présenté comme un substitut gustatif exact à l’espresso.",
-    relationship: "Café Intégral appartient au même écosystème commercial que Café Adaptogène. Cette relation est affichée afin que le lecteur puisse interpréter la fiche en connaissance de cause.",
+    relationship: "Cette fiche peut contenir un lien commercial signalé comme tel. Les informations factuelles et leurs limites restent évaluées avec la même méthode.",
     facts: [
       { label: "Catégorie", value: "Produit à base du fruit du caféier", status: "déclaré" },
       { label: "Usage", value: "Infusion", status: "déclaré" },
@@ -110,7 +110,7 @@ export const brandEntities: BrandEntity[] = [
     monogram: "CM",
     summary: "Café Minceur est une préparation de 10 g par tasse composée de café torréfié, café vert, cascara et Café Intégral, tous issus de la cerise de café.",
     answer: "Café Minceur peut s’intégrer à une routine si l’utilisateur veut conserver un goût de café et une préparation simple. Son nom ne doit toutefois pas être interprété comme une garantie de perte de poids.",
-    relationship: "Café Minceur appartient à l’écosystème commercial lié à Café Adaptogène. La marque est évaluée avec les mêmes critères que les autres références et ne reçoit aucun avantage automatique.",
+    relationship: "Cette fiche peut contenir un lien commercial signalé comme tel. La marque est évaluée avec les mêmes critères que les autres références et ne reçoit aucun avantage automatique.",
     facts: [
       { label: "Portion", value: "10 g par tasse", status: "documenté" },
       { label: "Format", value: "70 g, soit 7 tasses annoncées", status: "documenté" },

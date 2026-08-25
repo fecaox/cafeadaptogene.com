@@ -8,7 +8,7 @@ export function ProductCard({ product, compact = false }: { product: ProductProf
     <article className={`product-card${compact ? " compact-product" : ""}`}>
       <div className="product-image">
         <Image src={product.image} alt={product.imageAlt} width={720} height={720} sizes={compact ? "(max-width: 760px) 40vw, 180px" : "(max-width: 760px) 86vw, 320px"} />
-        {commercial && <span className="relationship-badge">Partenaire · classement indépendant</span>}
+        {commercial && <span className="relationship-badge">Lien commercial · classement indépendant</span>}
       </div>
       <div className="product-copy">
         <p className="product-category">{product.category}</p>
@@ -31,7 +31,7 @@ export function ProductCard({ product, compact = false }: { product: ProductProf
           <small>{product.verified}</small>
           {product.detailPath && <Link href={product.detailPath}>Lire la fiche vérifiée <span>→</span></Link>}
           <a href={product.link} target="_blank" rel={commercial ? "sponsored nofollow noopener" : "nofollow noopener"}>
-            Voir le site officiel <span>↗</span>{commercial && <em>Lien partenaire</em>}
+            Voir le site officiel <span>↗</span>{commercial && <em>Lien commercial</em>}
           </a>
         </div>
       </div>

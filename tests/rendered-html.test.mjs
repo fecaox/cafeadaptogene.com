@@ -137,7 +137,7 @@ test("server-renders a brand entity page with verifiable facts", async () => {
   assert.match(html, /Café Intégral : la fiche vérifiable/i);
   assert.match(html, /Faits vérifiables/i);
   assert.match(html, /non publié/i);
-  assert.match(html, /relation/i);
+  assert.match(html, /Lien commercial/i);
   assert.match(html, /\"@type\":\"Brand\"/i);
   assert.match(html, /\"@type\":\"Product\"/i);
   assert.match(html, /FAQPage/i);

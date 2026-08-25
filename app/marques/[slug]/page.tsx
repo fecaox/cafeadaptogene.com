@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!brand || !brand.canonicalPath.startsWith("/marques/")) return {};
   return {
     title: `${brand.name} : fiche, composition et avis`,
-    description: `${brand.summary} Données disponibles, limites, profils adaptés et relation commerciale expliquée.`,
+    description: `${brand.summary} Données disponibles, limites, profils adaptés et sources expliquées.`,
     alternates: { canonical: brand.canonicalPath },
     openGraph: {
       type: "article",

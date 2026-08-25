@@ -242,7 +242,7 @@ export default function Quiz() {
                   <ul>{result.reasons.length ? result.reasons.map((reason) => <li key={reason}>{reason}</li>) : <li>la meilleure compatibilité globale parmi les produits documentés</li>}</ul>
                   <div className="result-caution"><b>Point à vérifier</b><span>{result.product.limits[0]}</span></div>
                   <a href={result.product.link} target="_blank" rel={commercial ? "sponsored nofollow noopener" : "nofollow noopener"}>
-                    Voir {result.product.name} <span>↗</span>{commercial && <em>Lien partenaire</em>}
+                    Voir {result.product.name} <span>↗</span>{commercial && <em>Lien commercial</em>}
                   </a>
                 </div>
               </article>
@@ -253,7 +253,7 @@ export default function Quiz() {
           <button type="button" onClick={restart}>Recommencer le test</button>
           <Link href="/methodologie/">Comprendre le calcul ↗</Link>
         </div>
-        <p className="results-disclosure">Les relations commerciales n’entrent pas dans le calcul. Torrégral, Café Intégral et Café Minceur sont liés à l’écosystème éditorial du site ; cette relation est affichée lorsqu’un de ces produits apparaît.</p>
+        <p className="results-disclosure">Les liens commerciaux sont signalés près du bouton concerné et n’entrent jamais dans le calcul. Les résultats dépendent uniquement des réponses et des données produit.</p>
       </section>
     );
   }
