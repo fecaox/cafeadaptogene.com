@@ -113,6 +113,8 @@ test("server-renders the documented Torrégral product sheet", async () => {
   assert.match(html, /12 g/i);
   assert.match(html, /Costa Rica/i);
   assert.match(html, /120 à 140 mg/i);
+  assert.match(html, /15,47 % de la dose/i);
+  assert.match(html, /6,6 kcal/i);
   assert.match(html, /Product/i);
 });
 

@@ -49,10 +49,11 @@ export const guides: Guide[] = [
         title: "Valeurs documentées dans une portion sèche de 12 g",
         paragraphs: [
           "Les résultats ci-dessous représentent la contribution calculée de la partie de la recette couverte par l’analyse CITA SAQ-1178-2017. Ils constituent des valeurs documentées minimales dans le produit sec, et non un tableau nutritionnel complet de la boisson préparée.",
-          "La portion contient ainsi au moins 1,86 g de fibres alimentaires documentées, 0,34 g de protéines, 0,31 g de lipides, 2,45 g de glucides totaux dont 0,59 g disponibles, environ 0,30 g de fructose et 0,25 g de glucose. Le saccharose documenté reste inférieur à 0,02 g par portion.",
+          "La portion contient ainsi au moins 1,86 g de fibres alimentaires documentées (15,47 % de la dose), 0,34 g de protéines (2,86 %), 0,31 g de lipides (2,60 %), 2,45 g de glucides totaux (20,40 %) dont 0,59 g disponibles (4,93 %), environ 0,30 g de fructose (2,50 %) et 0,25 g de glucose (2,05 %). Le saccharose documenté reste inférieur à 0,02 g, soit moins de 0,13 % de la dose.",
+          "La contribution documentée comprend également environ 0,35 g d’humidité (2,90 % de la dose), 0,15 g de cendres minérales (1,25 %) et 6,6 kcal. Ces chiffres n’intègrent pas les apports éventuels de la partie de la recette qui n’a pas été couverte par cette analyse nutritionnelle.",
           "La contribution minérale calculée est d’environ 37 mg de potassium, 4,8 mg de calcium, 1,35 mg de fer et 0,45 mg de sodium. L’analyse permet aussi de calculer au moins 364 µmol équivalent Trolox d’activité ORAC par portion ; cette mesure in vitro ne constitue pas, à elle seule, la preuve d’un bénéfice chez l’être humain.",
         ],
-        bullets: ["Fibres documentées : ≥ 1,86 g", "Protéines documentées : ≥ 0,34 g", "Lipides documentés : ≥ 0,31 g", "Glucides totaux documentés : ≥ 2,45 g", "Potassium documenté : ≥ 37 mg", "Fer documenté : ≥ 1,35 mg", "ORAC documenté : ≥ 364 µmol TE"],
+        bullets: ["Fibres : ≥ 1,86 g · 15,47 % de la dose", "Protéines : ≥ 0,34 g · 2,86 %", "Lipides : ≥ 0,31 g · 2,60 %", "Glucides totaux : ≥ 2,45 g · 20,40 %", "Glucides disponibles : ≥ 0,59 g · 4,93 %", "Fructose : ≥ 0,30 g · 2,50 %", "Glucose : ≥ 0,25 g · 2,05 %", "Saccharose : < 0,02 g · < 0,13 %", "Humidité documentée : ≥ 0,35 g · 2,90 %", "Cendres minérales : ≥ 0,15 g · 1,25 %", "Énergie documentée : ≥ 6,6 kcal", "Potassium : ≥ 37 mg", "Calcium : ≥ 4,8 mg", "Fer : ≥ 1,35 mg", "Sodium : ≥ 0,45 mg", "ORAC : ≥ 364 µmol TE"],
       },
       {
         title: "Caféine : ce que le calcul permet réellement d’affirmer",
