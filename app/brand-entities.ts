@@ -135,7 +135,7 @@ export const brandEntities: BrandEntity[] = [
   },
 ];
 
-export const ownedBrandEntities = brandEntities.filter((brand) => brand.canonicalPath.startsWith("/marques/"));
+export const detailedBrandEntities = brandEntities.filter((brand) => brand.canonicalPath.startsWith("/marques/"));
 
 export function getBrandEntity(slug: string) {
   return brandEntities.find((brand) => brand.slug === slug);

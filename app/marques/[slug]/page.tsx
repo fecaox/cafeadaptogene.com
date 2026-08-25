@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getBrandEntity, ownedBrandEntities } from "../../brand-entities";
+import { detailedBrandEntities, getBrandEntity } from "../../brand-entities";
 import { SiteFooter, SiteHeader } from "../../components/site-chrome";
 import { siteUrl } from "../../site-data";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return ownedBrandEntities.map((brand) => ({ slug: brand.slug }));
+  return detailedBrandEntities.map((brand) => ({ slug: brand.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

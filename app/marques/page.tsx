@@ -50,14 +50,14 @@ export default function BrandsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <SiteHeader compact />
-      <main className="owned-brands-page">
+      <main className="brand-profiles-page">
         <div className="article-breadcrumb"><Link href="/">Accueil</Link><span>→</span><b>Fiches détaillées</b></div>
-        <section className="owned-brands-hero">
+        <section className="brand-profiles-hero">
           <div>
             <p className="eyebrow"><span /> Identités de marque</p>
             <h1>Des fiches détaillées,<br /><em>sans raccourci.</em></h1>
           </div>
-          <div className="owned-brands-intro">
+          <div className="brand-profiles-intro">
             <p>Cette sélection rassemble des produits qui suivent des logiques différentes. Chaque fiche expose leur positionnement, les données disponibles et les informations encore manquantes.</p>
             <small>Une promesse de marque ne vaut ni preuve scientifique, ni supériorité automatique.</small>
           </div>
@@ -80,7 +80,7 @@ export default function BrandsPage() {
           ))}
         </section>
 
-        <section className="owned-brands-principles">
+        <section className="brand-profiles-principles">
           <h2>Ce que signifie<br /><em>« meilleur » ici.</em></h2>
           <div>
             <article><span>01</span><h3>Le besoin d’abord</h3><p>Une recommandation dépend du goût, de la caféine, du rituel, des ingrédients acceptés et du niveau de preuve recherché.</p></article>
