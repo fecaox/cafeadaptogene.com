@@ -26,7 +26,7 @@ export default function BrandDirectoryPage() {
         name: "Annuaire des cafés fonctionnels et adaptogènes",
         description: metadata.description,
         url: `${siteUrl}/annuaire-cafes-fonctionnels/`,
-        dateModified: "2026-08-01",
+        dateModified: "2026-08-25",
         inLanguage: "fr-FR",
       },
       {

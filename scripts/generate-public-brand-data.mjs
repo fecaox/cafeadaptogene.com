@@ -153,7 +153,7 @@ const typeShape = `{
   imageStatus: string;
 }`;
 
-const output = `// Généré depuis data/marques-cafe-fonctionnel.csv par scripts/generate-public-brand-data.mjs.\n// Ne pas modifier ce fichier à la main.\n\nexport type DirectoryProduct = ${typeShape};\n\nexport const directoryProducts: DirectoryProduct[] = ${JSON.stringify(products, null, 2)};\n\nexport const directoryStats = ${JSON.stringify(stats, null, 2)} as const;\n\nexport const directoryUpdatedAt = "1er août 2026";\n`;
+const output = `// Généré depuis data/marques-cafe-fonctionnel.csv par scripts/generate-public-brand-data.mjs.\n// Ne pas modifier ce fichier à la main.\n\nexport type DirectoryProduct = ${typeShape};\n\nexport const directoryProducts: DirectoryProduct[] = ${JSON.stringify(products, null, 2)};\n\nexport const directoryStats = ${JSON.stringify(stats, null, 2)} as const;\n\nexport const directoryUpdatedAt = "25 août 2026";\n`;
 
 fs.writeFileSync(TARGET, output, "utf8");
 console.log(`Generated ${TARGET} with ${products.length} references.`);

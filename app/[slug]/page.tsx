@@ -56,7 +56,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     headline: guide.title,
     description: guide.description,
     datePublished: "2026-07-30",
-    dateModified: "2026-08-01",
+    dateModified: slug === "torregral" ? "2026-08-25" : "2026-08-01",
     inLanguage: "fr-FR",
     mainEntityOfPage: `${siteUrl}/${guide.slug}/`,
     author: { "@type": "Organization", name: "Rédaction Café Adaptogène" },
@@ -67,11 +67,27 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     "@type": "FAQPage",
     mainEntity: guide.faq.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })),
   };
+  const productSchema = slug === "torregral" ? {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Torrégral",
+    description: guide.description,
+    image: `${siteUrl}/images/products/torregral-packaging.jpg`,
+    url: `${siteUrl}/torregral/`,
+    brand: { "@type": "Brand", name: "Torrégral" },
+    countryOfOrigin: { "@type": "Country", name: "Costa Rica" },
+    additionalProperty: [
+      { "@type": "PropertyValue", name: "Portion recommandée", value: "12 g" },
+      { "@type": "PropertyValue", name: "Caféine de la dose sèche", value: "Estimation : 120 à 140 mg par 12 g" },
+      { "@type": "PropertyValue", name: "Base", value: "Ingrédients exclusivement issus du café et de son fruit" },
+    ],
+  } : null;
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      {productSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />}
       <SiteHeader compact />
       <main className="article-page">
         <div className="article-breadcrumb">
@@ -85,7 +101,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <p className="eyebrow"><span /> {guide.eyebrow}</p>
             <h1>{guide.title}</h1>
             <p>{guide.description}</p>
-            <div className="article-meta"><span>Mis à jour le 1er août 2026</span><span>Lecture · {readingTime} min</span><span>Sources et méthode visibles</span></div>
+            <div className="article-meta"><span>Mis à jour le {slug === "torregral" ? "25 août 2026" : "1er août 2026"}</span><span>Lecture · {readingTime} min</span><span>Sources et méthode visibles</span></div>
           </div>
           <div className="article-monogram" aria-hidden="true"><span>{guide.icon}</span><small>CAFÉ<br />ADAPTOGÈNE</small></div>
         </header>

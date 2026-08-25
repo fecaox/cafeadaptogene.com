@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { ProductProfile } from "../site-data";
 
 export function ProductCard({ product, compact = false }: { product: ProductProfile; compact?: boolean }) {
@@ -28,6 +29,7 @@ export function ProductCard({ product, compact = false }: { product: ProductProf
         )}
         <div className="product-footer">
           <small>{product.verified}</small>
+          {product.detailPath && <Link href={product.detailPath}>Lire la fiche vérifiée <span>→</span></Link>}
           <a href={product.link} target="_blank" rel={commercial ? "sponsored nofollow noopener" : "nofollow noopener"}>
             Voir le site officiel <span>↗</span>{commercial && <em>Lien partenaire</em>}
           </a>

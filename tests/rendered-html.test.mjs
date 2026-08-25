@@ -49,6 +49,7 @@ test("ships the static GitHub Pages essentials", async () => {
   assert.match(sitemap, /cafe-fonctionnel/);
   assert.match(sitemap, /cafe-nouvelle-generation/);
   assert.match(sitemap, /comparatif-cafe-adaptogene/);
+  assert.match(sitemap, /torregral/);
   assert.match(sitemap, /annuaire-cafes-fonctionnels/);
   assert.match(sitemap, /proteine/);
   assert.match(sitemap, /creatine/);
@@ -61,6 +62,7 @@ test("ships the static GitHub Pages essentials", async () => {
   await access(new URL("out/cafe-fonctionnel/index.html", root));
   await access(new URL("out/cafe-nouvelle-generation/index.html", root));
   await access(new URL("out/comparatif-cafe-adaptogene/index.html", root));
+  await access(new URL("out/torregral/index.html", root));
   await access(new URL("out/annuaire-cafes-fonctionnels/index.html", root));
   await access(new URL("out/proteine/index.html", root));
   await access(new URL("out/creatine/index.html", root));
@@ -101,6 +103,17 @@ test("server-renders a priority SEO article with its internal cluster", async ()
   assert.match(html, /Caféine/i);
   assert.match(html, /Faire le test personnalisé/i);
   assert.match(html, /FAQPage/i);
+});
+
+test("server-renders the documented Torrégral product sheet", async () => {
+  const response = await render("/torregral/");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Torrégral : composition, caféine et valeurs par tasse/i);
+  assert.match(html, /12 g/i);
+  assert.match(html, /Costa Rica/i);
+  assert.match(html, /120 à 140 mg/i);
+  assert.match(html, /Product/i);
 });
 
 test("server-renders the recommendation quiz", async () => {

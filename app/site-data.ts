@@ -23,6 +23,75 @@ export type Guide = {
 
 export const guides: Guide[] = [
   {
+    slug: "torregral",
+    eyebrow: "Fiche produit documentée",
+    title: "Torrégral : composition, caféine et valeurs par tasse",
+    description: "Torrégral analysé par portion de 12 g : origine, composition issue du café, caféine estimée, valeurs calculées et limites des données disponibles.",
+    intro: "Torrégral est un café moulu d’origine Costa Rica dont la portion recommandée est de 12 g. Sa recette reste exclusivement issue du café et de son fruit, sans champignons, plantes, protéines ou arômes ajoutés. Les analyses disponibles permettent de calculer plusieurs apports de la dose sèche ; la caféine totale est présentée comme une estimation, car le produit fini et la boisson extraite n’ont pas encore été dosés directement.",
+    color: "copper",
+    icon: "T",
+    keyPoints: ["12 g de produit sec par tasse", "Origine Costa Rica", "100 % d’ingrédients issus du café", "Mesures, calculs et estimations clairement séparés"],
+    criteria: [
+      { title: "Mesuré", text: "Le Café Intégral utilisé dans la recette a fait l’objet d’une analyse chimique CITA portant notamment sur la caféine, les fibres, les macronutriments, les minéraux et l’ORAC." },
+      { title: "Calculé", text: "Les valeurs par portion sont obtenues à partir de la dose Torrégral de 12 g et des résultats analytiques de la partie documentée de la recette." },
+      { title: "Estimé", text: "La caféine totale de la dose sèche utilise une plage publiée pour l’Arabica torréfié. La quantité réellement extraite dans la tasse dépend de la mouture et de la préparation." },
+    ],
+    sections: [
+      {
+        title: "Une portion claire, sans dévoiler la recette propriétaire",
+        paragraphs: [
+          "La dose recommandée est exactement de 12 g de Torrégral par tasse. Tous les ingrédients proviennent du caféier : la fonctionnalité recherchée vient donc du café et de son fruit, et non d’un ajout de champignons, de plantes ou de nutriments extérieurs.",
+          "La recette détaillée et les fournisseurs relèvent du savoir-faire confidentiel de la marque. La fiche publie les valeurs utiles au consommateur sans révéler les proportions de fabrication.",
+        ],
+        bullets: ["Origine du café : Costa Rica", "Format : café moulu à préparer", "Portion : 12 g de produit sec", "Profil : goût et rituel d’un café classique"],
+      },
+      {
+        title: "Valeurs documentées dans une portion sèche de 12 g",
+        paragraphs: [
+          "Les résultats ci-dessous représentent la contribution calculée de la partie de la recette couverte par l’analyse CITA SAQ-1178-2017. Ils constituent des valeurs documentées minimales dans le produit sec, et non un tableau nutritionnel complet de la boisson préparée.",
+          "La portion contient ainsi au moins 1,86 g de fibres alimentaires documentées, 0,34 g de protéines, 0,31 g de lipides, 2,45 g de glucides totaux dont 0,59 g disponibles, environ 0,30 g de fructose et 0,25 g de glucose. Le saccharose documenté reste inférieur à 0,02 g par portion.",
+          "La contribution minérale calculée est d’environ 37 mg de potassium, 4,8 mg de calcium, 1,35 mg de fer et 0,45 mg de sodium. L’analyse permet aussi de calculer au moins 364 µmol équivalent Trolox d’activité ORAC par portion ; cette mesure in vitro ne constitue pas, à elle seule, la preuve d’un bénéfice chez l’être humain.",
+        ],
+        bullets: ["Fibres documentées : ≥ 1,86 g", "Protéines documentées : ≥ 0,34 g", "Lipides documentés : ≥ 0,31 g", "Glucides totaux documentés : ≥ 2,45 g", "Potassium documenté : ≥ 37 mg", "Fer documenté : ≥ 1,35 mg", "ORAC documenté : ≥ 364 µmol TE"],
+      },
+      {
+        title: "Caféine : ce que le calcul permet réellement d’affirmer",
+        paragraphs: [
+          "La partie analysée de la recette apporte 28,7 mg de caféine dans la dose sèche de 12 g. En ajoutant la plage publiée pour des cafés Arabica torréfiés comparables, la dose sèche complète est estimée à environ 120 à 140 mg de caféine.",
+          "Cette plage ne doit pas être confondue avec la caféine effectivement présente dans la tasse. Une extraction filtre, une cafetière italienne ou un espresso ne transfèrent pas exactement la même quantité. La valeur de la boisson ne pourra être qualifiée de mesurée qu’après analyse du Torrégral fini préparé selon un protocole défini.",
+        ],
+        bullets: ["Contribution mesurée et calculée : 28,7 mg", "Dose sèche totale estimée : environ 120 à 140 mg", "Caféine extraite dans la tasse : variable selon la préparation", "Prochaine preuve souhaitable : analyse du produit fini et de la boisson"],
+      },
+      {
+        title: "Allergènes et précautions",
+        paragraphs: [
+          "D’après la composition communiquée, Torrégral présente le même profil allergène qu’un café noir classique : aucun des allergènes alimentaires majeurs n’est un ingrédient inhérent à la recette. L’étiquette du lot reste la référence, notamment en cas d’allergie sévère ou de risque de contamination croisée sur le site de conditionnement.",
+          "Les précautions sont celles d’un café caféiné. Les personnes sensibles à la caféine doivent tenir compte de toutes leurs consommations de la journée. Grossesse, allaitement, minorité, pathologie, traitement ou effets indésirables justifient une vigilance particulière et, si nécessaire, l’avis d’un professionnel de santé.",
+        ],
+      },
+      {
+        title: "Niveau de preuve et prochaine étape",
+        paragraphs: [
+          "Les chiffres analytiques proviennent d’un rapport CITA de 2017 portant sur le Café Intégral utilisé dans la recette. Un second rapport Agrisanam de 2020 documente l’humidité, les degrés Brix, le pH et des paramètres microbiologiques de deux échantillons de Café Intégral.",
+          "Ces documents renforcent la connaissance de la matière première, mais ils ne remplacent pas une analyse du produit Torrégral fini. Pour transformer les estimations en valeurs définitives, il faudra faire analyser au minimum la caféine, l’humidité, les fibres et les principaux marqueurs sur plusieurs lots, puis mesurer une tasse préparée selon un protocole reproductible.",
+        ],
+        links: [{ label: "Lire notre méthode de vérification", slug: "methodologie" }, { label: "Comparer les cafés nouvelle génération", slug: "cafe-nouvelle-generation" }],
+      },
+    ],
+    sources: [
+      { label: "EFSA — sécurité et repères de consommation de la caféine", url: "https://www.efsa.europa.eu/fr/topics/topic/caffeine" },
+      { label: "Étude de composition de cafés Arabica torréfiés", url: "https://www.scielo.br/j/jbchs/a/SKKgscBvyNMyVvp9ZZGPyZf/?lang=en" },
+    ],
+    faq: [
+      { question: "Quelle quantité de Torrégral utiliser par tasse ?", answer: "La portion recommandée est de 12 g de produit sec par tasse." },
+      { question: "Combien de caféine contient Torrégral ?", answer: "La dose sèche de 12 g est estimée à environ 120 à 140 mg de caféine. La quantité effectivement extraite dans la boisson varie avec la préparation et doit encore être mesurée sur le produit fini." },
+      { question: "Quelle est l’origine de Torrégral ?", answer: "Le café est indiqué d’origine Costa Rica." },
+      { question: "Torrégral contient-il des champignons ou des plantes ajoutées ?", answer: "Non. La recette communiquée est exclusivement composée d’ingrédients issus du café et de son fruit." },
+      { question: "Torrégral contient-il des allergènes ?", answer: "La composition présente le même profil qu’un café noir classique et ne comporte pas d’allergène alimentaire majeur comme ingrédient. L’étiquette du lot reste toutefois la référence pour les contaminations croisées éventuelles." },
+    ],
+    productIds: ["torregral"],
+  },
+  {
     slug: "guide-cafe-adaptogene",
     eyebrow: "Guide essentiel",
     title: "Café adaptogène : comprendre, comparer et bien choisir",
@@ -527,6 +596,7 @@ export type ProductProfile = {
   caffeineText: string;
   priceText: string;
   verified: string;
+  detailPath?: string;
   recommendable?: boolean;
 };
 
@@ -536,13 +606,14 @@ export const products: ProductProfile[] = [
     name: "Torrégral",
     product: "Café premium nouvelle génération",
     category: "Café intrinsèquement fonctionnel",
-    origin: "France",
-    description: "Un café présenté par la marque comme 100 % café, pensé pour conserver un goût familier et une préparation classique tout en travaillant une approche plus complète de la cerise.",
+    origin: "Costa Rica",
+    description: "Un café moulu d’origine Costa Rica, préparé à raison de 12 g par tasse et composé exclusivement d’ingrédients issus du café et de son fruit. Il est pensé pour conserver le goût et le rituel d’un café classique.",
     image: "/images/products/torregral-packaging.jpg",
     imageAlt: "Paquet de café Torrégral",
     link: "https://www.torregral.com/",
+    detailPath: "/torregral/",
     relationship: "partenaire",
-    badges: ["100 % café déclaré", "Goût café", "Procédé intrinsèque"],
+    badges: ["12 g par tasse", "Origine Costa Rica", "100 % issu du café"],
     taste: 5,
     compositions: ["coffee-only"],
     goals: ["ritual", "focus", "steady"],
@@ -550,12 +621,12 @@ export const products: ProductProfile[] = [
     caffeine: "classic",
     simplicity: 5,
     priceTier: "premium",
-    strengths: ["Reste un véritable café", "Compatible avec le rituel habituel", "Sans champignons ni mélange aromatisé"],
-    limits: ["Poids, dose de Café Intégral et caféine non publiés", "Les bénéfices spécifiques doivent encore être documentés produit par produit"],
-    serving: "Non publiée",
-    caffeineText: "Non publiée",
+    strengths: ["Reste un véritable café", "Portion et origine documentées", "Sans champignons ni mélange aromatisé"],
+    limits: ["Caféine totale calculée, à confirmer par analyse du produit fini", "Les bénéfices spécifiques doivent encore être documentés produit par produit"],
+    serving: "12 g",
+    caffeineText: "≈ 120–140 mg / dose sèche*",
     priceText: "15 € / paquet",
-    verified: "Site officiel consulté le 30 juillet 2026",
+    verified: "Fiche technique et analyses examinées le 25 août 2026",
   },
   {
     id: "cafeminceur",

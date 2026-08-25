@@ -17,9 +17,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...allGuides.map((guide) => ({
       url: `${siteUrl}/${guide.slug}/`,
-      lastModified: "2026-08-01",
+      lastModified: guide.slug === "torregral" ? "2026-08-25" : "2026-08-01",
       changeFrequency: "monthly" as const,
-      priority: guide.slug === "guide-cafe-adaptogene" ? 0.9 : 0.8,
+      priority: guide.slug === "guide-cafe-adaptogene" || guide.slug === "torregral" ? 0.9 : 0.8,
     })),
   ];
 }
