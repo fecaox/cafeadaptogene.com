@@ -14,7 +14,7 @@ const existingImages = {
   "cafe-integral-cafe-integral-100": "/images/products/cafeintegral-packaging.jpg",
   "bonjour-super-cafe": "/images/products/bonjourdrink-packaging.jpg",
   "wake-wake-original": "/images/products/wake-packaging.jpg",
-  "brainstoorm-mush-n-go-cafe-adaptogene": "/images/products/brainstoorm-packaging.jpg",
+  "brainstoorm-mush-n-go-brainstoorm-coffee": "/images/products/brainstoorm-packaging.jpg",
   "french-mush-boost-cafe": "/images/products/frenchmush-packaging.jpg",
   "cafe-des-guerriers-le-cafe-parfait": "/images/products/cafedesguerriers-packaging.jpg",
   "strate-cafe-adaptogene": "/images/products/strate-packaging.jpg",
@@ -173,8 +173,14 @@ async function collectOne(item) {
 }
 
 await fs.mkdir(OUTPUT_DIR, { recursive: true });
-const results = [];
-const queue = [...directoryProducts];
+const priorManifest = await fs.readFile(MANIFEST_PATH, "utf8").then(JSON.parse).catch(() => ({}));
+const missingOnly = process.argv.includes("--missing-only");
+const results = missingOnly
+  ? directoryProducts.filter((item) => priorManifest[item.id]?.imagePath).map((item) => priorManifest[item.id])
+  : [];
+const queue = missingOnly
+  ? directoryProducts.filter((item) => !priorManifest[item.id]?.imagePath)
+  : [...directoryProducts];
 const workers = Array.from({ length: 5 }, async () => {
   while (queue.length) {
     const item = queue.shift();
@@ -189,5 +195,5 @@ results.sort((a, b) => directoryProducts.findIndex((item) => item.id === a.id) -
 const manifest = Object.fromEntries(results.map((result) => [result.id, result]));
 const counts = Object.fromEntries([...new Set(results.map((result) => result.status))].map((status) => [status, results.filter((result) => result.status === status).length]));
 await fs.writeFile(MANIFEST_PATH, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
-await fs.writeFile(REPORT_PATH, `${JSON.stringify({ updatedAt: "2026-08-01", references: results.length, counts, missing: results.filter((result) => !result.imagePath) }, null, 2)}\n`, "utf8");
+await fs.writeFile(REPORT_PATH, `${JSON.stringify({ updatedAt: "2026-09-08", references: results.length, counts, missing: results.filter((result) => !result.imagePath) }, null, 2)}\n`, "utf8");
 console.log(JSON.stringify({ references: results.length, counts }, null, 2));

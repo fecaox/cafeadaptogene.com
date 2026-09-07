@@ -152,7 +152,7 @@ export default function DirectoryExplorer() {
 
     return filtered.sort((a, b) => {
       if (sort === "verification") return a.verificationLevel.localeCompare(b.verificationLevel) || a.brand.localeCompare(b.brand, "fr");
-      if (sort === "new") return Number(b.newEntry) - Number(a.newEntry) || a.brand.localeCompare(b.brand, "fr");
+      if (sort === "new") return b.firstObservedAt.localeCompare(a.firstObservedAt) || a.brand.localeCompare(b.brand, "fr");
       return a.brand.localeCompare(b.brand, "fr") || a.product.localeCompare(b.product, "fr");
     });
   }, [availability, caffeine, category, macro, search, sort, status]);

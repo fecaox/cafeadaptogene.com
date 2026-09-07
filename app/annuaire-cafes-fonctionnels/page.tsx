@@ -6,12 +6,12 @@ import { siteUrl } from "../site-data";
 import DirectoryExplorer from "./DirectoryExplorer";
 
 export const metadata: Metadata = {
-  title: "Annuaire des cafés fonctionnels : 128 produits et 120 marques",
+  title: `Annuaire des cafés fonctionnels : ${directoryStats.references} produits et ${directoryStats.brands} marques`,
   description: "L’annuaire français des cafés fonctionnels, adaptogènes et augmentés : composition, caféine, dosage, prix, disponibilité et niveau de vérification.",
   alternates: { canonical: "/annuaire-cafes-fonctionnels/" },
   openGraph: {
-    title: "Annuaire des cafés fonctionnels : 128 références vérifiées",
-    description: "120 marques classées par base réelle, actifs, caféine, prix et disponibilité.",
+    title: `Annuaire des cafés fonctionnels : ${directoryStats.references} références vérifiées`,
+    description: `${directoryStats.brands} marques classées par base réelle, actifs, caféine, prix et disponibilité.`,
     url: `${siteUrl}/annuaire-cafes-fonctionnels/`,
     images: ["/og.png"],
   },
@@ -26,7 +26,7 @@ export default function BrandDirectoryPage() {
         name: "Annuaire des cafés fonctionnels et adaptogènes",
         description: metadata.description,
         url: `${siteUrl}/annuaire-cafes-fonctionnels/`,
-        dateModified: "2026-08-25",
+        dateModified: "2026-09-08",
         inLanguage: "fr-FR",
       },
       {
@@ -36,7 +36,8 @@ export default function BrandDirectoryPage() {
           "@type": "ListItem",
           position: index + 1,
           name: `${item.brand} — ${item.product}`,
-          url: item.source.startsWith("http") ? item.source : `${siteUrl}/annuaire-cafes-fonctionnels/#${item.id}`,
+          url: `${siteUrl}/annuaire-cafes-fonctionnels/#${item.id}`,
+          ...(item.source.startsWith("http") ? { sameAs: item.source } : {}),
           ...(item.imagePath ? { image: `${siteUrl}${item.imagePath}` } : {}),
         })),
       },
@@ -78,6 +79,7 @@ export default function BrandDirectoryPage() {
             </div>
             <p className="directory-updated">Base mise à jour le {directoryUpdatedAt}. Les prix sont des observations datées et peuvent évoluer.</p>
             <p className="directory-image-rights">Les visuels servent uniquement à identifier les références. Ils proviennent des marques ou des pages produit citées et restent la propriété de leurs ayants droit.</p>
+            <Link className="text-link" href="/nouveautes-cafes-fonctionnels/">Voir les derniers ajouts et changements ↗</Link>
           </div>
         </section>
 

@@ -108,13 +108,13 @@ export const brandEntities: BrandEntity[] = [
     imageAlt: "Paquet Café Minceur avec cuillère doseuse",
     color: "rose",
     monogram: "CM",
-    summary: "Café Minceur est une préparation de 10 g par tasse composée de café torréfié, café vert, cascara et Café Intégral, tous issus de la cerise de café.",
+    summary: "Café Minceur est une préparation de 10 g par tasse composée de café torréfié, café vert, cascara et poudre de cerise de café.",
     answer: "Café Minceur peut s’intégrer à une routine si l’utilisateur veut conserver un goût de café et une préparation simple. Son nom ne doit toutefois pas être interprété comme une garantie de perte de poids.",
     relationship: "Cette fiche peut contenir un lien commercial signalé comme tel. La marque est évaluée avec les mêmes critères que les autres références et ne reçoit aucun avantage automatique.",
     facts: [
       { label: "Portion", value: "10 g par tasse", status: "documenté" },
       { label: "Format", value: "70 g, soit 7 tasses annoncées", status: "documenté" },
-      { label: "Composition", value: "Café torréfié, café vert, cascara et Café Intégral", status: "déclaré" },
+      { label: "Composition", value: "Café torréfié, café vert, cascara et poudre de cerise de café", status: "déclaré" },
       { label: "Origine des ingrédients", value: "Entièrement issus de la cerise de café", status: "déclaré" },
       { label: "Caféine par portion", value: "Non publiée", status: "non publié" },
     ],
@@ -128,9 +128,9 @@ export const brandEntities: BrandEntity[] = [
     faq: [
       { question: "Café Minceur fait-il perdre du poids ?", answer: "Aucun café ne garantit une perte de poids. Le produit peut seulement s’inscrire dans une routine globale adaptée à la personne." },
       { question: "Quelle quantité utiliser ?", answer: "La portion indiquée est de 10 g par tasse ; le format de 70 g correspond à sept tasses annoncées." },
-      { question: "Café Minceur contient-il autre chose que du caféier ?", answer: "La composition communiquée associe café torréfié, café vert, cascara et Café Intégral, tous présentés comme issus de la cerise de café." },
+      { question: "Café Minceur contient-il autre chose que du caféier ?", answer: "La composition communiquée associe café torréfié, café vert, cascara et poudre de cerise de café." },
     ],
-    related: [{ label: "Comprendre le café minceur", path: "/cafe-minceur/" }, { label: "Comparer avec Torrégral", path: "/torregral/" }, { label: "Trouver son café", path: "/quel-cafe-me-correspond/" }],
+    related: [{ label: "Comprendre le café minceur", path: "/cafe-minceur/" }, { label: "Comparer les cafés fonctionnels", path: "/comparatif-cafe-adaptogene/" }, { label: "Trouver son café", path: "/quel-cafe-me-correspond/" }],
     updated: "25 août 2026",
   },
 ];

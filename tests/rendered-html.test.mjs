@@ -26,7 +26,7 @@ test("server-renders the Café Adaptogène homepage", async () => {
   assert.match(html, /Torrégral/i);
   assert.match(html, /Cafés enrichis/i);
   assert.match(html, /Trouver mon café/i);
-  assert.match(html, /128 références/i);
+  assert.match(html, /137[\s\S]*références/i);
   assert.match(html, /application\/ld\+json/i);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
@@ -52,6 +52,7 @@ test("ships the static GitHub Pages essentials", async () => {
   assert.match(sitemap, /comparatif-cafe-adaptogene/);
   assert.match(sitemap, /torregral/);
   assert.match(sitemap, /annuaire-cafes-fonctionnels/);
+  assert.match(sitemap, /nouveautes-cafes-fonctionnels/);
   assert.match(sitemap, /proteine/);
   assert.match(sitemap, /creatine/);
   assert.match(sitemap, /collagene/);
@@ -65,6 +66,7 @@ test("ships the static GitHub Pages essentials", async () => {
   assert.match(llms, /https:\/\/cafeadaptogene\.com\/torregral\//);
   assert.match(llms, /https:\/\/cafeadaptogene\.com\/marques\/cafe-integral\//);
   assert.match(llms, /https:\/\/cafeadaptogene\.com\/marques\/cafe-minceur\//);
+  assert.match(llms, /https:\/\/cafeadaptogene\.com\/nouveautes-cafes-fonctionnels\//);
   await access(new URL("out/guide-cafe-adaptogene/index.html", root));
   await access(new URL("out/quel-cafe-me-correspond/index.html", root));
   await access(new URL("out/cafes-enrichis/index.html", root));
@@ -73,6 +75,7 @@ test("ships the static GitHub Pages essentials", async () => {
   await access(new URL("out/comparatif-cafe-adaptogene/index.html", root));
   await access(new URL("out/torregral/index.html", root));
   await access(new URL("out/annuaire-cafes-fonctionnels/index.html", root));
+  await access(new URL("out/nouveautes-cafes-fonctionnels/index.html", root));
   await access(new URL("out/proteine/index.html", root));
   await access(new URL("out/creatine/index.html", root));
   await access(new URL("out/collagene/index.html", root));
@@ -88,10 +91,10 @@ test("server-renders the verified brand directory", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /L’annuaire des cafés fonctionnels/i);
-  assert.match(html, /128[\s\S]*références documentées/i);
-  assert.match(html, /120[\s\S]*marques recensées/i);
+  assert.match(html, /137[\s\S]*références documentées/i);
+  assert.match(html, /128[\s\S]*marques recensées/i);
   assert.match(html, /Four Sigmatic/i);
-  assert.match(html, /124[\s\S]*visuels de packaging vérifiés/i);
+  assert.match(html, /134[\s\S]*visuels de packaging vérifiés/i);
   assert.match(html, /Packaging Four Sigmatic/i);
   assert.match(html, /Visuel officiel non retrouvé/i);
   assert.match(html, /Source du visuel/i);
@@ -100,9 +103,24 @@ test("server-renders the verified brand directory", async () => {
 
   const root = new URL("../", import.meta.url);
   const manifest = JSON.parse(await readFile(new URL("data/brand-image-manifest.json", root), "utf8"));
-  assert.equal(Object.keys(manifest).length, 128);
-  assert.equal(Object.values(manifest).filter((entry) => !entry.imagePath).length, 4);
+  assert.equal(Object.keys(manifest).length, 137);
+  assert.equal(Object.values(manifest).filter((entry) => !entry.imagePath).length, 3);
   await Promise.all(Object.values(manifest).filter((entry) => entry.imagePath).map((entry) => access(new URL(`public${entry.imagePath}`, root))));
+});
+
+test("server-renders the hybrid market news and watch page", async () => {
+  const response = await render("/nouveautes-cafes-fonctionnels/");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Nouveautés cafés fonctionnels/i);
+  assert.match(html, /9 nouvelles références/i);
+  assert.match(html, /8 septembre 2026/i);
+  assert.match(html, /Café Protéiné Cannelle/i);
+  assert.match(html, /Noble Strong Mushroom Coffee/i);
+  assert.match(html, /Arsène Classique/i);
+  assert.match(html, /Ce que nous surveillons/i);
+  assert.match(html, /CollectionPage/i);
+  assert.match(html, /ItemList/i);
 });
 
 test("server-renders a priority SEO article with its internal cluster", async () => {

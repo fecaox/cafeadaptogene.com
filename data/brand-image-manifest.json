@@ -49,13 +49,13 @@
     "status": "existing-reviewed",
     "note": "Visuel déjà présent dans la sélection éditoriale."
   },
-  "brainstoorm-mush-n-go-cafe-adaptogene": {
-    "id": "brainstoorm-mush-n-go-cafe-adaptogene",
+  "brainstoorm-mush-n-go-brainstoorm-coffee": {
+    "id": "brainstoorm-mush-n-go-brainstoorm-coffee",
     "brand": "Brainstoorm / Mush n Go",
-    "product": "Café adaptogène",
+    "product": "Brainstoorm Coffee",
     "imagePath": "/images/products/brainstoorm-packaging.jpg",
-    "imageSource": "https://brainstoorm.com/",
-    "pageSource": "https://brainstoorm.com/",
+    "imageSource": "https://mushngo.com/products/brainstoorm-coffee",
+    "pageSource": "https://mushngo.com/products/brainstoorm-coffee",
     "status": "existing-reviewed",
     "note": "Visuel déjà présent dans la sélection éditoriale."
   },
@@ -1012,12 +1012,12 @@
     "id": "eight-batch-001",
     "brand": "Eight",
     "product": "Batch 001",
-    "imagePath": null,
-    "imageSource": null,
+    "imagePath": "/images/directory/eight-batch-001.webp",
+    "imageSource": "https://idrinkeight.com/science_section.png",
     "pageSource": "https://idrinkeight.com/",
-    "status": "missing",
+    "status": "official-page-image",
     "bytes": 43988,
-    "note": "Aucun visuel de packaging vérifiable n’a été trouvé. Le produit est encore en pré-lancement ou la marque ne publie pas de paquet identifiable."
+    "note": "Candidat img, score 43."
   },
   "trubrain-coffee-kit": {
     "id": "trubrain-coffee-kit",
@@ -1177,12 +1177,12 @@
     "id": "urth-root-creatine-coffee",
     "brand": "Urth&Root",
     "product": "Creatine Coffee",
-    "imagePath": null,
-    "imageSource": null,
+    "imagePath": "/images/directory/urth-root-creatine-coffee.webp",
+    "imageSource": "https://urthandroot.com/cdn/shop/files/Urth_RootRiseCreatineCoffee_2.jpg?v=1787836682&width=352",
     "pageSource": "https://urthandroot.com/",
-    "status": "missing",
-    "bytes": 19134,
-    "note": "Aucun visuel de packaging vérifiable n’a été trouvé. Le produit est encore en pré-lancement ou la marque ne publie pas de paquet identifiable."
+    "status": "official-page-image",
+    "bytes": 6496,
+    "note": "Candidat img, score 91."
   },
   "smart-coffee-eu-functional-coffee": {
     "id": "smart-coffee-eu-functional-coffee",
@@ -1392,5 +1392,103 @@
     "status": "official-product-image",
     "bytes": 47832,
     "note": "Candidat json-product, score 168."
+  },
+  "sunday-natural-cafe-proteine-cannelle": {
+    "id": "sunday-natural-cafe-proteine-cannelle",
+    "brand": "Sunday Natural",
+    "product": "Café Protéiné Cannelle",
+    "imagePath": "/images/directory/sunday-natural-cafe-proteine-cannelle.webp",
+    "imageSource": "https://media.sunday-natural.com/media/catalog/product/cache/7717006f8b243e1d1a78a01c4d692f07/N/8/N8632CDE_protein-coffee-cannelle_product-main-1-v1_1778856971.png",
+    "pageSource": "https://www.sunday.fr/protein-coffee-cannelle.html",
+    "status": "official-product-image",
+    "bytes": 27468,
+    "note": "Candidat json-product, score 200."
+  },
+  "sunday-natural-noble-strong-mushroom-coffee": {
+    "id": "sunday-natural-noble-strong-mushroom-coffee",
+    "brand": "Sunday Natural",
+    "product": "Noble Strong Mushroom Coffee",
+    "imagePath": "/images/directory/sunday-natural-noble-strong-mushroom-coffee.webp",
+    "imageSource": "https://media.sunday-natural.com/media/catalog/product/cache/7717006f8b243e1d1a78a01c4d692f07/N/7/N7291CFR_mushroom-coffee-noble-strong_product-main-1-v1_1782372027.png",
+    "pageSource": "https://www.sunday.fr/mushroom-coffee-noble-strong.html",
+    "status": "official-product-image",
+    "bytes": 38286,
+    "note": "Candidat json-product, score 214."
+  },
+  "myco-zen-boisson-adaptogene-saveur-cafe": {
+    "id": "myco-zen-boisson-adaptogene-saveur-cafe",
+    "brand": "Myco Zen",
+    "product": "Boisson Adaptogène Saveur Café",
+    "imagePath": "/images/directory/myco-zen-boisson-adaptogene-saveur-cafe.webp",
+    "imageSource": "https://www.cafe-champignon-adaptogene.fr/wp-content/uploads/2026/01/product-13-boisson-cafe.jpg",
+    "pageSource": "https://www.cafe-champignon-adaptogene.fr/produit/boisson-adaptogene-saveur-cafe/",
+    "status": "official-product-image",
+    "bytes": 39354,
+    "note": "Candidat json-product, score 178."
+  },
+  "arsene-arsene-classique": {
+    "id": "arsene-arsene-classique",
+    "brand": "Arsène",
+    "product": "Arsène Classique",
+    "imagePath": "/images/directory/arsene-arsene-classique.webp",
+    "imageSource": "https://arseneboissons.fr/cdn/shop/files/Visuel_site_internet_arsene_classique_2901_8.png?v=1776241537&width=1200",
+    "pageSource": "https://arseneboissons.fr/",
+    "status": "official-page-image",
+    "bytes": 108792,
+    "note": "Candidat img, score 87."
+  },
+  "lupi-coffee-cafe-de-lupin-bio": {
+    "id": "lupi-coffee-cafe-de-lupin-bio",
+    "brand": "Lupi Coffee",
+    "product": "Café de lupin bio",
+    "imagePath": "/images/directory/lupi-coffee-cafe-de-lupin-bio.webp",
+    "imageSource": "https://www.lupicoffee.com/cdn/shop/files/boite_de_decouverte_Lupi_Coffee.png?v=1784552881&width=1920",
+    "pageSource": "https://www.lupicoffee.com/",
+    "status": "official-product-image",
+    "bytes": 56442,
+    "note": "Candidat json-product, score 182."
+  },
+  "mojo-labs-alternative-au-cafe": {
+    "id": "mojo-labs-alternative-au-cafe",
+    "brand": "MOJO Labs",
+    "product": "Alternative au café",
+    "imagePath": null,
+    "imageSource": null,
+    "pageSource": "https://mojolabs.fr/products/mojo-labs",
+    "status": "missing",
+    "note": "fetch failed"
+  },
+  "maison-datus-datus-moulu": {
+    "id": "maison-datus-datus-moulu",
+    "brand": "Maison DATUS",
+    "product": "DATUS moulu",
+    "imagePath": "/images/directory/maison-datus-datus-moulu.webp",
+    "imageSource": "https://maisondatus.com/cdn/shop/files/datus-recette-de-grand-mere-detox-foie-antidote-correcteu.jpg?v=1769105163&width=1920",
+    "pageSource": "https://maisondatus.com/products/alternative-cafe-moulu-sans-cafeine-datus",
+    "status": "official-product-image",
+    "bytes": 52344,
+    "note": "Candidat json-product, score 200."
+  },
+  "graine-de-breton-orge": {
+    "id": "graine-de-breton-orge",
+    "brand": "Graine de Breton",
+    "product": "Orgé",
+    "imagePath": "/images/directory/graine-de-breton-orge.webp",
+    "imageSource": "https://grainedebreton.bzh/wp-content/uploads/2023/11/mate-orge.jpg",
+    "pageSource": "https://grainedebreton.bzh/categorie-produit/orge/",
+    "status": "official-page-image",
+    "bytes": 45742,
+    "note": "Candidat og, score 140."
+  },
+  "la-tribu-des-kawas-lupin-torrefie-bio": {
+    "id": "la-tribu-des-kawas-lupin-torrefie-bio",
+    "brand": "La Tribu des Kawas",
+    "product": "Lupin torréfié bio",
+    "imagePath": "/images/directory/la-tribu-des-kawas-lupin-torrefie-bio.webp",
+    "imageSource": "https://www.latribudeskawas.fr/wp-content/uploads/2025/09/tribu-des-kawas-packs.webp",
+    "pageSource": "https://www.latribudeskawas.fr/",
+    "status": "official-page-image",
+    "bytes": 83694,
+    "note": "Candidat og, score 160."
   }
 }

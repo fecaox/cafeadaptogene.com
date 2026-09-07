@@ -635,7 +635,7 @@ export const products: ProductProfile[] = [
     product: "Café au goût familier",
     category: "Café intrinsèquement fonctionnel",
     origin: "France",
-    description: "Un mélange de café torréfié, café vert, cascara et Café Intégral, entièrement issu de la cerise de café et préparé à raison de 10 g par tasse.",
+    description: "Un mélange de café torréfié, café vert, cascara et poudre de cerise de café, entièrement issu du caféier et préparé à raison de 10 g par tasse.",
     image: "/images/products/cafeminceur-packaging.jpg",
     imageAlt: "Paquet Café Minceur avec cuillère doseuse",
     link: "https://www.cafeminceur.fr/",

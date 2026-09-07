@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ProductCard } from "./components/product-card";
 import { SiteFooter, SiteHeader } from "./components/site-chrome";
+import { directoryStats, directoryUpdatedAt, marketUpdateStats } from "./brand-directory-data";
 import { guides, products, siteUrl, taxonomyGuides, universes } from "./site-data";
 
 const featuredIds = ["torregral", "bonjour", "cafit", "corial"];
@@ -60,7 +61,7 @@ export default function Home() {
             <div className="hero-facts">
               <span><b>3</b> univers lisibles</span>
               <span><b>7</b> familles comparables</span>
-              <span><b>128</b> références documentées</span>
+              <span><b>{directoryStats.references}</b> références documentées</span>
             </div>
           </div>
           <div className="hero-products" aria-label="Exemples de cafés nouvelle génération">
@@ -185,7 +186,7 @@ export default function Home() {
               <p className="eyebrow"><span /> Observatoire des marques</p>
               <h2>Le marché en images,<br /><em>sans angle mort.</em></h2>
             </div>
-            <p>Notre annuaire recense 128 références issues de 120 marques. Cette sélection visuelle présente quelques produits repères ; chaque fiche complète distingue les déclarations des marques de ce que nous avons pu vérifier.</p>
+            <p>Notre annuaire recense {directoryStats.references} références issues de {directoryStats.brands} marques. Cette sélection visuelle présente quelques produits repères ; chaque fiche complète distingue les déclarations des marques de ce que nous avons pu vérifier.</p>
           </header>
           <div className="brand-wall">
             {products.filter((product) => product.recommendable !== false).map((product, index) => (
@@ -198,9 +199,14 @@ export default function Home() {
             ))}
           </div>
           <div className="brand-directory-cta">
-            <p><b>128 références · 120 marques</b><span>Composition, caféine, dosage, prix, disponibilité et niveau de vérification.</span></p>
+            <p><b>{directoryStats.references} références · {directoryStats.brands} marques</b><span>Composition, caféine, dosage, prix, disponibilité et niveau de vérification.</span></p>
             <Link className="button button-primary" href="/annuaire-cafes-fonctionnels/">Ouvrir l’annuaire complet <span>→</span></Link>
           </div>
+          <Link className="market-update-ribbon" href="/nouveautes-cafes-fonctionnels/">
+            <span>Veille mise à jour le {directoryUpdatedAt}</span>
+            <b>{marketUpdateStats.newReferences} nouvelles références, {marketUpdateStats.verifiedChanges} fiches actualisées</b>
+            <em>Voir les nouveautés →</em>
+          </Link>
         </section>
 
         <section className="method-band">
