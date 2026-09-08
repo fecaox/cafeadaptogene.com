@@ -57,6 +57,7 @@ test("ships the static GitHub Pages essentials", async () => {
   assert.match(sitemap, /creatine/);
   assert.match(sitemap, /collagene/);
   assert.match(sitemap, /mush/);
+  assert.match(sitemap, /vitalitea/);
   assert.match(sitemap, /marques\/cafe-integral/);
   assert.match(sitemap, /marques\/cafe-minceur/);
   assert.match(outputHome, /og\.png/);
@@ -67,6 +68,7 @@ test("ships the static GitHub Pages essentials", async () => {
   assert.match(llms, /https:\/\/cafeadaptogene\.com\/marques\/cafe-integral\//);
   assert.match(llms, /https:\/\/cafeadaptogene\.com\/marques\/cafe-minceur\//);
   assert.match(llms, /https:\/\/cafeadaptogene\.com\/nouveautes-cafes-fonctionnels\//);
+  assert.match(llms, /https:\/\/cafeadaptogene\.com\/vitalitea\//);
   await access(new URL("out/guide-cafe-adaptogene/index.html", root));
   await access(new URL("out/quel-cafe-me-correspond/index.html", root));
   await access(new URL("out/cafes-enrichis/index.html", root));
@@ -80,10 +82,27 @@ test("ships the static GitHub Pages essentials", async () => {
   await access(new URL("out/creatine/index.html", root));
   await access(new URL("out/collagene/index.html", root));
   await access(new URL("out/mush/index.html", root));
+  await access(new URL("out/vitalitea/index.html", root));
   await access(new URL("out/marques/index.html", root));
   await access(new URL("out/marques/cafe-integral/index.html", root));
   await access(new URL("out/marques/cafe-minceur/index.html", root));
   await assert.rejects(access(new URL("app/_sites-preview/SkeletonPreview.tsx", root)));
+});
+
+test("server-renders the Vitalitéa whole-fruit coffee landing page", async () => {
+  const response = await render("/vitalitea/");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Vitalitéa/i);
+  assert.match(html, /café du fruit entier/i);
+  assert.match(html, /12 g/i);
+  assert.match(html, /précommande/i);
+  assert.match(html, /Product/i);
+  assert.match(html, /FAQPage/i);
+  assert.match(html, /name="twitter:title" content="Vitalitéa, le café du fruit entier"/i);
+  assert.match(html, /name="twitter:image" content="https:\/\/cafeadaptogene\.com\/images\/landing\/vitalitea-pack\.png"/i);
+  assert.doesNotMatch(html, /_vinext\/image/);
+  assert.doesNotMatch(html, /Méo|70\s*%|30\s*%/i);
 });
 
 test("server-renders the verified brand directory", async () => {

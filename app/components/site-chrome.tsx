@@ -60,6 +60,7 @@ export function SiteFooter() {
           <Link href="/creatine/">Café Créatine</Link>
           <Link href="/collagene/">Café Collagène</Link>
           <Link href="/mush/">Café Mush</Link>
+          <Link href="/vitalitea/">Vitalitéa</Link>
         </div>
         <div>
           <h3>Contact</h3>

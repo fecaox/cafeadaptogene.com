@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/marques/cafe-minceur/`, lastModified: "2026-08-25", changeFrequency: "monthly", priority: 0.85 },
     { url: `${siteUrl}/annuaire-cafes-fonctionnels/`, lastModified: "2026-09-08", changeFrequency: "weekly", priority: 0.95 },
     { url: `${siteUrl}/nouveautes-cafes-fonctionnels/`, lastModified: "2026-09-08", changeFrequency: "weekly", priority: 0.95 },
+    { url: `${siteUrl}/vitalitea/`, lastModified: "2026-09-08", changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteUrl}/quel-cafe-me-correspond/`, lastModified: "2026-08-01", changeFrequency: "monthly", priority: 0.9 },
     ...landingSlugs.map((slug) => ({
       url: `${siteUrl}/${slug}/`,
