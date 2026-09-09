@@ -13,6 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/annuaire-cafes-fonctionnels/`, lastModified: "2026-09-08", changeFrequency: "weekly", priority: 0.95 },
     { url: `${siteUrl}/nouveautes-cafes-fonctionnels/`, lastModified: "2026-09-08", changeFrequency: "weekly", priority: 0.95 },
     { url: `${siteUrl}/vitalitea/`, lastModified: "2026-09-08", changeFrequency: "weekly", priority: 0.9 },
+    { url: `${siteUrl}/mentions-legales/`, lastModified: "2026-09-09", changeFrequency: "yearly", priority: 0.2 },
+    { url: `${siteUrl}/politique-de-confidentialite/`, lastModified: "2026-09-09", changeFrequency: "yearly", priority: 0.2 },
+    { url: `${siteUrl}/politique-cookies/`, lastModified: "2026-09-09", changeFrequency: "yearly", priority: 0.2 },
+    { url: `${siteUrl}/conditions-utilisation/`, lastModified: "2026-09-09", changeFrequency: "yearly", priority: 0.2 },
+    { url: `${siteUrl}/conditions-precommande/`, lastModified: "2026-09-09", changeFrequency: "monthly", priority: 0.3 },
+    { url: `${siteUrl}/livraison-retours/`, lastModified: "2026-09-09", changeFrequency: "monthly", priority: 0.3 },
     { url: `${siteUrl}/quel-cafe-me-correspond/`, lastModified: "2026-08-01", changeFrequency: "monthly", priority: 0.9 },
     ...landingSlugs.map((slug) => ({
       url: `${siteUrl}/${slug}/`,

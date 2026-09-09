@@ -83,10 +83,57 @@ test("ships the static GitHub Pages essentials", async () => {
   await access(new URL("out/collagene/index.html", root));
   await access(new URL("out/mush/index.html", root));
   await access(new URL("out/vitalitea/index.html", root));
+  await access(new URL("out/mentions-legales/index.html", root));
+  await access(new URL("out/politique-de-confidentialite/index.html", root));
+  await access(new URL("out/politique-cookies/index.html", root));
+  await access(new URL("out/conditions-utilisation/index.html", root));
+  await access(new URL("out/conditions-precommande/index.html", root));
+  await access(new URL("out/livraison-retours/index.html", root));
   await access(new URL("out/marques/index.html", root));
   await access(new URL("out/marques/cafe-integral/index.html", root));
   await access(new URL("out/marques/cafe-minceur/index.html", root));
   await assert.rejects(access(new URL("app/_sites-preview/SkeletonPreview.tsx", root)));
+});
+
+test("exposes the legal and privacy information from every page footer", async () => {
+  const home = await render("/");
+  assert.equal(home.status, 200);
+  const homeHtml = await home.text();
+  for (const slug of [
+    "mentions-legales",
+    "politique-de-confidentialite",
+    "politique-cookies",
+    "conditions-utilisation",
+    "conditions-precommande",
+    "livraison-retours",
+  ]) {
+    assert.match(homeHtml, new RegExp(`href="/${slug}/"`, "i"));
+    const response = await render(`/${slug}/`);
+    assert.equal(response.status, 200, `${slug} should render`);
+    assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
+  }
+});
+
+test("publishes the disclosed legal identity without inventing missing registration details", async () => {
+  const legal = await render("/mentions-legales/");
+  const legalHtml = await legal.text();
+  assert.match(legalHtml, /CaféAdaptogène\.com/i);
+  assert.match(legalHtml, /Aix-en-Provence/i);
+  assert.match(legalHtml, /contact@cafeminceur\.fr/i);
+  assert.match(legalHtml, /Obambu SARL/i);
+  assert.match(legalHtml, /10 rue de Penthièvre/i);
+  assert.doesNotMatch(legalHtml, /SIREN\s*:\s*\d|SIRET\s*:\s*\d/i);
+
+  const privacy = await render("/politique-de-confidentialite/");
+  const privacyHtml = await privacy.text();
+  assert.match(privacyHtml, /droit d’accès/i);
+  assert.match(privacyHtml, /réclamation.*CNIL/i);
+  assert.match(privacyHtml, /contact@cafeminceur\.fr/i);
+
+  const cookies = await render("/politique-cookies/");
+  const cookiesHtml = await cookies.text();
+  assert.match(cookiesHtml, /aucun cookie publicitaire/i);
+  assert.match(cookiesHtml, /aucun outil de mesure d’audience/i);
 });
 
 test("server-renders the Vitalitéa whole-fruit coffee landing page", async () => {

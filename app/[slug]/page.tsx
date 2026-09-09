@@ -2,17 +2,28 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProductCard } from "../components/product-card";
+import { LegalDocumentPage } from "../components/legal-document";
 import { SiteFooter, SiteHeader } from "../components/site-chrome";
+import { legalDocumentBySlug, legalDocuments } from "../legal-data";
 import { allGuides, products, siteUrl, universes } from "../site-data";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return allGuides.map((guide) => ({ slug: guide.slug }));
+  return [...allGuides.map((guide) => ({ slug: guide.slug })), ...legalDocuments.map((document) => ({ slug: document.slug }))];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  const legalDocument = legalDocumentBySlug.get(slug);
+  if (legalDocument) {
+    return {
+      title: legalDocument.title,
+      description: legalDocument.description,
+      alternates: { canonical: `/${legalDocument.slug}/` },
+      openGraph: { title: legalDocument.title, description: legalDocument.description, url: `${siteUrl}/${legalDocument.slug}/`, images: ["/og.png"] },
+    };
+  }
   const guide = allGuides.find((item) => item.slug === slug);
   if (!guide) return {};
   return {
@@ -39,6 +50,8 @@ function fallbackProducts(slug: string) {
 
 export default async function GuidePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const legalDocument = legalDocumentBySlug.get(slug);
+  if (legalDocument) return <LegalDocumentPage document={legalDocument} />;
   const guide = allGuides.find((item) => item.slug === slug);
   if (!guide) notFound();
 

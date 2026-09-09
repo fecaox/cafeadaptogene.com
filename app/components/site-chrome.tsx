@@ -68,6 +68,14 @@ export function SiteFooter() {
           <p className="footer-small">Une donnée à corriger ? Envoyez-nous sa source et sa date.</p>
         </div>
       </div>
+      <nav className="footer-legal" aria-label="Informations légales">
+        <Link href="/mentions-legales/">Mentions légales</Link>
+        <Link href="/politique-de-confidentialite/">Confidentialité</Link>
+        <Link href="/politique-cookies/">Cookies</Link>
+        <Link href="/conditions-utilisation/">Conditions d’utilisation</Link>
+        <Link href="/conditions-precommande/">Précommandes</Link>
+        <Link href="/livraison-retours/">Livraison et retours</Link>
+      </nav>
       <div className="footer-bottom">
         <span>© 2026 cafeadaptogene.com</span>
         <span>Information générale — ne remplace pas un avis médical</span>
