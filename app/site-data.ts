@@ -204,8 +204,8 @@ export const guides: Guide[] = [
   {
     slug: "cafe-nouvelle-generation",
     eyebrow: "Décryptage marché",
-    title: "Café nouvelle génération : quand le café devient fonctionnel",
-    description: "Cafés nouvelle génération : innovations issues du fruit, cafés enrichis, boissons hybrides et critères pour distinguer une vraie évolution d’un simple slogan.",
+    title: "Café nouvelle génération : définition et comparatif 2026",
+    description: "Qu’est-ce qu’un café nouvelle génération ? Comparez cafés fonctionnels, adaptogènes, protéinés et alternatives : composition, caféine, goût et prix.",
     intro: "Le café nouvelle génération n’est pas une recette unique. Il désigne un mouvement qui transforme le café par le fruit, le procédé, l’ajout d’actifs ou la création d’une alternative au rituel classique. Pour rester utile, cette expression doit toujours être suivie d’une réponse concrète : qu’est-ce qui change réellement dans la tasse ?",
     color: "copper",
     icon: "N",
@@ -247,6 +247,7 @@ export const guides: Guide[] = [
           "Le prix doit enfin être ramené à la tasse. Une nouveauté peut coûter davantage qu’un café classique, mais le supplément doit correspondre à une différence lisible plutôt qu’à une accumulation de mots tendance.",
         ],
         bullets: ["Composition complète accessible", "Dose par tasse cohérente", "Goût et préparation décrits honnêtement", "Prix par portion calculable", "Limites et relation commerciale visibles"],
+        links: [{ label: "Comparer les références de l’annuaire", slug: "annuaire-cafes-fonctionnels" }],
       },
     ],
     faq: [
