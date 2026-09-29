@@ -23,8 +23,27 @@ test("summarises the latest dated market update", async () => {
   const products = buildDirectoryProducts(parseCsv(source), {});
   const stats = buildMarketUpdateStats(products);
 
-  assert.equal(stats.latestChangeDate, "2026-09-08");
-  assert.equal(stats.newReferences, 9);
-  assert.ok(stats.availableInFrance >= 8);
-  assert.ok(stats.underWatch >= 1);
+  assert.equal(stats.latestChangeDate, "2026-09-29");
+  assert.equal(stats.newReferences, 6);
+  assert.ok(stats.availableInFrance >= 6);
+  assert.ok(stats.underWatch >= 2);
+});
+
+test("includes the September protein and collagen coffee launches", async () => {
+  const source = await readFile(new URL("../data/marques-cafe-fonctionnel.csv", import.meta.url), "utf8");
+  const products = buildDirectoryProducts(parseCsv(source), {});
+  const latest = products.filter((product) => product.changeDate === "2026-09-29");
+
+  assert.equal(latest.length, 6);
+  assert.deepEqual(
+    new Set(latest.map((product) => product.id)),
+    new Set([
+      "myprotein-protein-iced-coffee",
+      "try-kinoko-cafe-proteine",
+      "sunday-natural-proteine-coffee-signature-roast",
+      "corial-cafe-collagene-vitamine-c-cacao",
+      "colco-cafe-au-collagene-250-g",
+      "collacup-cafe-instantane-au-collagene",
+    ]),
+  );
 });

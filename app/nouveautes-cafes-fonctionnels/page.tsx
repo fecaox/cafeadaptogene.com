@@ -22,6 +22,33 @@ const newReferences = latestChanges.filter((item) => item.changeType.includes("n
 const updatedReferences = latestChanges.filter((item) => !item.changeType.includes("nouvelle référence"));
 const watchlist = latestChanges.filter((item) => item.publicStatus !== "Actif" || item.verificationLevel === "C" || !item.featuredNovelty);
 
+const marketTrends = [
+  {
+    number: "01",
+    title: "Le froid devient un format, pas seulement une recette.",
+    text: "Myprotein et Try Kinoko conçoivent leur café protéiné pour une préparation froide. La catégorie se rapproche ainsi des boissons nomades et de la nutrition sportive.",
+    evidence: "Myprotein · Try Kinoko",
+  },
+  {
+    number: "02",
+    title: "La nutrition prend le relais des seuls adaptogènes.",
+    text: "Les nouveaux lancements documentés annoncent de 10 à 23 g de protéines par portion. Le bénéfice recherché devient plus mesurable que la seule promesse de focus ou d’énergie.",
+    evidence: "Kinoko · Myprotein · Sunday Natural",
+  },
+  {
+    number: "03",
+    title: "Le collagène se décline comme une gamme de café.",
+    text: "Café instantané, cacao, capsules et mélanges moulus : les marques multiplient les formats, mais publient encore très inégalement le dosage et la caféine par tasse.",
+    evidence: "Corial · Colco · CollaCup",
+  },
+  {
+    number: "04",
+    title: "La disponibilité reste instable.",
+    text: "Deux des six références repérées sont déjà indisponibles. Une innovation visible sur une boutique n’est donc pas nécessairement un produit que l’on peut acheter aujourd’hui.",
+    evidence: "Colco · CollaCup",
+  },
+] as const;
+
 function ProductVisual({ item }: { item: (typeof directoryProducts)[number] }) {
   return item.imagePath ? (
     <Image src={item.imagePath} alt={`Packaging ${item.brand} ${item.product}`} width={720} height={720} />
@@ -68,7 +95,7 @@ export default function MarketUpdatesPage() {
           <div className="updates-hero-copy">
             <p className="eyebrow light"><span /> Veille du marché · {directoryUpdatedAt}</p>
             <h1>Nouveautés cafés fonctionnels.</h1>
-            <p>Neuf nouvelles références entrent dans l’annuaire : cafés protéinés, mélanges aux champignons et alternatives torréfiées. Nous signalons aussi les prix, formules et pages produit qui ont changé.</p>
+            <p>{marketUpdateStats.newReferences} nouvelles références entrent dans l’annuaire : cafés protéinés pour boissons froides, cafés au collagène et nouveaux formats nutritionnels. Nous signalons séparément les produits disponibles et ceux déjà en rupture.</p>
             <div className="updates-actions">
               <a className="button button-light" href="#nouveaux-produits">Voir les lancements <span>↓</span></a>
               <Link className="text-link light-link" href="/annuaire-cafes-fonctionnels/">Explorer les {directoryStats.references} références ↗</Link>
@@ -85,8 +112,26 @@ export default function MarketUpdatesPage() {
         <section className="updates-answer">
           <p className="eyebrow"><span /> Ce qu’il faut retenir</p>
           <div>
-            <h2>Le marché ne se limite plus au café aux champignons.</h2>
-            <p>La nouveauté la plus nette est la diversification. Le café devient une base protéinée, tandis que le lupin, l’orge ou les noyaux de dattes cherchent à reproduire son rituel sans caféine. Un lancement n’est toutefois pas une preuve d’efficacité : nous retenons d’abord la composition, la dose, la caféine et la disponibilité réelle.</p>
+            <h2>Le café fonctionnel devient une catégorie nutritionnelle.</h2>
+            <p>Le signal le plus net est le déplacement vers les protéines, le collagène et les préparations froides. Les différences se jouent désormais sur les grammes d’actifs, la source de protéines, les arômes ou édulcorants et la disponibilité réelle. Un lancement ne prouve toutefois ni l’efficacité ni la qualité du produit fini.</p>
+          </div>
+        </section>
+
+        <section className="updates-trends" aria-labelledby="tendances-marche">
+          <header>
+            <p className="eyebrow"><span /> Tendances émergentes</p>
+            <h2 id="tendances-marche">Quatre signaux à suivre cet automne.</h2>
+            <p>Il s’agit d’une lecture de l’offre vérifiée au 29 septembre 2026, pas d’une prévision de ventes ni d’une validation des promesses des marques.</p>
+          </header>
+          <div className="updates-trends-grid">
+            {marketTrends.map((trend) => (
+              <article key={trend.number}>
+                <span>{trend.number}</span>
+                <h3>{trend.title}</h3>
+                <p>{trend.text}</p>
+                <small>{trend.evidence}</small>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -121,21 +166,23 @@ export default function MarketUpdatesPage() {
           </div>
         </section>
 
-        <section className="updates-changes">
-          <header>
-            <p className="eyebrow light"><span /> Fiches actualisées</p>
-            <h2>Ce qui a changé depuis le dernier relevé.</h2>
-          </header>
-          <div>
-            {updatedReferences.map((item) => (
-              <article key={item.id}>
-                <span className={`level level-${item.verificationLevel.toLowerCase()}`}>{item.verificationLevel}</span>
-                <div><small>{item.changeType}</small><h3>{item.brand} · {item.product}</h3><p>{item.changeSummary}</p></div>
-                <Link href={`/annuaire-cafes-fonctionnels/#${item.id}`}>Détails →</Link>
-              </article>
-            ))}
-          </div>
-        </section>
+        {updatedReferences.length > 0 ? (
+          <section className="updates-changes">
+            <header>
+              <p className="eyebrow light"><span /> Fiches actualisées</p>
+              <h2>Ce qui a changé depuis le dernier relevé.</h2>
+            </header>
+            <div>
+              {updatedReferences.map((item) => (
+                <article key={item.id}>
+                  <span className={`level level-${item.verificationLevel.toLowerCase()}`}>{item.verificationLevel}</span>
+                  <div><small>{item.changeType}</small><h3>{item.brand} · {item.product}</h3><p>{item.changeSummary}</p></div>
+                  <Link href={`/annuaire-cafes-fonctionnels/#${item.id}`}>Détails →</Link>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <section className="updates-watch">
           <div>

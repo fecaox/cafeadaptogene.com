@@ -26,7 +26,7 @@ test("server-renders the Café Adaptogène homepage", async () => {
   assert.match(html, /Torrégral/i);
   assert.match(html, /Cafés enrichis/i);
   assert.match(html, /Trouver mon café/i);
-  assert.match(html, /137[\s\S]*références/i);
+  assert.match(html, /143[\s\S]*références/i);
   assert.match(html, /application\/ld\+json/i);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
@@ -157,10 +157,10 @@ test("server-renders the verified brand directory", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /L’annuaire des cafés fonctionnels/i);
-  assert.match(html, /137[\s\S]*références documentées/i);
-  assert.match(html, /128[\s\S]*marques recensées/i);
+  assert.match(html, /143[\s\S]*références documentées/i);
+  assert.match(html, /132[\s\S]*marques recensées/i);
   assert.match(html, /Four Sigmatic/i);
-  assert.match(html, /134[\s\S]*visuels de packaging vérifiés/i);
+  assert.match(html, /140[\s\S]*visuels de packaging vérifiés/i);
   assert.match(html, /Packaging Four Sigmatic/i);
   assert.match(html, /Visuel officiel non retrouvé/i);
   assert.match(html, /Source du visuel/i);
@@ -169,7 +169,7 @@ test("server-renders the verified brand directory", async () => {
 
   const root = new URL("../", import.meta.url);
   const manifest = JSON.parse(await readFile(new URL("data/brand-image-manifest.json", root), "utf8"));
-  assert.equal(Object.keys(manifest).length, 137);
+  assert.equal(Object.keys(manifest).length, 143);
   assert.equal(Object.values(manifest).filter((entry) => !entry.imagePath).length, 3);
   await Promise.all(Object.values(manifest).filter((entry) => entry.imagePath).map((entry) => access(new URL(`public${entry.imagePath}`, root))));
 });
@@ -179,11 +179,15 @@ test("server-renders the hybrid market news and watch page", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /Nouveautés cafés fonctionnels/i);
-  assert.match(html, /9 nouvelles références/i);
-  assert.match(html, /8 septembre 2026/i);
-  assert.match(html, /Café Protéiné Cannelle/i);
-  assert.match(html, /Noble Strong Mushroom Coffee/i);
-  assert.match(html, /Arsène Classique/i);
+  assert.match(html, /6 nouvelles références/i);
+  assert.match(html, /29 septembre 2026/i);
+  assert.match(html, /Protein Iced Coffee/i);
+  assert.match(html, /Café Protéiné/i);
+  assert.match(html, /Signature Roast/i);
+  assert.match(html, /Café Collagène[^<]*Cacao/i);
+  assert.match(html, /Le froid devient un format/i);
+  assert.match(html, /La nutrition prend le relais/i);
+  assert.match(html, /La disponibilité reste instable/i);
   assert.match(html, /Ce que nous surveillons/i);
   assert.match(html, /CollectionPage/i);
   assert.match(html, /ItemList/i);

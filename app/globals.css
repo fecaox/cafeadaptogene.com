@@ -518,6 +518,16 @@ footer { color: #e7ded4; background: #211c18; }
 .updates-answer { padding: 82px 7vw; display: grid; grid-template-columns: .65fr 1.35fr; gap: 7vw; border-bottom: 1px solid var(--line); }
 .updates-answer h2 { max-width: 850px; margin: 0; font-family: var(--serif); font-size: clamp(48px, 5vw, 76px); font-weight: 400; letter-spacing: -.055em; line-height: .98; }
 .updates-answer div > p { max-width: 770px; margin: 28px 0 0; color: var(--muted); font-family: var(--serif); font-size: 20px; line-height: 1.6; }
+.updates-trends { padding: 95px 7vw 105px; display: grid; grid-template-columns: .72fr 1.28fr; gap: 8vw; border-bottom: 1px solid var(--line); background: #e2d7c6; }
+.updates-trends > header { position: sticky; top: 28px; align-self: start; }
+.updates-trends h2 { max-width: 650px; margin: 0; font-family: var(--serif); font-size: clamp(48px, 5.2vw, 78px); font-weight: 400; letter-spacing: -.055em; line-height: .98; }
+.updates-trends > header > p:last-child { max-width: 570px; margin: 28px 0 0; color: var(--muted); font-family: var(--serif); font-size: 17px; line-height: 1.55; }
+.updates-trends-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--ink); }
+.updates-trends-grid article { min-height: 310px; padding: 28px; display: flex; align-items: flex-start; flex-direction: column; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); background: rgba(255,255,255,.32); }
+.updates-trends-grid span { display: grid; place-items: center; width: 36px; height: 36px; margin-bottom: 52px; border: 1px solid var(--ink); border-radius: 50%; font-family: var(--serif); }
+.updates-trends-grid h3 { margin: 0 0 18px; font-family: var(--serif); font-size: 30px; font-weight: 400; letter-spacing: -.035em; line-height: 1.05; }
+.updates-trends-grid p { margin: 0 0 28px; color: var(--muted); font-size: 10px; line-height: 1.65; }
+.updates-trends-grid small { margin-top: auto; color: var(--rust); font-size: 7px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
 .updates-new { padding: 100px 7vw 115px; }
 .updates-section-heading { margin-bottom: 52px; display: grid; grid-template-columns: 1.1fr .9fr; align-items: end; gap: 8vw; }
 .updates-section-heading h2, .updates-changes h2, .updates-watch h2 { margin: 0; font-family: var(--serif); font-size: clamp(48px, 5.2vw, 78px); font-weight: 400; letter-spacing: -.055em; line-height: .98; }
@@ -635,7 +645,8 @@ footer { color: #e7ded4; background: #211c18; }
   .brand-entity-card { border-bottom: 1px solid var(--line); }
   .brand-article-hero { grid-template-columns: 1fr; }
   .brand-pack-hero { width: min(520px, 100%); height: 390px; justify-self: start; }
-  .updates-hero, .updates-answer, .updates-section-heading, .updates-changes, .updates-watch { grid-template-columns: 1fr; }
+  .updates-hero, .updates-answer, .updates-trends, .updates-section-heading, .updates-changes, .updates-watch { grid-template-columns: 1fr; }
+  .updates-trends > header { position: static; }
   .updates-scoreboard { max-width: 760px; }
   .updates-card { grid-template-columns: 36% 64%; }
   .updates-watch-list article { grid-template-columns: 130px 170px 1fr; }
@@ -796,9 +807,11 @@ footer { color: #e7ded4; background: #211c18; }
   .updates-hero { min-height: 0; padding: 70px 6vw; }
   .updates-hero h1 { font-size: 59px; }
   .updates-hero-copy > p:not(.eyebrow) { font-size: 18px; }
-  .updates-answer, .updates-new, .updates-changes, .updates-watch { padding: 65px 6vw; }
-  .updates-answer, .updates-section-heading, .updates-changes, .updates-watch { gap: 35px; }
-  .updates-answer h2, .updates-section-heading h2, .updates-changes h2, .updates-watch h2 { font-size: 47px; }
+  .updates-answer, .updates-trends, .updates-new, .updates-changes, .updates-watch { padding: 65px 6vw; }
+  .updates-answer, .updates-trends, .updates-section-heading, .updates-changes, .updates-watch { gap: 35px; }
+  .updates-answer h2, .updates-trends h2, .updates-section-heading h2, .updates-changes h2, .updates-watch h2 { font-size: 47px; }
+  .updates-trends-grid { grid-template-columns: 1fr; }
+  .updates-trends-grid article { min-height: 270px; }
   .updates-grid { grid-template-columns: 1fr; }
   .updates-card { grid-template-columns: 1fr; }
   .updates-card figure { min-height: 310px; }

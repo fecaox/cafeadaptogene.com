@@ -1490,5 +1490,71 @@
     "status": "official-page-image",
     "bytes": 83694,
     "note": "Candidat og, score 160."
+  },
+  "myprotein-protein-iced-coffee": {
+    "id": "myprotein-protein-iced-coffee",
+    "brand": "Myprotein",
+    "product": "Protein Iced Coffee",
+    "imagePath": "/images/directory/myprotein-protein-iced-coffee.jpg",
+    "imageSource": "https://static.thcdn.com/productimg/original/17631052-1605343232982139.jpg",
+    "pageSource": "https://fr.myprotein.com/p/nutrition-sportive/protein-iced-coffee/17631051/",
+    "status": "official-product-image",
+    "bytes": 164320,
+    "note": "Visuel principal officiel consulté le 29 septembre 2026."
+  },
+  "try-kinoko-cafe-proteine": {
+    "id": "try-kinoko-cafe-proteine",
+    "brand": "Try Kinoko",
+    "product": "Café Protéiné",
+    "imagePath": "/images/directory/try-kinoko-cafe-proteine.png",
+    "imageSource": "https://fr.trykinoko.co/cdn/shop/files/selfmade-france.png?v=1784252144",
+    "pageSource": "https://fr.trykinoko.co/products/protein-coffee",
+    "status": "official-product-image",
+    "bytes": 1483422,
+    "note": "Visuel principal officiel consulté le 29 septembre 2026."
+  },
+  "sunday-natural-proteine-coffee-signature-roast": {
+    "id": "sunday-natural-proteine-coffee-signature-roast",
+    "brand": "Sunday Natural",
+    "product": "Protéine Coffee Signature Roast",
+    "imagePath": "/images/directory/sunday-natural-proteine-coffee-signature-roast.jpg",
+    "imageSource": "https://media.sunday-natural.com/media/catalog/product/cache/6b78ac9ed927a3c2db42a3c84dab4ce5/N/8/N8630CDE_protein-coffee-signature-roast_product-main-1-v1_1778856788.png",
+    "pageSource": "https://www.sunday.fr/protein-coffee-signature-roast.html",
+    "status": "official-product-image",
+    "bytes": 6988,
+    "note": "Visuel principal officiel consulté le 29 septembre 2026."
+  },
+  "corial-cafe-collagene-vitamine-c-cacao": {
+    "id": "corial-cafe-collagene-vitamine-c-cacao",
+    "brand": "Corial",
+    "product": "Café Collagène + Vitamine C - Cacao",
+    "imagePath": "/images/directory/corial-cafe-collagene-vitamine-c-cacao.jpg",
+    "imageSource": "https://corialfoods.com/cdn/shop/files/Collagen_Coffee_Cacau_CORIAL_colag_nio_hidrolisado_com_caf_e_cacau.webp?v=1778146861",
+    "pageSource": "https://corialfoods.com/fr-fr/products/collagen-coffee-cacau",
+    "status": "official-product-image",
+    "bytes": 584795,
+    "note": "Visuel principal officiel consulté le 29 septembre 2026."
+  },
+  "colco-cafe-au-collagene-250-g": {
+    "id": "colco-cafe-au-collagene-250-g",
+    "brand": "Colco",
+    "product": "Café au collagène 250 g",
+    "imagePath": "/images/directory/colco-cafe-au-collagene-250-g.png",
+    "imageSource": "https://colco.fr/cdn/shop/files/Generated_with_Kive.ai_-_kive-image_1.png?v=1770297055",
+    "pageSource": "https://colco.fr/products/cure-1-mois",
+    "status": "official-product-image",
+    "bytes": 2660241,
+    "note": "Visuel principal officiel consulté le 29 septembre 2026."
+  },
+  "collacup-cafe-instantane-au-collagene": {
+    "id": "collacup-cafe-instantane-au-collagene",
+    "brand": "CollaCup",
+    "product": "Café instantané au collagène",
+    "imagePath": "/images/directory/collacup-cafe-instantane-au-collagene.png",
+    "imageSource": "https://collacup.com/cdn/shop/files/sachet_collacup_soluble.png?v=1777131865",
+    "pageSource": "https://collacup.com/products/collacup-capsule-de-cafe-au-collagene",
+    "status": "official-product-image",
+    "bytes": 1493789,
+    "note": "Visuel principal officiel consulté le 29 septembre 2026."
   }
 }

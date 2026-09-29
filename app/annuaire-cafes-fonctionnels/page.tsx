@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { directoryProducts, directoryStats, directoryUpdatedAt } from "../brand-directory-data";
+import { directoryProducts, directoryStats, directoryUpdatedAt, marketUpdateStats } from "../brand-directory-data";
 import { SiteFooter, SiteHeader } from "../components/site-chrome";
 import { siteUrl } from "../site-data";
 import DirectoryExplorer from "./DirectoryExplorer";
@@ -26,7 +26,7 @@ export default function BrandDirectoryPage() {
         name: "Annuaire des cafés fonctionnels et adaptogènes",
         description: metadata.description,
         url: `${siteUrl}/annuaire-cafes-fonctionnels/`,
-        dateModified: "2026-09-08",
+        dateModified: marketUpdateStats.latestChangeDate,
         inLanguage: "fr-FR",
       },
       {
