@@ -62,6 +62,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const universe = universes.find((item) => item.slug === slug || item.children.some((child) => child.slug === slug));
   const hasDeepDive = Boolean(guide.sections?.length);
   const readingTime = 7 + (guide.sections?.length ?? 0) * 2;
+  const dateModified = slug === "cafe-nouvelle-generation" ? "2026-09-24" : slug === "torregral" ? "2026-08-25" : "2026-08-01";
+  const updatedLabel = slug === "cafe-nouvelle-generation" ? "24 septembre 2026" : slug === "torregral" ? "25 août 2026" : "1er août 2026";
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -69,7 +71,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     headline: guide.title,
     description: guide.description,
     datePublished: "2026-07-30",
-    dateModified: slug === "torregral" ? "2026-08-25" : "2026-08-01",
+    dateModified,
     inLanguage: "fr-FR",
     mainEntityOfPage: `${siteUrl}/${guide.slug}/`,
     author: { "@type": "Organization", name: "Rédaction Café Adaptogène" },
@@ -115,7 +117,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <p className="eyebrow"><span /> {guide.eyebrow}</p>
             <h1>{guide.title}</h1>
             <p>{guide.description}</p>
-            <div className="article-meta"><span>Mis à jour le {slug === "torregral" ? "25 août 2026" : "1er août 2026"}</span><span>Lecture · {readingTime} min</span><span>Sources et méthode visibles</span></div>
+            <div className="article-meta"><span>Mis à jour le {updatedLabel}</span><span>Lecture · {readingTime} min</span><span>Sources et méthode visibles</span></div>
           </div>
           <div className="article-monogram" aria-hidden="true"><span>{guide.icon}</span><small>CAFÉ<br />ADAPTOGÈNE</small></div>
         </header>
