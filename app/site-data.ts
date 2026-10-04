@@ -4,6 +4,7 @@ export type Guide = {
   slug: string;
   eyebrow: string;
   title: string;
+  seoTitle?: string;
   description: string;
   intro: string;
   color: string;
@@ -262,6 +263,7 @@ export const guides: Guide[] = [
     slug: "comparatif-cafe-adaptogene",
     eyebrow: "Comparatif 2026",
     title: "Meilleur café adaptogène 2026 : comparatif France",
+    seoTitle: "Comparatif café adaptogène 2026 : lequel choisir ?",
     description: "Comparez les cafés adaptogènes vendus en France : composition, caféine, dosage, goût et prix par tasse. Classement selon votre profil.",
     intro: "Il n’existe pas un meilleur café adaptogène pour tout le monde. Le choix change selon que l’on veut préserver le goût d’un vrai café, réduire la caféine, consommer des champignons précisément dosés ou adopter une formule tout-en-un. Notre comparatif commence donc par votre profil, puis examine les données publiées par chaque marque.",
     color: "sage",

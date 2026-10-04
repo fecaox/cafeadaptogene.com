@@ -197,6 +197,8 @@ test("server-renders a priority SEO article with its internal cluster", async ()
   const response = await render("/comparatif-cafe-adaptogene/");
   assert.equal(response.status, 200);
   const html = await response.text();
+  assert.match(html, /<title>Comparatif café adaptogène 2026 : lequel choisir \?<\/title>/i);
+  assert.doesNotMatch(html, /<title>[^<]*\| Café Adaptogène<\/title>/i);
   assert.match(html, /Meilleur café adaptogène/i);
   assert.match(html, /Quel café adaptogène choisir selon votre profil/i);
   assert.match(html, /Portion/i);
