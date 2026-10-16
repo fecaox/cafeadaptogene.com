@@ -95,6 +95,27 @@ test("ships the static GitHub Pages essentials", async () => {
   await assert.rejects(access(new URL("app/_sites-preview/SkeletonPreview.tsx", root)));
 });
 
+test("consolide le sujet café aux champignons sur une seule URL", async () => {
+  const root = new URL("../", import.meta.url);
+  const [page, sitemap, htaccess] = await Promise.all([
+    readFile(new URL("out/cafe-champignons-plantes/index.html", root), "utf8"),
+    readFile(new URL("out/sitemap.xml", root), "utf8"),
+    readFile(new URL("out/.htaccess", root), "utf8"),
+  ]);
+
+  assert.match(page, /<title>Café aux champignons : comparatif 2026 et guide pour choisir<\/title>/);
+  assert.match(page, /Comment comparer les cafés aux champignons en 2026/);
+  assert.match(page, /Dose, extrait et partie du champignon/);
+  assert.match(page, /Caféine, goût et prix par tasse/);
+  assert.match(page, /Mis à jour le <!-- -->16 octobre 2026/);
+  assert.match(sitemap, /https:\/\/cafeadaptogene\.com\/cafe-champignons-plantes\//);
+  assert.doesNotMatch(sitemap, /https:\/\/cafeadaptogene\.com\/cafe-champignon\//);
+  assert.match(
+    htaccess,
+    /RewriteRule \^cafe-champignon\/\?\$ https:\/\/cafeadaptogene\.com\/cafe-champignons-plantes\/ \[R=301,L\]/,
+  );
+});
+
 test("exposes the legal and privacy information from every page footer", async () => {
   const home = await render("/");
   assert.equal(home.status, 200);

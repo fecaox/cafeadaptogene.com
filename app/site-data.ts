@@ -183,7 +183,7 @@ export const guides: Guide[] = [
           "Les champignons les plus fréquents sont le Lion’s Mane, le Chaga, le Cordyceps et le Reishi. Les plantes peuvent inclure ginseng, maca, ashwagandha ou rhodiola. Les formules nutritionnelles ajoutent plutôt whey, collagène, MCT, fibres ou vitamines.",
           "La présence d’un ingrédient connu ne suffit pas à comparer deux produits. Une quantité non publiée, une forme d’extrait différente ou une portion irréaliste peuvent modifier fortement la pertinence de la formule.",
         ],
-        links: [{ label: "Comparer les cafés aux champignons", slug: "cafe-champignon" }, { label: "Comparer les cafés protéinés", slug: "cafe-proteine" }, { label: "Comparer les cafés au collagène", slug: "cafe-collagene" }],
+        links: [{ label: "Comparer les cafés aux champignons", slug: "cafe-champignons-plantes" }, { label: "Comparer les cafés protéinés", slug: "cafe-proteine" }, { label: "Comparer les cafés au collagène", slug: "cafe-collagene" }],
       },
       {
         title: "Le bon calcul : prix, portion et caféine",
@@ -311,26 +311,6 @@ export const guides: Guide[] = [
     productIds: ["torregral", "bonjour", "brainstoorm", "frenchmush", "guerriers", "strate"],
   },
   {
-    slug: "cafe-champignon",
-    eyebrow: "Comparatif catégorie",
-    title: "Café aux champignons : Lion’s Mane, Chaga, Reishi… que comparer ?",
-    description: "Comparatif des cafés aux champignons disponibles en France : base, extraits, dosages, caféine, goût et prix par tasse.",
-    intro: "Le « mushroom coffee » est l’une des catégories emblématiques du café fonctionnel. Derrière l’image du champignon se cachent pourtant plusieurs réalités : café arabica enrichi, latte instantané, chicorée cacaotée ou boisson presque sans caféine. La bonne question n’est pas seulement “combien de champignons ?”, mais lesquels, sous quelle forme et dans quelle boisson.",
-    color: "copper",
-    icon: "M",
-    keyPoints: ["Espèces et quantités détaillées", "Corps fructifère ou mycélium", "Méthode d’extraction documentée", "Goût, solubilité et sucres ajoutés"],
-    criteria: [
-      { title: "Lion’s Mane", text: "Souvent positionné sur le focus. Nous distinguons la littérature sur l’ingrédient des bénéfices réellement démontrés pour la formule vendue." },
-      { title: "Chaga, Reishi, Cordyceps", text: "Leur présence ne suffit pas : provenance, partie utilisée, extraction et quantité par tasse comptent davantage qu’une longue liste." },
-      { title: "La matrice de la boisson", text: "Cacao, chicorée, fibres, lait de coco ou arômes influencent fortement la digestion, les calories et le profil gustatif." },
-    ],
-    faq: [
-      { question: "Le café aux champignons a-t-il un goût de champignon ?", answer: "Les marques cherchent généralement à masquer cette note par le café, le cacao ou la chicorée. Le résultat varie d’un espresso léger à un latte plus gourmand." },
-      { question: "Plus de milligrammes signifie-t-il meilleur ?", answer: "Pas nécessairement. La nature de l’extrait, sa standardisation et la transparence du fabricant sont aussi importantes que la masse annoncée." },
-      { question: "Est-ce la même chose qu’un complément alimentaire ?", answer: "Pas toujours juridiquement ni dans l’usage, mais ces boissons peuvent contenir des ingrédients concentrés. Les mêmes réflexes de prudence restent utiles." },
-    ],
-  },
-  {
     slug: "cafe-focus",
     eyebrow: "Choisir par objectif",
     title: "Café focus : les formules pensées pour la concentration",
@@ -359,7 +339,7 @@ export const guides: Guide[] = [
           "Le Lion’s Mane est fréquent dans les cafés positionnés sur le focus. La L-théanine apparaît dans certaines formules caféinées, tandis que ginseng, rhodiola, maca ou ashwagandha complètent les mélanges les plus longs.",
           "La présence d’un nom connu ne permet pas de conclure sur le produit fini. Il faut connaître la quantité, la forme utilisée et, pour les champignons, la partie du champignon et le type d’extrait. Une étude sur un ingrédient isolé ne valide pas automatiquement le mélange commercial.",
         ],
-        links: [{ label: "Lire le guide des cafés aux champignons", slug: "cafe-champignon" }, { label: "Comprendre le dossier BDNF", slug: "cafe-bdnf" }],
+        links: [{ label: "Lire le guide des cafés aux champignons", slug: "cafe-champignons-plantes" }, { label: "Comprendre le dossier BDNF", slug: "cafe-bdnf" }],
       },
       {
         title: "Vrai café ou boisson fonctionnelle instantanée ?",
@@ -989,20 +969,60 @@ export const taxonomyGuides: Guide[] = [
     ], productIds: ["bonjour", "guerriers", "cafit", "corial"],
   },
   {
-    slug: "cafe-champignons-plantes", eyebrow: "Famille 03", title: "Cafés aux champignons et aux plantes fonctionnelles", color: "sage", icon: "M",
-    description: "Lion’s Mane, Chaga, Reishi, Cordyceps et plantes : comment lire les formules sans confondre présence et preuve.",
-    intro: "Cette famille réunit deux sous-ensembles proches mais distincts : les cafés aux champignons fonctionnels et les cafés enrichis en plantes. Dans les deux cas, la qualité de l’extrait, la dose par tasse et la transparence de la marque comptent plus qu’une simple mention en façade.",
-    keyPoints: ["Espèce et partie utilisées", "Extrait ou poudre brute", "Dose par portion", "Base café, céréale ou cacao"],
+    slug: "cafe-champignons-plantes", eyebrow: "Comparatif 2026", title: "Comment comparer les cafés aux champignons en 2026", seoTitle: "Café aux champignons : comparatif 2026 et guide pour choisir", color: "sage", icon: "M",
+    description: "Comparez les cafés aux champignons vendus en France : espèces, extraits, dosages, caféine, goût et prix par tasse. Guide et produits repères 2026.",
+    intro: "Un café aux champignons peut être un arabica enrichi, une poudre instantanée à l’orge, un latte au cacao ou une boisson presque sans caféine. Pour les comparer, il faut regarder la boisson entière : espèces utilisées, forme des extraits, dose par tasse, base réelle, caféine, goût et coût. Une longue liste d’ingrédients ne suffit pas à démontrer un bénéfice.",
+    keyPoints: ["Espèces, parties et extraits détaillés", "Dose de chaque actif par tasse", "Caféine et base de la boisson", "Goût et prix par portion"],
     criteria: [
-      { title: "Champignons", text: "Lion’s Mane, Chaga, Reishi et Cordyceps n’ont ni le même historique ni les mêmes usages revendiqués." },
-      { title: "Plantes", text: "Les plantes dites adaptogènes doivent être identifiées précisément, avec une vigilance particulière sur les contre-indications." },
-      { title: "Goût réel", text: "Une formule peut ressembler à un café, à un cacao ou à une boisson de céréales : nous le précisons avant la promesse fonctionnelle." },
+      { title: "Que contient réellement la tasse ?", text: "Lion’s Mane, Chaga, Reishi et Cordyceps doivent être identifiés séparément, avec leur quantité, leur partie et leur forme lorsqu’elles sont publiées." },
+      { title: "Est-ce encore un café ?", text: "La proportion de café, la caféine et la préparation distinguent un arabica enrichi d’une boisson à base d’orge, de chicorée ou de cacao." },
+      { title: "Le prix est-il comparable ?", text: "Nous ramenons le prix à la portion recommandée et signalons les abonnements ou dosages qui modifient le coût réel de la tasse." },
+    ],
+    sections: [
+      {
+        title: "Dose, extrait et partie du champignon",
+        paragraphs: [
+          "Le nombre de champignons affiché sur l’emballage ne permet pas de comparer deux formules. Une masse totale peut regrouper plusieurs espèces sans révéler la quantité de chacune. Nous privilégions les produits qui publient une dose par tasse et distinguent clairement poudre brute, extrait et éventuelle standardisation.",
+          "La mention corps fructifère ou mycélium décrit la matière utilisée, mais ne suffit pas à classer la qualité. La provenance, la méthode d’extraction, les contrôles annoncés et la transparence de l’étiquette doivent être lus ensemble. Lorsqu’une donnée manque, elle reste indiquée comme non communiquée.",
+        ],
+        links: [{ label: "Voir notre méthode de comparaison", slug: "methodologie" }],
+      },
+      {
+        title: "Caféine, goût et prix par tasse",
+        paragraphs: [
+          "Deux produits appelés « mushroom coffee » peuvent produire des tasses très différentes. Une base de café instantané reste généralement plus proche du café ; l’orge, la chicorée, le cacao, les fibres ou le lait de coco changent le goût, la texture et parfois les calories.",
+          "La caféine doit être comparée toutes sources confondues et par portion réellement préparée. Le prix doit suivre la même logique : prix du paquet divisé par le nombre de tasses recommandé, hors promotion ponctuelle. Ces deux valeurs sont plus utiles qu’un prix facial ou qu’une promesse de stimulation.",
+        ],
+        links: [{ label: "Comparer les produits documentés", slug: "comparatif-cafe-adaptogene" }, { label: "Parcourir l’annuaire des marques", slug: "annuaire-cafes-fonctionnels" }],
+      },
+      {
+        title: "Que valent les promesses de focus ou de vitalité ?",
+        paragraphs: [
+          "Une étude menée sur un champignon isolé ne démontre pas automatiquement l’effet d’un mélange commercial. La dose, l’extrait, la population étudiée et le produit fini peuvent différer. Nous séparons donc les résultats portant sur un ingrédient des allégations publiées par une marque.",
+          "Les denrées ne peuvent pas revendiquer la prévention, le traitement ou la guérison d’une maladie. Un vocabulaire séduisant comme « focus », « immunité » ou « sans crash » doit être lu comme un positionnement tant que le bénéfice précis de la formule n’est pas étayé.",
+        ],
+        links: [{ label: "Comprendre les cafés dédiés au focus", slug: "cafe-focus" }],
+      },
+      {
+        title: "Précautions avant d’ajouter la boisson à sa routine",
+        paragraphs: [
+          "Une boisson en poudre n’est pas automatiquement un complément alimentaire au sens juridique, mais la présence d’extraits concentrés justifie les mêmes réflexes de lecture : respecter la portion, vérifier les avertissements et éviter de cumuler plusieurs produits contenant les mêmes actifs sans avis adapté.",
+          "La caféine du produit s’ajoute à celle du café, du thé, du chocolat, des boissons énergisantes et de certains compléments. Les personnes enceintes ou allaitantes, les mineurs et les personnes sous traitement doivent demander conseil à un professionnel de santé en cas de doute ou d’interaction possible.",
+        ],
+      },
     ],
     faq: [
-      { question: "Le café aux champignons goûte-t-il le champignon ?", answer: "Pas toujours. Le café, le cacao ou les céréales peuvent masquer les notes terreuses, mais le résultat varie fortement." },
+      { question: "Le café aux champignons a-t-il un goût de champignon ?", answer: "Pas nécessairement. Le café, le cacao, la chicorée ou les céréales peuvent atténuer les notes terreuses. Le résultat varie d’un café léger à un latte plus gourmand selon la base et les arômes." },
       { question: "Corps fructifère ou mycélium ?", answer: "Cette information aide à comprendre la matière utilisée, mais elle ne remplace pas les données d’extraction, de standardisation et de dose." },
+      { question: "Plus de milligrammes signifie-t-il un meilleur produit ?", answer: "Non. La masse doit être mise en regard du nombre d’espèces, de la forme utilisée, de la standardisation éventuelle et de la transparence du fabricant." },
+      { question: "Est-ce la même chose qu’un complément alimentaire ?", answer: "Pas toujours juridiquement ni dans l’usage. Certaines boissons restent des denrées classiques, mais la présence d’extraits concentrés impose de lire les portions, avertissements et risques de cumul." },
       { question: "Ces produits conviennent-ils à tout le monde ?", answer: "Non nécessairement. Les plantes et extraits peuvent présenter des précautions, notamment avec certains traitements ou situations médicales." },
-    ], productIds: ["bonjour", "brainstoorm", "frenchmush", "guerriers", "strate"],
+    ],
+    sources: [
+      { label: "DGCCRF — étiquetage et précautions des compléments alimentaires", url: "https://www.economie.gouv.fr/dgccrf/les-fiches-pratiques/etiquetage-presentation-et-publicite-des-complements-alimentaires-les-regles-connaitre" },
+      { label: "EFSA — repères de sécurité sur la caféine", url: "https://www.efsa.europa.eu/fr/corporate/pub/efsaexplainscaffeine150527" },
+    ],
+    productIds: ["bonjour", "brainstoorm", "frenchmush", "guerriers", "strate"],
   },
   {
     slug: "cafe-nutrition-performance", eyebrow: "Famille 04", title: "Cafés nutritionnels et de performance", color: "gold", icon: "N",

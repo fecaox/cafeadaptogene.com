@@ -37,7 +37,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 function fallbackProducts(slug: string) {
   const map: Record<string, string[]> = {
     "guide-cafe-adaptogene": ["torregral", "bonjour", "cafit"],
-    "cafe-champignon": ["bonjour", "guerriers", "frenchmush"],
     "cafe-focus": ["torregral", "bonjour", "brainstoorm"],
     "cafe-sans-crash": ["torregral", "bonjour", "cafeintegral"],
     "cafe-collagene": ["corial", "wake"],
@@ -62,8 +61,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const universe = universes.find((item) => item.slug === slug || item.children.some((child) => child.slug === slug));
   const hasDeepDive = Boolean(guide.sections?.length);
   const readingTime = 7 + (guide.sections?.length ?? 0) * 2;
-  const dateModified = slug === "cafe-nouvelle-generation" ? "2026-09-24" : slug === "torregral" ? "2026-08-25" : "2026-08-01";
-  const updatedLabel = slug === "cafe-nouvelle-generation" ? "24 septembre 2026" : slug === "torregral" ? "25 août 2026" : "1er août 2026";
+  const dateModified = slug === "cafe-champignons-plantes" ? "2026-10-16" : slug === "cafe-nouvelle-generation" ? "2026-09-24" : slug === "torregral" ? "2026-08-25" : "2026-08-01";
+  const updatedLabel = slug === "cafe-champignons-plantes" ? "16 octobre 2026" : slug === "cafe-nouvelle-generation" ? "24 septembre 2026" : slug === "torregral" ? "25 août 2026" : "1er août 2026";
 
   const articleSchema = {
     "@context": "https://schema.org",

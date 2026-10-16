@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Fusion SEO : une seule page de référence pour les cafés aux champignons.
+RewriteRule ^cafe-champignon/?$ https://cafeadaptogene.com/cafe-champignons-plantes/ [R=301,L]
+
 # Une seule version publique du site : HTTPS, sans www.
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} ^www\.cafeadaptogene\.com$ [NC]

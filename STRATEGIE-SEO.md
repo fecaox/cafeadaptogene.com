@@ -42,7 +42,6 @@ Ton : expert accessible, précis, sobre et curieux. Le site refuse les promesses
 │   └── produits-cerise-cafe/
 ├── comparatifs/
 │   ├── meilleur-cafe-adaptogene/
-│   ├── cafe-champignon/
 │   ├── cafe-collagene/
 │   ├── cafe-proteine/
 │   ├── cafe-minceur/
@@ -95,7 +94,7 @@ La V1 met en ligne l’accueil et huit pages piliers à la racine afin de démar
 ### Vague 1 — publiée dans la V1
 
 - `/guide-cafe-adaptogene/` — requête mère et page d’orientation ;
-- `/cafe-champignon/` — catégorie structurante du marché, à traiter sans présumer de son poids relatif ;
+- `/cafe-champignons-plantes/` — page consolidée le 16 octobre 2026 pour couvrir la catégorie sans concurrence interne ;
 - `/cafe-focus/` — pont naturel vers Torrégral ;
 - `/cafe-sans-crash/` — requête bénéfice très commerciale ;
 - `/cafe-collagene/` — segment beauté / nutricosmétique ;
