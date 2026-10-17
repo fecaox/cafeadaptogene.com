@@ -122,12 +122,12 @@ export const legalDocuments: LegalDocument[] = [
     eyebrow: "Traceurs",
     title: "Politique relative aux cookies",
     description: "État des cookies et traceurs utilisés par CaféAdaptogène.com et règles applicables à leur évolution.",
-    intro: "Dans sa version actuelle, le site fonctionne sans outil publicitaire, sans mesure d’audience et sans compte utilisateur.",
+    intro: "Le site fonctionne sans outil publicitaire et sans compte utilisateur. Une mesure d’audience est proposée uniquement avec votre consentement.",
     sections: [
       {
         title: "Situation actuelle",
         paragraphs: [
-          "CaféAdaptogène.com ne dépose aucun cookie publicitaire et n’intègre aucun outil de mesure d’audience. Les vidéos sont servies directement depuis le site et ne proviennent pas d’une plateforme tierce susceptible de suivre la navigation.",
+          "CaféAdaptogène.com ne dépose aucun cookie publicitaire. Google Analytics mesure la fréquentation uniquement si vous cliquez sur « Accepter ». En cas de refus, le script Google n’est pas chargé. Vous pouvez modifier ce choix grâce au bouton « Gérer les cookies ». Les vidéos sont servies directement depuis le site.",
           "Aucun bandeau de consentement n’est affiché, puisqu’aucun traceur soumis au consentement n’est actuellement déclenché par le site.",
         ],
       },

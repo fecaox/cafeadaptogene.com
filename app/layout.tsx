@@ -32,6 +32,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr">
+      <head>
+        <script src="/analytics-consent.js" data-measurement-id="G-8H0V7XTDBJ" defer />
+      </head>
       <body>{children}</body>
     </html>
   );

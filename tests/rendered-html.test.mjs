@@ -154,7 +154,26 @@ test("publishes the disclosed legal identity without inventing missing registrat
   const cookies = await render("/politique-cookies/");
   const cookiesHtml = await cookies.text();
   assert.match(cookiesHtml, /aucun cookie publicitaire/i);
-  assert.match(cookiesHtml, /aucun outil de mesure d’audience/i);
+  assert.match(cookiesHtml, /Google Analytics/i);
+  assert.match(cookiesHtml, /uniquement si vous cliquez sur « Accepter »/i);
+});
+
+test("loads Google Analytics only after an explicit audience-measurement choice", async () => {
+  const root = new URL("../", import.meta.url);
+  const [layout, consentScript, legalData] = await Promise.all([
+    readFile(new URL("app/layout.tsx", root), "utf8"),
+    readFile(new URL("public/analytics-consent.js", root), "utf8"),
+    readFile(new URL("app/legal-data.ts", root), "utf8"),
+  ]);
+
+  assert.match(layout, /analytics-consent\.js/);
+  assert.match(layout, /G-8H0V7XTDBJ/);
+  assert.match(consentScript, /analytics_storage/);
+  assert.match(consentScript, /googletagmanager\.com\/gtag\/js/);
+  assert.match(consentScript, /localStorage/);
+  assert.match(consentScript, /Gérer les cookies/);
+  assert.match(legalData, /Google Analytics/i);
+  assert.match(legalData, /consentement/i);
 });
 
 test("server-renders the Vitalitéa whole-fruit coffee landing page", async () => {
