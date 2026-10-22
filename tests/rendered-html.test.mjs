@@ -3,14 +3,21 @@ import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render(pathname = "/") {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  const { default: worker } = await import(workerUrl.href);
-  return worker.fetch(
-    new Request(`http://localhost${pathname}`, { headers: { accept: "text/html" } }),
-    { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
-    { waitUntil() {}, passThroughOnException() {} },
-  );
+  const slug = pathname.replace(/^\/+|\/+$/g, "");
+  const pageUrl = new URL(slug ? `../out/${slug}/index.html` : "../out/index.html", import.meta.url);
+
+  try {
+    const html = await readFile(pageUrl, "utf8");
+    return new Response(html, {
+      status: 200,
+      headers: { "content-type": "text/html; charset=utf-8" },
+    });
+  } catch (error) {
+    if (error?.code === "ENOENT") {
+      return new Response("Not found", { status: 404 });
+    }
+    throw error;
+  }
 }
 
 test("server-renders the Café Adaptogène homepage", async () => {
