@@ -49,6 +49,19 @@
     try { window.localStorage.setItem(storageKey, choice); } catch { /* Storage can be unavailable. */ }
   };
 
+  document.addEventListener("click", (event) => {
+    const link = event.target instanceof Element
+      ? event.target.closest('a[href^="mailto:bonjour@cafeadaptogene.com"]')
+      : null;
+    if (!link || readChoice() !== "granted") return;
+    window.gtag("event", "generate_lead", {
+      method: "email",
+      link_url: link.href,
+      link_text: link.textContent.trim(),
+      transport_type: "beacon",
+    });
+  });
+
   function loadAnalytics() {
     window.gtag("consent", "update", {
       analytics_storage: "granted",

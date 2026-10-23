@@ -183,6 +183,17 @@ test("loads Google Analytics only after an explicit audience-measurement choice"
   assert.match(legalData, /consentement/i);
 });
 
+test("tracks preorder email clicks as leads only after consent", async () => {
+  const consentScript = await readFile(
+    new URL("../public/analytics-consent.js", import.meta.url),
+    "utf8",
+  );
+  assert.match(consentScript, /mailto:bonjour@cafeadaptogene\.com/);
+  assert.match(consentScript, /generate_lead/);
+  assert.match(consentScript, /readChoice\(\) !== "granted"/);
+  assert.match(consentScript, /transport_type:\s*"beacon"/);
+});
+
 test("server-renders the Vitalitéa whole-fruit coffee landing page", async () => {
   const response = await render("/vitalitea/");
   assert.equal(response.status, 200);
