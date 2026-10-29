@@ -19,8 +19,8 @@ test("construit un paquet MCP sans exposer ses fichiers internes", async () => {
     readFile(new URL("out/mcp/data/mcp-data.json", root), "utf8"),
   ]);
 
-  assert.match(rootRules, /RewriteRule \^mcp\/?\$ mcp\/index\.php \[L\]/);
-  assert.match(mcpRules, /RewriteRule !\^index\.php\$ - \[F,L\]/);
+  assert.match(rootRules, /RewriteRule \^mcp\/\?\$ mcp\/index\.php \[L\]/);
+  assert.match(mcpRules, /RewriteRule !\^index\\\.php\$ - \[F,L\]/);
   assert.equal(JSON.parse(data).documents.length, 154);
   await access(new URL("out/mcp/index.php", root));
   await access(new URL("out/mcp/src/KnowledgeBase.php", root));
