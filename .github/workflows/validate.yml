@@ -2,7 +2,7 @@ name: Vérifier cafeadaptogene.com
 
 on:
   push:
-    branches: [main, fix/production-mcp-endpoint]
+    branches: [main]
   pull_request:
     branches: [main]
 
