@@ -45,7 +45,7 @@ jobs:
           npm run build:github
           npm run lint
           node --test tests/*.test.mjs
-          php mcp-server/tests/KnowledgeBaseTest.php
+          for test in mcp-server/tests/*Test.php; do php "$test"; done
 
       - name: Vérifier le protocole MCP par HTTP
         run: |

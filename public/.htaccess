@@ -6,7 +6,11 @@ RewriteCond %{HTTP_HOST} ^www\.cafeadaptogene\.com$ [NC]
 RewriteRule ^ https://cafeadaptogene.com%{REQUEST_URI} [R=301,L]
 
 # Point d’entrée public MCP, servi par PHP sans redirection vers /mcp/.
-RewriteRule ^mcp/?$ mcp/index.php [L]
+RewriteRule ^mcp/?$ mcp.php [L]
+
+# Une requête directe vers le fichier PHP revient à l’URL publique stable.
+RewriteCond %{THE_REQUEST} \s/+mcp\.php(?:[?\s]) [NC]
+RewriteRule ^mcp\.php$ https://cafeadaptogene.com/mcp [R=308,L]
 
 # Fusion SEO : une seule page de référence pour les cafés aux champignons.
 RewriteRule ^cafe-champignon/?$ https://cafeadaptogene.com/cafe-champignons-plantes/ [R=301,L]

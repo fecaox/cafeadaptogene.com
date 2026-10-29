@@ -1,5 +1,5 @@
 Options -Indexes
 RewriteEngine On
 
-# Seul le point d’entrée MCP est public. Le code, les dépendances et les données restent inaccessibles par HTTP.
-RewriteRule !^index\.php$ - [F,L]
+# Le runtime n’est jamais servi directement. Seul /mcp, réécrit vers le fichier racine, est public.
+RewriteRule ^ - [F,L]

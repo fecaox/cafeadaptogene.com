@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use CafeAdaptogene\Mcp\KnowledgeBase;
+use CafeAdaptogene\Mcp\HttpMiddleware;
 use CafeAdaptogene\Mcp\Tools;
 use Http\Discovery\Psr17Factory;
 use Laminas\HttpHandlerRunner\Emitter\SapiEmitter;
@@ -11,11 +12,15 @@ use Mcp\Server;
 use Mcp\Server\Transport\StreamableHttpTransport;
 use Psr\Log\NullLogger;
 
-$runtimeRoot = is_file(__DIR__.'/vendor/autoload.php') ? __DIR__ : dirname(__DIR__);
+$runtimeRoot = match (true) {
+    is_file(__DIR__.'/mcp-runtime/vendor/autoload.php') => __DIR__.'/mcp-runtime',
+    is_file(__DIR__.'/vendor/autoload.php') => __DIR__,
+    default => dirname(__DIR__),
+};
 require_once $runtimeRoot.'/vendor/autoload.php';
 
-$dataPath = is_file(__DIR__.'/data/mcp-data.json')
-    ? __DIR__.'/data/mcp-data.json'
+$dataPath = is_file($runtimeRoot.'/data/mcp-data.json')
+    ? $runtimeRoot.'/data/mcp-data.json'
     : dirname(__DIR__, 2).'/public/ai/mcp-data.json';
 
 $logger = new NullLogger();
@@ -112,7 +117,8 @@ $server = Server::builder()
     ->build();
 
 $request = (new Psr17Factory())->createServerRequestFromGlobals();
-$transport = new StreamableHttpTransport($request, logger: $logger);
+$middleware = 'cli-server' === PHP_SAPI ? HttpMiddleware::local() : HttpMiddleware::production();
+$transport = new StreamableHttpTransport($request, logger: $logger, middleware: $middleware);
 $response = $server->run($transport);
 
 if (is_int($response)) {
