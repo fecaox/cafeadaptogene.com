@@ -62,6 +62,6 @@ jq -e '.result.structuredContent.missingIds | length == 0' <<<"$comparison" >/de
 
 sources="$(call_mcp "tools/call" "get_sources" '{"name":"get_sources","arguments":{"id":"guide:torregral"}}')"
 jq -e '.result.structuredContent.sources | length > 0' <<<"$sources" >/dev/null
-jq -e 'all(.result.structuredContent.sources[]; has("title") and (.url | startswith("https://")))' <<<"$sources" >/dev/null
+jq -e 'all(.result.structuredContent.sources[]; has("label") and (.url | startswith("https://")))' <<<"$sources" >/dev/null
 
 printf 'MCP HTTP smoke passed.\n'
