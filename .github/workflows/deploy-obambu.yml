@@ -26,14 +26,34 @@ jobs:
           node-version: 24.22.1
           cache: npm
 
-      - name: Installer les dépendances
+      - name: Installer PHP et Composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1"
+          tools: composer:v2
+
+      - name: Installer les dépendances du site
         run: npm ci
+
+      - name: Installer le serveur MCP
+        working-directory: mcp-server
+        run: composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader
 
       - name: Vérifier le site
         run: |
           npm run build
           npm run build:github
-          node --test tests/rendered-html.test.mjs
+          npm run lint
+          node --test tests/*.test.mjs
+          php mcp-server/tests/KnowledgeBaseTest.php
+
+      - name: Vérifier le protocole MCP par HTTP
+        run: |
+          php -S 127.0.0.1:8765 mcp-server/public/index.php >/tmp/cafeadaptogene-mcp.log 2>&1 &
+          bash mcp-server/tests/http-smoke.sh
+
+      - name: Ajouter le serveur MCP à la publication
+        run: node scripts/package-mcp-server.mjs
 
       - name: Publier la version statique sur Obambu
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0

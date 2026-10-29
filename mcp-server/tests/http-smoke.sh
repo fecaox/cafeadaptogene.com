@@ -28,7 +28,19 @@ call_mcp() {
   curl --fail-with-body --silent --show-error "$endpoint" "${headers[@]}" --data "$body"
 }
 
-discover="$(call_mcp "server/discover" "" '{}')"
+discover=""
+for attempt in {1..10}; do
+  if discover="$(call_mcp "server/discover" "" '{}' 2>/dev/null)"; then
+    break
+  fi
+  sleep 1
+done
+
+if [[ -z "$discover" ]]; then
+  printf 'Le serveur MCP ne répond pas.\n' >&2
+  exit 1
+fi
+
 jq -e '.result.supportedVersions | index("2026-07-28")' <<<"$discover" >/dev/null
 jq -e '.result._meta["io.modelcontextprotocol/serverInfo"].name == "cafeadaptogene-public-knowledge"' <<<"$discover" >/dev/null
 
