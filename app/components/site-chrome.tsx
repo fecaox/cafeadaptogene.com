@@ -53,6 +53,7 @@ export function SiteFooter() {
           <Link href="/annuaire-cafes-fonctionnels/">Annuaire des marques</Link>
           <Link href="/nouveautes-cafes-fonctionnels/">Nouveautés du marché</Link>
           <Link href="/guide-cafe-adaptogene/">Guide essentiel</Link>
+          <Link href="/acces-agents-ia/">Accès agents IA</Link>
         </div>
         <div>
           <h3>Nos créations</h3>

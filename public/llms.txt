@@ -32,3 +32,9 @@
 
 - [Sitemap XML](https://cafeadaptogene.com/sitemap.xml)
 - [Règles d’exploration](https://cafeadaptogene.com/robots.txt)
+- [Documentation pour les agents IA](https://cafeadaptogene.com/acces-agents-ia/)
+- [Serveur MCP public en lecture seule](https://cafeadaptogene.com/mcp)
+- [Guides structurés](https://cafeadaptogene.com/ai/content.json)
+- [Annuaire structuré](https://cafeadaptogene.com/ai/catalog.json)
+- [Sources dédupliquées](https://cafeadaptogene.com/ai/sources.json)
+- [Index unifié MCP](https://cafeadaptogene.com/ai/mcp-data.json)

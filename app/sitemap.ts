@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/annuaire-cafes-fonctionnels/`, lastModified: "2026-09-29", changeFrequency: "weekly", priority: 0.95 },
     { url: `${siteUrl}/nouveautes-cafes-fonctionnels/`, lastModified: "2026-09-29", changeFrequency: "weekly", priority: 0.95 },
     { url: `${siteUrl}/vitalitea/`, lastModified: "2026-09-08", changeFrequency: "weekly", priority: 0.9 },
+    { url: `${siteUrl}/acces-agents-ia/`, lastModified: "2026-10-29", changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/mentions-legales/`, lastModified: "2026-09-09", changeFrequency: "yearly", priority: 0.2 },
     { url: `${siteUrl}/politique-de-confidentialite/`, lastModified: "2026-09-09", changeFrequency: "yearly", priority: 0.2 },
     { url: `${siteUrl}/politique-cookies/`, lastModified: "2026-09-09", changeFrequency: "yearly", priority: 0.2 },

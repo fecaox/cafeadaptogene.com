@@ -300,3 +300,33 @@ test("server-renders the recommendation quiz", async () => {
   assert.match(html, /Question[\s\S]*01[\s\S]*07/i);
   assert.match(html, /Le goût d’un véritable café/i);
 });
+
+test("documente un accès public et strictement lisible par les agents IA", async () => {
+  const response = await render("/acces-agents-ia/");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  assert.match(html, /Accès agents IA et MCP/i);
+  assert.match(html, /https:\/\/cafeadaptogene\.com\/mcp/);
+  assert.match(html, />search</i);
+  assert.match(html, />fetch</i);
+  assert.match(html, />compare_products</i);
+  assert.match(html, />get_sources</i);
+  assert.match(html, /lecture seule/i);
+  assert.match(html, /ne garantit ni indexation ni citation/i);
+  assert.match(html, /href="\/ai\/content\.json"/i);
+  assert.match(html, /href="\/ai\/catalog\.json"/i);
+  assert.match(html, /href="\/ai\/sources\.json"/i);
+
+  const root = new URL("../", import.meta.url);
+  const [sitemap, llms] = await Promise.all([
+    readFile(new URL("out/sitemap.xml", root), "utf8"),
+    readFile(new URL("out/llms.txt", root), "utf8"),
+  ]);
+  assert.match(sitemap, /https:\/\/cafeadaptogene\.com\/acces-agents-ia\//);
+  assert.match(llms, /https:\/\/cafeadaptogene\.com\/mcp/);
+  assert.match(llms, /https:\/\/cafeadaptogene\.com\/ai\/mcp-data\.json/);
+
+  const home = await render("/");
+  assert.match(await home.text(), /href="\/acces-agents-ia\/"/i);
+});
