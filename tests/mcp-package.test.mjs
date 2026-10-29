@@ -7,23 +7,26 @@ import test from "node:test";
 const execFileAsync = promisify(execFile);
 const root = new URL("../", import.meta.url);
 
-test("construit un paquet MCP sans exposer ses fichiers internes", async () => {
+test("publie /mcp sans créer de dossier physique concurrent", async () => {
   await rm(new URL("out/mcp/", root), { recursive: true, force: true });
+  await rm(new URL("out/mcp-runtime/", root), { recursive: true, force: true });
+  await rm(new URL("out/mcp.php", root), { force: true });
   await execFileAsync(process.execPath, ["scripts/package-mcp-server.mjs", "--without-vendor"], {
     cwd: new URL(".", root),
   });
 
   const [rootRules, mcpRules, data] = await Promise.all([
     readFile(new URL("out/.htaccess", root), "utf8"),
-    readFile(new URL("out/mcp/.htaccess", root), "utf8"),
-    readFile(new URL("out/mcp/data/mcp-data.json", root), "utf8"),
+    readFile(new URL("out/mcp-runtime/.htaccess", root), "utf8"),
+    readFile(new URL("out/mcp-runtime/data/mcp-data.json", root), "utf8"),
   ]);
 
-  assert.match(rootRules, /RewriteRule \^mcp\/\?\$ mcp\/index\.php \[L\]/);
-  assert.match(mcpRules, /RewriteRule !\^index\\\.php\$ - \[F,L\]/);
+  assert.match(rootRules, /RewriteRule \^mcp\/\?\$ mcp\.php \[L\]/);
+  assert.match(mcpRules, /RewriteRule \^ - \[F,L\]/);
   assert.equal(JSON.parse(data).documents.length, 154);
-  await access(new URL("out/mcp/index.php", root));
-  await access(new URL("out/mcp/src/KnowledgeBase.php", root));
-  await access(new URL("out/mcp/src/Tools.php", root));
-  await assert.rejects(access(new URL("out/mcp/vendor/autoload.php", root)));
+  await access(new URL("out/mcp.php", root));
+  await access(new URL("out/mcp-runtime/src/KnowledgeBase.php", root));
+  await access(new URL("out/mcp-runtime/src/Tools.php", root));
+  await assert.rejects(access(new URL("out/mcp/", root)));
+  await assert.rejects(access(new URL("out/mcp-runtime/vendor/autoload.php", root)));
 });

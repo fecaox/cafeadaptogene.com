@@ -2,7 +2,7 @@ name: Vérifier cafeadaptogene.com
 
 on:
   push:
-    branches: [main]
+    branches: [main, fix/production-mcp-endpoint]
   pull_request:
     branches: [main]
 
@@ -30,7 +30,8 @@ jobs:
       - run: npm run build:github
       - run: npm run lint
       - run: node --test tests/*.test.mjs
-      - run: php mcp-server/tests/KnowledgeBaseTest.php
+      - name: Tester le serveur MCP PHP
+        run: for test in mcp-server/tests/*Test.php; do php "$test"; done
       - name: Démarrer le serveur MCP local
         run: php -S 127.0.0.1:8765 mcp-server/public/index.php >/tmp/cafeadaptogene-mcp.log 2>&1 &
       - name: Vérifier le protocole MCP par HTTP
