@@ -7,7 +7,6 @@ use Http\Discovery\Psr17Factory;
 use Mcp\Server\Transport\Http\MiddlewareRequestHandler;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Psr\Http\Server\RequestHandlerInterface;
 
 require_once dirname(__DIR__).'/vendor/autoload.php';
 
@@ -19,24 +18,17 @@ function expectHttp(bool $condition, string $message): void
 }
 
 $factory = new Psr17Factory();
-$passthrough = new class($factory) implements RequestHandlerInterface {
-    public function __construct(private readonly Psr17Factory $factory)
-    {
-    }
-
-    public function handle(ServerRequestInterface $request): ResponseInterface
-    {
-        return $this->factory->createResponse(200);
-    }
-};
-
-$handler = new MiddlewareRequestHandler(HttpMiddleware::production(), $passthrough);
+$passthrough = static fn (ServerRequestInterface $request): ResponseInterface => $factory->createResponse(200);
+$handle = static fn (ServerRequestInterface $request): ResponseInterface => (new MiddlewareRequestHandler(
+    HttpMiddleware::production(),
+    $passthrough,
+))->handle($request);
 
 $allowed = $factory->createServerRequest('POST', 'https://cafeadaptogene.com/mcp')
     ->withHeader('Host', 'cafeadaptogene.com');
-expectHttp(200 === $handler->handle($allowed)->getStatusCode(), 'Le domaine public doit être autorisé.');
+expectHttp(200 === $handle($allowed)->getStatusCode(), 'Le domaine public doit être autorisé.');
 
 $rebound = $allowed->withHeader('Host', 'cafeadaptogene.com.evil.example');
-expectHttp(403 === $handler->handle($rebound)->getStatusCode(), 'Un hôte de rebinding doit rester interdit.');
+expectHttp(403 === $handle($rebound)->getStatusCode(), 'Un hôte de rebinding doit rester interdit.');
 
 fwrite(STDOUT, "HTTP middleware tests passed.\n");
