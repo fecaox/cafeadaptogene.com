@@ -26,12 +26,12 @@ jobs:
       - name: Installer le serveur MCP
         working-directory: mcp-server
         run: composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader
+      - name: Tester le serveur MCP PHP
+        run: for test in mcp-server/tests/*Test.php; do php "$test"; done
       - run: npm run build
       - run: npm run build:github
       - run: npm run lint
       - run: node --test tests/*.test.mjs
-      - name: Tester le serveur MCP PHP
-        run: for test in mcp-server/tests/*Test.php; do php "$test"; done
       - name: Démarrer le serveur MCP local
         run: php -S 127.0.0.1:8765 mcp-server/public/index.php >/tmp/cafeadaptogene-mcp.log 2>&1 &
       - name: Vérifier le protocole MCP par HTTP
