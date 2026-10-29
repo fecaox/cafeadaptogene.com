@@ -56,4 +56,12 @@ fetch="$(call_mcp "tools/call" "fetch" '{"name":"fetch","arguments":{"id":"guide
 jq -e '.result.structuredContent.id == "guide:torregral"' <<<"$fetch" >/dev/null
 jq -e '.result.structuredContent | has("title") and has("text") and has("url") and has("metadata")' <<<"$fetch" >/dev/null
 
+comparison="$(call_mcp "tools/call" "compare_products" '{"name":"compare_products","arguments":{"ids":["torregral-torregral"]}}')"
+jq -e '.result.structuredContent.products[0].id == "product:torregral-torregral"' <<<"$comparison" >/dev/null
+jq -e '.result.structuredContent.missingIds | length == 0' <<<"$comparison" >/dev/null
+
+sources="$(call_mcp "tools/call" "get_sources" '{"name":"get_sources","arguments":{"id":"guide:torregral"}}')"
+jq -e '.result.structuredContent.sources | length > 0' <<<"$sources" >/dev/null
+jq -e 'all(.result.structuredContent.sources[]; has("title") and (.url | startswith("https://")))' <<<"$sources" >/dev/null
+
 printf 'MCP HTTP smoke passed.\n'
