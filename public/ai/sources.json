@@ -1,0 +1,1189 @@
+{
+  "schemaVersion": "1.0",
+  "site": "https://cafeadaptogene.com",
+  "license": "Consultation et citation avec attribution à l’URL publique correspondante.",
+  "sources": [
+    {
+      "id": "source:001",
+      "label": "Source officielle ou page observée",
+      "url": "https://adaptolatte.com/en-au/products/adaptolatte-powder",
+      "documentIds": [
+        "product:adaptolatte-original-adaptolatte"
+      ]
+    },
+    {
+      "id": "source:002",
+      "label": "Source officielle ou page observée",
+      "url": "https://alchemydose.com/products/super-shroom-coffee",
+      "documentIds": [
+        "product:alchemy-dose-mycosynergy-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:003",
+      "label": "Source officielle ou page observée",
+      "url": "https://ancientandbrave.earth/products/coffee-collagen",
+      "documentIds": [
+        "product:ancient-brave-coffee-collagen"
+      ]
+    },
+    {
+      "id": "source:004",
+      "label": "Source officielle ou page observée",
+      "url": "https://arseneboissons.fr/",
+      "documentIds": [
+        "product:arsene-arsene-classique"
+      ]
+    },
+    {
+      "id": "source:005",
+      "label": "Source officielle ou page observée",
+      "url": "https://atlascoffeeclub.com/products/atlas-plus-superblend-latte",
+      "documentIds": [
+        "product:atlas-superblend-coffee-latte"
+      ]
+    },
+    {
+      "id": "source:006",
+      "label": "Source officielle ou page observée",
+      "url": "https://beforeyouspeakcoffee.com/products/collagen-coffee",
+      "documentIds": [
+        "product:before-you-speak-collagen-coffee"
+      ]
+    },
+    {
+      "id": "source:007",
+      "label": "Source officielle ou page observée",
+      "url": "https://blog.organogold.com/mushroom-coffee-explained-health-benefits-brewing-tips-and-why-organos-blend-stands-out/",
+      "documentIds": [
+        "product:organo-gourmet-black-coffee-coffee-range"
+      ]
+    },
+    {
+      "id": "source:008",
+      "label": "Source officielle ou page observée",
+      "url": "https://bonjourdrink.co/",
+      "documentIds": [
+        "product:bonjour-super-cafe"
+      ]
+    },
+    {
+      "id": "source:009",
+      "label": "Source officielle ou page observée",
+      "url": "https://brewy.com.au/products/organic-mushroom-coffee",
+      "documentIds": [
+        "product:brewy-organic-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:010",
+      "label": "Source officielle ou page observée",
+      "url": "https://cafedesguerriers.fr/",
+      "documentIds": [
+        "product:cafe-des-guerriers-le-cafe-parfait"
+      ]
+    },
+    {
+      "id": "source:011",
+      "label": "Source officielle ou page observée",
+      "url": "https://cafeintegral.fr/",
+      "documentIds": [
+        "product:cafe-integral-cafe-integral-100"
+      ]
+    },
+    {
+      "id": "source:012",
+      "label": "Source officielle ou page observée",
+      "url": "https://cafeminceur.fr/",
+      "documentIds": [
+        "product:cafe-minceur-cafe-minceur"
+      ]
+    },
+    {
+      "id": "source:013",
+      "label": "Source officielle ou page observée",
+      "url": "https://cafitdrink.com/",
+      "documentIds": [
+        "product:cafit-cafe-proteine"
+      ]
+    },
+    {
+      "id": "source:014",
+      "label": "Source officielle ou page observée",
+      "url": "https://canadianprotein.com/products/protein-coffee",
+      "documentIds": [
+        "product:canadian-protein-protein-coffee"
+      ]
+    },
+    {
+      "id": "source:015",
+      "label": "Source officielle ou page observée",
+      "url": "https://clearly.fr/products/protein-coffee",
+      "documentIds": [
+        "product:clearly-protein-iced-coffee"
+      ]
+    },
+    {
+      "id": "source:016",
+      "label": "Source officielle ou page observée",
+      "url": "https://clearly.nl/en/products/mushroom-coffee",
+      "documentIds": [
+        "product:clearly-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:017",
+      "label": "Source officielle ou page observée",
+      "url": "https://cokare.co/focus-ground-coffee",
+      "documentIds": [
+        "product:cokare-focus-ground-coffee"
+      ]
+    },
+    {
+      "id": "source:018",
+      "label": "Source officielle ou page observée",
+      "url": "https://colco.fr/products/cure-1-mois",
+      "documentIds": [
+        "product:colco-cafe-au-collagene-250-g"
+      ]
+    },
+    {
+      "id": "source:019",
+      "label": "Source officielle ou page observée",
+      "url": "https://collacup.com/products/collacup-capsule-de-cafe-au-collagene",
+      "documentIds": [
+        "product:collacup-cafe-instantane-au-collagene"
+      ]
+    },
+    {
+      "id": "source:020",
+      "label": "Source officielle ou page observée",
+      "url": "https://collafe.com/",
+      "documentIds": [
+        "product:collafe-collagen-coffee-madagascan-vanilla"
+      ]
+    },
+    {
+      "id": "source:021",
+      "label": "Source officielle ou page observée",
+      "url": "https://collagencoffee.com/",
+      "documentIds": [
+        "product:collagen-coffee-original-collagen-coffee"
+      ]
+    },
+    {
+      "id": "source:022",
+      "label": "Source officielle ou page observée",
+      "url": "https://corialfoods.com/en-us/products/collagen-coffee-original",
+      "documentIds": [
+        "product:corial-collagen-coffee-original"
+      ]
+    },
+    {
+      "id": "source:023",
+      "label": "Source officielle ou page observée",
+      "url": "https://corialfoods.com/fr-fr/products/collagen-coffee-cacau",
+      "documentIds": [
+        "product:corial-cafe-collagene-vitamine-c-cacao"
+      ]
+    },
+    {
+      "id": "source:024",
+      "label": "Source officielle ou page observée",
+      "url": "https://cosmicblend.fr/",
+      "documentIds": [
+        "product:cosmic-blend-cosmic-blend-coffee"
+      ]
+    },
+    {
+      "id": "source:025",
+      "label": "Source officielle ou page observée",
+      "url": "https://creatine-coffee.com/products/creatinecoffee-the-coffee-upgrade-for-mind-muscle-90-day-supply",
+      "documentIds": [
+        "product:creatinecoffeee-creatinecoffee"
+      ]
+    },
+    {
+      "id": "source:026",
+      "label": "Source officielle ou page observée",
+      "url": "https://creoffee.com/",
+      "documentIds": [
+        "product:creoffee-original"
+      ]
+    },
+    {
+      "id": "source:027",
+      "label": "Source officielle ou page observée",
+      "url": "https://crushedtonic.com/products/coffeecollagen",
+      "documentIds": [
+        "product:crushed-tonic-coffee-collagen"
+      ]
+    },
+    {
+      "id": "source:028",
+      "label": "Source officielle ou page observée",
+      "url": "https://dayonecoffees.com/",
+      "documentIds": [
+        "product:day-one-functional-coffees-creatine-coffee-k-cup"
+      ]
+    },
+    {
+      "id": "source:029",
+      "label": "Source officielle ou page observée",
+      "url": "https://drinkfoocus.fr/products/cafe-foocus",
+      "documentIds": [
+        "product:foocus-start"
+      ]
+    },
+    {
+      "id": "source:030",
+      "label": "Source officielle ou page observée",
+      "url": "https://drinkmushee.de/products/adaptogener-pilzkaffee",
+      "documentIds": [
+        "product:mushee-super-adaptogener-kaffee"
+      ]
+    },
+    {
+      "id": "source:031",
+      "label": "Source officielle ou page observée",
+      "url": "https://drinkmykofi.es/products/mushroom-coffee",
+      "documentIds": [
+        "product:mykofi-cafe-con-hongos-funcionales"
+      ]
+    },
+    {
+      "id": "source:032",
+      "label": "Source officielle ou page observée",
+      "url": "https://eightbillion.com/",
+      "documentIds": [
+        "product:eightbillion-brain-mood-coffee"
+      ]
+    },
+    {
+      "id": "source:033",
+      "label": "Source officielle ou page observée",
+      "url": "https://en.vietnordic.com/wp-content/uploads/2025/02/KING-COFFEE-products-portfolio_International_Oct.2024_EN.pdf",
+      "documentIds": [
+        "product:king-coffee-cappuccino-collagen"
+      ]
+    },
+    {
+      "id": "source:034",
+      "label": "Source officielle ou page observée",
+      "url": "https://eons.com/products/smart-mushroom-coffee",
+      "documentIds": [
+        "product:eons-smart-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:035",
+      "label": "Source officielle ou page observée",
+      "url": "https://feelgoodcompany.com/products/mushroom-coffee",
+      "documentIds": [
+        "product:feelgood-company-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:036",
+      "label": "Source officielle ou page observée",
+      "url": "https://fr.myprotein.com/p/nutrition-sportive/protein-iced-coffee/17631051/",
+      "documentIds": [
+        "product:myprotein-protein-iced-coffee"
+      ]
+    },
+    {
+      "id": "source:037",
+      "label": "Source officielle ou page observée",
+      "url": "https://fr.trykinoko.co/products/protein-coffee",
+      "documentIds": [
+        "product:try-kinoko-cafe-proteine"
+      ]
+    },
+    {
+      "id": "source:038",
+      "label": "Source officielle ou page observée",
+      "url": "https://frenchmush.com/",
+      "documentIds": [
+        "product:french-mush-boost-cafe"
+      ]
+    },
+    {
+      "id": "source:039",
+      "label": "Source officielle ou page observée",
+      "url": "https://fungu.es/producto/fungu/",
+      "documentIds": [
+        "product:fungu-fungu-chocolate-flavor"
+      ]
+    },
+    {
+      "id": "source:040",
+      "label": "Source officielle ou page observée",
+      "url": "https://getyourwake.com/pages/page-produit-2",
+      "documentIds": [
+        "product:wake-wake-original"
+      ]
+    },
+    {
+      "id": "source:041",
+      "label": "Source officielle ou page observée",
+      "url": "https://gomush.co.uk/",
+      "documentIds": [
+        "product:gomush-organic-mushroom-coffee-pods-with-chaga"
+      ]
+    },
+    {
+      "id": "source:042",
+      "label": "Source officielle ou page observée",
+      "url": "https://grainedebreton.bzh/categorie-produit/orge/",
+      "documentIds": [
+        "product:graine-de-breton-orge"
+      ]
+    },
+    {
+      "id": "source:043",
+      "label": "Source officielle ou page observée",
+      "url": "https://happydetoxtea.de/products/clarity-cup-mushroom-coffee-blend",
+      "documentIds": [
+        "product:adapcoffee-happy-detox-tea-clarity-cup"
+      ]
+    },
+    {
+      "id": "source:044",
+      "label": "Source officielle ou page observée",
+      "url": "https://idrinkeight.com/",
+      "documentIds": [
+        "product:eight-batch-001"
+      ]
+    },
+    {
+      "id": "source:045",
+      "label": "Source officielle ou page observée",
+      "url": "https://javvycoffee.com/products/javvy-protein-coffee",
+      "documentIds": [
+        "product:javvy-protein-coffee"
+      ]
+    },
+    {
+      "id": "source:046",
+      "label": "Source officielle ou page observée",
+      "url": "https://kawadrinks.com/",
+      "documentIds": [
+        "product:kawa-kawa-cafe-proteine"
+      ]
+    },
+    {
+      "id": "source:047",
+      "label": "Source officielle ou page observée",
+      "url": "https://kimerakoffee.com/collections/coffee/products/kimera-koffee-12oz-ground",
+      "documentIds": [
+        "product:kimera-koffee-original-blend"
+      ]
+    },
+    {
+      "id": "source:048",
+      "label": "Source officielle ou page observée",
+      "url": "https://kovrcoffee.com/",
+      "documentIds": [
+        "product:kovr-mushroom-latte"
+      ]
+    },
+    {
+      "id": "source:049",
+      "label": "Source officielle ou page observée",
+      "url": "https://lairdsuperfood.com/collections/all/products/perform-medium-roast-ground-mushroom-coffee",
+      "documentIds": [
+        "product:laird-superfood-organic-perform-functional-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:050",
+      "label": "Source officielle ou page observée",
+      "url": "https://londonnootropics.com/collections/adaptogenic-coffee",
+      "documentIds": [
+        "product:london-nootropics-flow",
+        "product:london-nootropics-mojo",
+        "product:london-nootropics-mush-love",
+        "product:london-nootropics-zen"
+      ]
+    },
+    {
+      "id": "source:051",
+      "label": "Source officielle ou page observée",
+      "url": "https://lyfemushrooms.com/",
+      "documentIds": [
+        "product:lyfe-mushrooms-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:052",
+      "label": "Source officielle ou page observée",
+      "url": "https://maisondatus.com/products/alternative-cafe-moulu-sans-cafeine-datus",
+      "documentIds": [
+        "product:maison-datus-datus-moulu"
+      ]
+    },
+    {
+      "id": "source:053",
+      "label": "Source officielle ou page observée",
+      "url": "https://mindabolics.de/en/products/mushroom-mojo-en",
+      "documentIds": [
+        "product:mindabolics-mushroom-mojo"
+      ]
+    },
+    {
+      "id": "source:054",
+      "label": "Source officielle ou page observée",
+      "url": "https://mojolabs.fr/products/mojo-labs",
+      "documentIds": [
+        "product:mojo-labs-alternative-au-cafe"
+      ]
+    },
+    {
+      "id": "source:055",
+      "label": "Source officielle ou page observée",
+      "url": "https://morli.co/products/perform",
+      "documentIds": [
+        "product:morli-perform"
+      ]
+    },
+    {
+      "id": "source:056",
+      "label": "Source officielle ou page observée",
+      "url": "https://moussecafe.fr/",
+      "documentIds": [
+        "product:mousse-mousse-cafe-adaptogene"
+      ]
+    },
+    {
+      "id": "source:057",
+      "label": "Source officielle ou page observée",
+      "url": "https://mudshroomcoffee.co.za/products/mud-shroom-coffee",
+      "documentIds": [
+        "product:mudshroom-mudshroom-coffee"
+      ]
+    },
+    {
+      "id": "source:058",
+      "label": "Source officielle ou page observée",
+      "url": "https://mudwtr.com/pages/rise",
+      "documentIds": [
+        "product:mud-wtr-rise-cacao"
+      ]
+    },
+    {
+      "id": "source:059",
+      "label": "Source officielle ou page observée",
+      "url": "https://mushngo.com/products/brainstoorm-coffee",
+      "documentIds": [
+        "product:brainstoorm-mush-n-go-brainstoorm-coffee"
+      ]
+    },
+    {
+      "id": "source:060",
+      "label": "Source officielle ou page observée",
+      "url": "https://mushup.ca/en/products/duo-spark-lionsmane-reishi",
+      "documentIds": [
+        "product:mushup-spark"
+      ]
+    },
+    {
+      "id": "source:061",
+      "label": "Source officielle ou page observée",
+      "url": "https://myshroomycoffee.com/",
+      "documentIds": [
+        "product:shroomy-shroomy-coffee"
+      ]
+    },
+    {
+      "id": "source:062",
+      "label": "Source officielle ou page observée",
+      "url": "https://ommushrooms.com/blogs/blog/mushroom-coffee-caffeine-m2",
+      "documentIds": [
+        "product:om-mushroom-superfood-mushroom-coffee-latte-blend"
+      ]
+    },
+    {
+      "id": "source:063",
+      "label": "Source officielle ou page observée",
+      "url": "https://optimalhuman.com/products/adaptogenic-mushroom-super-coffee",
+      "documentIds": [
+        "product:optimal-human-adaptogenic-mushroom-super-coffee"
+      ]
+    },
+    {
+      "id": "source:064",
+      "label": "Source officielle ou page observée",
+      "url": "https://ostrovit.com/en/products/ostrovit-protein-coffee-360-g-26688.html",
+      "documentIds": [
+        "product:ostrovit-protein-coffee"
+      ]
+    },
+    {
+      "id": "source:065",
+      "label": "Source officielle ou page observée",
+      "url": "https://peakstatecoffee.com/products/variety-pack-functional-whole-bean-coffee",
+      "documentIds": [
+        "product:peak-state-coffee-variety-pack-brain-sustain-immunity-boost-stress-less"
+      ]
+    },
+    {
+      "id": "source:066",
+      "label": "Source officielle ou page observée",
+      "url": "https://popeli.co/",
+      "documentIds": [
+        "product:popeli-super-cafe-proteine"
+      ]
+    },
+    {
+      "id": "source:067",
+      "label": "Source officielle ou page observée",
+      "url": "https://potentialfuel.com/products/potential-protein-functional-coffee",
+      "documentIds": [
+        "product:potential-protein-functional-coffee"
+      ]
+    },
+    {
+      "id": "source:068",
+      "label": "Source officielle ou page observée",
+      "url": "https://protealpes.com/produit/whey-cafe-sans-sucres-ajoutes/",
+      "documentIds": [
+        "product:protealpes-whey-cafe-sans-sucres-ajoutes"
+      ]
+    },
+    {
+      "id": "source:069",
+      "label": "Source officielle ou page observée",
+      "url": "https://purasana.com/",
+      "documentIds": [
+        "product:purasana-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:070",
+      "label": "Source officielle ou page observée",
+      "url": "https://rainbo.ca/products/fungki-coffee",
+      "documentIds": [
+        "product:rainbo-fungki-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:071",
+      "label": "Source officielle ou page observée",
+      "url": "https://rytualcafe.shop/products/rytual%C2%AE-cafe-a-base-de-hongos",
+      "documentIds": [
+        "product:rytual-cafe-a-base-de-hongos"
+      ]
+    },
+    {
+      "id": "source:072",
+      "label": "Source officielle ou page observée",
+      "url": "https://samsuperfoods.nl/products/6-in-1-paddenstoelen-koffie",
+      "documentIds": [
+        "product:sam-s-superfoods-6-in-1-paddenstoelen-koffie"
+      ]
+    },
+    {
+      "id": "source:073",
+      "label": "Source officielle ou page observée",
+      "url": "https://shop.bulletproof.com/products/creatine-coffee",
+      "documentIds": [
+        "product:bulletproof-coffee-creatine"
+      ]
+    },
+    {
+      "id": "source:074",
+      "label": "Source officielle ou page observée",
+      "url": "https://shynecoffee.ca/product/lions-mane-coffee",
+      "documentIds": [
+        "product:shyne-lion-s-mane-coffee-rising-star"
+      ]
+    },
+    {
+      "id": "source:075",
+      "label": "Source officielle ou page observée",
+      "url": "https://smaints.de/en/products/mushroom-coffee",
+      "documentIds": [
+        "product:smaints-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:076",
+      "label": "Source officielle ou page observée",
+      "url": "https://smartcoffeeeu.com/",
+      "documentIds": [
+        "product:smart-coffee-eu-functional-coffee"
+      ]
+    },
+    {
+      "id": "source:077",
+      "label": "Source officielle ou page observée",
+      "url": "https://smartowlcoffee.com/collections/all-products/products/smart-owl-coffee-cognition-blend",
+      "documentIds": [
+        "product:smart-owl-coffee-cognition-blend"
+      ]
+    },
+    {
+      "id": "source:078",
+      "label": "Source officielle ou page observée",
+      "url": "https://stratecafe.com/products/cafe-champignons",
+      "documentIds": [
+        "product:strate-cafe-adaptogene"
+      ]
+    },
+    {
+      "id": "source:079",
+      "label": "Source officielle ou page observée",
+      "url": "https://strongcoffeecompany.com/products/vanilla-latte-starter-kit",
+      "documentIds": [
+        "product:strong-coffee-company-collagen-latte-vanilla"
+      ]
+    },
+    {
+      "id": "source:080",
+      "label": "Source officielle ou page observée",
+      "url": "https://taika.co/product/black-coffee/",
+      "documentIds": [
+        "product:taika-black-coffee-macadamia-latte"
+      ]
+    },
+    {
+      "id": "source:081",
+      "label": "Source officielle ou page observée",
+      "url": "https://thenutracompany.co.in/",
+      "documentIds": [
+        "product:the-nutra-company-focus-energy-slim-beauty-coffee"
+      ]
+    },
+    {
+      "id": "source:082",
+      "label": "Source officielle ou page observée",
+      "url": "https://torregral.com/",
+      "documentIds": [
+        "product:torregral-torregral"
+      ]
+    },
+    {
+      "id": "source:083",
+      "label": "Source officielle ou page observée",
+      "url": "https://trybioflow.com/en-eu/pages/dfb1-coffee",
+      "documentIds": [
+        "product:bioflow-deep-focus-coffee"
+      ]
+    },
+    {
+      "id": "source:084",
+      "label": "Source officielle ou page observée",
+      "url": "https://urbancalmcoffee.ca/collections/mushroom-coffee",
+      "documentIds": [
+        "product:urban-calm-coffee-dreamer-onward-centered-lioness"
+      ]
+    },
+    {
+      "id": "source:085",
+      "label": "Source officielle ou page observée",
+      "url": "https://urthandroot.com/",
+      "documentIds": [
+        "product:urth-root-creatine-coffee"
+      ]
+    },
+    {
+      "id": "source:086",
+      "label": "Source officielle ou page observée",
+      "url": "https://us.foursigmatic.com/products/focus-organic-coffee-latte-original",
+      "documentIds": [
+        "product:four-sigmatic-focus-organic-coffee-latte-think-coffee"
+      ]
+    },
+    {
+      "id": "source:087",
+      "label": "Source officielle ou page observée",
+      "url": "https://us.foursigmatic.com/products/prime-original-the-boys-creatine-coffee",
+      "documentIds": [
+        "product:four-sigmatic-the-boys-creatine-coffee"
+      ]
+    },
+    {
+      "id": "source:088",
+      "label": "Source officielle ou page observée",
+      "url": "https://vitaritual.de/products/pilzkaffee",
+      "documentIds": [
+        "product:vitaritual-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:089",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.activz.com/products/coffee",
+      "documentIds": [
+        "product:activz-everyday-coffee"
+      ]
+    },
+    {
+      "id": "source:090",
+      "label": "Anses — usages et risques des compléments alimentaires",
+      "url": "https://www.anses.fr/fr/content/dossier/complements-alimentaires-tout-savoir-sur-les-usages-et-risques",
+      "documentIds": [
+        "guide:guide-cafe-adaptogene"
+      ]
+    },
+    {
+      "id": "source:091",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.brainandbrawn.com.au/products/synergy-collagen-coffee-with-organic-cordyceps-mct-c8-c10-20-x-15g-sachet",
+      "documentIds": [
+        "product:brain-and-brawn-synergy-collagen-coffee"
+      ]
+    },
+    {
+      "id": "source:092",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.bulk.com/fr/products/cafe-proteine-whey/bpb-pico",
+      "documentIds": [
+        "product:bulk-whey-protein-coffee"
+      ]
+    },
+    {
+      "id": "source:093",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.cafe-champignon-adaptogene.fr/produit/boisson-adaptogene-saveur-cafe/",
+      "documentIds": [
+        "product:myco-zen-boisson-adaptogene-saveur-cafe"
+      ]
+    },
+    {
+      "id": "source:094",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.dirteaworld.com/products/mushroom-coffee-super-blend",
+      "documentIds": [
+        "product:dirtea-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:095",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.dodjivi.com/products/4-in-1-chaga-and-lions-mane-mushroom-coffee",
+      "documentIds": [
+        "product:dodjivi-4-protection-instant-organic-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:096",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.dodjivi.com/products/vitality-mushroom-coffee",
+      "documentIds": [
+        "product:dodjivi-vitality-instant-organic-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:097",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.drinkmagiclab.com/products/magic-coffee-cafe-complement-aux-champignons-adaptognes",
+      "documentIds": [
+        "product:magic-lab-magic-coffee"
+      ]
+    },
+    {
+      "id": "source:098",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.drinkpuls.com/",
+      "documentIds": [
+        "product:puls-original-latte"
+      ]
+    },
+    {
+      "id": "source:099",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.drinkriseandshine.com/products/rise-and-shine-mushroom-coffee",
+      "documentIds": [
+        "product:rise-shine-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:100",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.drinksupercoffee.com/products/super-coffee-xxtra-vanilla",
+      "documentIds": [
+        "product:super-coffee-xxtra"
+      ]
+    },
+    {
+      "id": "source:101",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.drinksupercoffee.com/products/vanilla-super-coffee",
+      "documentIds": [
+        "product:super-coffee-lean-iced-latte"
+      ]
+    },
+    {
+      "id": "source:102",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.dxn2u.com/product/product_det.php?lang=en&p=bev_ling21&pid=fb",
+      "documentIds": [
+        "product:dxn-lingzhi-coffee-2-in-1"
+      ]
+    },
+    {
+      "id": "source:103",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.earthshake.co/products/readybrew",
+      "documentIds": [
+        "product:earthshake-functional-coffee"
+      ]
+    },
+    {
+      "id": "source:104",
+      "label": "EFSA — repères sur la caféine · EFSA — sécurité et repères de consommation de la caféine",
+      "url": "https://www.efsa.europa.eu/fr/topics/topic/caffeine",
+      "documentIds": [
+        "guide:cafe-focus",
+        "guide:cafe-sans-crash",
+        "guide:guide-cafe-adaptogene",
+        "guide:torregral"
+      ]
+    },
+    {
+      "id": "source:105",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.eganoworldwide.com/",
+      "documentIds": [
+        "product:egano-ganoderma-coffee"
+      ]
+    },
+    {
+      "id": "source:106",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.everydaydose.com/products/30-serving-bold-coffee",
+      "documentIds": [
+        "product:everyday-dose-coffee-mild-medium"
+      ]
+    },
+    {
+      "id": "source:107",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.fratemateclub.com/products/poudre-cafe",
+      "documentIds": [
+        "product:frate-mate-magic-powder-cafe"
+      ]
+    },
+    {
+      "id": "source:108",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.ganoexcel.com/language/Portugese/our-offer.html",
+      "documentIds": [
+        "product:gano-excel-gano-cafe-3-in-1"
+      ]
+    },
+    {
+      "id": "source:109",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.herbalife.com/assets/regional-reusable-assets/workflow/fusion/pdp/product-label-pdf/en-gb/pl-pdf-gb-012k.pdf",
+      "documentIds": [
+        "product:herbalife-high-protein-iced-coffee"
+      ]
+    },
+    {
+      "id": "source:110",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.ilikechike.com/collections/protein-coffee",
+      "documentIds": [
+        "product:chike-high-protein-iced-coffee"
+      ]
+    },
+    {
+      "id": "source:111",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.latribudeskawas.fr/",
+      "documentIds": [
+        "product:la-tribu-des-kawas-lupin-torrefie-bio"
+      ]
+    },
+    {
+      "id": "source:112",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.lionspirit.fr/",
+      "documentIds": [
+        "product:lion-spirit-cafes-bibal-focus-criniere-de-lion"
+      ]
+    },
+    {
+      "id": "source:113",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.lupicoffee.com/",
+      "documentIds": [
+        "product:lupi-coffee-cafe-de-lupin-bio"
+      ]
+    },
+    {
+      "id": "source:114",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.mahoganyorganics.in/products/mahogany-7-mushrooms-mix-coffee-with-beneficial-effects-of-seven-mushrooms-200g",
+      "documentIds": [
+        "product:mahogany-organics-7-mushrooms-mix-coffee"
+      ]
+    },
+    {
+      "id": "source:115",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.mareshi.co.uk/",
+      "documentIds": [
+        "product:mareshi-drive"
+      ]
+    },
+    {
+      "id": "source:116",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.mushroomcoffespain.com/",
+      "documentIds": [
+        "product:mushroom-coffee-spain-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:117",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.naturecan.fr/products/cafe-proteine",
+      "documentIds": [
+        "product:naturecan-protein-coffee"
+      ]
+    },
+    {
+      "id": "source:118",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.naturesfinest.fr/produit/collagene-cafe-boisson/",
+      "documentIds": [
+        "product:nature-s-finest-collagen-coffee"
+      ]
+    },
+    {
+      "id": "source:119",
+      "label": "Source secondaire",
+      "url": "https://www.naturesfinest.si/wp-content/uploads/2024/08/5638-Collagen-Coffee-doc.pdf",
+      "documentIds": [
+        "product:nature-s-finest-collagen-coffee"
+      ]
+    },
+    {
+      "id": "source:120",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.neuroast.com/products/foodservice",
+      "documentIds": [
+        "product:neuroast-classic-roast"
+      ]
+    },
+    {
+      "id": "source:121",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.nu3.fr/products/nu3-focus-mushroom-coffee",
+      "documentIds": [
+        "product:nu3-focus-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:122",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.nuevalife.com/shop/nueva-morning",
+      "documentIds": [
+        "product:nueva-nueva-morning"
+      ]
+    },
+    {
+      "id": "source:123",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.nuspira.com/",
+      "documentIds": [
+        "product:nuspira-nucore-6-black-coffee"
+      ]
+    },
+    {
+      "id": "source:124",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.nuubrew.com/products/the-hustler-blend",
+      "documentIds": [
+        "product:nuubrew-the-hustle-blend"
+      ]
+    },
+    {
+      "id": "source:125",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.oetker.de/produkte/p/high-protein-coffee-drink-espresso-macchiato-style",
+      "documentIds": [
+        "product:dr-oetker-high-protein-coffee-drink-espresso-macchiato-style"
+      ]
+    },
+    {
+      "id": "source:126",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.organic-bless.com/",
+      "documentIds": [
+        "product:organic-bless-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:127",
+      "label": "Source secondaire",
+      "url": "https://www.physalishealth.com/en/blog/how-to-make-a-physalis-collagen-coffee/",
+      "documentIds": [
+        "product:physalis-collagen-coffee"
+      ]
+    },
+    {
+      "id": "source:128",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.physalishealth.com/fr/complements-alimentaires/cheveux-peau-ongles-yeux/collagen-coffee/",
+      "documentIds": [
+        "product:physalis-collagen-coffee"
+      ]
+    },
+    {
+      "id": "source:129",
+      "label": "Source secondaire",
+      "url": "https://www.prnewswire.com/news-releases/bulletproof-introduces-coffee--creatine-a-first-of-its-kind-functional-coffee-innovation-302696454.html",
+      "documentIds": [
+        "product:bulletproof-coffee-creatine"
+      ]
+    },
+    {
+      "id": "source:130",
+      "label": "Source secondaire",
+      "url": "https://www.prnewswire.com/news-releases/vitacup-launches-first-of-its-kind-creatine-coffee-stick-packs-at-sprouts-farmers-market-in-stores-now-302732090.html",
+      "documentIds": [
+        "product:vitacup-creatine-coffee"
+      ]
+    },
+    {
+      "id": "source:131",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.proffee.fr/products/cafe-instantane-proteine-gene",
+      "documentIds": [
+        "product:proffee-cafe-instantane-proteine"
+      ]
+    },
+    {
+      "id": "source:132",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.rahygge.nl/",
+      "documentIds": [
+        "product:rahygge-reishi-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:133",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.ryzesuperfoods.com/",
+      "documentIds": [
+        "product:ryze-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:134",
+      "label": "Étude de composition de cafés Arabica torréfiés",
+      "url": "https://www.scielo.br/j/jbchs/a/SKKgscBvyNMyVvp9ZZGPyZf/?lang=en",
+      "documentIds": [
+        "guide:torregral"
+      ]
+    },
+    {
+      "id": "source:135",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.setacor.com/producto/cafe-funcional-con-hongos-medicinales/",
+      "documentIds": [
+        "product:setacor-cafe-funcional-con-hongos-medicinales"
+      ]
+    },
+    {
+      "id": "source:136",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.shroomnest.com/",
+      "documentIds": [
+        "product:shroomnest-focus-energy"
+      ]
+    },
+    {
+      "id": "source:137",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.sunday.fr/mushroom-coffee-noble-strong.html",
+      "documentIds": [
+        "product:sunday-natural-noble-strong-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:138",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.sunday.fr/protein-coffee-cannelle.html",
+      "documentIds": [
+        "product:sunday-natural-cafe-proteine-cannelle"
+      ]
+    },
+    {
+      "id": "source:139",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.sunday.fr/protein-coffee-signature-roast.html",
+      "documentIds": [
+        "product:sunday-natural-proteine-coffee-signature-roast"
+      ]
+    },
+    {
+      "id": "source:140",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.transparentlabs.com/blogs/all/protein-coffee",
+      "documentIds": [
+        "product:transparent-labs-protein-coffee"
+      ]
+    },
+    {
+      "id": "source:141",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.trubrain.com/products/coffee",
+      "documentIds": [
+        "product:trubrain-coffee-kit"
+      ]
+    },
+    {
+      "id": "source:142",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.vahdam.com/products/mushroom-coffee",
+      "documentIds": [
+        "product:vahdam-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:143",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.vitacup.com/products/creatine-coffee-instant-pouch",
+      "documentIds": [
+        "product:vitacup-creatine-coffee"
+      ]
+    },
+    {
+      "id": "source:144",
+      "label": "Source officielle ou page observée",
+      "url": "https://www.vitacup.com/products/mushroom-coffee-instant-bag",
+      "documentIds": [
+        "product:vitacup-mushroom-focus-coffee"
+      ]
+    },
+    {
+      "id": "source:145",
+      "label": "Source officielle ou page observée",
+      "url": "https://xmushroomcoffee.com/",
+      "documentIds": [
+        "product:x-mushroom-coffee-x-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:146",
+      "label": "Source officielle ou page observée",
+      "url": "https://xtreme-brands.com/products/tribe-organic-mushroom-coffee",
+      "documentIds": [
+        "product:xtreme-wellness-x-tribe-organic-mushroom-coffee"
+      ]
+    },
+    {
+      "id": "source:147",
+      "label": "Source officielle ou page observée",
+      "url": "https://zenergymushrooms.com/",
+      "documentIds": [
+        "product:zenergy-mushrooms-mushroom-coffee"
+      ]
+    }
+  ]
+}
