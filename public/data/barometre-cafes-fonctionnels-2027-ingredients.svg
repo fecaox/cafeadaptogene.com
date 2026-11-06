@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="706" viewBox="0 0 1200 706" role="img" aria-labelledby="title desc">
+  <title id="title">Principales familles d’ingrédients</title>
+  <desc id="desc">Présence des familles d’ingrédients dans le panel France qualifié ; une référence peut appartenir à plusieurs familles.</desc>
+  <rect width="1200" height="706" fill="#f7f2e8"/>
+  <text x="70" y="72" fill="#183126" font-family="Arial, sans-serif" font-size="36" font-weight="700">Principales familles d’ingrédients</text>
+  <text x="70" y="110" fill="#4f665b" font-family="Arial, sans-serif" font-size="18">Catégories chevauchantes ; les pourcentages ne totalisent pas 100 % · n=35</text>
+  <text x="70" y="170" fill="#183126" font-family="Arial, sans-serif" font-size="19" font-weight="600">Champignons</text>
+  <rect x="390" y="148" width="650" height="28" rx="14" fill="#e3dacb"/>
+  <rect x="390" y="148" width="650" height="28" rx="14" fill="#3e7761"/>
+  <text x="1060" y="170" fill="#183126" font-family="Arial, sans-serif" font-size="18">16 · 45,7 %</text>
+  <text x="70" y="246" fill="#183126" font-family="Arial, sans-serif" font-size="19" font-weight="600">Plantes / nootropiques</text>
+  <rect x="390" y="224" width="650" height="28" rx="14" fill="#e3dacb"/>
+  <rect x="390" y="224" width="365.625" height="28" rx="14" fill="#3e7761"/>
+  <text x="1060" y="246" fill="#183126" font-family="Arial, sans-serif" font-size="18">9 · 25,7 %</text>
+  <text x="70" y="322" fill="#183126" font-family="Arial, sans-serif" font-size="19" font-weight="600">Protéines</text>
+  <rect x="390" y="300" width="650" height="28" rx="14" fill="#e3dacb"/>
+  <rect x="390" y="300" width="406.25" height="28" rx="14" fill="#3e7761"/>
+  <text x="1060" y="322" fill="#183126" font-family="Arial, sans-serif" font-size="18">10 · 28,6 %</text>
+  <text x="70" y="398" fill="#183126" font-family="Arial, sans-serif" font-size="19" font-weight="600">Collagène</text>
+  <rect x="390" y="376" width="650" height="28" rx="14" fill="#e3dacb"/>
+  <rect x="390" y="376" width="203.125" height="28" rx="14" fill="#3e7761"/>
+  <text x="1060" y="398" fill="#183126" font-family="Arial, sans-serif" font-size="18">5 · 14,3 %</text>
+  <text x="70" y="474" fill="#183126" font-family="Arial, sans-serif" font-size="19" font-weight="600">MCT</text>
+  <rect x="390" y="452" width="650" height="28" rx="14" fill="#e3dacb"/>
+  <rect x="390" y="452" width="121.875" height="28" rx="14" fill="#3e7761"/>
+  <text x="1060" y="474" fill="#183126" font-family="Arial, sans-serif" font-size="18">3 · 8,6 %</text>
+  <text x="70" y="550" fill="#183126" font-family="Arial, sans-serif" font-size="19" font-weight="600">Alternative torréfiée / sans café</text>
+  <rect x="390" y="528" width="650" height="28" rx="14" fill="#e3dacb"/>
+  <rect x="390" y="528" width="325" height="28" rx="14" fill="#3e7761"/>
+  <text x="1060" y="550" fill="#183126" font-family="Arial, sans-serif" font-size="18">8 · 22,9 %</text>
+  <line x1="70" y1="634" x2="1130" y2="634" stroke="#d4c9b7"/>
+  <text x="70" y="668" fill="#5d6c64" font-family="Arial, sans-serif" font-size="16">Données arrêtées au 6 novembre 2026 · Source : Café Adaptogène</text>
+</svg>

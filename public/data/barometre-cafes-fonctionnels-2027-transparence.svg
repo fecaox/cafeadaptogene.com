@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="402" viewBox="0 0 1200 402" role="img" aria-labelledby="title desc">
+  <title id="title">Niveau de transparence des dosages</title>
+  <desc id="desc">Répartition des niveaux de publication des informations nécessaires à la comparaison.</desc>
+  <rect width="1200" height="402" fill="#f7f2e8"/>
+  <text x="70" y="72" fill="#183126" font-family="Arial, sans-serif" font-size="36" font-weight="700">Niveau de transparence des dosages</text>
+  <text x="70" y="110" fill="#4f665b" font-family="Arial, sans-serif" font-size="18">Ce niveau ne mesure ni efficacité, ni goût, ni qualité générale · n=35</text>
+  <text x="70" y="170" fill="#183126" font-family="Arial, sans-serif" font-size="19" font-weight="600">Élevée</text>
+  <rect x="390" y="148" width="650" height="28" rx="14" fill="#e3dacb"/>
+  <rect x="390" y="148" width="613.8888888888889" height="28" rx="14" fill="#7a5a91"/>
+  <text x="1060" y="170" fill="#183126" font-family="Arial, sans-serif" font-size="18">17 · 48,6 %</text>
+  <text x="70" y="246" fill="#183126" font-family="Arial, sans-serif" font-size="19" font-weight="600">Partielle</text>
+  <rect x="390" y="224" width="650" height="28" rx="14" fill="#e3dacb"/>
+  <rect x="390" y="224" width="650" height="28" rx="14" fill="#7a5a91"/>
+  <text x="1060" y="246" fill="#183126" font-family="Arial, sans-serif" font-size="18">18 · 51,4 %</text>
+  <line x1="70" y1="330" x2="1130" y2="330" stroke="#d4c9b7"/>
+  <text x="70" y="364" fill="#5d6c64" font-family="Arial, sans-serif" font-size="16">Données arrêtées au 6 novembre 2026 · Source : Café Adaptogène</text>
+</svg>
