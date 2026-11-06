@@ -79,6 +79,7 @@ export default function BrandDirectoryPage() {
             </div>
             <p className="directory-updated">Base mise à jour le {directoryUpdatedAt}. Les prix sont des observations datées et peuvent évoluer.</p>
             <p className="directory-image-rights">Les visuels servent uniquement à identifier les références. Ils proviennent des marques ou des pages produit citées et restent la propriété de leurs ayants droit.</p>
+            <Link className="text-link" href="/barometre-cafes-fonctionnels-2027/">Lire le Baromètre français 2027 ↗</Link>
             <Link className="text-link" href="/nouveautes-cafes-fonctionnels/">Voir les derniers ajouts et changements ↗</Link>
           </div>
         </section>

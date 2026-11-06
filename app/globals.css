@@ -506,6 +506,9 @@ footer { color: #e7ded4; background: #211c18; }
 .market-update-ribbon { margin-top: 24px; padding: 20px 23px; display: grid; grid-template-columns: .8fr 1.4fr auto; align-items: center; gap: 25px; border: 1px solid var(--ink); background: var(--gold); }
 .market-update-ribbon span, .market-update-ribbon em { font-size: 8px; font-style: normal; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .market-update-ribbon b { font-family: var(--serif); font-size: 18px; font-weight: 400; }
+.barometer-ribbon { margin-top: 24px; padding: 22px 24px; display: grid; grid-template-columns: .8fr 1.4fr auto; align-items: center; gap: 25px; color: var(--white); background: var(--rust-dark); }
+.barometer-ribbon span, .barometer-ribbon em { color: #e4b492; font-size: 8px; font-style: normal; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.barometer-ribbon b { font-family: var(--serif); font-size: 18px; font-weight: 400; }
 .updates-page { background: #f0eadf; }
 .updates-hero { min-height: 630px; padding: 88px 7vw 74px; display: grid; grid-template-columns: 1.2fr .8fr; align-items: end; gap: 8vw; color: var(--white); background: #26342e; }
 .updates-hero h1 { max-width: 880px; margin: 0; font-family: var(--serif); font-size: clamp(68px, 8vw, 124px); font-weight: 400; letter-spacing: -.07em; line-height: .86; }
@@ -568,6 +571,111 @@ footer { color: #e7ded4; background: #211c18; }
 .updates-method { padding: 48px 7vw; display: flex; align-items: center; justify-content: space-between; gap: 55px; border-top: 1px solid var(--line); }
 .updates-method > p { max-width: 760px; margin: 0; color: var(--muted); font-family: var(--serif); font-size: 17px; line-height: 1.55; }
 .updates-method > div { display: flex; align-items: center; gap: 25px; flex-shrink: 0; }
+
+/* Baromètre 2027 */
+.barometer-page { background: var(--paper); }
+.barometer-hero { min-height: 630px; padding: 85px 7vw 75px; display: grid; grid-template-columns: 1.35fr .65fr; align-items: end; gap: 8vw; color: var(--white); background: var(--rust-dark); }
+.barometer-hero h1 { max-width: 980px; margin: 0; font-family: var(--serif); font-size: clamp(62px, 7.7vw, 118px); font-weight: 400; letter-spacing: -.065em; line-height: .87; }
+.barometer-hero > div > p:not(.eyebrow) { max-width: 760px; margin: 33px 0 0; color: #e1cec0; font-family: var(--serif); font-size: 21px; line-height: 1.55; }
+.barometer-actions { margin-top: 34px; display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
+.barometer-edition { width: min(360px, 100%); aspect-ratio: 1; justify-self: end; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,.46); border-radius: 50%; text-align: center; }
+.barometer-edition span { color: #e4b492; font-size: 9px; font-weight: 800; letter-spacing: .28em; }
+.barometer-edition b { margin: 9px 0; font-family: var(--serif); font-size: clamp(76px, 8vw, 118px); font-weight: 400; line-height: .9; }
+.barometer-edition small { max-width: 210px; color: #e1cec0; font-size: 8px; line-height: 1.5; letter-spacing: .1em; text-transform: uppercase; }
+.barometer-scoreboard { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }
+.barometer-scoreboard > div { min-height: 180px; padding: 32px 3vw; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--line); }
+.barometer-scoreboard > div:last-child { border-right: 0; }
+.barometer-scoreboard strong { font-family: var(--serif); font-size: 55px; font-weight: 400; letter-spacing: -.05em; }
+.barometer-scoreboard span { margin-top: 8px; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.barometer-scoreboard small { margin-top: 6px; color: var(--muted); font-size: 8px; }
+.barometer-cite { padding: 105px 7vw; display: grid; grid-template-columns: .7fr 1.3fr; gap: 8vw; background: var(--paper-2); }
+.barometer-cite h2, .barometer-section-heading h2, .barometer-two-columns h2, .barometer-method h2, .barometer-data h2, .barometer-limit h2, .barometer-table-section h2 { margin: 0; font-family: var(--serif); font-size: clamp(45px, 5vw, 72px); font-weight: 400; letter-spacing: -.05em; line-height: .98; }
+.barometer-cite > div > p:not(.eyebrow), .barometer-section-heading > p, .barometer-data header > p:not(.eyebrow) { color: var(--muted); font-family: var(--serif); font-size: 18px; line-height: 1.55; }
+.barometer-cite ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ink); }
+.barometer-cite li { padding: 22px 0; display: grid; grid-template-columns: 45px 1fr; gap: 18px; border-bottom: 1px solid var(--line); }
+.barometer-cite li span { color: var(--rust); font-family: var(--serif); font-size: 18px; }
+.barometer-cite li p { margin: 0; font-family: var(--serif); font-size: 20px; line-height: 1.45; }
+.barometer-analysis, .barometer-table-section { padding: 100px 7vw; }
+.barometer-section-heading { margin-bottom: 55px; display: grid; grid-template-columns: 1.1fr .9fr; align-items: end; gap: 7vw; }
+.barometer-section-heading > p { margin: 0; }
+.barometer-price-section { color: var(--white); background: var(--ink); }
+.barometer-price-section .eyebrow { color: #e4b492; }
+.barometer-price-section .barometer-section-heading > p { color: #c4b7aa; }
+.barometer-price-layout { display: grid; grid-template-columns: 1fr 270px; gap: 7vw; }
+.barometer-price-chart { border-top: 1px solid rgba(255,255,255,.25); }
+.barometer-price-chart > div { min-height: 49px; display: grid; grid-template-columns: minmax(180px, .9fr) minmax(200px, 1.3fr) minmax(170px, .75fr); align-items: center; gap: 18px; border-bottom: 1px solid rgba(255,255,255,.15); }
+.barometer-price-chart > div > span { font-family: var(--serif); font-size: 15px; }
+.barometer-price-chart > div > span small { margin-top: 3px; display: block; color: #a99d91; font-family: var(--sans); font-size: 7px; letter-spacing: .04em; }
+.barometer-price-chart i, .barometer-bars i { height: 10px; display: block; overflow: hidden; border-radius: 999px; background: rgba(255,255,255,.13); }
+.barometer-price-chart i b, .barometer-bars i b { height: 100%; display: block; border-radius: inherit; background: #cf744e; }
+.barometer-price-chart strong { font-size: 8px; font-weight: 700; line-height: 1.4; }
+.barometer-price-layout aside { align-self: start; padding: 28px; position: sticky; top: 25px; color: var(--ink); background: var(--gold); }
+.barometer-price-layout aside span { font-size: 8px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.barometer-price-layout aside b { margin: 11px 0 18px; display: block; font-family: var(--serif); font-size: 36px; font-weight: 400; }
+.barometer-price-layout aside p { font-size: 10px; line-height: 1.65; }
+.barometer-price-layout aside a { margin-top: 20px; display: inline-block; border-bottom: 1px solid; font-size: 8px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.barometer-two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 9vw; background: var(--paper); }
+.barometer-two-columns > div { min-width: 0; }
+.barometer-two-columns > div > p:not(.eyebrow) { min-height: 78px; color: var(--muted); font-size: 11px; line-height: 1.65; }
+.barometer-bars { margin: 38px 0 28px; border-top: 1px solid var(--line); }
+.barometer-bars > div { min-height: 66px; display: grid; grid-template-columns: 180px 1fr 90px; align-items: center; gap: 18px; border-bottom: 1px solid var(--line); }
+.barometer-bars > div > span { font-family: var(--serif); font-size: 16px; }
+.barometer-bars i { background: #ded4c6; }
+.barometer-bars i b { background: var(--rust); }
+.barometer-bars strong { text-align: right; font-family: var(--serif); font-size: 24px; font-weight: 400; }
+.barometer-bars strong small { color: var(--muted); font-family: var(--sans); font-size: 8px; }
+.barometer-ingredients { border-top: 1px solid var(--line); background: #d7dfcf; }
+.barometer-ingredients .barometer-bars { max-width: 1050px; }
+.barometer-ingredients .barometer-bars i { background: rgba(23,21,18,.13); }
+.barometer-ingredients .barometer-bars i b { background: var(--sage); }
+.barometer-table-section { background: var(--white); }
+.barometer-table-section .barometer-section-heading { align-items: center; }
+.barometer-table-section label { justify-self: end; display: flex; flex-direction: column; gap: 8px; }
+.barometer-table-section label span { font-size: 8px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+.barometer-table-section select { min-width: 250px; padding: 13px 38px 13px 14px; border: 1px solid var(--ink); border-radius: 0; background: var(--white); }
+.barometer-table-note { max-width: 850px; margin: -25px 0 28px; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.barometer-table-scroll { overflow-x: auto; border-top: 2px solid var(--ink); }
+.barometer-table-scroll table { width: 100%; min-width: 1050px; border-collapse: collapse; }
+.barometer-table-scroll th, .barometer-table-scroll td { padding: 17px 14px; vertical-align: top; border-bottom: 1px solid var(--line); text-align: left; }
+.barometer-table-scroll thead th { color: var(--muted); font-size: 7px; letter-spacing: .1em; text-transform: uppercase; }
+.barometer-table-scroll tbody th { width: 220px; }
+.barometer-table-scroll tbody th b { display: block; font-family: var(--serif); font-size: 17px; font-weight: 400; }
+.barometer-table-scroll tbody th span { margin-top: 4px; display: block; font-size: 9px; }
+.barometer-table-scroll small { margin-top: 6px; display: block; color: var(--muted); font-size: 7px; line-height: 1.45; }
+.barometer-table-scroll td { max-width: 230px; font-size: 8px; line-height: 1.5; }
+.barometer-table-scroll td > a { border-bottom: 1px solid; font-weight: 800; }
+.barometer-missing { color: #8d847a; font-style: italic; }
+.barometer-transparency { display: inline-block; padding: 6px 8px; color: var(--white); background: var(--blue); font-size: 7px; letter-spacing: .06em; text-transform: uppercase; }
+.barometer-transparency-partielle { background: var(--gold); color: var(--ink); }
+.barometer-transparency-faible, .barometer-transparency-non-documentée { background: var(--rust); }
+.barometer-method { padding: 100px 7vw; display: grid; grid-template-columns: .8fr 1.2fr; gap: 9vw; color: var(--white); background: var(--rust-dark); }
+.barometer-method header > p:not(.eyebrow) { color: #d8c7ba; font-family: var(--serif); font-size: 18px; line-height: 1.55; }
+.barometer-method ol { margin: 0 0 45px; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.28); }
+.barometer-method li { padding: 16px 0; display: grid; grid-template-columns: 36px 1fr; gap: 14px; border-bottom: 1px solid rgba(255,255,255,.18); }
+.barometer-method li span { color: #e4b492; font-family: var(--serif); font-size: 18px; }
+.barometer-method li p { margin: 0; font-size: 10px; line-height: 1.6; }
+.barometer-method details { border-top: 1px solid rgba(255,255,255,.25); }
+.barometer-method details:last-child { border-bottom: 1px solid rgba(255,255,255,.25); }
+.barometer-method summary { padding: 18px 0; cursor: pointer; font-family: var(--serif); font-size: 19px; }
+.barometer-method details p { margin: 0; padding: 0 0 20px; color: #d8c7ba; font-size: 10px; line-height: 1.7; }
+.barometer-data { padding: 105px 7vw; background: var(--paper-2); }
+.barometer-data header { max-width: 900px; }
+.barometer-download-grid { margin-top: 50px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--ink); }
+.barometer-download { min-height: 300px; padding: 25px; display: flex; flex-direction: column; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.barometer-download > span { width: 45px; height: 45px; display: grid; place-items: center; color: var(--white); border-radius: 50%; background: var(--rust); font-size: 8px; font-weight: 800; }
+.barometer-download h3 { margin: 55px 0 12px; font-family: var(--serif); font-size: 27px; font-weight: 400; }
+.barometer-download p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.barometer-download b { margin-top: auto; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
+.barometer-data blockquote { margin: 55px 0 0; padding: 30px; border-left: 4px solid var(--rust); background: var(--white); font-family: var(--serif); font-size: 20px; line-height: 1.5; }
+.barometer-data blockquote span { margin-bottom: 9px; display: block; color: var(--rust); font-family: var(--sans); font-size: 8px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.barometer-correction { margin: 28px 0 0; color: var(--muted); font-size: 10px; }
+.barometer-correction a { border-bottom: 1px solid; color: var(--ink); font-weight: 800; }
+.barometer-chart-links { margin-top: 25px; display: flex; gap: 10px; flex-wrap: wrap; }
+.barometer-chart-links a { padding: 10px 13px; border: 1px solid var(--line); font-size: 8px; font-weight: 800; text-transform: uppercase; }
+.barometer-limit { padding: 70px 7vw; display: grid; grid-template-columns: .8fr 1.2fr auto; align-items: center; gap: 5vw; color: var(--white); background: var(--ink); }
+.barometer-limit h2 { font-size: 38px; }
+.barometer-limit p { margin: 0; color: #c4b7aa; font-size: 10px; line-height: 1.7; }
+.barometer-page a:focus-visible, .barometer-page button:focus-visible, .barometer-page select:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 
 /* Legal documents */
 .legal-page { background: var(--paper); }
@@ -650,6 +758,16 @@ footer { color: #e7ded4; background: #211c18; }
   .updates-scoreboard { max-width: 760px; }
   .updates-card { grid-template-columns: 36% 64%; }
   .updates-watch-list article { grid-template-columns: 130px 170px 1fr; }
+  .barometer-hero { grid-template-columns: 1fr; }
+  .barometer-edition { width: 280px; justify-self: start; }
+  .barometer-scoreboard { grid-template-columns: repeat(2, 1fr); }
+  .barometer-scoreboard > div:nth-child(2) { border-right: 0; }
+  .barometer-cite, .barometer-method { grid-template-columns: 1fr; gap: 55px; }
+  .barometer-price-layout { grid-template-columns: 1fr; }
+  .barometer-price-layout aside { max-width: 500px; position: static; }
+  .barometer-download-grid { grid-template-columns: repeat(2, 1fr); }
+  .barometer-limit { grid-template-columns: 1fr 1fr; }
+  .barometer-limit .button { justify-self: start; }
   .footer-main { grid-template-columns: 1.4fr repeat(4, 1fr); gap: 2.5vw; }
   .legal-hero { grid-template-columns: 1fr; gap: 50px; }
   .legal-hero dl { max-width: 620px; }
@@ -804,6 +922,7 @@ footer { color: #e7ded4; background: #211c18; }
   .brand-fact-table small { justify-self: start; }
   .brand-fit-grid { grid-template-columns: 1fr; }
   .market-update-ribbon { grid-template-columns: 1fr; gap: 9px; }
+  .barometer-ribbon { grid-template-columns: 1fr; gap: 9px; }
   .updates-hero { min-height: 0; padding: 70px 6vw; }
   .updates-hero h1 { font-size: 59px; }
   .updates-hero-copy > p:not(.eyebrow) { font-size: 18px; }
@@ -820,6 +939,27 @@ footer { color: #e7ded4; background: #211c18; }
   .updates-watch-list article { grid-template-columns: 1fr; gap: 7px; }
   .updates-method { padding: 45px 6vw; align-items: flex-start; flex-direction: column; }
   .updates-method > div { align-items: flex-start; flex-direction: column; }
+  .barometer-hero { min-height: 0; padding: 70px 6vw; }
+  .barometer-hero h1 { font-size: 58px; }
+  .barometer-hero > div > p:not(.eyebrow) { font-size: 18px; }
+  .barometer-edition { width: 220px; }
+  .barometer-scoreboard { grid-template-columns: 1fr; }
+  .barometer-scoreboard > div { min-height: 130px; padding: 24px 6vw; border-right: 0; }
+  .barometer-cite, .barometer-analysis, .barometer-table-section, .barometer-method, .barometer-data { padding: 70px 6vw; }
+  .barometer-cite, .barometer-section-heading, .barometer-two-columns, .barometer-method { grid-template-columns: 1fr; gap: 38px; }
+  .barometer-cite h2, .barometer-section-heading h2, .barometer-two-columns h2, .barometer-method h2, .barometer-data h2, .barometer-table-section h2 { font-size: 45px; }
+  .barometer-price-chart > div { padding: 13px 0; grid-template-columns: 1fr; gap: 8px; }
+  .barometer-price-chart i { width: 100%; }
+  .barometer-two-columns > div > p:not(.eyebrow) { min-height: 0; }
+  .barometer-bars > div { grid-template-columns: 1fr 65px; padding: 13px 0; gap: 10px; }
+  .barometer-bars i { grid-column: 1 / -1; grid-row: 2; }
+  .barometer-bars strong { grid-column: 2; grid-row: 1; }
+  .barometer-table-section label { justify-self: start; }
+  .barometer-table-section select { min-width: min(280px, 85vw); }
+  .barometer-download-grid { grid-template-columns: 1fr; }
+  .barometer-download { min-height: 220px; }
+  .barometer-download h3 { margin-top: 35px; }
+  .barometer-limit { padding: 55px 6vw; grid-template-columns: 1fr; gap: 25px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/marques/cafe-minceur/`, lastModified: "2026-08-25", changeFrequency: "monthly", priority: 0.85 },
     { url: `${siteUrl}/annuaire-cafes-fonctionnels/`, lastModified: "2026-09-29", changeFrequency: "weekly", priority: 0.95 },
     { url: `${siteUrl}/nouveautes-cafes-fonctionnels/`, lastModified: "2026-09-29", changeFrequency: "weekly", priority: 0.95 },
+    { url: `${siteUrl}/barometre-cafes-fonctionnels-2027/`, lastModified: "2026-11-06", changeFrequency: "monthly", priority: 0.95 },
     { url: `${siteUrl}/vitalitea/`, lastModified: "2026-09-08", changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteUrl}/acces-agents-ia/`, lastModified: "2026-10-29", changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/mentions-legales/`, lastModified: "2026-09-09", changeFrequency: "yearly", priority: 0.2 },

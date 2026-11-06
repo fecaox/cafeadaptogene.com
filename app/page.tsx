@@ -202,6 +202,11 @@ export default function Home() {
             <p><b>{directoryStats.references} références · {directoryStats.brands} marques</b><span>Composition, caféine, dosage, prix, disponibilité et niveau de vérification.</span></p>
             <Link className="button button-primary" href="/annuaire-cafes-fonctionnels/">Ouvrir l’annuaire complet <span>→</span></Link>
           </div>
+          <Link className="barometer-ribbon" href="/barometre-cafes-fonctionnels-2027/">
+            <span>Nouvelle étude · édition 2027</span>
+            <b>Prix par tasse, caféine, ingrédients et transparence</b>
+            <em>Lire le baromètre →</em>
+          </Link>
           <Link className="market-update-ribbon" href="/nouveautes-cafes-fonctionnels/">
             <span>Veille mise à jour le {directoryUpdatedAt}</span>
             <b>{marketUpdateStats.newReferences} nouvelles références, {marketUpdateStats.verifiedChanges} fiches actualisées</b>

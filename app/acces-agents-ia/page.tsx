@@ -79,6 +79,9 @@ export default function AgentAccessPage() {
               <h2>Lire directement les fichiers</h2>
               <p>Un agent qui ne prend pas en charge MCP peut télécharger le même corpus dans des formats simples :</p>
               <ul className="source-list">
+                <li><Link href="/barometre-cafes-fonctionnels-2027/">Baromètre 2027 — page canonique</Link></li>
+                <li><a href="/data/barometre-cafes-fonctionnels-2027.json">Baromètre 2027 — JSON</a></li>
+                <li><a href="/data/barometre-cafes-fonctionnels-2027.csv">Baromètre 2027 — CSV</a></li>
                 <li><a href="/ai/content.json">Guides et fiches éditoriales — JSON</a></li>
                 <li><a href="/ai/catalog.json">Annuaire des produits — JSON</a></li>
                 <li><a href="/ai/sources.json">Sources dédupliquées — JSON</a></li>

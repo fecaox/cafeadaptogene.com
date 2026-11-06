@@ -202,7 +202,7 @@ export default function MarketUpdatesPage() {
 
         <section className="updates-method">
           <p>Cette veille n’est ni un palmarès ni une recommandation médicale. Une information annoncée par une marque reste présentée comme telle. Les prix et stocks peuvent changer après notre relevé.</p>
-          <div><Link className="button button-primary" href="/methodologie/">Lire la méthode <span>→</span></Link><Link className="text-link" href="/quel-cafe-me-correspond/">Trouver un café selon mes critères ↗</Link></div>
+          <div><Link className="button button-primary" href="/barometre-cafes-fonctionnels-2027/">Lire le baromètre 2027 <span>→</span></Link><Link className="text-link" href="/methodologie/">Lire la méthode ↗</Link></div>
         </section>
       </main>
       <SiteFooter />

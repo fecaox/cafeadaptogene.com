@@ -358,3 +358,47 @@ test("documente un accès public et strictement lisible par les agents IA", asyn
   const home = await render("/");
   assert.match(await home.text(), /href="\/acces-agents-ia\/"/i);
 });
+
+test("publie le Baromètre français des cafés fonctionnels 2027 avec ses données citables", async () => {
+  const response = await render("/barometre-cafes-fonctionnels-2027/");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  assert.match(html, /<title>[^<]*Baromètre français des cafés fonctionnels 2027/i);
+  assert.match(html, /Données arrêtées au 6 novembre 2026/i);
+  assert.match(html, /143[\s\S]*références recensées/i);
+  assert.match(html, /35[\s\S]*produits dans le panel France/i);
+  assert.match(html, /32[\s\S]*marques dans le panel/i);
+  assert.match(html, /n=18/);
+  assert.match(html, /n=30/);
+  assert.match(html, /catégories se chevauchent|familles peuvent se chevaucher/i);
+  assert.match(html, /Café Adaptogène, Baromètre français des cafés fonctionnels 2027/i);
+
+  assert.match(html, /href="\/data\/barometre-cafes-fonctionnels-2027\.csv"/);
+  assert.match(html, /href="\/data\/barometre-cafes-fonctionnels-2027\.json"/);
+  assert.match(html, /href="\/data\/barometre-cafes-fonctionnels-2027-methodologie\.md"/);
+  assert.match(html, /href="\/data\/barometre-cafes-fonctionnels-2027-prix\.svg"/);
+  assert.match(html, /href="\/data\/barometre-cafes-fonctionnels-2027-cafeine\.svg"/);
+  assert.match(html, /href="\/data\/barometre-cafes-fonctionnels-2027-ingredients\.svg"/);
+  assert.match(html, /href="\/data\/barometre-cafes-fonctionnels-2027-transparence\.svg"/);
+
+  assert.match(html, /application\/ld\+json/i);
+  assert.match(html, /"@type":"Dataset"/);
+  assert.match(html, /"encodingFormat":"text\/csv"/);
+  assert.match(html, /"encodingFormat":"application\/json"/);
+  assert.doesNotMatch(html, /meilleur produit|classement santé/i);
+
+  const root = new URL("../", import.meta.url);
+  const [sitemap, home, directory, updates, agentAccess] = await Promise.all([
+    readFile(new URL("out/sitemap.xml", root), "utf8"),
+    readFile(new URL("out/index.html", root), "utf8"),
+    readFile(new URL("out/annuaire-cafes-fonctionnels/index.html", root), "utf8"),
+    readFile(new URL("out/nouveautes-cafes-fonctionnels/index.html", root), "utf8"),
+    readFile(new URL("out/acces-agents-ia/index.html", root), "utf8"),
+  ]);
+  for (const content of [sitemap, home, directory, updates, agentAccess]) {
+    assert.match(content, /barometre-cafes-fonctionnels-2027/);
+  }
+  await access(new URL("out/data/barometre-cafes-fonctionnels-2027.csv", root));
+  await access(new URL("out/data/barometre-cafes-fonctionnels-2027.json", root));
+});
