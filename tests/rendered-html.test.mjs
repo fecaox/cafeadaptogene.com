@@ -255,7 +255,7 @@ test("server-renders a priority SEO article with its internal cluster", async ()
   const response = await render("/comparatif-cafe-adaptogene/");
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /<title>Comparatif café adaptogène 2026 : lequel choisir \?<\/title>/i);
+  assert.match(html, /<title>Meilleur café adaptogène 2026 : comparatif de 6 produits<\/title>/i);
   assert.doesNotMatch(html, /<title>[^<]*\| Café Adaptogène<\/title>/i);
   assert.match(html, /Meilleur café adaptogène/i);
   assert.match(html, /Quel café adaptogène choisir selon votre profil/i);
@@ -263,6 +263,34 @@ test("server-renders a priority SEO article with its internal cluster", async ()
   assert.match(html, /Caféine/i);
   assert.match(html, /Faire le test personnalisé/i);
   assert.match(html, /FAQPage/i);
+});
+
+test("oriente les recherches comparatives vers le comparatif dédié", async () => {
+  const [homeResponse, comparisonResponse, sitemap] = await Promise.all([
+    render("/"),
+    render("/comparatif-cafe-adaptogene/"),
+    readFile(new URL("../out/sitemap.xml", import.meta.url), "utf8"),
+  ]);
+  const home = await homeResponse.text();
+  const comparison = await comparisonResponse.text();
+
+  assert.match(
+    home,
+    /href="\/comparatif-cafe-adaptogene\/"[^>]*>Comparer 6 cafés adaptogènes</i,
+  );
+  assert.match(
+    comparison,
+    /<title>Meilleur café adaptogène 2026 : comparatif de 6 produits<\/title>/i,
+  );
+  assert.match(
+    comparison,
+    /Comparez 6 cafés adaptogènes vendus en France : base réelle, caféine, dosage, goût et prix par tasse\. Choix expliqué selon votre profil\./i,
+  );
+  assert.match(comparison, /Mis à jour le <!-- -->6 novembre 2026/i);
+  assert.match(
+    sitemap,
+    /<loc>https:\/\/cafeadaptogene\.com\/comparatif-cafe-adaptogene\/<\/loc>[\s\S]*?<lastmod>2026-11-06<\/lastmod>/i,
+  );
 });
 
 test("server-renders the documented Torrégral product sheet", async () => {

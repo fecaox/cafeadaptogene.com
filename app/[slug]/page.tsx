@@ -61,8 +61,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const universe = universes.find((item) => item.slug === slug || item.children.some((child) => child.slug === slug));
   const hasDeepDive = Boolean(guide.sections?.length);
   const readingTime = 7 + (guide.sections?.length ?? 0) * 2;
-  const dateModified = slug === "cafe-champignons-plantes" ? "2026-10-16" : slug === "cafe-nouvelle-generation" ? "2026-09-24" : slug === "torregral" ? "2026-08-25" : "2026-08-01";
-  const updatedLabel = slug === "cafe-champignons-plantes" ? "16 octobre 2026" : slug === "cafe-nouvelle-generation" ? "24 septembre 2026" : slug === "torregral" ? "25 août 2026" : "1er août 2026";
+  const dateModified = slug === "comparatif-cafe-adaptogene" ? "2026-11-06" : slug === "cafe-champignons-plantes" ? "2026-10-16" : slug === "cafe-nouvelle-generation" ? "2026-09-24" : slug === "torregral" ? "2026-08-25" : "2026-08-01";
+  const updatedLabel = slug === "comparatif-cafe-adaptogene" ? "6 novembre 2026" : slug === "cafe-champignons-plantes" ? "16 octobre 2026" : slug === "cafe-nouvelle-generation" ? "24 septembre 2026" : slug === "torregral" ? "25 août 2026" : "1er août 2026";
 
   const articleSchema = {
     "@context": "https://schema.org",

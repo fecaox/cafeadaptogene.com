@@ -56,7 +56,7 @@ export default function Home() {
             <p className="hero-lede">Un vrai café plus fonctionnel, un mélange aux champignons, une formule protéinée ou une alternative sans café&nbsp;? Nous les classons avant de les comparer.</p>
             <div className="hero-actions">
               <Link className="button button-primary" href="/quel-cafe-me-correspond/">Trouver mon café <span>→</span></Link>
-              <Link className="button button-ghost" href="/guide-cafe-adaptogene/">Comprendre le marché</Link>
+              <Link className="button button-ghost" href="/comparatif-cafe-adaptogene/">Comparer 6 cafés adaptogènes</Link>
             </div>
             <div className="hero-facts">
               <span><b>3</b> univers lisibles</span>

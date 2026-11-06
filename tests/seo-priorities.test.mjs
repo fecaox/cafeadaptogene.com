@@ -7,13 +7,13 @@ const guidePage = await readFile(new URL("../app/[slug]/page.tsx", import.meta.u
 const sitemap = await readFile(new URL("../app/sitemap.ts", import.meta.url), "utf8");
 
 test("le comparatif utilise un titre SEO court et centré sur la recherche", () => {
-  assert.match(source, /title: "Meilleur café adaptogène 2026 : comparatif France"/);
+  assert.match(source, /seoTitle: "Meilleur café adaptogène 2026 : comparatif de 6 produits"/);
 });
 
 test("la description du comparatif expose les critères utiles avant la promesse", () => {
   assert.match(
     source,
-    /description: "Comparez les cafés adaptogènes vendus en France : composition, caféine, dosage, goût et prix par tasse\. Classement selon votre profil\."/,
+    /description: "Comparez 6 cafés adaptogènes vendus en France : base réelle, caféine, dosage, goût et prix par tasse\. Choix expliqué selon votre profil\."/,
   );
 });
 
