@@ -602,10 +602,10 @@ footer { color: #e7ded4; background: #211c18; }
 .barometer-price-section .eyebrow { color: #e4b492; }
 .barometer-price-section .barometer-section-heading > p { color: #c4b7aa; }
 .barometer-price-layout { display: grid; grid-template-columns: 1fr 270px; gap: 7vw; }
-.barometer-price-chart { border-top: 1px solid rgba(255,255,255,.25); }
-.barometer-price-chart > div { min-height: 49px; display: grid; grid-template-columns: minmax(180px, .9fr) minmax(200px, 1.3fr) minmax(170px, .75fr); align-items: center; gap: 18px; border-bottom: 1px solid rgba(255,255,255,.15); }
-.barometer-price-chart > div > span { font-family: var(--serif); font-size: 15px; }
-.barometer-price-chart > div > span small { margin-top: 3px; display: block; color: #a99d91; font-family: var(--sans); font-size: 7px; letter-spacing: .04em; }
+.barometer-price-chart { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.25); }
+.barometer-price-chart > li { min-height: 49px; display: grid; grid-template-columns: minmax(180px, .9fr) minmax(200px, 1.3fr) minmax(170px, .75fr); align-items: center; gap: 18px; border-bottom: 1px solid rgba(255,255,255,.15); }
+.barometer-price-chart > li > span { font-family: var(--serif); font-size: 15px; }
+.barometer-price-chart > li > span small { margin-top: 3px; display: block; color: #a99d91; font-family: var(--sans); font-size: 7px; letter-spacing: .04em; }
 .barometer-price-chart i, .barometer-bars i { height: 10px; display: block; overflow: hidden; border-radius: 999px; background: rgba(255,255,255,.13); }
 .barometer-price-chart i b, .barometer-bars i b { height: 100%; display: block; border-radius: inherit; background: #cf744e; }
 .barometer-price-chart strong { font-size: 8px; font-weight: 700; line-height: 1.4; }
@@ -617,9 +617,9 @@ footer { color: #e7ded4; background: #211c18; }
 .barometer-two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 9vw; background: var(--paper); }
 .barometer-two-columns > div { min-width: 0; }
 .barometer-two-columns > div > p:not(.eyebrow) { min-height: 78px; color: var(--muted); font-size: 11px; line-height: 1.65; }
-.barometer-bars { margin: 38px 0 28px; border-top: 1px solid var(--line); }
-.barometer-bars > div { min-height: 66px; display: grid; grid-template-columns: 180px 1fr 90px; align-items: center; gap: 18px; border-bottom: 1px solid var(--line); }
-.barometer-bars > div > span { font-family: var(--serif); font-size: 16px; }
+.barometer-bars { margin: 38px 0 28px; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.barometer-bars > li { min-height: 66px; display: grid; grid-template-columns: 180px 1fr 90px; align-items: center; gap: 18px; border-bottom: 1px solid var(--line); }
+.barometer-bars > li > span { font-family: var(--serif); font-size: 16px; }
 .barometer-bars i { background: #ded4c6; }
 .barometer-bars i b { background: var(--rust); }
 .barometer-bars strong { text-align: right; font-family: var(--serif); font-size: 24px; font-weight: 400; }
@@ -642,6 +642,7 @@ footer { color: #e7ded4; background: #211c18; }
 .barometer-table-scroll tbody th b { display: block; font-family: var(--serif); font-size: 17px; font-weight: 400; }
 .barometer-table-scroll tbody th span { margin-top: 4px; display: block; font-size: 9px; }
 .barometer-table-scroll small { margin-top: 6px; display: block; color: var(--muted); font-size: 7px; line-height: 1.45; }
+.barometer-table-scroll .barometer-caveat { margin-top: 8px; padding-left: 8px; border-left: 2px solid var(--rust); color: #6d2f1f; }
 .barometer-table-scroll td { max-width: 230px; font-size: 8px; line-height: 1.5; }
 .barometer-table-scroll td > a { border-bottom: 1px solid; font-weight: 800; }
 .barometer-missing { color: #8d847a; font-style: italic; }
@@ -948,10 +949,10 @@ footer { color: #e7ded4; background: #211c18; }
   .barometer-cite, .barometer-analysis, .barometer-table-section, .barometer-method, .barometer-data { padding: 70px 6vw; }
   .barometer-cite, .barometer-section-heading, .barometer-two-columns, .barometer-method { grid-template-columns: 1fr; gap: 38px; }
   .barometer-cite h2, .barometer-section-heading h2, .barometer-two-columns h2, .barometer-method h2, .barometer-data h2, .barometer-table-section h2 { font-size: 45px; }
-  .barometer-price-chart > div { padding: 13px 0; grid-template-columns: 1fr; gap: 8px; }
+  .barometer-price-chart > li { padding: 13px 0; grid-template-columns: 1fr; gap: 8px; }
   .barometer-price-chart i { width: 100%; }
   .barometer-two-columns > div > p:not(.eyebrow) { min-height: 0; }
-  .barometer-bars > div { grid-template-columns: 1fr 65px; padding: 13px 0; gap: 10px; }
+  .barometer-bars > li { grid-template-columns: 1fr 65px; padding: 13px 0; gap: 10px; }
   .barometer-bars i { grid-column: 1 / -1; grid-row: 2; }
   .barometer-bars strong { grid-column: 2; grid-row: 1; }
   .barometer-table-section label { justify-self: start; }

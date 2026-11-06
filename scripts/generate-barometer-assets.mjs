@@ -2,11 +2,13 @@ import { readFile, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import { buildBarometer } from "./lib/barometer-data.mjs";
+import { assertEditionSource } from "./lib/barometer-release.mjs";
 import { parseCsv, validateFunctionalCoffeeRows } from "./lib/functional-coffee-data.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
 const dataDirectory = path.join(root, "public", "data");
 const csvPath = path.join(root, "data", "marques-cafe-fonctionnel.csv");
+const releasePath = path.join(root, "data", "barometre-cafes-fonctionnels-2027.release.json");
 const basename = "barometre-cafes-fonctionnels-2027";
 
 function csvCell(value) {
@@ -20,7 +22,7 @@ function publicCsv(barometer) {
     "disponibilite_france", "statut_commercial", "niveau_verification", "derniere_verification",
     "panel_inclus", "motifs_exclusion", "prix_portion_brut", "prix_min_eur", "prix_max_eur",
     "prix_central_eur", "cafeine_brute", "cafeine_min_mg", "cafeine_max_mg", "cafeine_centrale_mg",
-    "niveau_cafeine", "transparence", "familles_ingredients", "preuve_laboratoire", "source_officielle",
+    "niveau_cafeine", "transparence", "familles_ingredients", "preuve_laboratoire", "reserve_publique", "source_officielle",
   ];
 
   const values = barometer.records.map((record) => [
@@ -46,10 +48,11 @@ function publicCsv(barometer) {
     record.caffeine?.min,
     record.caffeine?.max,
     record.caffeine?.midpoint,
-    record.caffeineLevel,
+    record.caffeineBand,
     record.transparency,
     record.ingredientFamilies,
     record.laboratoryEvidence,
+    record.publicCaveat,
     record.source,
   ]);
 
@@ -60,8 +63,10 @@ function methodMarkdown(barometer) {
   const { metadata, methodology, stats } = barometer;
   return `# ${metadata.title} — méthodologie
 
-Version du jeu de données : **${metadata.datasetVersion}**  
-Données arrêtées au : **6 novembre 2026**  
+Version du jeu de données : **${metadata.datasetVersion}**
+
+Données arrêtées au : **6 novembre 2026**
+
 Page canonique : ${metadata.canonicalUrl}
 
 ## Périmètre
@@ -177,12 +182,21 @@ function categorySvg({ title, description, subtitle, series, color = "#b7623e" }
   return svgFrame({ title, description, subtitle, sampleSize, height, body });
 }
 
-const sourceText = await readFile(csvPath, "utf8");
+const [sourceText, releaseText] = await Promise.all([
+  readFile(csvPath, "utf8"),
+  readFile(releasePath, "utf8"),
+]);
+const release = JSON.parse(releaseText);
+const sourceDataSha256 = assertEditionSource(sourceText, release);
 const rows = parseCsv(sourceText);
 const errors = validateFunctionalCoffeeRows(rows);
 if (errors.length) throw new Error(`Base fonctionnelle invalide :\n${errors.join("\n")}`);
 
-const barometer = buildBarometer(rows);
+const barometer = buildBarometer(rows, {
+  cutoffDate: release.cutoffDate,
+  datasetVersion: release.datasetVersion,
+  sourceDataSha256,
+});
 const pageBarometer = {
   metadata: barometer.metadata,
   methodology: barometer.methodology,

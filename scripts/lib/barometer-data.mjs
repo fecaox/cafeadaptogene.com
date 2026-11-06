@@ -33,12 +33,21 @@ function percentage(count, total) {
   return total ? round((count / total) * 100, 1) : 0;
 }
 
+function isHttpUrl(value) {
+  try {
+    const url = new URL(clean(value));
+    return ["http:", "https:"].includes(url.protocol) && Boolean(url.hostname);
+  } catch {
+    return false;
+  }
+}
+
 function exclusionReasons(row) {
   const reasons = [];
   if (!/^oui\b/i.test(clean(row.disponibilite_france))) reasons.push("disponibilité France non confirmée");
   if (!/^actif\b/i.test(clean(row.statut_commercial_actuel))) reasons.push("statut commercial non actif");
   if (!["A", "B"].includes(clean(row.statut_verification))) reasons.push("niveau de vérification insuffisant");
-  if (!/^https?:\/\//i.test(clean(row.source_officielle))) reasons.push("source officielle absente ou invalide");
+  if (!isHttpUrl(row.source_officielle)) reasons.push("source officielle absente ou invalide");
   return reasons;
 }
 
@@ -48,10 +57,12 @@ export function isQualifiedPanelRow(row) {
 
 export function parseEuroRange(value) {
   const text = clean(value);
-  if (!text.includes("€") || /moins de|inférieur/i.test(text)) return null;
-  const euroText = text.slice(0, text.lastIndexOf("€") + 1);
-  const numbers = [...euroText.matchAll(/\d+(?:[.,]\d+)?/g)]
-    .map((match) => Number(match[0].replace(",", ".")))
+  if (!text.includes("€") || /moins de|inférieur|[<>≤≥]|abonnement uniquement/i.test(text)) return null;
+  if (/(?:\$|£|\b(?:USD|GBP|CHF)\b)/i.test(text)) return null;
+  const numbers = [...text.matchAll(/(\d+(?:[.,]\d+)?)(?:\s*[–—-]\s*(\d+(?:[.,]\d+)?))?\s*€/g)]
+    .flatMap((match) => [match[1], match[2]])
+    .filter(Boolean)
+    .map((number) => Number(number.replace(",", ".")))
     .filter(Number.isFinite);
   if (!numbers.length) return null;
   const min = Math.min(...numbers);
@@ -119,19 +130,36 @@ function caffeineBand(caffeine) {
   return "Élevée (> 100 mg)";
 }
 
+function normalizeCaffeineBand(value, caffeine) {
+  const text = clean(value).toLocaleLowerCase("fr");
+  if (text.startsWith("sans caféine")) return "Sans caféine";
+  if (text.startsWith("faible")) return "Faible (≤ 50 mg)";
+  if (text.startsWith("modérée") || text.startsWith("moderee")) return "Modérée (51–100 mg)";
+  if (text.startsWith("élevée") || text.startsWith("elevee")) return "Élevée (> 100 mg)";
+  return caffeineBand(caffeine);
+}
+
 function laboratoryEvidence(value) {
   const text = clean(value);
   if (!text || /^non publi/i.test(text)) return "Non publiée";
-  if (/document.*disponible|document.*consult|rapport.*(disponible|consult|archiv)|fiche technique.*examin|documents consultables/i.test(text)) {
+  if (/document.*disponible|document.*consult|rapport.*(?:disponible|consult)|fiche technique.*examin|documents consultables/i.test(text)) {
     return "Document consultable";
   }
   return "Analyse annoncée, document non archivé";
+}
+
+function publicCaveat(row) {
+  const notes = clean(row.notes);
+  if (!/caf[ée]ine/i.test(notes)) return "";
+  if (!/contradic|incoh|selon les pages|affirme aussi|mention contradictoire/i.test(notes)) return "";
+  return notes;
 }
 
 function publicRecord(row) {
   const panelIncluded = isQualifiedPanelRow(row);
   const price = parseEuroRange(row.prix_par_portion_observe);
   const caffeine = parseCaffeineRange(row);
+  const caffeineBandValue = normalizeCaffeineBand(row.niveau_cafeine, caffeine);
   return {
     id: productId(row),
     brand: clean(row.marque),
@@ -151,6 +179,8 @@ function publicRecord(row) {
     rawCaffeine: clean(row.cafeine_portion),
     caffeine,
     caffeineLevel: clean(row.niveau_cafeine),
+    caffeineBand: caffeineBandValue,
+    publicCaveat: publicCaveat(row),
     transparency: normalizeTransparency(row.transparence_dosage),
     ingredientFamilies: detectIngredientFamilies(row),
     laboratoryEvidence: laboratoryEvidence(row.preuve_laboratoire),
@@ -174,6 +204,7 @@ export function buildBarometer(rows, {
   siteUrl = "https://cafeadaptogene.com",
   cutoffDate = "2026-11-06",
   datasetVersion = "2027.1",
+  sourceDataSha256 = null,
 } = {}) {
   const normalizedSiteUrl = siteUrl.replace(/\/+$/, "");
   const records = rows.map(publicRecord);
@@ -200,7 +231,7 @@ export function buildBarometer(rows, {
     transparencySample: panel.length,
   };
 
-  const caffeineValues = caffeinated.map((record) => caffeineBand(record.caffeine));
+  const caffeineValues = caffeinated.map((record) => record.caffeineBand);
   const transparencyOrder = ["Élevée", "Partielle", "Faible", "Non documentée"];
   const ingredientSeries = countSeries(INGREDIENT_FAMILIES, ingredientValues, panel.length)
     .filter((item) => item.count > 0);
@@ -213,6 +244,7 @@ export function buildBarometer(rows, {
     metadata: {
       schemaVersion: "1.0",
       datasetVersion,
+      sourceDataSha256,
       title: "Baromètre français des cafés fonctionnels 2027",
       publicationDate: "2026-11-06",
       cutoffDate,
@@ -271,6 +303,8 @@ export function buildBarometer(rows, {
       price: record.price,
       rawCaffeine: record.rawCaffeine,
       caffeine: record.caffeine,
+      caffeineBand: record.caffeineBand,
+      publicCaveat: record.publicCaveat,
       transparency: record.transparency,
       ingredientFamilies: record.ingredientFamilies,
       laboratoryEvidence: record.laboratoryEvidence,

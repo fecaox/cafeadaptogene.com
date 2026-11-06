@@ -51,6 +51,7 @@ test("qualifie uniquement les produits disponibles, actifs, vérifiés et sourc�
   assert.equal(isQualifiedPanelRow(panelRow({ statut_commercial_actuel: "épuisé — page accessible" })), false);
   assert.equal(isQualifiedPanelRow(panelRow({ statut_verification: "C" })), false);
   assert.equal(isQualifiedPanelRow(panelRow({ source_officielle: "source à confirmer" })), false);
+  assert.equal(isQualifiedPanelRow(panelRow({ source_officielle: "https://" })), false);
 });
 
 test("extrait uniquement les prix en euros directement comparables", () => {
@@ -59,6 +60,10 @@ test("extrait uniquement les prix en euros directement comparables", () => {
   assert.deepEqual(parseEuroRange("environ 1,65 € promotionnel; 2,20 € prix de référence"), { min: 1.65, max: 2.2, midpoint: 1.925, currency: "EUR" });
   assert.equal(parseEuroRange("1,00 $ / portion"), null);
   assert.equal(parseEuroRange("moins de 1 € / portion"), null);
+  assert.equal(parseEuroRange("< 1 € / portion"), null);
+  assert.deepEqual(parseEuroRange("30 portions à 1,20 €"), { min: 1.2, max: 1.2, midpoint: 1.2, currency: "EUR" });
+  assert.equal(parseEuroRange("1,20 € ou 1.30 $ selon le pays"), null);
+  assert.equal(parseEuroRange("1,20 € avec abonnement uniquement"), null);
   assert.equal(parseEuroRange("non calculable avec les données publiques"), null);
 });
 
@@ -124,5 +129,23 @@ test("construit un modèle public stable depuis la base réelle", async () => {
   assert.ok(barometer.findings.every((finding) => finding.includes("n=")));
   assert.equal(barometer.records.find((record) => record.brand === "Cosmic Blend")?.panelIncluded, false);
   assert.equal(barometer.records.find((record) => record.brand === "Magic Lab")?.caffeine?.midpoint, 0);
+  assert.deepEqual(barometer.series.caffeine.items.map(({ label, count }) => ({ label, count })), [
+    { label: "Sans caféine", count: 6 },
+    { label: "Faible (≤ 50 mg)", count: 8 },
+    { label: "Modérée (51–100 mg)", count: 13 },
+    { label: "Élevée (> 100 mg)", count: 3 },
+  ]);
+
+  const earthshake = barometer.records.find((record) => record.brand === "Earthshake");
+  const nobleStrong = barometer.records.find((record) => record.product === "Noble Strong Mushroom Coffee");
+  assert.equal(earthshake?.caffeineBand, "Modérée (51–100 mg)");
+  assert.match(earthshake?.publicCaveat ?? "", /sans caféine.*29,5\/59 mg/i);
+  assert.match(nobleStrong?.publicCaveat ?? "", /mention contradictoire.*120 mg/i);
+
+  for (const brand of ["Smart Coffee EU", "Sunday Natural", "Maison DATUS"]) {
+    const matching = barometer.panel.filter((record) => record.brand === brand);
+    assert.ok(matching.length > 0);
+    assert.ok(matching.some((record) => record.laboratoryEvidence === "Analyse annoncée, document non archivé"));
+  }
   assert.doesNotMatch(JSON.stringify(barometer), /fecaox@gmail\.com/i);
 });

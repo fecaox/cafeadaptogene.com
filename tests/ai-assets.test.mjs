@@ -49,6 +49,10 @@ test("construit des identifiants stables et des URLs publiques absolues", () => 
   assert.match(dataset.text, /ne mesure ni l’efficacité/i);
   assert.match(dataset.text, /barometre-cafes-fonctionnels-2027\.csv/);
   assert.equal(dataset.metadata.datasetVersion, "2027.1");
+  const legacySource = assets.sources.sources.find((source) => source.url === "https://cafedesguerriers.fr/");
+  const datasetSource = assets.sources.sources.find((source) => source.url === "https://cafeadaptogene.com/barometre-cafes-fonctionnels-2027/");
+  assert.equal(legacySource?.id, "source:010");
+  assert.equal(datasetSource?.id, "source:148");
 });
 
 test("conserve les limites éditoriales utiles aux agents", () => {
@@ -101,6 +105,56 @@ test("déduplique les sources tout en reliant chaque document", () => {
   assert.equal(assets.sources.sources.length, 1);
   assert.deepEqual(assets.sources.sources[0].documentIds, ["guide:guide-a", "product:produit-a"]);
   assert.equal(assets.sources.sources[0].url, duplicateUrl);
+});
+
+test("conserve les identifiants déjà publiés quand une nouvelle source apparaît", () => {
+  const base = buildAiAssets({
+    siteUrl: "https://example.com",
+    guides: [{
+      slug: "guide-a", eyebrow: "Guide", title: "Guide A", description: "Description", intro: "Introduction",
+      color: "sage", icon: "A", keyPoints: [], criteria: [], faq: [],
+      sources: [{ label: "Source B", url: "https://example.org/b" }],
+    }],
+    products: [{
+      id: "produit-c", brand: "Marque", product: "Produit", source: "https://example.org/c",
+      secondarySource: "non publiée", editorialCaution: "faible", notes: "", lastVerified: "2026-01-01",
+    }],
+    datasets: [{
+      slug: "dataset-a", title: "Dataset", url: "https://example.org/a", description: "Données",
+      findings: [], methodology: {}, stats: {}, metadata: {}, downloads: [],
+    }],
+  });
+  assert.deepEqual(base.sources.sources.map(({ id, url }) => ({ id, url })), [
+    { id: "source:001", url: "https://example.org/b" },
+    { id: "source:002", url: "https://example.org/c" },
+    { id: "source:003", url: "https://example.org/a" },
+  ]);
+
+  const rebuilt = buildAiAssets({
+    siteUrl: "https://example.com",
+    guides: [{
+      slug: "guide-a", eyebrow: "Guide", title: "Guide A", description: "Description", intro: "Introduction",
+      color: "sage", icon: "A", keyPoints: [], criteria: [], faq: [],
+      sources: [
+        { label: "Source AA", url: "https://example.org/aa" },
+        { label: "Source B", url: "https://example.org/b" },
+      ],
+    }],
+    products: [{
+      id: "produit-c", brand: "Marque", product: "Produit", source: "https://example.org/c",
+      secondarySource: "non publiée", editorialCaution: "faible", notes: "", lastVerified: "2026-01-01",
+    }],
+    datasets: [{
+      slug: "dataset-a", title: "Dataset", url: "https://example.org/a", description: "Données",
+      findings: [], methodology: {}, stats: {}, metadata: {}, downloads: [],
+    }],
+    existingSources: base.sources.sources,
+  });
+
+  assert.equal(rebuilt.sources.sources.find((source) => source.url === "https://example.org/b")?.id, "source:001");
+  assert.equal(rebuilt.sources.sources.find((source) => source.url === "https://example.org/c")?.id, "source:002");
+  assert.equal(rebuilt.sources.sources.find((source) => source.url === "https://example.org/a")?.id, "source:003");
+  assert.equal(rebuilt.sources.sources.find((source) => source.url === "https://example.org/aa")?.id, "source:004");
 });
 
 test("publie les cinq ressources machine déterministes", async () => {

@@ -144,7 +144,7 @@ function productMetadata(product) {
   );
 }
 
-export function buildAiAssets({ guides, products, datasets = [], siteUrl }) {
+export function buildAiAssets({ guides, products, datasets = [], siteUrl, existingSources = [] }) {
   const normalizedSiteUrl = siteUrl.replace(/\/+$/, "");
   const sourceMap = new Map();
 
@@ -216,14 +216,26 @@ export function buildAiAssets({ guides, products, datasets = [], siteUrl }) {
 
   const contentDocuments = [...guideDocuments, ...datasetDocuments];
   const allDocuments = [...contentDocuments, ...productDocuments];
+  const existingIdsByUrl = new Map(existingSources
+    .filter((source) => /^source:\d+$/.test(source.id) && isPublicSource(source.url))
+    .map((source) => [source.url, source.id]));
+  let nextSourceId = Math.max(0, ...[...existingIdsByUrl.values()].map((id) => Number(id.slice("source:".length)))) + 1;
   const sourceRecords = [...sourceMap.values()]
-    .sort((a, b) => a.url.localeCompare(b.url))
-    .map((source, index) => ({
-      id: `source:${String(index + 1).padStart(3, "0")}`,
+    .sort((a, b) => {
+      if (!existingSources.length) {
+        const aDatasetOnly = [...a.documentIds].every((id) => id.startsWith("dataset:"));
+        const bDatasetOnly = [...b.documentIds].every((id) => id.startsWith("dataset:"));
+        if (aDatasetOnly !== bDatasetOnly) return aDatasetOnly ? 1 : -1;
+      }
+      return a.url.localeCompare(b.url);
+    })
+    .map((source) => ({
+      id: existingIdsByUrl.get(source.url) ?? `source:${String(nextSourceId++).padStart(3, "0")}`,
       label: [...source.labels].sort().join(" · ") || source.url,
       url: source.url,
       documentIds: [...source.documentIds].sort(),
-    }));
+    }))
+    .sort((a, b) => Number(a.id.slice("source:".length)) - Number(b.id.slice("source:".length)));
 
   const sourceIdsByDocument = new Map();
   for (const source of sourceRecords) {

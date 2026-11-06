@@ -1,7 +1,9 @@
 # Baromètre français des cafés fonctionnels 2027 — méthodologie
 
-Version du jeu de données : **2027.1**  
-Données arrêtées au : **6 novembre 2026**  
+Version du jeu de données : **2027.1**
+
+Données arrêtées au : **6 novembre 2026**
+
 Page canonique : https://cafeadaptogene.com/barometre-cafes-fonctionnels-2027/
 
 ## Périmètre

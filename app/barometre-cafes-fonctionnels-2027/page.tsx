@@ -7,10 +7,11 @@ import BarometerTable from "./BarometerTable";
 
 const dataBase = "/data/barometre-cafes-fonctionnels-2027";
 const formatNumber = (value: number, digits = 2) => new Intl.NumberFormat("fr-FR", { maximumFractionDigits: digits }).format(value);
+const pageDescription = `Prix par tasse, caféine, ingrédients et transparence : le baromètre 2027 analyse ${barometer.stats.panelProducts} produits disponibles en France et publie ses données CSV/JSON.`;
 
 export const metadata: Metadata = {
   title: "Baromètre français des cafés fonctionnels 2027",
-  description: "Prix par tasse, caféine, ingrédients et transparence : le baromètre 2027 analyse 35 produits disponibles en France et publie ses données CSV/JSON.",
+  description: pageDescription,
   alternates: { canonical: "/barometre-cafes-fonctionnels-2027/" },
   openGraph: {
     title: "Baromètre français des cafés fonctionnels 2027",
@@ -33,15 +34,15 @@ function BarSeries({ items, sampleSize, overlap = false }: {
 }) {
   const max = Math.max(...items.map((item) => item.count), 1);
   return (
-    <div className="barometer-bars" role="img" aria-label={`Répartition sur un échantillon de ${sampleSize} références${overlap ? ", avec catégories chevauchantes" : ""}`}>
+    <ul className="barometer-bars" aria-label={`Répartition sur un échantillon de ${sampleSize} références${overlap ? ", avec catégories chevauchantes" : ""}`}>
       {items.map((item) => (
-        <div key={item.label}>
+        <li key={item.label}>
           <span>{item.label}</span>
-          <i><b style={{ width: `${(item.count / max) * 100}%` }} /></i>
+          <i aria-hidden="true"><b style={{ width: `${(item.count / max) * 100}%` }} /></i>
           <strong>{item.count} <small>{formatNumber(item.percentage, 1)} %</small></strong>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 
@@ -66,7 +67,7 @@ export default function BarometerPage() {
         "@type": "Dataset",
         "@id": `${dataset.canonicalUrl}#dataset`,
         name: dataset.title,
-        description: metadata.description,
+        description: pageDescription,
         url: dataset.canonicalUrl,
         version: dataset.datasetVersion,
         datePublished: dataset.publicationDate,
@@ -91,7 +92,7 @@ export default function BarometerPage() {
       {
         "@type": "Article",
         headline: dataset.title,
-        description: metadata.description,
+        description: pageDescription,
         mainEntityOfPage: dataset.canonicalUrl,
         datePublished: dataset.publicationDate,
         dateModified: dataset.cutoffDate,
@@ -146,15 +147,15 @@ export default function BarometerPage() {
             <p>Calculée sur les prix en euros directement comparables (n={stats.priceSample}). Les points centraux servent à la médiane ; promotions et fourchettes restent visibles.</p>
           </div>
           <div className="barometer-price-layout">
-            <div className="barometer-price-chart" role="img" aria-label={`Comparaison des prix par portion pour ${series.prices.sampleSize} références`}>
+            <ul className="barometer-price-chart" aria-label={`Comparaison des prix par portion pour ${series.prices.sampleSize} références`}>
               {series.prices.items.map((item) => (
-                <div key={item.id}>
+                <li key={item.id}>
                   <span>{item.brand}<small>{item.product}</small></span>
-                  <i><b style={{ width: `${(item.midpoint / maximumPrice) * 100}%` }} /></i>
+                  <i aria-hidden="true"><b style={{ width: `${(item.midpoint / maximumPrice) * 100}%` }} /></i>
                   <strong>{item.raw}</strong>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
             <aside>
               <span>Plage observée</span>
               <b>{formatNumber(stats.priceMinEur)} à {formatNumber(stats.priceMaxEur)} €</b>

@@ -2,6 +2,7 @@
   "metadata": {
     "schemaVersion": "1.0",
     "datasetVersion": "2027.1",
+    "sourceDataSha256": "988167e6b351b42e0f83711a4eac9ba1da4b60277b8377f474ba8991abfbea38",
     "title": "Baromètre français des cafés fonctionnels 2027",
     "publicationDate": "2026-11-06",
     "cutoffDate": "2026-11-06",
@@ -238,8 +239,8 @@
         },
         {
           "label": "Faible (≤ 50 mg)",
-          "count": 9,
-          "percentage": 30
+          "count": 8,
+          "percentage": 26.7
         },
         {
           "label": "Modérée (51–100 mg)",
@@ -248,8 +249,8 @@
         },
         {
           "label": "Élevée (> 100 mg)",
-          "count": 2,
-          "percentage": 6.7
+          "count": 3,
+          "percentage": 10
         }
       ]
     },
@@ -325,6 +326,8 @@
         "midpoint": 35,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -354,6 +357,8 @@
         "midpoint": 5,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -382,6 +387,8 @@
         "midpoint": 20,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -410,6 +417,8 @@
         "midpoint": 49,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -437,6 +446,8 @@
         "midpoint": 48,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -464,6 +475,8 @@
         "midpoint": 80,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
@@ -491,6 +504,8 @@
         "midpoint": 0,
         "unit": "mg"
       },
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -519,6 +534,8 @@
         "midpoint": 41.5,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Plantes / nootropiques"
@@ -541,6 +558,8 @@
         "midpoint": 90.5,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines"
@@ -563,6 +582,8 @@
         "midpoint": 80,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines"
@@ -585,6 +606,8 @@
         "midpoint": 68,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Collagène"
@@ -607,6 +630,8 @@
         "midpoint": 45,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -630,6 +655,8 @@
         "midpoint": 44.25,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "La page affirme aussi 'sans caféine' à certains endroits malgré les valeurs 29,5/59 mg: incohérence éditoriale.",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -648,6 +675,8 @@
       "price": null,
       "rawCaffeine": "non publié",
       "caffeine": null,
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -671,6 +700,8 @@
         "midpoint": 87.5,
         "unit": "mg"
       },
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -693,6 +724,8 @@
         "midpoint": 65,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "Corps fructifères 8:1 double extraction; excellente transparence mais incohérence interne sur la caféine.",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -716,6 +749,8 @@
         "midpoint": 45,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -739,6 +774,8 @@
         "midpoint": 162,
         "unit": "mg"
       },
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -757,6 +794,8 @@
       "price": null,
       "rawCaffeine": "non publiée",
       "caffeine": null,
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -779,6 +818,8 @@
         "midpoint": 80,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
@@ -806,13 +847,15 @@
         "midpoint": 80,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Plantes / nootropiques",
         "Collagène",
         "MCT"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "source": "https://smartcoffeeeu.com/",
       "lastVerified": "2026-08-01"
     },
@@ -825,6 +868,8 @@
       "price": null,
       "rawCaffeine": "non publiée",
       "caffeine": null,
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines"
@@ -842,6 +887,8 @@
       "price": null,
       "rawCaffeine": "non publiée",
       "caffeine": null,
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Collagène",
@@ -870,11 +917,13 @@
         "midpoint": 87,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "source": "https://www.sunday.fr/protein-coffee-cannelle.html",
       "lastVerified": "2026-09-08"
     },
@@ -897,6 +946,8 @@
         "midpoint": 120,
         "unit": "mg"
       },
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "Dosage de chaque champignon publié. Caféine élevée. La page contient une mention contradictoire 'sans caféine' malgré 120 mg affichés; la valeur quantitative est retenue.",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons"
@@ -919,6 +970,8 @@
       },
       "rawCaffeine": "annoncée environ 50 % inférieure à un café classique; valeur non publiée",
       "caffeine": null,
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -946,6 +999,8 @@
         "midpoint": 0,
         "unit": "mg"
       },
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
@@ -973,6 +1028,8 @@
         "midpoint": 0,
         "unit": "mg"
       },
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
@@ -995,11 +1052,13 @@
         "midpoint": 0,
         "unit": "mg"
       },
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "source": "https://maisondatus.com/products/alternative-cafe-moulu-sans-cafeine-datus",
       "lastVerified": "2026-09-08"
     },
@@ -1017,6 +1076,8 @@
         "midpoint": 0,
         "unit": "mg"
       },
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
@@ -1039,6 +1100,8 @@
         "midpoint": 0,
         "unit": "mg"
       },
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
@@ -1066,6 +1129,8 @@
         "midpoint": 74.2,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
@@ -1093,6 +1158,8 @@
         "midpoint": 80,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines",
@@ -1121,6 +1188,8 @@
         "midpoint": 87,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
@@ -1148,6 +1217,8 @@
         "midpoint": 68,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines",
@@ -1183,6 +1254,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "classique",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [],
       "laboratoryEvidence": "Analyse annoncée, document non archivé",
@@ -1215,6 +1288,8 @@
       "rawCaffeine": "non publié",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [],
       "laboratoryEvidence": "Non publiée",
@@ -1242,6 +1317,8 @@
       "rawCaffeine": "non publié",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
@@ -1281,6 +1358,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -1320,6 +1399,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -1358,6 +1439,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -1396,6 +1479,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -1433,6 +1518,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -1472,6 +1559,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -1509,6 +1598,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons",
@@ -1551,6 +1642,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
@@ -1588,6 +1681,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "sans caféine",
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -1626,6 +1721,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Plantes / nootropiques"
@@ -1653,6 +1750,8 @@
       "rawCaffeine": "non publié",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines",
@@ -1688,6 +1787,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Plantes / nootropiques",
@@ -1729,6 +1830,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons"
@@ -1768,6 +1871,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -1803,6 +1908,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines"
@@ -1830,6 +1937,8 @@
       "rawCaffeine": "non publié",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons"
@@ -1864,6 +1973,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines"
@@ -1896,6 +2007,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Collagène"
@@ -1928,6 +2041,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -1956,6 +2071,8 @@
       "rawCaffeine": "non publié",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -1991,6 +2108,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "La page affirme aussi 'sans caféine' à certains endroits malgré les valeurs 29,5/59 mg: incohérence éditoriale.",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -2024,6 +2143,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "sans caféine",
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -2054,6 +2175,8 @@
       "rawCaffeine": "non publié",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -2090,6 +2213,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons"
@@ -2119,6 +2244,8 @@
       "rawCaffeine": "non publié",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -2149,6 +2276,8 @@
       "rawCaffeine": "non publié",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -2187,6 +2316,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "Importante incohérence entre pages officielles: formule, poids, température de préparation et caféine.",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -2224,6 +2355,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons",
@@ -2259,6 +2392,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Plantes / nootropiques"
@@ -2293,6 +2428,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons",
@@ -2328,6 +2465,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons"
@@ -2362,6 +2501,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -2391,6 +2532,8 @@
       "rawCaffeine": "non publié",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons"
@@ -2421,6 +2564,8 @@
       "rawCaffeine": "non publié",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Plantes / nootropiques",
@@ -2456,6 +2601,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Collagène",
@@ -2486,6 +2633,8 @@
       "rawCaffeine": "non publié",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines"
@@ -2515,6 +2664,8 @@
       "rawCaffeine": "non publié",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -2545,6 +2696,8 @@
       "rawCaffeine": "non publié",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons"
@@ -2580,6 +2733,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -2612,6 +2767,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -2646,13 +2803,15 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
         "Plantes / nootropiques",
         "Collagène"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "panelIncluded": false,
       "panelExclusionReasons": [
         "disponibilité France non confirmée"
@@ -2682,6 +2841,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -2717,6 +2878,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -2756,6 +2919,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Collagène",
@@ -2791,6 +2956,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
@@ -2825,6 +2992,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines",
@@ -2855,6 +3024,8 @@
       "rawCaffeine": "non publié sur page extraite",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines",
@@ -2891,6 +3062,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Plantes / nootropiques",
@@ -2927,6 +3100,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons",
@@ -2964,6 +3139,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -3000,6 +3177,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
@@ -3034,6 +3213,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines"
@@ -3068,6 +3249,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons",
@@ -3098,6 +3281,8 @@
       "rawCaffeine": "valeur non extraite",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons",
@@ -3129,6 +3314,8 @@
       "rawCaffeine": "non publié",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons",
@@ -3165,6 +3352,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons",
@@ -3201,6 +3390,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons",
@@ -3237,6 +3428,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -3266,6 +3459,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -3301,6 +3496,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons"
@@ -3335,12 +3532,14 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
         "Plantes / nootropiques"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "panelIncluded": false,
       "panelExclusionReasons": [
         "disponibilité France non confirmée"
@@ -3370,6 +3569,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons"
@@ -3404,6 +3605,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -3439,6 +3642,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -3468,6 +3673,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons",
@@ -3505,6 +3712,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -3541,6 +3750,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "Corps fructifères 8:1 double extraction; excellente transparence mais incohérence interne sur la caféine.",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -3569,6 +3780,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Plantes / nootropiques",
@@ -3605,6 +3818,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Plantes / nootropiques",
@@ -3635,6 +3850,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -3667,6 +3884,8 @@
       "rawCaffeine": "annoncée plus basse qu'un café classique, sans valeur",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -3697,6 +3916,8 @@
       "rawCaffeine": "non publiée; seulement 'low caffeine'",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -3733,6 +3954,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -3771,6 +3994,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -3806,6 +4031,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -3834,6 +4061,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -3861,6 +4090,8 @@
       "rawCaffeine": "moins qu'un espresso, valeur non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -3891,6 +4122,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -3920,6 +4153,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons"
@@ -3954,6 +4189,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons"
@@ -3989,6 +4226,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -4023,6 +4262,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons"
@@ -4057,6 +4298,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "faible (≤ 50 mg)",
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -4087,11 +4330,13 @@
       "rawCaffeine": "non publiée; varie selon torréfaction",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "panelIncluded": false,
       "panelExclusionReasons": [
         "disponibilité France non confirmée"
@@ -4121,6 +4366,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons"
@@ -4155,6 +4402,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons"
@@ -4191,6 +4440,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons"
@@ -4225,6 +4476,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -4261,6 +4514,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -4297,6 +4552,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines",
@@ -4330,6 +4587,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Plantes / nootropiques"
@@ -4361,6 +4620,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Plantes / nootropiques"
@@ -4396,6 +4657,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Collagène"
@@ -4425,6 +4688,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Plantes / nootropiques"
@@ -4460,6 +4725,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
@@ -4492,6 +4759,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines"
@@ -4521,6 +4790,8 @@
       "rawCaffeine": "variable selon préparation; fiche donne seulement des fourchettes génériques",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Plantes / nootropiques"
@@ -4556,6 +4827,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons"
@@ -4585,6 +4858,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Créatine"
@@ -4614,6 +4889,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Créatine"
@@ -4644,6 +4921,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Créatine"
@@ -4675,6 +4954,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Créatine"
@@ -4709,6 +4990,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -4739,6 +5022,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Créatine"
@@ -4769,6 +5054,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -4800,6 +5087,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Créatine"
@@ -4841,13 +5130,15 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Plantes / nootropiques",
         "Collagène",
         "MCT"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "panelIncluded": true,
       "panelExclusionReasons": []
     },
@@ -4870,6 +5161,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines"
@@ -4897,6 +5190,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Protéines"
@@ -4926,6 +5221,8 @@
       "rawCaffeine": "non publiée; café décaféiné",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Protéines"
@@ -4955,6 +5252,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Collagène"
@@ -4985,11 +5284,13 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "panelIncluded": false,
       "panelExclusionReasons": [
         "disponibilité France non confirmée",
@@ -5015,11 +5316,13 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "panelIncluded": false,
       "panelExclusionReasons": [
         "disponibilité France non confirmée",
@@ -5045,6 +5348,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons"
@@ -5075,6 +5380,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons",
@@ -5107,6 +5414,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -5138,6 +5447,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons",
@@ -5168,6 +5479,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons",
@@ -5199,6 +5512,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons"
@@ -5229,6 +5544,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Collagène"
@@ -5259,6 +5576,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Collagène"
@@ -5288,6 +5607,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -5319,6 +5640,8 @@
       "rawCaffeine": "non publiée; annoncée légèrement inférieure au café classique",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -5350,6 +5673,8 @@
       "rawCaffeine": "annoncée faible; valeur non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Champignons"
@@ -5381,6 +5706,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Collagène",
@@ -5419,11 +5746,13 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "panelIncluded": true,
       "panelExclusionReasons": []
     },
@@ -5456,6 +5785,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "élevée (> 100 mg)",
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "Dosage de chaque champignon publié. Caféine élevée. La page contient une mention contradictoire 'sans caféine' malgré 120 mg affichés; la valeur quantitative est retenue.",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons"
@@ -5488,6 +5819,8 @@
       "rawCaffeine": "annoncée environ 50 % inférieure à un café classique; valeur non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -5525,6 +5858,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "sans caféine",
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
@@ -5562,6 +5897,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "sans caféine",
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
@@ -5599,12 +5936,14 @@
         "unit": "mg"
       },
       "caffeineLevel": "sans caféine",
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Plantes / nootropiques",
         "Alternative torréfiée / sans café"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "panelIncluded": false,
       "panelExclusionReasons": [
         "statut commercial non actif"
@@ -5634,11 +5973,13 @@
         "unit": "mg"
       },
       "caffeineLevel": "sans caféine",
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "panelIncluded": true,
       "panelExclusionReasons": []
     },
@@ -5666,6 +6007,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "sans caféine",
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
@@ -5698,6 +6041,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "sans caféine",
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
@@ -5735,6 +6080,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
@@ -5772,6 +6119,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines",
@@ -5810,6 +6159,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
@@ -5847,6 +6198,8 @@
         "unit": "mg"
       },
       "caffeineLevel": "modérée (51–100 mg)",
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines",
@@ -5875,6 +6228,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Collagène"
@@ -5904,6 +6259,8 @@
       "rawCaffeine": "non publiée",
       "caffeine": null,
       "caffeineLevel": "non documenté",
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Faible",
       "ingredientFamilies": [
         "Collagène"

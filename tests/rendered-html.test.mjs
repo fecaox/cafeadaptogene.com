@@ -386,6 +386,9 @@ test("publie le Baromètre français des cafés fonctionnels 2027 avec ses donn�
   assert.match(html, /"@type":"Dataset"/);
   assert.match(html, /"encodingFormat":"text\/csv"/);
   assert.match(html, /"encodingFormat":"application\/json"/);
+  assert.match(html, /<ul class="barometer-bars"/);
+  assert.doesNotMatch(html, /class="barometer-bars" role="img"/);
+  assert.match(html, /Incohérence publiée[\s\S]{0,220}sans caféine/i);
   assert.doesNotMatch(html, /meilleur produit|classement santé/i);
 
   const root = new URL("../", import.meta.url);

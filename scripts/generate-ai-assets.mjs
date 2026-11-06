@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import { barometer } from "../app/barometer-data.ts";
@@ -7,6 +7,17 @@ import { guides, siteUrl } from "../app/site-data.ts";
 import { buildAiAssets } from "./lib/ai-assets.mjs";
 
 const outputDirectory = path.resolve(import.meta.dirname, "..", "public", "ai");
+const sourceRegistryPath = path.join(outputDirectory, "sources.json");
+
+async function readSourceRegistry() {
+  try {
+    const registry = JSON.parse(await readFile(sourceRegistryPath, "utf8"));
+    return Array.isArray(registry.sources) ? registry.sources : [];
+  } catch (error) {
+    if (error?.code === "ENOENT") return [];
+    throw error;
+  }
+}
 const barometerDataset = {
   slug: "barometre-cafes-fonctionnels-2027",
   title: barometer.metadata.title,
@@ -26,7 +37,8 @@ const barometerDataset = {
     { format: "Méthodologie", url: `${siteUrl}/data/barometre-cafes-fonctionnels-2027-methodologie.md` },
   ],
 };
-const assets = buildAiAssets({ guides, products: directoryProducts, datasets: [barometerDataset], siteUrl });
+const existingSources = await readSourceRegistry();
+const assets = buildAiAssets({ guides, products: directoryProducts, datasets: [barometerDataset], siteUrl, existingSources });
 
 await mkdir(outputDirectory, { recursive: true });
 await Promise.all([

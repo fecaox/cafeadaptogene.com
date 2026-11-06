@@ -3,6 +3,7 @@ export const barometer = {
   "metadata": {
     "schemaVersion": "1.0",
     "datasetVersion": "2027.1",
+    "sourceDataSha256": "988167e6b351b42e0f83711a4eac9ba1da4b60277b8377f474ba8991abfbea38",
     "title": "Baromètre français des cafés fonctionnels 2027",
     "publicationDate": "2026-11-06",
     "cutoffDate": "2026-11-06",
@@ -239,8 +240,8 @@ export const barometer = {
         },
         {
           "label": "Faible (≤ 50 mg)",
-          "count": 9,
-          "percentage": 30
+          "count": 8,
+          "percentage": 26.7
         },
         {
           "label": "Modérée (51–100 mg)",
@@ -249,8 +250,8 @@ export const barometer = {
         },
         {
           "label": "Élevée (> 100 mg)",
-          "count": 2,
-          "percentage": 6.7
+          "count": 3,
+          "percentage": 10
         }
       ]
     },
@@ -326,6 +327,8 @@ export const barometer = {
         "midpoint": 35,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -355,6 +358,8 @@ export const barometer = {
         "midpoint": 5,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -383,6 +388,8 @@ export const barometer = {
         "midpoint": 20,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -411,6 +418,8 @@ export const barometer = {
         "midpoint": 49,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -438,6 +447,8 @@ export const barometer = {
         "midpoint": 48,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -465,6 +476,8 @@ export const barometer = {
         "midpoint": 80,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
@@ -492,6 +505,8 @@ export const barometer = {
         "midpoint": 0,
         "unit": "mg"
       },
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -520,6 +535,8 @@ export const barometer = {
         "midpoint": 41.5,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Plantes / nootropiques"
@@ -542,6 +559,8 @@ export const barometer = {
         "midpoint": 90.5,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines"
@@ -564,6 +583,8 @@ export const barometer = {
         "midpoint": 80,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines"
@@ -586,6 +607,8 @@ export const barometer = {
         "midpoint": 68,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Collagène"
@@ -608,6 +631,8 @@ export const barometer = {
         "midpoint": 45,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -631,6 +656,8 @@ export const barometer = {
         "midpoint": 44.25,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "La page affirme aussi 'sans caféine' à certains endroits malgré les valeurs 29,5/59 mg: incohérence éditoriale.",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -649,6 +676,8 @@ export const barometer = {
       "price": null,
       "rawCaffeine": "non publié",
       "caffeine": null,
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons",
@@ -672,6 +701,8 @@ export const barometer = {
         "midpoint": 87.5,
         "unit": "mg"
       },
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -694,6 +725,8 @@ export const barometer = {
         "midpoint": 65,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "Corps fructifères 8:1 double extraction; excellente transparence mais incohérence interne sur la caféine.",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -717,6 +750,8 @@ export const barometer = {
         "midpoint": 45,
         "unit": "mg"
       },
+      "caffeineBand": "Faible (≤ 50 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -740,6 +775,8 @@ export const barometer = {
         "midpoint": 162,
         "unit": "mg"
       },
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons",
@@ -758,6 +795,8 @@ export const barometer = {
       "price": null,
       "rawCaffeine": "non publiée",
       "caffeine": null,
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -780,6 +819,8 @@ export const barometer = {
         "midpoint": 80,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
@@ -807,13 +848,15 @@ export const barometer = {
         "midpoint": 80,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Plantes / nootropiques",
         "Collagène",
         "MCT"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "source": "https://smartcoffeeeu.com/",
       "lastVerified": "2026-08-01"
     },
@@ -826,6 +869,8 @@ export const barometer = {
       "price": null,
       "rawCaffeine": "non publiée",
       "caffeine": null,
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines"
@@ -843,6 +888,8 @@ export const barometer = {
       "price": null,
       "rawCaffeine": "non publiée",
       "caffeine": null,
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Collagène",
@@ -871,11 +918,13 @@ export const barometer = {
         "midpoint": 87,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "source": "https://www.sunday.fr/protein-coffee-cannelle.html",
       "lastVerified": "2026-09-08"
     },
@@ -898,6 +947,8 @@ export const barometer = {
         "midpoint": 120,
         "unit": "mg"
       },
+      "caffeineBand": "Élevée (> 100 mg)",
+      "publicCaveat": "Dosage de chaque champignon publié. Caféine élevée. La page contient une mention contradictoire 'sans caféine' malgré 120 mg affichés; la valeur quantitative est retenue.",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Champignons"
@@ -920,6 +971,8 @@ export const barometer = {
       },
       "rawCaffeine": "annoncée environ 50 % inférieure à un café classique; valeur non publiée",
       "caffeine": null,
+      "caffeineBand": null,
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Champignons"
@@ -947,6 +1000,8 @@ export const barometer = {
         "midpoint": 0,
         "unit": "mg"
       },
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
@@ -974,6 +1029,8 @@ export const barometer = {
         "midpoint": 0,
         "unit": "mg"
       },
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
@@ -996,11 +1053,13 @@ export const barometer = {
         "midpoint": 0,
         "unit": "mg"
       },
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
       ],
-      "laboratoryEvidence": "Document consultable",
+      "laboratoryEvidence": "Analyse annoncée, document non archivé",
       "source": "https://maisondatus.com/products/alternative-cafe-moulu-sans-cafeine-datus",
       "lastVerified": "2026-09-08"
     },
@@ -1018,6 +1077,8 @@ export const barometer = {
         "midpoint": 0,
         "unit": "mg"
       },
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
@@ -1040,6 +1101,8 @@ export const barometer = {
         "midpoint": 0,
         "unit": "mg"
       },
+      "caffeineBand": "Sans caféine",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Alternative torréfiée / sans café"
@@ -1067,6 +1130,8 @@ export const barometer = {
         "midpoint": 74.2,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
@@ -1094,6 +1159,8 @@ export const barometer = {
         "midpoint": 80,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Partielle",
       "ingredientFamilies": [
         "Protéines",
@@ -1122,6 +1189,8 @@ export const barometer = {
         "midpoint": 87,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines"
@@ -1149,6 +1218,8 @@ export const barometer = {
         "midpoint": 68,
         "unit": "mg"
       },
+      "caffeineBand": "Modérée (51–100 mg)",
+      "publicCaveat": "",
       "transparency": "Élevée",
       "ingredientFamilies": [
         "Protéines",

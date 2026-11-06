@@ -11,6 +11,8 @@ export type BarometerTableRow = {
   readonly price: { readonly min: number; readonly max: number; readonly midpoint: number; readonly currency: string } | null;
   readonly rawCaffeine: string;
   readonly caffeine: { readonly min: number; readonly max: number; readonly midpoint: number; readonly unit: string } | null;
+  readonly caffeineBand: string | null;
+  readonly publicCaveat: string;
   readonly transparency: string;
   readonly ingredientFamilies: readonly string[];
   readonly laboratoryEvidence: string;
@@ -78,7 +80,10 @@ export default function BarometerTable({ rows }: { rows: readonly BarometerTable
               <tr key={row.id}>
                 <th scope="row"><b>{row.brand}</b><span>{row.product}</span><small>{row.category}</small></th>
                 <td>{row.price ? row.rawPricePerServing : <span className="barometer-missing">Non calculable</span>}</td>
-                <td>{row.caffeine ? row.rawCaffeine : <span className="barometer-missing">Non chiffrée</span>}</td>
+                <td>
+                  {row.caffeine ? row.rawCaffeine : <span className="barometer-missing">Non chiffrée</span>}
+                  {row.publicCaveat ? <small className="barometer-caveat"><b>Incohérence publiée :</b> {row.publicCaveat}</small> : null}
+                </td>
                 <td>{row.ingredientFamilies.length ? row.ingredientFamilies.join(" · ") : <span className="barometer-missing">Aucune famille suivie</span>}</td>
                 <td><b className={`barometer-transparency barometer-transparency-${row.transparency.toLocaleLowerCase("fr").replace(/\s+/g, "-")}`}>{row.transparency}</b><small>{row.laboratoryEvidence}</small></td>
                 <td><a href={row.source} target="_blank" rel="nofollow noopener">Source officielle ↗</a><small>Vérifiée le {row.lastVerified}</small></td>

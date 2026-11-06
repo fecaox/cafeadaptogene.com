@@ -17,6 +17,7 @@ test("publie un CSV complet avec valeurs brutes, calculées et inclusion au pane
   assert.ok("prix_central_eur" in rows[0]);
   assert.ok("cafeine_centrale_mg" in rows[0]);
   assert.ok("panel_inclus" in rows[0]);
+  assert.ok("reserve_publique" in rows[0]);
   assert.ok("source_officielle" in rows[0]);
 
   const magicLab = rows.find((row) => row.marque === "Magic Lab");
@@ -26,12 +27,14 @@ test("publie un CSV complet avec valeurs brutes, calculées et inclusion au pane
   assert.equal(cosmicBlend?.panel_inclus, "non");
   assert.match(cosmicBlend?.motifs_exclusion ?? "", /statut commercial|vérification/i);
   assert.equal(cafeIntegral?.prix_central_eur, "");
+  assert.match(rows.find((row) => row.marque === "Earthshake")?.reserve_publique ?? "", /sans caféine/i);
 });
 
 test("publie un JSON versionné avec statistiques, méthode et enregistrements", async () => {
   const data = JSON.parse(await readFile(new URL("barometre-cafes-fonctionnels-2027.json", dataRoot), "utf8"));
 
   assert.equal(data.metadata.datasetVersion, "2027.1");
+  assert.equal(data.metadata.sourceDataSha256, "988167e6b351b42e0f83711a4eac9ba1da4b60277b8377f474ba8991abfbea38");
   assert.equal(data.metadata.cutoffDate, "2026-11-06");
   assert.equal(data.metadata.canonicalUrl, "https://cafeadaptogene.com/barometre-cafes-fonctionnels-2027/");
   assert.equal(data.stats.universeProducts, 143);
@@ -43,6 +46,7 @@ test("publie un JSON versionné avec statistiques, méthode et enregistrements",
   assert.equal(data.series.ingredients.overlapping, true);
   assert.match(data.methodology.priceRule, /fourchettes/i);
   assert.match(data.metadata.license, /citation/i);
+  assert.match(data.records.find((record) => record.brand === "Earthshake")?.publicCaveat ?? "", /29,5\/59 mg/i);
 });
 
 test("génère un module TypeScript léger pour le rendu statique", async () => {
