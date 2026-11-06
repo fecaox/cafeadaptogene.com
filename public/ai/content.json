@@ -19,8 +19,8 @@
         ]
       },
       "sourceIds": [
-        "source:104",
-        "source:134"
+        "source:105",
+        "source:135"
       ]
     },
     {
@@ -37,8 +37,8 @@
         "productIds": []
       },
       "sourceIds": [
-        "source:090",
-        "source:104"
+        "source:091",
+        "source:105"
       ]
     },
     {
@@ -117,7 +117,7 @@
         "productIds": []
       },
       "sourceIds": [
-        "source:104"
+        "source:105"
       ]
     },
     {
@@ -134,7 +134,7 @@
         "productIds": []
       },
       "sourceIds": [
-        "source:104"
+        "source:105"
       ]
     },
     {
@@ -196,6 +196,50 @@
         "productIds": []
       },
       "sourceIds": []
+    },
+    {
+      "id": "dataset:barometre-cafes-fonctionnels-2027",
+      "type": "dataset",
+      "title": "Baromètre français des cafés fonctionnels 2027",
+      "url": "https://cafeadaptogene.com/barometre-cafes-fonctionnels-2027/",
+      "text": "Baromètre français des cafés fonctionnels 2027\n\nDonnées françaises comparables sur les prix par portion, la caféine, les ingrédients et la transparence des cafés fonctionnels.\n\nUnivers recensé : 143 produits.\n\nPanel France qualifié : 35 produits et 32 marques.\n\nSous-échantillon prix : n=18.\n\nSous-échantillon caféine : n=30.\n\nConstats à citer :\n\n- Le prix médian observé est de 1,08 € par portion parmi les prix en euros comparables (n=18).\n\n- La caféine médiane publiée est de 57 mg par portion parmi les références chiffrées (n=30).\n\n- Champignons est la famille la plus fréquente du panel avec 16 références ; les familles peuvent se chevaucher (n=35).\n\n- 17 références présentent une transparence de dosage élevée, soit 48,6 % du panel (n=35).\n\nCritères du panel :\n\n- Disponibilité en France commençant par « oui ».\n\n- Statut commercial commençant par « actif ».\n\n- Niveau de vérification A ou B.\n\n- Source officielle HTTP(S) valide.\n\nRègle prix : Montants en euros directement calculables. Les fourchettes conservent leurs bornes et utilisent leur point central pour la médiane. Dollars, seuils et valeurs non calculables sont exclus des agrégats.\n\nRègle caféine : Valeurs numériques publiques en milligrammes. Les fourchettes conservent leurs bornes et utilisent leur point central pour la médiane. Zéro milligramme reste une donnée valide.\n\nRègle ingrédients : Familles détectées depuis les champs structurés. Elles peuvent se chevaucher et leurs pourcentages ne totalisent donc pas nécessairement 100 %.\n\nLimite de la transparence : Niveau de publication des dosages et informations comparables ; il ne mesure ni l’efficacité, ni le goût, ni la qualité du produit.\n\nSources et limites : Les informations proviennent des pages officielles citées et datées. Les allégations de marque ne sont pas traitées comme des mesures indépendantes.\n\nTéléchargements :\n\n- CSV : https://cafeadaptogene.com/data/barometre-cafes-fonctionnels-2027.csv\n\n- JSON : https://cafeadaptogene.com/data/barometre-cafes-fonctionnels-2027.json\n\n- Méthodologie : https://cafeadaptogene.com/data/barometre-cafes-fonctionnels-2027-methodologie.md\n\nAttribution : Café Adaptogène, Baromètre français des cafés fonctionnels 2027, données arrêtées au 6 novembre 2026.",
+      "searchText": "barometre francais des cafes fonctionnels 2027 donnees francaises comparables sur les prix par portion la cafeine les ingredients et la transparence des cafes fonctionnels barometre francais des cafes fonctionnels 2027 donnees francaises comparables sur les prix par portion la cafeine les ingredients et la transparence des cafes fonctionnels univers recense 143 produits panel france qualifie 35 produits et 32 marques sous echantillon prix n 18 sous echantillon cafeine n 30 constats a citer le prix median observe est de 1 08 par portion parmi les prix en euros comparables n 18 la cafeine mediane publiee est de 57 mg par portion parmi les references chiffrees n 30 champignons est la famille la plus frequente du panel avec 16 references les familles peuvent se chevaucher n 35 17 references presentent une transparence de dosage elevee soit 48 6 du panel n 35 criteres du panel disponibilite en france commencant par oui statut commercial commencant par actif niveau de verification a ou b source officielle http s valide regle prix montants en euros directement calculables les fourchettes conservent leurs bornes et utilisent leur point central pour la mediane dollars seuils et valeurs non calculables sont exclus des agregats regle cafeine valeurs numeriques publiques en milligrammes les fourchettes conservent leurs bornes et utilisent leur point central pour la mediane zero milligramme reste une donnee valide regle ingredients familles detectees depuis les champs structures elles peuvent se chevaucher et leurs pourcentages ne totalisent donc pas necessairement 100 limite de la transparence niveau de publication des dosages et informations comparables il ne mesure ni l efficacite ni le gout ni la qualite du produit sources et limites les informations proviennent des pages officielles citees et datees les allegations de marque ne sont pas traitees comme des mesures independantes telechargements csv https cafeadaptogene com data barometre cafes fonctionnels 2027 csv json https cafeadaptogene com data barometre cafes fonctionnels 2027 json methodologie https cafeadaptogene com data barometre cafes fonctionnels 2027 methodologie md attribution cafe adaptogene barometre francais des cafes fonctionnels 2027 donnees arretees au 6 novembre 2026",
+      "metadata": {
+        "datasetVersion": "2027.1",
+        "cutoffDate": "2026-11-06",
+        "attribution": "Café Adaptogène, Baromètre français des cafés fonctionnels 2027, données arrêtées au 6 novembre 2026.",
+        "description": "Données françaises comparables sur les prix par portion, la caféine, les ingrédients et la transparence des cafés fonctionnels.",
+        "downloads": [
+          {
+            "format": "CSV",
+            "url": "https://cafeadaptogene.com/data/barometre-cafes-fonctionnels-2027.csv"
+          },
+          {
+            "format": "JSON",
+            "url": "https://cafeadaptogene.com/data/barometre-cafes-fonctionnels-2027.json"
+          },
+          {
+            "format": "Méthodologie",
+            "url": "https://cafeadaptogene.com/data/barometre-cafes-fonctionnels-2027-methodologie.md"
+          }
+        ],
+        "stats": {
+          "universeProducts": 143,
+          "universeBrands": 132,
+          "panelProducts": 35,
+          "panelBrands": 32,
+          "priceSample": 18,
+          "caffeineSample": 30,
+          "priceMedianEur": 1.08,
+          "priceMinEur": 0.23,
+          "priceMaxEur": 2.2,
+          "caffeineMedianMg": 57,
+          "transparencySample": 35
+        }
+      },
+      "sourceIds": [
+        "source:010"
+      ]
     }
   ]
 }

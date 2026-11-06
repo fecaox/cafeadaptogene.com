@@ -1,12 +1,32 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
+import { barometer } from "../app/barometer-data.ts";
 import { directoryProducts } from "../app/brand-directory-data.ts";
 import { guides, siteUrl } from "../app/site-data.ts";
 import { buildAiAssets } from "./lib/ai-assets.mjs";
 
 const outputDirectory = path.resolve(import.meta.dirname, "..", "public", "ai");
-const assets = buildAiAssets({ guides, products: directoryProducts, siteUrl });
+const barometerDataset = {
+  slug: "barometre-cafes-fonctionnels-2027",
+  title: barometer.metadata.title,
+  url: barometer.metadata.canonicalUrl,
+  description: "Données françaises comparables sur les prix par portion, la caféine, les ingrédients et la transparence des cafés fonctionnels.",
+  findings: barometer.findings,
+  methodology: barometer.methodology,
+  stats: barometer.stats,
+  metadata: {
+    datasetVersion: barometer.metadata.datasetVersion,
+    cutoffDate: barometer.metadata.cutoffDate,
+    attribution: barometer.metadata.attribution,
+  },
+  downloads: [
+    { format: "CSV", url: `${siteUrl}/data/barometre-cafes-fonctionnels-2027.csv` },
+    { format: "JSON", url: `${siteUrl}/data/barometre-cafes-fonctionnels-2027.json` },
+    { format: "Méthodologie", url: `${siteUrl}/data/barometre-cafes-fonctionnels-2027-methodologie.md` },
+  ],
+};
+const assets = buildAiAssets({ guides, products: directoryProducts, datasets: [barometerDataset], siteUrl });
 
 await mkdir(outputDirectory, { recursive: true });
 await Promise.all([
@@ -17,4 +37,4 @@ await Promise.all([
   writeFile(path.join(outputDirectory, "index.md"), assets.markdown, "utf8"),
 ]);
 
-console.log(`Generated ${assets.content.documents.length} guides, ${assets.catalog.products.length} products and ${assets.sources.sources.length} sources in ${outputDirectory}.`);
+console.log(`Generated ${assets.content.documents.length} content documents, ${assets.catalog.products.length} products and ${assets.sources.sources.length} sources in ${outputDirectory}.`);

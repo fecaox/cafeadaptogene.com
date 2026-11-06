@@ -92,6 +92,31 @@ function productText(product) {
   return lines.filter(Boolean).join("\n\n");
 }
 
+function datasetText(dataset) {
+  const lines = [dataset.title, dataset.description];
+  const stats = dataset.stats ?? {};
+  if (stats.universeProducts !== undefined) lines.push(`Univers recensé : ${stats.universeProducts} produits.`);
+  if (stats.panelProducts !== undefined) lines.push(`Panel France qualifié : ${stats.panelProducts} produits et ${stats.panelBrands} marques.`);
+  if (stats.priceSample !== undefined) lines.push(`Sous-échantillon prix : n=${stats.priceSample}.`);
+  if (stats.caffeineSample !== undefined) lines.push(`Sous-échantillon caféine : n=${stats.caffeineSample}.`);
+
+  if (dataset.findings?.length) lines.push("Constats à citer :", ...dataset.findings.map((finding) => `- ${finding}`));
+
+  const methodology = dataset.methodology ?? {};
+  if (methodology.panelCriteria?.length) lines.push("Critères du panel :", ...methodology.panelCriteria.map((criterion) => `- ${criterion}`));
+  pushLabel(lines, "Règle prix", methodology.priceRule);
+  pushLabel(lines, "Règle caféine", methodology.caffeineRule);
+  pushLabel(lines, "Règle ingrédients", methodology.ingredientsRule);
+  pushLabel(lines, "Limite de la transparence", methodology.transparencyRule);
+  pushLabel(lines, "Sources et limites", methodology.sourceRule);
+
+  if (dataset.downloads?.length) {
+    lines.push("Téléchargements :", ...dataset.downloads.map((download) => `- ${download.format} : ${download.url}`));
+  }
+  pushLabel(lines, "Attribution", dataset.metadata?.attribution);
+  return lines.filter(Boolean).join("\n\n");
+}
+
 function isPublicSource(value) {
   const text = clean(value);
   return /^https?:\/\//i.test(text);
@@ -119,7 +144,7 @@ function productMetadata(product) {
   );
 }
 
-export function buildAiAssets({ guides, products, siteUrl }) {
+export function buildAiAssets({ guides, products, datasets = [], siteUrl }) {
   const normalizedSiteUrl = siteUrl.replace(/\/+$/, "");
   const sourceMap = new Map();
 
@@ -165,7 +190,32 @@ export function buildAiAssets({ guides, products, siteUrl }) {
     };
   });
 
-  const allDocuments = [...guideDocuments, ...productDocuments];
+  const datasetDocuments = datasets.map((dataset) => {
+    const id = `dataset:${dataset.slug}`;
+    const url = /^https?:\/\//i.test(dataset.url)
+      ? dataset.url
+      : absoluteUrl(normalizedSiteUrl, dataset.url);
+    addSource(sourceMap, { label: "Page canonique du jeu de données", url }, id);
+    const text = datasetText(dataset);
+    return {
+      id,
+      type: "dataset",
+      title: dataset.title,
+      url,
+      text,
+      searchText: normalizeSearchText(`${dataset.title} ${dataset.description} ${text}`),
+      metadata: {
+        ...dataset.metadata,
+        description: dataset.description,
+        downloads: dataset.downloads ?? [],
+        stats: dataset.stats ?? {},
+      },
+      sourceIds: [],
+    };
+  });
+
+  const contentDocuments = [...guideDocuments, ...datasetDocuments];
+  const allDocuments = [...contentDocuments, ...productDocuments];
   const sourceRecords = [...sourceMap.values()]
     .sort((a, b) => a.url.localeCompare(b.url))
     .map((source, index) => ({
@@ -193,7 +243,7 @@ export function buildAiAssets({ guides, products, siteUrl }) {
     license: "Consultation et citation avec attribution à l’URL publique correspondante.",
   };
 
-  const content = { ...header, documents: guideDocuments };
+  const content = { ...header, documents: contentDocuments };
   const catalog = { ...header, products: productDocuments };
   const sources = { ...header, sources: sourceRecords };
   const mcpData = { ...header, documents: allDocuments, sources: sourceRecords };
@@ -207,6 +257,7 @@ Corpus public, factuel et en lecture seule. Les pages HTML restent les sources c
 - Sources : ${normalizedSiteUrl}/ai/sources.json
 - Index MCP : ${normalizedSiteUrl}/ai/mcp-data.json
 - Documentation : ${normalizedSiteUrl}/acces-agents-ia/
+${datasetDocuments.length ? `- Baromètre 2027 : ${normalizedSiteUrl}/barometre-cafes-fonctionnels-2027/\n- Données du baromètre : ${normalizedSiteUrl}/data/barometre-cafes-fonctionnels-2027.json\n` : ""}
 
 Une donnée absente reste indiquée comme non publiée. Les estimations ne sont pas des mesures du produit fini.
 `;

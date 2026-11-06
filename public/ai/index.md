@@ -8,5 +8,8 @@ Corpus public, factuel et en lecture seule. Les pages HTML restent les sources c
 - Sources : https://cafeadaptogene.com/ai/sources.json
 - Index MCP : https://cafeadaptogene.com/ai/mcp-data.json
 - Documentation : https://cafeadaptogene.com/acces-agents-ia/
+- Baromètre 2027 : https://cafeadaptogene.com/barometre-cafes-fonctionnels-2027/
+- Données du baromètre : https://cafeadaptogene.com/data/barometre-cafes-fonctionnels-2027.json
+
 
 Une donnée absente reste indiquée comme non publiée. Les estimations ne sont pas des mesures du produit fini.

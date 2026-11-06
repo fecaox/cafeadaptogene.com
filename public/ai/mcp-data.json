@@ -19,8 +19,8 @@
         ]
       },
       "sourceIds": [
-        "source:104",
-        "source:134"
+        "source:105",
+        "source:135"
       ]
     },
     {
@@ -37,8 +37,8 @@
         "productIds": []
       },
       "sourceIds": [
-        "source:090",
-        "source:104"
+        "source:091",
+        "source:105"
       ]
     },
     {
@@ -117,7 +117,7 @@
         "productIds": []
       },
       "sourceIds": [
-        "source:104"
+        "source:105"
       ]
     },
     {
@@ -134,7 +134,7 @@
         "productIds": []
       },
       "sourceIds": [
-        "source:104"
+        "source:105"
       ]
     },
     {
@@ -198,6 +198,50 @@
       "sourceIds": []
     },
     {
+      "id": "dataset:barometre-cafes-fonctionnels-2027",
+      "type": "dataset",
+      "title": "Baromètre français des cafés fonctionnels 2027",
+      "url": "https://cafeadaptogene.com/barometre-cafes-fonctionnels-2027/",
+      "text": "Baromètre français des cafés fonctionnels 2027\n\nDonnées françaises comparables sur les prix par portion, la caféine, les ingrédients et la transparence des cafés fonctionnels.\n\nUnivers recensé : 143 produits.\n\nPanel France qualifié : 35 produits et 32 marques.\n\nSous-échantillon prix : n=18.\n\nSous-échantillon caféine : n=30.\n\nConstats à citer :\n\n- Le prix médian observé est de 1,08 € par portion parmi les prix en euros comparables (n=18).\n\n- La caféine médiane publiée est de 57 mg par portion parmi les références chiffrées (n=30).\n\n- Champignons est la famille la plus fréquente du panel avec 16 références ; les familles peuvent se chevaucher (n=35).\n\n- 17 références présentent une transparence de dosage élevée, soit 48,6 % du panel (n=35).\n\nCritères du panel :\n\n- Disponibilité en France commençant par « oui ».\n\n- Statut commercial commençant par « actif ».\n\n- Niveau de vérification A ou B.\n\n- Source officielle HTTP(S) valide.\n\nRègle prix : Montants en euros directement calculables. Les fourchettes conservent leurs bornes et utilisent leur point central pour la médiane. Dollars, seuils et valeurs non calculables sont exclus des agrégats.\n\nRègle caféine : Valeurs numériques publiques en milligrammes. Les fourchettes conservent leurs bornes et utilisent leur point central pour la médiane. Zéro milligramme reste une donnée valide.\n\nRègle ingrédients : Familles détectées depuis les champs structurés. Elles peuvent se chevaucher et leurs pourcentages ne totalisent donc pas nécessairement 100 %.\n\nLimite de la transparence : Niveau de publication des dosages et informations comparables ; il ne mesure ni l’efficacité, ni le goût, ni la qualité du produit.\n\nSources et limites : Les informations proviennent des pages officielles citées et datées. Les allégations de marque ne sont pas traitées comme des mesures indépendantes.\n\nTéléchargements :\n\n- CSV : https://cafeadaptogene.com/data/barometre-cafes-fonctionnels-2027.csv\n\n- JSON : https://cafeadaptogene.com/data/barometre-cafes-fonctionnels-2027.json\n\n- Méthodologie : https://cafeadaptogene.com/data/barometre-cafes-fonctionnels-2027-methodologie.md\n\nAttribution : Café Adaptogène, Baromètre français des cafés fonctionnels 2027, données arrêtées au 6 novembre 2026.",
+      "searchText": "barometre francais des cafes fonctionnels 2027 donnees francaises comparables sur les prix par portion la cafeine les ingredients et la transparence des cafes fonctionnels barometre francais des cafes fonctionnels 2027 donnees francaises comparables sur les prix par portion la cafeine les ingredients et la transparence des cafes fonctionnels univers recense 143 produits panel france qualifie 35 produits et 32 marques sous echantillon prix n 18 sous echantillon cafeine n 30 constats a citer le prix median observe est de 1 08 par portion parmi les prix en euros comparables n 18 la cafeine mediane publiee est de 57 mg par portion parmi les references chiffrees n 30 champignons est la famille la plus frequente du panel avec 16 references les familles peuvent se chevaucher n 35 17 references presentent une transparence de dosage elevee soit 48 6 du panel n 35 criteres du panel disponibilite en france commencant par oui statut commercial commencant par actif niveau de verification a ou b source officielle http s valide regle prix montants en euros directement calculables les fourchettes conservent leurs bornes et utilisent leur point central pour la mediane dollars seuils et valeurs non calculables sont exclus des agregats regle cafeine valeurs numeriques publiques en milligrammes les fourchettes conservent leurs bornes et utilisent leur point central pour la mediane zero milligramme reste une donnee valide regle ingredients familles detectees depuis les champs structures elles peuvent se chevaucher et leurs pourcentages ne totalisent donc pas necessairement 100 limite de la transparence niveau de publication des dosages et informations comparables il ne mesure ni l efficacite ni le gout ni la qualite du produit sources et limites les informations proviennent des pages officielles citees et datees les allegations de marque ne sont pas traitees comme des mesures independantes telechargements csv https cafeadaptogene com data barometre cafes fonctionnels 2027 csv json https cafeadaptogene com data barometre cafes fonctionnels 2027 json methodologie https cafeadaptogene com data barometre cafes fonctionnels 2027 methodologie md attribution cafe adaptogene barometre francais des cafes fonctionnels 2027 donnees arretees au 6 novembre 2026",
+      "metadata": {
+        "datasetVersion": "2027.1",
+        "cutoffDate": "2026-11-06",
+        "attribution": "Café Adaptogène, Baromètre français des cafés fonctionnels 2027, données arrêtées au 6 novembre 2026.",
+        "description": "Données françaises comparables sur les prix par portion, la caféine, les ingrédients et la transparence des cafés fonctionnels.",
+        "downloads": [
+          {
+            "format": "CSV",
+            "url": "https://cafeadaptogene.com/data/barometre-cafes-fonctionnels-2027.csv"
+          },
+          {
+            "format": "JSON",
+            "url": "https://cafeadaptogene.com/data/barometre-cafes-fonctionnels-2027.json"
+          },
+          {
+            "format": "Méthodologie",
+            "url": "https://cafeadaptogene.com/data/barometre-cafes-fonctionnels-2027-methodologie.md"
+          }
+        ],
+        "stats": {
+          "universeProducts": 143,
+          "universeBrands": 132,
+          "panelProducts": 35,
+          "panelBrands": 32,
+          "priceSample": 18,
+          "caffeineSample": 30,
+          "priceMedianEur": 1.08,
+          "priceMinEur": 0.23,
+          "priceMaxEur": 2.2,
+          "caffeineMedianMg": 57,
+          "transparencySample": 35
+        }
+      },
+      "sourceIds": [
+        "source:010"
+      ]
+    },
+    {
       "id": "product:torregral-torregral",
       "type": "product",
       "title": "Torrégral — Torrégral",
@@ -249,7 +293,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:082"
+        "source:083"
       ]
     },
     {
@@ -304,7 +348,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:012"
+        "source:013"
       ]
     },
     {
@@ -359,7 +403,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:011"
+        "source:012"
       ]
     },
     {
@@ -472,7 +516,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:040"
+        "source:041"
       ]
     },
     {
@@ -530,7 +574,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:059"
+        "source:060"
       ]
     },
     {
@@ -585,7 +629,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:038"
+        "source:039"
       ]
     },
     {
@@ -640,7 +684,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:010"
+        "source:011"
       ]
     },
     {
@@ -695,7 +739,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:078"
+        "source:079"
       ]
     },
     {
@@ -753,7 +797,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:024"
+        "source:025"
       ]
     },
     {
@@ -808,7 +852,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:013"
+        "source:014"
       ]
     },
     {
@@ -863,7 +907,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:097"
+        "source:098"
       ]
     },
     {
@@ -921,7 +965,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:056"
+        "source:057"
       ]
     },
     {
@@ -976,7 +1020,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:066"
+        "source:067"
       ]
     },
     {
@@ -1031,7 +1075,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:046"
+        "source:047"
       ]
     },
     {
@@ -1086,7 +1130,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:029"
+        "source:030"
       ]
     },
     {
@@ -1141,7 +1185,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:107"
+        "source:108"
       ]
     },
     {
@@ -1196,7 +1240,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:131"
+        "source:132"
       ]
     },
     {
@@ -1251,7 +1295,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:112"
+        "source:113"
       ]
     },
     {
@@ -1306,7 +1350,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:117"
+        "source:118"
       ]
     },
     {
@@ -1361,7 +1405,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:022"
+        "source:023"
       ]
     },
     {
@@ -1416,7 +1460,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:016"
+        "source:017"
       ]
     },
     {
@@ -1471,7 +1515,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:017"
+        "source:018"
       ]
     },
     {
@@ -1526,7 +1570,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:103"
+        "source:104"
       ]
     },
     {
@@ -1581,7 +1625,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:075"
+        "source:076"
       ]
     },
     {
@@ -1636,7 +1680,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:088"
+        "source:089"
       ]
     },
     {
@@ -1691,7 +1735,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:030"
+        "source:031"
       ]
     },
     {
@@ -1746,7 +1790,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:072"
+        "source:073"
       ]
     },
     {
@@ -1801,7 +1845,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:043"
+        "source:044"
       ]
     },
     {
@@ -1856,7 +1900,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:053"
+        "source:054"
       ]
     },
     {
@@ -1911,7 +1955,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:050"
+        "source:051"
       ]
     },
     {
@@ -1966,7 +2010,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:050"
+        "source:051"
       ]
     },
     {
@@ -2021,7 +2065,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:050"
+        "source:051"
       ]
     },
     {
@@ -2076,7 +2120,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:050"
+        "source:051"
       ]
     },
     {
@@ -2131,7 +2175,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:094"
+        "source:095"
       ]
     },
     {
@@ -2186,7 +2230,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:041"
+        "source:042"
       ]
     },
     {
@@ -2296,7 +2340,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:020"
+        "source:021"
       ]
     },
     {
@@ -2351,7 +2395,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:064"
+        "source:065"
       ]
     },
     {
@@ -2406,7 +2450,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:069"
+        "source:070"
       ]
     },
     {
@@ -2461,7 +2505,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:048"
+        "source:049"
       ]
     },
     {
@@ -2516,7 +2560,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:086"
+        "source:087"
       ]
     },
     {
@@ -2571,7 +2615,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:133"
+        "source:134"
       ]
     },
     {
@@ -2626,7 +2670,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:106"
+        "source:107"
       ]
     },
     {
@@ -2681,7 +2725,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:058"
+        "source:059"
       ]
     },
     {
@@ -2736,7 +2780,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:079"
+        "source:080"
       ]
     },
     {
@@ -2846,7 +2890,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:110"
+        "source:111"
       ]
     },
     {
@@ -2901,7 +2945,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:045"
+        "source:046"
       ]
     },
     {
@@ -2956,7 +3000,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:101"
+        "source:102"
       ]
     },
     {
@@ -3011,7 +3055,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:100"
+        "source:101"
       ]
     },
     {
@@ -3066,7 +3110,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:080"
+        "source:081"
       ]
     },
     {
@@ -3121,7 +3165,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:063"
+        "source:064"
       ]
     },
     {
@@ -3176,7 +3220,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:140"
+        "source:141"
       ]
     },
     {
@@ -3231,7 +3275,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:014"
+        "source:015"
       ]
     },
     {
@@ -3286,7 +3330,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:034"
+        "source:035"
       ]
     },
     {
@@ -3341,7 +3385,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:145"
+        "source:146"
       ]
     },
     {
@@ -3396,7 +3440,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:032"
+        "source:033"
       ]
     },
     {
@@ -3451,7 +3495,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:122"
+        "source:123"
       ]
     },
     {
@@ -3561,7 +3605,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:049"
+        "source:050"
       ]
     },
     {
@@ -3616,7 +3660,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:060"
+        "source:061"
       ]
     },
     {
@@ -3671,7 +3715,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:074"
+        "source:075"
       ]
     },
     {
@@ -3726,7 +3770,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:070"
+        "source:071"
       ]
     },
     {
@@ -3781,7 +3825,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:095"
+        "source:096"
       ]
     },
     {
@@ -3836,7 +3880,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:096"
+        "source:097"
       ]
     },
     {
@@ -3891,7 +3935,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:084"
+        "source:085"
       ]
     },
     {
@@ -3946,7 +3990,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:061"
+        "source:062"
       ]
     },
     {
@@ -4111,7 +4155,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:081"
+        "source:082"
       ]
     },
     {
@@ -4166,7 +4210,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:067"
+        "source:068"
       ]
     },
     {
@@ -4221,7 +4265,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:136"
+        "source:137"
       ]
     },
     {
@@ -4276,7 +4320,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:114"
+        "source:115"
       ]
     },
     {
@@ -4331,7 +4375,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:057"
+        "source:058"
       ]
     },
     {
@@ -4386,7 +4430,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:039"
+        "source:040"
       ]
     },
     {
@@ -4441,7 +4485,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:031"
+        "source:032"
       ]
     },
     {
@@ -4499,7 +4543,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:121"
+        "source:122"
       ]
     },
     {
@@ -4554,7 +4598,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:132"
+        "source:133"
       ]
     },
     {
@@ -4609,7 +4653,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:116"
+        "source:117"
       ]
     },
     {
@@ -4664,7 +4708,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:102"
+        "source:103"
       ]
     },
     {
@@ -4719,7 +4763,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:108"
+        "source:109"
       ]
     },
     {
@@ -4829,7 +4873,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:123"
+        "source:124"
       ]
     },
     {
@@ -4884,7 +4928,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:035"
+        "source:036"
       ]
     },
     {
@@ -4939,7 +4983,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:126"
+        "source:127"
       ]
     },
     {
@@ -4994,7 +5038,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:065"
+        "source:066"
       ]
     },
     {
@@ -5049,7 +5093,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:144"
+        "source:145"
       ]
     },
     {
@@ -5104,7 +5148,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:062"
+        "source:063"
       ]
     },
     {
@@ -5159,7 +5203,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:146"
+        "source:147"
       ]
     },
     {
@@ -5214,7 +5258,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:142"
+        "source:143"
       ]
     },
     {
@@ -5269,7 +5313,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:124"
+        "source:125"
       ]
     },
     {
@@ -5324,7 +5368,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:098"
+        "source:099"
       ]
     },
     {
@@ -5379,7 +5423,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:044"
+        "source:045"
       ]
     },
     {
@@ -5434,7 +5478,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:141"
+        "source:142"
       ]
     },
     {
@@ -5489,7 +5533,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:027"
+        "source:028"
       ]
     },
     {
@@ -5544,7 +5588,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:077"
+        "source:078"
       ]
     },
     {
@@ -5599,7 +5643,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:109"
+        "source:110"
       ]
     },
     {
@@ -5654,7 +5698,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:125"
+        "source:126"
       ]
     },
     {
@@ -5709,7 +5753,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:047"
+        "source:048"
       ]
     },
     {
@@ -5764,7 +5808,7 @@
         "newEntry": false
       },
       "sourceIds": [
-        "source:120"
+        "source:121"
       ]
     },
     {
@@ -5823,7 +5867,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:026"
+        "source:027"
       ]
     },
     {
@@ -5882,7 +5926,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:025"
+        "source:026"
       ]
     },
     {
@@ -5941,7 +5985,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:028"
+        "source:029"
       ]
     },
     {
@@ -6000,8 +6044,8 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:073",
-        "source:129"
+        "source:074",
+        "source:130"
       ]
     },
     {
@@ -6060,7 +6104,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:087"
+        "source:088"
       ]
     },
     {
@@ -6119,8 +6163,8 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:130",
-        "source:143"
+        "source:131",
+        "source:144"
       ]
     },
     {
@@ -6179,7 +6223,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:115"
+        "source:116"
       ]
     },
     {
@@ -6238,7 +6282,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:085"
+        "source:086"
       ]
     },
     {
@@ -6297,7 +6341,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:076"
+        "source:077"
       ]
     },
     {
@@ -6356,7 +6400,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:092"
+        "source:093"
       ]
     },
     {
@@ -6415,7 +6459,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:015"
+        "source:016"
       ]
     },
     {
@@ -6474,7 +6518,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:068"
+        "source:069"
       ]
     },
     {
@@ -6533,7 +6577,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:021"
+        "source:022"
       ]
     },
     {
@@ -6592,7 +6636,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:147"
+        "source:148"
       ]
     },
     {
@@ -6651,7 +6695,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:051"
+        "source:052"
       ]
     },
     {
@@ -6710,7 +6754,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:135"
+        "source:136"
       ]
     },
     {
@@ -6769,7 +6813,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:055"
+        "source:056"
       ]
     },
     {
@@ -6828,7 +6872,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:099"
+        "source:100"
       ]
     },
     {
@@ -6887,7 +6931,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:083"
+        "source:084"
       ]
     },
     {
@@ -6946,7 +6990,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:089"
+        "source:090"
       ]
     },
     {
@@ -7005,7 +7049,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:105"
+        "source:106"
       ]
     },
     {
@@ -7064,7 +7108,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:033"
+        "source:034"
       ]
     },
     {
@@ -7123,8 +7167,8 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:118",
-        "source:119"
+        "source:119",
+        "source:120"
       ]
     },
     {
@@ -7183,7 +7227,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:091"
+        "source:092"
       ]
     },
     {
@@ -7301,7 +7345,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:071"
+        "source:072"
       ]
     },
     {
@@ -7360,8 +7404,8 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:127",
-        "source:128"
+        "source:128",
+        "source:129"
       ]
     },
     {
@@ -7419,7 +7463,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:138"
+        "source:139"
       ]
     },
     {
@@ -7477,7 +7521,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:137"
+        "source:138"
       ]
     },
     {
@@ -7535,7 +7579,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:093"
+        "source:094"
       ]
     },
     {
@@ -7651,7 +7695,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:113"
+        "source:114"
       ]
     },
     {
@@ -7709,7 +7753,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:054"
+        "source:055"
       ]
     },
     {
@@ -7767,7 +7811,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:052"
+        "source:053"
       ]
     },
     {
@@ -7825,7 +7869,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:042"
+        "source:043"
       ]
     },
     {
@@ -7883,7 +7927,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:111"
+        "source:112"
       ]
     },
     {
@@ -7942,7 +7986,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:036"
+        "source:037"
       ]
     },
     {
@@ -8001,7 +8045,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:037"
+        "source:038"
       ]
     },
     {
@@ -8059,7 +8103,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:139"
+        "source:140"
       ]
     },
     {
@@ -8118,7 +8162,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:023"
+        "source:024"
       ]
     },
     {
@@ -8177,7 +8221,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:018"
+        "source:019"
       ]
     },
     {
@@ -8236,7 +8280,7 @@
         "newEntry": true
       },
       "sourceIds": [
-        "source:019"
+        "source:020"
       ]
     }
   ],
@@ -8315,6 +8359,14 @@
     },
     {
       "id": "source:010",
+      "label": "Page canonique du jeu de données",
+      "url": "https://cafeadaptogene.com/barometre-cafes-fonctionnels-2027/",
+      "documentIds": [
+        "dataset:barometre-cafes-fonctionnels-2027"
+      ]
+    },
+    {
+      "id": "source:011",
       "label": "Source officielle ou page observée",
       "url": "https://cafedesguerriers.fr/",
       "documentIds": [
@@ -8322,7 +8374,7 @@
       ]
     },
     {
-      "id": "source:011",
+      "id": "source:012",
       "label": "Source officielle ou page observée",
       "url": "https://cafeintegral.fr/",
       "documentIds": [
@@ -8330,7 +8382,7 @@
       ]
     },
     {
-      "id": "source:012",
+      "id": "source:013",
       "label": "Source officielle ou page observée",
       "url": "https://cafeminceur.fr/",
       "documentIds": [
@@ -8338,7 +8390,7 @@
       ]
     },
     {
-      "id": "source:013",
+      "id": "source:014",
       "label": "Source officielle ou page observée",
       "url": "https://cafitdrink.com/",
       "documentIds": [
@@ -8346,7 +8398,7 @@
       ]
     },
     {
-      "id": "source:014",
+      "id": "source:015",
       "label": "Source officielle ou page observée",
       "url": "https://canadianprotein.com/products/protein-coffee",
       "documentIds": [
@@ -8354,7 +8406,7 @@
       ]
     },
     {
-      "id": "source:015",
+      "id": "source:016",
       "label": "Source officielle ou page observée",
       "url": "https://clearly.fr/products/protein-coffee",
       "documentIds": [
@@ -8362,7 +8414,7 @@
       ]
     },
     {
-      "id": "source:016",
+      "id": "source:017",
       "label": "Source officielle ou page observée",
       "url": "https://clearly.nl/en/products/mushroom-coffee",
       "documentIds": [
@@ -8370,7 +8422,7 @@
       ]
     },
     {
-      "id": "source:017",
+      "id": "source:018",
       "label": "Source officielle ou page observée",
       "url": "https://cokare.co/focus-ground-coffee",
       "documentIds": [
@@ -8378,7 +8430,7 @@
       ]
     },
     {
-      "id": "source:018",
+      "id": "source:019",
       "label": "Source officielle ou page observée",
       "url": "https://colco.fr/products/cure-1-mois",
       "documentIds": [
@@ -8386,7 +8438,7 @@
       ]
     },
     {
-      "id": "source:019",
+      "id": "source:020",
       "label": "Source officielle ou page observée",
       "url": "https://collacup.com/products/collacup-capsule-de-cafe-au-collagene",
       "documentIds": [
@@ -8394,7 +8446,7 @@
       ]
     },
     {
-      "id": "source:020",
+      "id": "source:021",
       "label": "Source officielle ou page observée",
       "url": "https://collafe.com/",
       "documentIds": [
@@ -8402,7 +8454,7 @@
       ]
     },
     {
-      "id": "source:021",
+      "id": "source:022",
       "label": "Source officielle ou page observée",
       "url": "https://collagencoffee.com/",
       "documentIds": [
@@ -8410,7 +8462,7 @@
       ]
     },
     {
-      "id": "source:022",
+      "id": "source:023",
       "label": "Source officielle ou page observée",
       "url": "https://corialfoods.com/en-us/products/collagen-coffee-original",
       "documentIds": [
@@ -8418,7 +8470,7 @@
       ]
     },
     {
-      "id": "source:023",
+      "id": "source:024",
       "label": "Source officielle ou page observée",
       "url": "https://corialfoods.com/fr-fr/products/collagen-coffee-cacau",
       "documentIds": [
@@ -8426,7 +8478,7 @@
       ]
     },
     {
-      "id": "source:024",
+      "id": "source:025",
       "label": "Source officielle ou page observée",
       "url": "https://cosmicblend.fr/",
       "documentIds": [
@@ -8434,7 +8486,7 @@
       ]
     },
     {
-      "id": "source:025",
+      "id": "source:026",
       "label": "Source officielle ou page observée",
       "url": "https://creatine-coffee.com/products/creatinecoffee-the-coffee-upgrade-for-mind-muscle-90-day-supply",
       "documentIds": [
@@ -8442,7 +8494,7 @@
       ]
     },
     {
-      "id": "source:026",
+      "id": "source:027",
       "label": "Source officielle ou page observée",
       "url": "https://creoffee.com/",
       "documentIds": [
@@ -8450,7 +8502,7 @@
       ]
     },
     {
-      "id": "source:027",
+      "id": "source:028",
       "label": "Source officielle ou page observée",
       "url": "https://crushedtonic.com/products/coffeecollagen",
       "documentIds": [
@@ -8458,7 +8510,7 @@
       ]
     },
     {
-      "id": "source:028",
+      "id": "source:029",
       "label": "Source officielle ou page observée",
       "url": "https://dayonecoffees.com/",
       "documentIds": [
@@ -8466,7 +8518,7 @@
       ]
     },
     {
-      "id": "source:029",
+      "id": "source:030",
       "label": "Source officielle ou page observée",
       "url": "https://drinkfoocus.fr/products/cafe-foocus",
       "documentIds": [
@@ -8474,7 +8526,7 @@
       ]
     },
     {
-      "id": "source:030",
+      "id": "source:031",
       "label": "Source officielle ou page observée",
       "url": "https://drinkmushee.de/products/adaptogener-pilzkaffee",
       "documentIds": [
@@ -8482,7 +8534,7 @@
       ]
     },
     {
-      "id": "source:031",
+      "id": "source:032",
       "label": "Source officielle ou page observée",
       "url": "https://drinkmykofi.es/products/mushroom-coffee",
       "documentIds": [
@@ -8490,7 +8542,7 @@
       ]
     },
     {
-      "id": "source:032",
+      "id": "source:033",
       "label": "Source officielle ou page observée",
       "url": "https://eightbillion.com/",
       "documentIds": [
@@ -8498,7 +8550,7 @@
       ]
     },
     {
-      "id": "source:033",
+      "id": "source:034",
       "label": "Source officielle ou page observée",
       "url": "https://en.vietnordic.com/wp-content/uploads/2025/02/KING-COFFEE-products-portfolio_International_Oct.2024_EN.pdf",
       "documentIds": [
@@ -8506,7 +8558,7 @@
       ]
     },
     {
-      "id": "source:034",
+      "id": "source:035",
       "label": "Source officielle ou page observée",
       "url": "https://eons.com/products/smart-mushroom-coffee",
       "documentIds": [
@@ -8514,7 +8566,7 @@
       ]
     },
     {
-      "id": "source:035",
+      "id": "source:036",
       "label": "Source officielle ou page observée",
       "url": "https://feelgoodcompany.com/products/mushroom-coffee",
       "documentIds": [
@@ -8522,7 +8574,7 @@
       ]
     },
     {
-      "id": "source:036",
+      "id": "source:037",
       "label": "Source officielle ou page observée",
       "url": "https://fr.myprotein.com/p/nutrition-sportive/protein-iced-coffee/17631051/",
       "documentIds": [
@@ -8530,7 +8582,7 @@
       ]
     },
     {
-      "id": "source:037",
+      "id": "source:038",
       "label": "Source officielle ou page observée",
       "url": "https://fr.trykinoko.co/products/protein-coffee",
       "documentIds": [
@@ -8538,7 +8590,7 @@
       ]
     },
     {
-      "id": "source:038",
+      "id": "source:039",
       "label": "Source officielle ou page observée",
       "url": "https://frenchmush.com/",
       "documentIds": [
@@ -8546,7 +8598,7 @@
       ]
     },
     {
-      "id": "source:039",
+      "id": "source:040",
       "label": "Source officielle ou page observée",
       "url": "https://fungu.es/producto/fungu/",
       "documentIds": [
@@ -8554,7 +8606,7 @@
       ]
     },
     {
-      "id": "source:040",
+      "id": "source:041",
       "label": "Source officielle ou page observée",
       "url": "https://getyourwake.com/pages/page-produit-2",
       "documentIds": [
@@ -8562,7 +8614,7 @@
       ]
     },
     {
-      "id": "source:041",
+      "id": "source:042",
       "label": "Source officielle ou page observée",
       "url": "https://gomush.co.uk/",
       "documentIds": [
@@ -8570,7 +8622,7 @@
       ]
     },
     {
-      "id": "source:042",
+      "id": "source:043",
       "label": "Source officielle ou page observée",
       "url": "https://grainedebreton.bzh/categorie-produit/orge/",
       "documentIds": [
@@ -8578,7 +8630,7 @@
       ]
     },
     {
-      "id": "source:043",
+      "id": "source:044",
       "label": "Source officielle ou page observée",
       "url": "https://happydetoxtea.de/products/clarity-cup-mushroom-coffee-blend",
       "documentIds": [
@@ -8586,7 +8638,7 @@
       ]
     },
     {
-      "id": "source:044",
+      "id": "source:045",
       "label": "Source officielle ou page observée",
       "url": "https://idrinkeight.com/",
       "documentIds": [
@@ -8594,7 +8646,7 @@
       ]
     },
     {
-      "id": "source:045",
+      "id": "source:046",
       "label": "Source officielle ou page observée",
       "url": "https://javvycoffee.com/products/javvy-protein-coffee",
       "documentIds": [
@@ -8602,7 +8654,7 @@
       ]
     },
     {
-      "id": "source:046",
+      "id": "source:047",
       "label": "Source officielle ou page observée",
       "url": "https://kawadrinks.com/",
       "documentIds": [
@@ -8610,7 +8662,7 @@
       ]
     },
     {
-      "id": "source:047",
+      "id": "source:048",
       "label": "Source officielle ou page observée",
       "url": "https://kimerakoffee.com/collections/coffee/products/kimera-koffee-12oz-ground",
       "documentIds": [
@@ -8618,7 +8670,7 @@
       ]
     },
     {
-      "id": "source:048",
+      "id": "source:049",
       "label": "Source officielle ou page observée",
       "url": "https://kovrcoffee.com/",
       "documentIds": [
@@ -8626,7 +8678,7 @@
       ]
     },
     {
-      "id": "source:049",
+      "id": "source:050",
       "label": "Source officielle ou page observée",
       "url": "https://lairdsuperfood.com/collections/all/products/perform-medium-roast-ground-mushroom-coffee",
       "documentIds": [
@@ -8634,7 +8686,7 @@
       ]
     },
     {
-      "id": "source:050",
+      "id": "source:051",
       "label": "Source officielle ou page observée",
       "url": "https://londonnootropics.com/collections/adaptogenic-coffee",
       "documentIds": [
@@ -8645,7 +8697,7 @@
       ]
     },
     {
-      "id": "source:051",
+      "id": "source:052",
       "label": "Source officielle ou page observée",
       "url": "https://lyfemushrooms.com/",
       "documentIds": [
@@ -8653,7 +8705,7 @@
       ]
     },
     {
-      "id": "source:052",
+      "id": "source:053",
       "label": "Source officielle ou page observée",
       "url": "https://maisondatus.com/products/alternative-cafe-moulu-sans-cafeine-datus",
       "documentIds": [
@@ -8661,7 +8713,7 @@
       ]
     },
     {
-      "id": "source:053",
+      "id": "source:054",
       "label": "Source officielle ou page observée",
       "url": "https://mindabolics.de/en/products/mushroom-mojo-en",
       "documentIds": [
@@ -8669,7 +8721,7 @@
       ]
     },
     {
-      "id": "source:054",
+      "id": "source:055",
       "label": "Source officielle ou page observée",
       "url": "https://mojolabs.fr/products/mojo-labs",
       "documentIds": [
@@ -8677,7 +8729,7 @@
       ]
     },
     {
-      "id": "source:055",
+      "id": "source:056",
       "label": "Source officielle ou page observée",
       "url": "https://morli.co/products/perform",
       "documentIds": [
@@ -8685,7 +8737,7 @@
       ]
     },
     {
-      "id": "source:056",
+      "id": "source:057",
       "label": "Source officielle ou page observée",
       "url": "https://moussecafe.fr/",
       "documentIds": [
@@ -8693,7 +8745,7 @@
       ]
     },
     {
-      "id": "source:057",
+      "id": "source:058",
       "label": "Source officielle ou page observée",
       "url": "https://mudshroomcoffee.co.za/products/mud-shroom-coffee",
       "documentIds": [
@@ -8701,7 +8753,7 @@
       ]
     },
     {
-      "id": "source:058",
+      "id": "source:059",
       "label": "Source officielle ou page observée",
       "url": "https://mudwtr.com/pages/rise",
       "documentIds": [
@@ -8709,7 +8761,7 @@
       ]
     },
     {
-      "id": "source:059",
+      "id": "source:060",
       "label": "Source officielle ou page observée",
       "url": "https://mushngo.com/products/brainstoorm-coffee",
       "documentIds": [
@@ -8717,7 +8769,7 @@
       ]
     },
     {
-      "id": "source:060",
+      "id": "source:061",
       "label": "Source officielle ou page observée",
       "url": "https://mushup.ca/en/products/duo-spark-lionsmane-reishi",
       "documentIds": [
@@ -8725,7 +8777,7 @@
       ]
     },
     {
-      "id": "source:061",
+      "id": "source:062",
       "label": "Source officielle ou page observée",
       "url": "https://myshroomycoffee.com/",
       "documentIds": [
@@ -8733,7 +8785,7 @@
       ]
     },
     {
-      "id": "source:062",
+      "id": "source:063",
       "label": "Source officielle ou page observée",
       "url": "https://ommushrooms.com/blogs/blog/mushroom-coffee-caffeine-m2",
       "documentIds": [
@@ -8741,7 +8793,7 @@
       ]
     },
     {
-      "id": "source:063",
+      "id": "source:064",
       "label": "Source officielle ou page observée",
       "url": "https://optimalhuman.com/products/adaptogenic-mushroom-super-coffee",
       "documentIds": [
@@ -8749,7 +8801,7 @@
       ]
     },
     {
-      "id": "source:064",
+      "id": "source:065",
       "label": "Source officielle ou page observée",
       "url": "https://ostrovit.com/en/products/ostrovit-protein-coffee-360-g-26688.html",
       "documentIds": [
@@ -8757,7 +8809,7 @@
       ]
     },
     {
-      "id": "source:065",
+      "id": "source:066",
       "label": "Source officielle ou page observée",
       "url": "https://peakstatecoffee.com/products/variety-pack-functional-whole-bean-coffee",
       "documentIds": [
@@ -8765,7 +8817,7 @@
       ]
     },
     {
-      "id": "source:066",
+      "id": "source:067",
       "label": "Source officielle ou page observée",
       "url": "https://popeli.co/",
       "documentIds": [
@@ -8773,7 +8825,7 @@
       ]
     },
     {
-      "id": "source:067",
+      "id": "source:068",
       "label": "Source officielle ou page observée",
       "url": "https://potentialfuel.com/products/potential-protein-functional-coffee",
       "documentIds": [
@@ -8781,7 +8833,7 @@
       ]
     },
     {
-      "id": "source:068",
+      "id": "source:069",
       "label": "Source officielle ou page observée",
       "url": "https://protealpes.com/produit/whey-cafe-sans-sucres-ajoutes/",
       "documentIds": [
@@ -8789,7 +8841,7 @@
       ]
     },
     {
-      "id": "source:069",
+      "id": "source:070",
       "label": "Source officielle ou page observée",
       "url": "https://purasana.com/",
       "documentIds": [
@@ -8797,7 +8849,7 @@
       ]
     },
     {
-      "id": "source:070",
+      "id": "source:071",
       "label": "Source officielle ou page observée",
       "url": "https://rainbo.ca/products/fungki-coffee",
       "documentIds": [
@@ -8805,7 +8857,7 @@
       ]
     },
     {
-      "id": "source:071",
+      "id": "source:072",
       "label": "Source officielle ou page observée",
       "url": "https://rytualcafe.shop/products/rytual%C2%AE-cafe-a-base-de-hongos",
       "documentIds": [
@@ -8813,7 +8865,7 @@
       ]
     },
     {
-      "id": "source:072",
+      "id": "source:073",
       "label": "Source officielle ou page observée",
       "url": "https://samsuperfoods.nl/products/6-in-1-paddenstoelen-koffie",
       "documentIds": [
@@ -8821,7 +8873,7 @@
       ]
     },
     {
-      "id": "source:073",
+      "id": "source:074",
       "label": "Source officielle ou page observée",
       "url": "https://shop.bulletproof.com/products/creatine-coffee",
       "documentIds": [
@@ -8829,7 +8881,7 @@
       ]
     },
     {
-      "id": "source:074",
+      "id": "source:075",
       "label": "Source officielle ou page observée",
       "url": "https://shynecoffee.ca/product/lions-mane-coffee",
       "documentIds": [
@@ -8837,7 +8889,7 @@
       ]
     },
     {
-      "id": "source:075",
+      "id": "source:076",
       "label": "Source officielle ou page observée",
       "url": "https://smaints.de/en/products/mushroom-coffee",
       "documentIds": [
@@ -8845,7 +8897,7 @@
       ]
     },
     {
-      "id": "source:076",
+      "id": "source:077",
       "label": "Source officielle ou page observée",
       "url": "https://smartcoffeeeu.com/",
       "documentIds": [
@@ -8853,7 +8905,7 @@
       ]
     },
     {
-      "id": "source:077",
+      "id": "source:078",
       "label": "Source officielle ou page observée",
       "url": "https://smartowlcoffee.com/collections/all-products/products/smart-owl-coffee-cognition-blend",
       "documentIds": [
@@ -8861,7 +8913,7 @@
       ]
     },
     {
-      "id": "source:078",
+      "id": "source:079",
       "label": "Source officielle ou page observée",
       "url": "https://stratecafe.com/products/cafe-champignons",
       "documentIds": [
@@ -8869,7 +8921,7 @@
       ]
     },
     {
-      "id": "source:079",
+      "id": "source:080",
       "label": "Source officielle ou page observée",
       "url": "https://strongcoffeecompany.com/products/vanilla-latte-starter-kit",
       "documentIds": [
@@ -8877,7 +8929,7 @@
       ]
     },
     {
-      "id": "source:080",
+      "id": "source:081",
       "label": "Source officielle ou page observée",
       "url": "https://taika.co/product/black-coffee/",
       "documentIds": [
@@ -8885,7 +8937,7 @@
       ]
     },
     {
-      "id": "source:081",
+      "id": "source:082",
       "label": "Source officielle ou page observée",
       "url": "https://thenutracompany.co.in/",
       "documentIds": [
@@ -8893,7 +8945,7 @@
       ]
     },
     {
-      "id": "source:082",
+      "id": "source:083",
       "label": "Source officielle ou page observée",
       "url": "https://torregral.com/",
       "documentIds": [
@@ -8901,7 +8953,7 @@
       ]
     },
     {
-      "id": "source:083",
+      "id": "source:084",
       "label": "Source officielle ou page observée",
       "url": "https://trybioflow.com/en-eu/pages/dfb1-coffee",
       "documentIds": [
@@ -8909,7 +8961,7 @@
       ]
     },
     {
-      "id": "source:084",
+      "id": "source:085",
       "label": "Source officielle ou page observée",
       "url": "https://urbancalmcoffee.ca/collections/mushroom-coffee",
       "documentIds": [
@@ -8917,7 +8969,7 @@
       ]
     },
     {
-      "id": "source:085",
+      "id": "source:086",
       "label": "Source officielle ou page observée",
       "url": "https://urthandroot.com/",
       "documentIds": [
@@ -8925,7 +8977,7 @@
       ]
     },
     {
-      "id": "source:086",
+      "id": "source:087",
       "label": "Source officielle ou page observée",
       "url": "https://us.foursigmatic.com/products/focus-organic-coffee-latte-original",
       "documentIds": [
@@ -8933,7 +8985,7 @@
       ]
     },
     {
-      "id": "source:087",
+      "id": "source:088",
       "label": "Source officielle ou page observée",
       "url": "https://us.foursigmatic.com/products/prime-original-the-boys-creatine-coffee",
       "documentIds": [
@@ -8941,7 +8993,7 @@
       ]
     },
     {
-      "id": "source:088",
+      "id": "source:089",
       "label": "Source officielle ou page observée",
       "url": "https://vitaritual.de/products/pilzkaffee",
       "documentIds": [
@@ -8949,7 +9001,7 @@
       ]
     },
     {
-      "id": "source:089",
+      "id": "source:090",
       "label": "Source officielle ou page observée",
       "url": "https://www.activz.com/products/coffee",
       "documentIds": [
@@ -8957,7 +9009,7 @@
       ]
     },
     {
-      "id": "source:090",
+      "id": "source:091",
       "label": "Anses — usages et risques des compléments alimentaires",
       "url": "https://www.anses.fr/fr/content/dossier/complements-alimentaires-tout-savoir-sur-les-usages-et-risques",
       "documentIds": [
@@ -8965,7 +9017,7 @@
       ]
     },
     {
-      "id": "source:091",
+      "id": "source:092",
       "label": "Source officielle ou page observée",
       "url": "https://www.brainandbrawn.com.au/products/synergy-collagen-coffee-with-organic-cordyceps-mct-c8-c10-20-x-15g-sachet",
       "documentIds": [
@@ -8973,7 +9025,7 @@
       ]
     },
     {
-      "id": "source:092",
+      "id": "source:093",
       "label": "Source officielle ou page observée",
       "url": "https://www.bulk.com/fr/products/cafe-proteine-whey/bpb-pico",
       "documentIds": [
@@ -8981,7 +9033,7 @@
       ]
     },
     {
-      "id": "source:093",
+      "id": "source:094",
       "label": "Source officielle ou page observée",
       "url": "https://www.cafe-champignon-adaptogene.fr/produit/boisson-adaptogene-saveur-cafe/",
       "documentIds": [
@@ -8989,7 +9041,7 @@
       ]
     },
     {
-      "id": "source:094",
+      "id": "source:095",
       "label": "Source officielle ou page observée",
       "url": "https://www.dirteaworld.com/products/mushroom-coffee-super-blend",
       "documentIds": [
@@ -8997,7 +9049,7 @@
       ]
     },
     {
-      "id": "source:095",
+      "id": "source:096",
       "label": "Source officielle ou page observée",
       "url": "https://www.dodjivi.com/products/4-in-1-chaga-and-lions-mane-mushroom-coffee",
       "documentIds": [
@@ -9005,7 +9057,7 @@
       ]
     },
     {
-      "id": "source:096",
+      "id": "source:097",
       "label": "Source officielle ou page observée",
       "url": "https://www.dodjivi.com/products/vitality-mushroom-coffee",
       "documentIds": [
@@ -9013,7 +9065,7 @@
       ]
     },
     {
-      "id": "source:097",
+      "id": "source:098",
       "label": "Source officielle ou page observée",
       "url": "https://www.drinkmagiclab.com/products/magic-coffee-cafe-complement-aux-champignons-adaptognes",
       "documentIds": [
@@ -9021,7 +9073,7 @@
       ]
     },
     {
-      "id": "source:098",
+      "id": "source:099",
       "label": "Source officielle ou page observée",
       "url": "https://www.drinkpuls.com/",
       "documentIds": [
@@ -9029,7 +9081,7 @@
       ]
     },
     {
-      "id": "source:099",
+      "id": "source:100",
       "label": "Source officielle ou page observée",
       "url": "https://www.drinkriseandshine.com/products/rise-and-shine-mushroom-coffee",
       "documentIds": [
@@ -9037,7 +9089,7 @@
       ]
     },
     {
-      "id": "source:100",
+      "id": "source:101",
       "label": "Source officielle ou page observée",
       "url": "https://www.drinksupercoffee.com/products/super-coffee-xxtra-vanilla",
       "documentIds": [
@@ -9045,7 +9097,7 @@
       ]
     },
     {
-      "id": "source:101",
+      "id": "source:102",
       "label": "Source officielle ou page observée",
       "url": "https://www.drinksupercoffee.com/products/vanilla-super-coffee",
       "documentIds": [
@@ -9053,7 +9105,7 @@
       ]
     },
     {
-      "id": "source:102",
+      "id": "source:103",
       "label": "Source officielle ou page observée",
       "url": "https://www.dxn2u.com/product/product_det.php?lang=en&p=bev_ling21&pid=fb",
       "documentIds": [
@@ -9061,7 +9113,7 @@
       ]
     },
     {
-      "id": "source:103",
+      "id": "source:104",
       "label": "Source officielle ou page observée",
       "url": "https://www.earthshake.co/products/readybrew",
       "documentIds": [
@@ -9069,7 +9121,7 @@
       ]
     },
     {
-      "id": "source:104",
+      "id": "source:105",
       "label": "EFSA — repères sur la caféine · EFSA — sécurité et repères de consommation de la caféine",
       "url": "https://www.efsa.europa.eu/fr/topics/topic/caffeine",
       "documentIds": [
@@ -9080,7 +9132,7 @@
       ]
     },
     {
-      "id": "source:105",
+      "id": "source:106",
       "label": "Source officielle ou page observée",
       "url": "https://www.eganoworldwide.com/",
       "documentIds": [
@@ -9088,7 +9140,7 @@
       ]
     },
     {
-      "id": "source:106",
+      "id": "source:107",
       "label": "Source officielle ou page observée",
       "url": "https://www.everydaydose.com/products/30-serving-bold-coffee",
       "documentIds": [
@@ -9096,7 +9148,7 @@
       ]
     },
     {
-      "id": "source:107",
+      "id": "source:108",
       "label": "Source officielle ou page observée",
       "url": "https://www.fratemateclub.com/products/poudre-cafe",
       "documentIds": [
@@ -9104,7 +9156,7 @@
       ]
     },
     {
-      "id": "source:108",
+      "id": "source:109",
       "label": "Source officielle ou page observée",
       "url": "https://www.ganoexcel.com/language/Portugese/our-offer.html",
       "documentIds": [
@@ -9112,7 +9164,7 @@
       ]
     },
     {
-      "id": "source:109",
+      "id": "source:110",
       "label": "Source officielle ou page observée",
       "url": "https://www.herbalife.com/assets/regional-reusable-assets/workflow/fusion/pdp/product-label-pdf/en-gb/pl-pdf-gb-012k.pdf",
       "documentIds": [
@@ -9120,7 +9172,7 @@
       ]
     },
     {
-      "id": "source:110",
+      "id": "source:111",
       "label": "Source officielle ou page observée",
       "url": "https://www.ilikechike.com/collections/protein-coffee",
       "documentIds": [
@@ -9128,7 +9180,7 @@
       ]
     },
     {
-      "id": "source:111",
+      "id": "source:112",
       "label": "Source officielle ou page observée",
       "url": "https://www.latribudeskawas.fr/",
       "documentIds": [
@@ -9136,7 +9188,7 @@
       ]
     },
     {
-      "id": "source:112",
+      "id": "source:113",
       "label": "Source officielle ou page observée",
       "url": "https://www.lionspirit.fr/",
       "documentIds": [
@@ -9144,7 +9196,7 @@
       ]
     },
     {
-      "id": "source:113",
+      "id": "source:114",
       "label": "Source officielle ou page observée",
       "url": "https://www.lupicoffee.com/",
       "documentIds": [
@@ -9152,7 +9204,7 @@
       ]
     },
     {
-      "id": "source:114",
+      "id": "source:115",
       "label": "Source officielle ou page observée",
       "url": "https://www.mahoganyorganics.in/products/mahogany-7-mushrooms-mix-coffee-with-beneficial-effects-of-seven-mushrooms-200g",
       "documentIds": [
@@ -9160,7 +9212,7 @@
       ]
     },
     {
-      "id": "source:115",
+      "id": "source:116",
       "label": "Source officielle ou page observée",
       "url": "https://www.mareshi.co.uk/",
       "documentIds": [
@@ -9168,7 +9220,7 @@
       ]
     },
     {
-      "id": "source:116",
+      "id": "source:117",
       "label": "Source officielle ou page observée",
       "url": "https://www.mushroomcoffespain.com/",
       "documentIds": [
@@ -9176,7 +9228,7 @@
       ]
     },
     {
-      "id": "source:117",
+      "id": "source:118",
       "label": "Source officielle ou page observée",
       "url": "https://www.naturecan.fr/products/cafe-proteine",
       "documentIds": [
@@ -9184,7 +9236,7 @@
       ]
     },
     {
-      "id": "source:118",
+      "id": "source:119",
       "label": "Source officielle ou page observée",
       "url": "https://www.naturesfinest.fr/produit/collagene-cafe-boisson/",
       "documentIds": [
@@ -9192,7 +9244,7 @@
       ]
     },
     {
-      "id": "source:119",
+      "id": "source:120",
       "label": "Source secondaire",
       "url": "https://www.naturesfinest.si/wp-content/uploads/2024/08/5638-Collagen-Coffee-doc.pdf",
       "documentIds": [
@@ -9200,7 +9252,7 @@
       ]
     },
     {
-      "id": "source:120",
+      "id": "source:121",
       "label": "Source officielle ou page observée",
       "url": "https://www.neuroast.com/products/foodservice",
       "documentIds": [
@@ -9208,7 +9260,7 @@
       ]
     },
     {
-      "id": "source:121",
+      "id": "source:122",
       "label": "Source officielle ou page observée",
       "url": "https://www.nu3.fr/products/nu3-focus-mushroom-coffee",
       "documentIds": [
@@ -9216,7 +9268,7 @@
       ]
     },
     {
-      "id": "source:122",
+      "id": "source:123",
       "label": "Source officielle ou page observée",
       "url": "https://www.nuevalife.com/shop/nueva-morning",
       "documentIds": [
@@ -9224,7 +9276,7 @@
       ]
     },
     {
-      "id": "source:123",
+      "id": "source:124",
       "label": "Source officielle ou page observée",
       "url": "https://www.nuspira.com/",
       "documentIds": [
@@ -9232,7 +9284,7 @@
       ]
     },
     {
-      "id": "source:124",
+      "id": "source:125",
       "label": "Source officielle ou page observée",
       "url": "https://www.nuubrew.com/products/the-hustler-blend",
       "documentIds": [
@@ -9240,7 +9292,7 @@
       ]
     },
     {
-      "id": "source:125",
+      "id": "source:126",
       "label": "Source officielle ou page observée",
       "url": "https://www.oetker.de/produkte/p/high-protein-coffee-drink-espresso-macchiato-style",
       "documentIds": [
@@ -9248,7 +9300,7 @@
       ]
     },
     {
-      "id": "source:126",
+      "id": "source:127",
       "label": "Source officielle ou page observée",
       "url": "https://www.organic-bless.com/",
       "documentIds": [
@@ -9256,7 +9308,7 @@
       ]
     },
     {
-      "id": "source:127",
+      "id": "source:128",
       "label": "Source secondaire",
       "url": "https://www.physalishealth.com/en/blog/how-to-make-a-physalis-collagen-coffee/",
       "documentIds": [
@@ -9264,7 +9316,7 @@
       ]
     },
     {
-      "id": "source:128",
+      "id": "source:129",
       "label": "Source officielle ou page observée",
       "url": "https://www.physalishealth.com/fr/complements-alimentaires/cheveux-peau-ongles-yeux/collagen-coffee/",
       "documentIds": [
@@ -9272,7 +9324,7 @@
       ]
     },
     {
-      "id": "source:129",
+      "id": "source:130",
       "label": "Source secondaire",
       "url": "https://www.prnewswire.com/news-releases/bulletproof-introduces-coffee--creatine-a-first-of-its-kind-functional-coffee-innovation-302696454.html",
       "documentIds": [
@@ -9280,7 +9332,7 @@
       ]
     },
     {
-      "id": "source:130",
+      "id": "source:131",
       "label": "Source secondaire",
       "url": "https://www.prnewswire.com/news-releases/vitacup-launches-first-of-its-kind-creatine-coffee-stick-packs-at-sprouts-farmers-market-in-stores-now-302732090.html",
       "documentIds": [
@@ -9288,7 +9340,7 @@
       ]
     },
     {
-      "id": "source:131",
+      "id": "source:132",
       "label": "Source officielle ou page observée",
       "url": "https://www.proffee.fr/products/cafe-instantane-proteine-gene",
       "documentIds": [
@@ -9296,7 +9348,7 @@
       ]
     },
     {
-      "id": "source:132",
+      "id": "source:133",
       "label": "Source officielle ou page observée",
       "url": "https://www.rahygge.nl/",
       "documentIds": [
@@ -9304,7 +9356,7 @@
       ]
     },
     {
-      "id": "source:133",
+      "id": "source:134",
       "label": "Source officielle ou page observée",
       "url": "https://www.ryzesuperfoods.com/",
       "documentIds": [
@@ -9312,7 +9364,7 @@
       ]
     },
     {
-      "id": "source:134",
+      "id": "source:135",
       "label": "Étude de composition de cafés Arabica torréfiés",
       "url": "https://www.scielo.br/j/jbchs/a/SKKgscBvyNMyVvp9ZZGPyZf/?lang=en",
       "documentIds": [
@@ -9320,7 +9372,7 @@
       ]
     },
     {
-      "id": "source:135",
+      "id": "source:136",
       "label": "Source officielle ou page observée",
       "url": "https://www.setacor.com/producto/cafe-funcional-con-hongos-medicinales/",
       "documentIds": [
@@ -9328,7 +9380,7 @@
       ]
     },
     {
-      "id": "source:136",
+      "id": "source:137",
       "label": "Source officielle ou page observée",
       "url": "https://www.shroomnest.com/",
       "documentIds": [
@@ -9336,7 +9388,7 @@
       ]
     },
     {
-      "id": "source:137",
+      "id": "source:138",
       "label": "Source officielle ou page observée",
       "url": "https://www.sunday.fr/mushroom-coffee-noble-strong.html",
       "documentIds": [
@@ -9344,7 +9396,7 @@
       ]
     },
     {
-      "id": "source:138",
+      "id": "source:139",
       "label": "Source officielle ou page observée",
       "url": "https://www.sunday.fr/protein-coffee-cannelle.html",
       "documentIds": [
@@ -9352,7 +9404,7 @@
       ]
     },
     {
-      "id": "source:139",
+      "id": "source:140",
       "label": "Source officielle ou page observée",
       "url": "https://www.sunday.fr/protein-coffee-signature-roast.html",
       "documentIds": [
@@ -9360,7 +9412,7 @@
       ]
     },
     {
-      "id": "source:140",
+      "id": "source:141",
       "label": "Source officielle ou page observée",
       "url": "https://www.transparentlabs.com/blogs/all/protein-coffee",
       "documentIds": [
@@ -9368,7 +9420,7 @@
       ]
     },
     {
-      "id": "source:141",
+      "id": "source:142",
       "label": "Source officielle ou page observée",
       "url": "https://www.trubrain.com/products/coffee",
       "documentIds": [
@@ -9376,7 +9428,7 @@
       ]
     },
     {
-      "id": "source:142",
+      "id": "source:143",
       "label": "Source officielle ou page observée",
       "url": "https://www.vahdam.com/products/mushroom-coffee",
       "documentIds": [
@@ -9384,7 +9436,7 @@
       ]
     },
     {
-      "id": "source:143",
+      "id": "source:144",
       "label": "Source officielle ou page observée",
       "url": "https://www.vitacup.com/products/creatine-coffee-instant-pouch",
       "documentIds": [
@@ -9392,7 +9444,7 @@
       ]
     },
     {
-      "id": "source:144",
+      "id": "source:145",
       "label": "Source officielle ou page observée",
       "url": "https://www.vitacup.com/products/mushroom-coffee-instant-bag",
       "documentIds": [
@@ -9400,7 +9452,7 @@
       ]
     },
     {
-      "id": "source:145",
+      "id": "source:146",
       "label": "Source officielle ou page observée",
       "url": "https://xmushroomcoffee.com/",
       "documentIds": [
@@ -9408,7 +9460,7 @@
       ]
     },
     {
-      "id": "source:146",
+      "id": "source:147",
       "label": "Source officielle ou page observée",
       "url": "https://xtreme-brands.com/products/tribe-organic-mushroom-coffee",
       "documentIds": [
@@ -9416,7 +9468,7 @@
       ]
     },
     {
-      "id": "source:147",
+      "id": "source:148",
       "label": "Source officielle ou page observée",
       "url": "https://zenergymushrooms.com/",
       "documentIds": [

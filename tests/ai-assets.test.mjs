@@ -2,28 +2,57 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
+import { barometer } from "../app/barometer-data.ts";
 import { directoryProducts } from "../app/brand-directory-data.ts";
 import { guides, siteUrl } from "../app/site-data.ts";
 import { buildAiAssets, normalizeSearchText } from "../scripts/lib/ai-assets.mjs";
+
+const barometerDataset = {
+  slug: "barometre-cafes-fonctionnels-2027",
+  title: barometer.metadata.title,
+  url: barometer.metadata.canonicalUrl,
+  description: "Données françaises comparables sur les prix par portion, la caféine, les ingrédients et la transparence.",
+  findings: barometer.findings,
+  methodology: barometer.methodology,
+  stats: barometer.stats,
+  metadata: {
+    datasetVersion: barometer.metadata.datasetVersion,
+    cutoffDate: barometer.metadata.cutoffDate,
+    attribution: barometer.metadata.attribution,
+  },
+  downloads: [
+    { format: "CSV", url: `${siteUrl}/data/barometre-cafes-fonctionnels-2027.csv` },
+    { format: "JSON", url: `${siteUrl}/data/barometre-cafes-fonctionnels-2027.json` },
+  ],
+};
 
 test("normalise les accents et la ponctuation pour une recherche française", () => {
   assert.equal(normalizeSearchText("  Café protéiné — Énergie !  "), "cafe proteine energie");
 });
 
 test("construit des identifiants stables et des URLs publiques absolues", () => {
-  const assets = buildAiAssets({ guides, products: directoryProducts, siteUrl });
+  const assets = buildAiAssets({ guides, products: directoryProducts, datasets: [barometerDataset], siteUrl });
 
-  assert.equal(assets.content.documents.length, 11);
+  assert.equal(assets.content.documents.length, 12);
   assert.equal(assets.catalog.products.length, 143);
   assert.equal(assets.content.documents[0].id, "guide:torregral");
   assert.equal(assets.content.documents[0].url, "https://cafeadaptogene.com/torregral/");
   assert.equal(assets.catalog.products[0].id, "product:torregral-torregral");
   assert.equal(assets.catalog.products[0].url, "https://cafeadaptogene.com/annuaire-cafes-fonctionnels/");
-  assert.equal(assets.mcpData.documents.length, 154);
+  assert.equal(assets.mcpData.documents.length, 155);
+  const dataset = assets.content.documents.find((document) => document.id === "dataset:barometre-cafes-fonctionnels-2027");
+  assert.ok(dataset);
+  assert.equal(dataset.type, "dataset");
+  assert.equal(dataset.url, "https://cafeadaptogene.com/barometre-cafes-fonctionnels-2027/");
+  assert.match(dataset.text, /35 produits/i);
+  assert.match(dataset.text, /n=18/);
+  assert.match(dataset.text, /ne mesure ni l’efficacité/i);
+  assert.match(dataset.text, /barometre-cafes-fonctionnels-2027\.csv/);
+  assert.equal(dataset.metadata.datasetVersion, "2027.1");
 });
 
 test("conserve les limites éditoriales utiles aux agents", () => {
-  const assets = buildAiAssets({ guides, products: directoryProducts, siteUrl });
+  const assets = buildAiAssets({ guides, products: directoryProducts, datasets: [barometerDataset], siteUrl });
   const torr = assets.catalog.products.find((product) => product.id === "product:torregral-torregral");
 
   assert.ok(torr);
@@ -84,9 +113,12 @@ test("publie les cinq ressources machine déterministes", async () => {
     readFile(new URL("index.md", root), "utf8"),
   ]);
 
-  assert.equal(JSON.parse(content).documents.length, 11);
+  assert.equal(JSON.parse(content).documents.length, 12);
   assert.equal(JSON.parse(catalog).products.length, 143);
   assert.ok(JSON.parse(sources).sources.length > 10);
-  assert.equal(JSON.parse(mcpData).documents.length, 154);
+  assert.equal(JSON.parse(mcpData).documents.length, 155);
+  assert.ok(JSON.parse(mcpData).documents.some((document) => document.id === "dataset:barometre-cafes-fonctionnels-2027"));
   assert.match(markdown, /https:\/\/cafeadaptogene\.com\/mcp/);
+  assert.match(markdown, /https:\/\/cafeadaptogene\.com\/barometre-cafes-fonctionnels-2027\//);
+  assert.match(markdown, /https:\/\/cafeadaptogene\.com\/data\/barometre-cafes-fonctionnels-2027\.json/);
 });

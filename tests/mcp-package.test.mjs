@@ -23,7 +23,9 @@ test("publie /mcp sans créer de dossier physique concurrent", async () => {
 
   assert.match(rootRules, /RewriteRule \^mcp\/\?\$ mcp\.php \[L\]/);
   assert.match(mcpRules, /RewriteRule \^ - \[F,L\]/);
-  assert.equal(JSON.parse(data).documents.length, 154);
+  const documents = JSON.parse(data).documents;
+  assert.equal(documents.length, 155);
+  assert.ok(documents.some((document) => document.id === "dataset:barometre-cafes-fonctionnels-2027"));
   await access(new URL("out/mcp.php", root));
   await access(new URL("out/mcp-runtime/src/KnowledgeBase.php", root));
   await access(new URL("out/mcp-runtime/src/Tools.php", root));
